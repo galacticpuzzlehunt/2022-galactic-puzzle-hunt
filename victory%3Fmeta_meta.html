@@ -320,7 +320,7 @@ document.getElementById("check-results-form").addEventListener("submit", (e) => 
 const slugs = ["intro_alt", "intro", "forward", "seasons", "concert", "meta_meta_alt", "meta_meta"];
 slugs.forEach(slug => document.getElementById(slug).style.display = "none");
 
-const matches = new RegExp(`\\?(${slugs.join("|")})`).exec(document.URL);
+const matches = new RegExp(`(?:\\?|3F)(${slugs.join("|")})`).exec(document.URL);
 if (matches && matches[1]) {
     document.getElementById(matches[1]).style.display = "block";
 }
