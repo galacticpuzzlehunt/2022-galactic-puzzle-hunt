@@ -1,0 +1,1991 @@
+
+
+
+
+
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    
+    <title>Galactic Puzzle Hunt</title>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=0.5">
+    <meta property="og:title" content="Galactic Puzzle Hunt 2022">
+    <meta property="og:description" content="Registration for this year's Galactic Puzzle Hunt is now open!">
+    <meta property="og:image" content="https://galacticpuzzlehunt.com/static/images/banner.png">
+    <meta property="twitter:card" content="summary_large_image">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Recursive:slnt,CASL,CRSV,MONO@-3,0.5,1,1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/skeleton.css">
+    <link rel="stylesheet" href="/static/css/base.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.19/jquery.touchSwipe.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.formset/1.2.2/jquery.formset.min.js"></script>
+    <script src="/jsi18n/"></script>
+    <script src="/static/js/sorttable.js"></script>
+    <script src="/static/js/tray.js"></script>
+    <script src="/static/js/notify.js"></script>
+    <script src="/static/js/time.js"></script>
+    
+    
+    <link rel="icon" sizes="16x16 32x32 48x48 64x64" href="/static/images/favicon.ico" type="image/vnd.microsoft.icon">
+    
+    
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-92192633-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-92192633-1');
+</script>
+
+</head>
+<body>
+    
+    <div id="background-glitch-wrapper" class="background-glitch">
+        <div class="glitch-1"></div>
+        <div class="glitch-2"></div>
+        <div class="glitch-3"></div>
+    </div>
+    
+    
+    <input id="shortcuts" type="checkbox">
+    
+    <nav>
+        <span class="tray">
+            <span id="tray-timer"></span>
+            <div class="top-tabs">
+                <a href="/">
+                    Home
+                </a>
+                
+                <a href="/rules">
+                    Rules
+                </a>
+                
+                
+                <a href="/story">
+                    Story
+                </a>
+                
+                
+                <a class="selected-tab" href="/puzzles">
+                    Puzzles
+                </a>
+                
+                <a href="/teams">
+                    Teams
+                </a>
+                
+                <a href="/faq">
+                    FAQ
+                </a>
+                
+                
+                <a href="/errata">
+                    Updates
+                </a>
+                
+                
+                <a href="/wrapup">
+                    Wrap-Up
+                </a>
+                
+                
+                <a href="https://galacticpuzzlehunt.com/archive">
+                    Archive
+                </a>
+                
+                
+                
+            </div>
+            <div class="top-left-actions">
+                
+            </div>
+        </span>
+        <div class="top-right-actions">
+        
+        
+        </div>
+    </nav>
+    
+    
+    
+    
+    
+    <script>
+
+    
+    
+    let glitchTriggerFuncs = [];
+    let glitchTriggerReceived = false;
+    let glitchTriggerExReceived = false;
+    let glitchPageLoaded = false;
+    function processGlitchFuncs(ex) {
+        glitchTriggerFuncs.forEach((func) => {
+            func(ex);
+        });
+    }
+    function doGlitch(ex) {
+        glitchTriggerReceived = true;
+        if (ex) {
+            glitchTriggerExReceived = true;
+        }
+        if (glitchPageLoaded) {
+            processGlitchFuncs(ex);
+        }
+    }
+    window.addEventListener('load', () => {
+        glitchPageLoaded = true;
+        if (glitchTriggerExReceived) {
+            processGlitchFuncs(true);
+        }
+        else if (glitchTriggerReceived) {
+            processGlitchFuncs(false);
+        }
+    }, false);
+    
+    
+    
+    function registerOnGlitchHook(func) {
+        if (glitchTriggerExReceived) {
+            func(true);
+        }
+        else if (glitchTriggerReceived) {
+            func(false);
+        }
+        glitchTriggerFuncs.push(func);
+    }
+    
+
+    
+    
+    </script>
+    <div class="content">
+        
+
+
+
+
+
+
+
+
+<div class="energy-nodes-info" style="display: none">
+<a href="/asteroid">
+  <svg height="1em" width="1.2em" viewBox="150 50 400 450" style="position: relative; top: 0.15em;">
+    <path d="m350 61.602c-15.293 0-29.246 7.6172-37.102 20.824l-209.12 352.27c-7.8555 13.246-7.6992 29.465 0.17188 42.699 7.875 13.234 21.773 21.039 37.102 21h417.9c15.328 0.054687 29.223-7.7656 37.102-21 7.875-13.234 8.0312-29.453 0.17188-42.699l-209.12-352.28c-7.8516-13.207-21.805-20.824-37.102-20.824zm0 33.602c2.9609 0 6.9336 2.207 8.2266 4.375l208.95 352.28c1.2891 2.1719 1.293 6.2266 0 8.3984s-5.2578 4.5586-8.2266 4.5508h-417.9c-2.9648 0-6.9336-2.3789-8.2266-4.5508s-1.2891-6.2266 0-8.3984l208.95-352.28c1.2891-2.168 5.2656-4.375 8.2266-4.375zm0 78.398c-18.559 0-33.602 15.043-33.602 33.602l5.6016 112c0 15.465 12.535 28 28 28s28-12.535 28-28l5.6016-112c0-18.559-15.043-33.602-33.602-33.602zm0 190.4c-18.559 0-33.602 15.043-33.602 33.602 0 18.555 15.043 33.602 33.602 33.602s33.602-15.043 33.602-33.602c0-18.559-15.043-33.602-33.602-33.602z"/>
+  </svg>
+  Energy nodes detected!
+</a>
+</div>
+
+
+
+<style>
+.info-row {
+  justify-content: center;
+  gap: 5%;
+}
+.info-row > div {
+  flex-basis: 30%;
+  flex-grow: 0;
+  box-sizing: border-box;
+}
+.info-row summary {
+  cursor: pointer;
+}
+.disabled-gadget {
+  background-color: #bbbcc3;
+}
+.disabled-gadget .info-desc {
+  opacity: 0.5;
+}
+
+.info-row .round {
+  border: 15px solid #087;
+  border-radius: 50%;
+  width: 230px;
+  height: 230px;
+  box-sizing: border-box;
+  margin: auto;
+  display: block;
+  animation: wormhole-rotate 60s infinite linear;
+}
+.info-row .round img {
+  width: 230px;
+  height: 230px;
+  margin: -15px;
+  transform: scale(1);
+  transition: transform 2s ease-out;
+}
+.info-row .round:hover img {
+  transform: scale(1.2);
+  transition: transform 0.5s ease-out;
+}
+@keyframes wormhole-rotate {
+  0% { transform: rotate(0deg); }
+  50% { transform: rotate(180deg); }
+  100% { transform: rotate(360deg); }
+}
+
+
+</style>
+<div class="info-row">
+  
+  <div>
+    <h4>The Wormhole</h4>
+    <div class="info-desc">
+      <a class="round" href="https://2021.galacticpuzzlehunt.com/puzzles">
+        <img src="/static/images/wormhole.png">
+      </a>
+    </div>
+  </div>
+  
+  
+  
+</div>
+  
+  <a href="/navigation" class="btn">Wormhole Simulator</a>
+  
+
+
+<table class="puzzles-list">
+
+    
+    <tbody id="the-exam-title">
+        <th colspan="4">
+            <h1>The Exam</h1>
+        </th>
+    </tbody>
+    
+    
+<tbody class="puzzles-section" id="the-exam-list">
+    
+    <tr>
+        <td>
+            
+            1
+            
+        </td>
+        <td>
+            <a href="/puzzle/extreme-anagrams">
+                
+                
+                    Extreme Anagrams
+                
+            </a>
+            
+            
+            <div class="puzzles-inner">
+                
+                <a href="/stats/extreme-anagrams">
+                
+                <b>591</b>&nbsp;solves
+                | <b>462</b>&nbsp;guesses
+                
+                | <b>600</b>&nbsp;teams
+                </a>
+                
+            </div>
+            
+        </td>
+        <td>
+            
+            
+            
+            <a class="puzzles-new" href="/solution/extreme-anagrams">Solution</a>
+            
+        </td>
+        
+    </tr>
+    
+    <tr>
+        <td>
+            
+            2
+            
+        </td>
+        <td>
+            <a href="/puzzle/naval-conflict">
+                
+                
+                    Naval Conflict
+                
+            </a>
+            
+            
+            <div class="puzzles-inner">
+                
+                <a href="/stats/naval-conflict">
+                
+                <b>615</b>&nbsp;solves
+                | <b>608</b>&nbsp;guesses
+                
+                | <b>629</b>&nbsp;teams
+                </a>
+                
+            </div>
+            
+        </td>
+        <td>
+            
+            
+            
+            <a class="puzzles-new" href="/solution/naval-conflict">Solution</a>
+            
+        </td>
+        
+    </tr>
+    
+    <tr>
+        <td>
+            
+            3
+            
+        </td>
+        <td>
+            <a href="/puzzle/whats-the-difference">
+                
+                
+                    What&#x27;s the Difference?
+                
+            </a>
+            
+            
+            <div class="puzzles-inner">
+                
+                <a href="/stats/whats-the-difference">
+                
+                <b>545</b>&nbsp;solves
+                | <b>1353</b>&nbsp;guesses
+                
+                | <b>559</b>&nbsp;teams
+                </a>
+                
+            </div>
+            
+        </td>
+        <td>
+            
+            
+            
+            <a class="puzzles-new" href="/solution/whats-the-difference">Solution</a>
+            
+        </td>
+        
+    </tr>
+    
+    <tr>
+        <td>
+            
+            4
+            
+        </td>
+        <td>
+            <a href="/puzzle/your-puzzle">
+                
+                
+                    Nobody Knows What Your Perfect Puzzle Is, But You Will After Answering These Nine Questions
+                
+            </a>
+            
+            
+            <div class="puzzles-inner">
+                
+                <a href="/stats/your-puzzle">
+                
+                <b>597</b>&nbsp;solves
+                | <b>827</b>&nbsp;guesses
+                
+                | <b>599</b>&nbsp;teams
+                </a>
+                
+            </div>
+            
+        </td>
+        <td>
+            
+            
+            
+            <a class="puzzles-new" href="/solution/your-puzzle">Solution</a>
+            
+        </td>
+        
+    </tr>
+    
+    <tr>
+        <td>
+            
+            5
+            
+        </td>
+        <td>
+            <a href="/puzzle/eclairs-and-more">
+                
+                
+                    Eclairs and More @ Ovsljs* Opsvut
+                
+            </a>
+            
+            
+            <div class="puzzles-inner">
+                
+                <a href="/stats/eclairs-and-more">
+                
+                <b>547</b>&nbsp;solves
+                | <b>756</b>&nbsp;guesses
+                
+                | <b>557</b>&nbsp;teams
+                </a>
+                
+            </div>
+            
+        </td>
+        <td>
+            
+            
+            
+            <a class="puzzles-new" href="/solution/eclairs-and-more">Solution</a>
+            
+        </td>
+        
+    </tr>
+    
+    <tr>
+        <td>
+            
+            6
+            
+        </td>
+        <td>
+            <a href="/puzzle/shared-samples">
+                
+                
+                    Shared Samples
+                
+            </a>
+            
+            
+            <div class="puzzles-inner">
+                
+                <a href="/stats/shared-samples">
+                
+                <b>401</b>&nbsp;solves
+                | <b>615</b>&nbsp;guesses
+                
+                | <b>435</b>&nbsp;teams
+                </a>
+                
+            </div>
+            
+        </td>
+        <td>
+            
+            
+            
+            <a class="puzzles-new" href="/solution/shared-samples">Solution</a>
+            
+        </td>
+        
+    </tr>
+    
+    <tr>
+        <td>
+            
+            7
+            
+        </td>
+        <td>
+            <a href="/puzzle/wordless">
+                
+                
+                    Wordless
+                
+            </a>
+            
+            
+            <div class="puzzles-inner">
+                
+                <a href="/stats/wordless">
+                
+                <b>566</b>&nbsp;solves
+                | <b>397</b>&nbsp;guesses
+                
+                | <b>568</b>&nbsp;teams
+                </a>
+                
+            </div>
+            
+        </td>
+        <td>
+            
+            
+            
+            <a class="puzzles-new" href="/solution/wordless">Solution</a>
+            
+        </td>
+        
+    </tr>
+    
+    <tr>
+        <td>
+            
+            8
+            
+        </td>
+        <td>
+            <a href="/puzzle/%D0%B5xtreme-anagrams">
+                
+                
+                    Extreme Anagrams
+                
+            </a>
+            
+            
+            <div class="puzzles-inner">
+                
+                <a href="/stats/%D0%B5xtreme-anagrams">
+                
+                <b>569</b>&nbsp;solves
+                | <b>186</b>&nbsp;guesses
+                
+                | <b>571</b>&nbsp;teams
+                </a>
+                
+            </div>
+            
+        </td>
+        <td>
+            
+            
+            
+            <a class="puzzles-new" href="/solution/%D0%B5xtreme-anagrams">Solution</a>
+            
+        </td>
+        
+    </tr>
+    
+    <tr>
+        <td>
+            
+        </td>
+        <td>
+            <a href="/puzzle/the-line">
+                
+                <div class="puzzles-new">meta</div>
+                
+                
+                    The Line
+                
+            </a>
+            
+            
+            <div class="puzzles-inner">
+                
+                <a href="/stats/the-line">
+                
+                <b>381</b>&nbsp;solves
+                | <b>2002</b>&nbsp;guesses
+                
+                | <b>415</b>&nbsp;teams
+                </a>
+                
+            </div>
+            
+        </td>
+        <td>
+            
+            
+            
+            <a class="puzzles-new" href="/solution/the-line">Solution</a>
+            
+        </td>
+        
+    </tr>
+    
+</tbody>
+
+
+    
+    <tbody class="blue" id="forward-title">
+        <th colspan="4">
+            <h1>Forward</h1>
+            
+            <style>
+                .blue h1 { color: #365693; background-color: #3656931a; }
+                .blue + tbody a { color: #365693; }
+                .blue + tbody a:hover, .blue + tbody a:focus { color: #6989c6; }
+                .blue + tbody .puzzles-answer > :first-child { border-color: #365693; }
+                .blue + tbody .puzzles-new { background-color: #365693; color: #f9f8f5; }
+                .blue + tbody .puzzles-new:hover, .blue + tbody a:hover .puzzles-new { background-color: #6989c6; color: #f9f8f5; }
+            </style>
+            
+        </th>
+    </tbody>
+    
+    
+<tbody class="puzzles-section" id="forward-list">
+    
+    <tr>
+        <td>
+            
+            1
+            
+        </td>
+        <td>
+            <a href="/puzzle/horse_ebooks">
+                
+                
+                    horse_ebooks
+                
+            </a>
+            
+            
+            <div class="puzzles-inner">
+                
+                <a href="/stats/horse_ebooks">
+                
+                <b>340</b>&nbsp;solves
+                | <b>147</b>&nbsp;guesses
+                
+                | <b>344</b>&nbsp;teams
+                </a>
+                
+            </div>
+            
+        </td>
+        <td>
+            
+            
+            
+            <a class="puzzles-new" href="/solution/horse_ebooks">Solution</a>
+            
+        </td>
+        
+    </tr>
+    
+    <tr>
+        <td>
+            
+            2
+            
+        </td>
+        <td>
+            <a href="/puzzle/make-your-own-puzzle-hunt">
+                
+                
+                    Make Your Own Puzzle Hunt
+                
+            </a>
+            
+            
+            <div class="puzzles-inner">
+                
+                <a href="/stats/make-your-own-puzzle-hunt">
+                
+                <b>185</b>&nbsp;solves
+                | <b>744</b>&nbsp;guesses
+                
+                | <b>195</b>&nbsp;teams
+                </a>
+                
+            </div>
+            
+        </td>
+        <td>
+            
+            
+            
+            <a class="puzzles-new" href="/solution/make-your-own-puzzle-hunt">Solution</a>
+            
+        </td>
+        
+    </tr>
+    
+    <tr>
+        <td>
+            
+            3
+            
+        </td>
+        <td>
+            <a href="/puzzle/bullet-curtain">
+                
+                
+                    Bullet Curtain
+                
+            </a>
+            
+            
+            <div class="puzzles-inner">
+                
+                <a href="/stats/bullet-curtain">
+                
+                <b>200</b>&nbsp;solves
+                | <b>354</b>&nbsp;guesses
+                
+                | <b>233</b>&nbsp;teams
+                </a>
+                
+            </div>
+            
+        </td>
+        <td>
+            
+            
+            
+            <a class="puzzles-new" href="/solution/bullet-curtain">Solution</a>
+            
+        </td>
+        
+    </tr>
+    
+    <tr>
+        <td>
+            
+            4
+            
+        </td>
+        <td>
+            <a href="/puzzle/duality">
+                
+                
+                    Duality
+                
+            </a>
+            
+            
+            <div class="puzzles-inner">
+                
+                <a href="/stats/duality">
+                
+                <b>133</b>&nbsp;solves
+                | <b>169</b>&nbsp;guesses
+                
+                | <b>144</b>&nbsp;teams
+                </a>
+                
+            </div>
+            
+        </td>
+        <td>
+            
+            
+            
+            <a class="puzzles-new" href="/solution/duality">Solution</a>
+            
+        </td>
+        
+    </tr>
+    
+    <tr>
+        <td>
+            
+            5
+            
+        </td>
+        <td>
+            <a href="/puzzle/changes">
+                
+                
+                    Changes
+                
+            </a>
+            
+            
+            <div class="puzzles-inner">
+                
+                <a href="/stats/changes">
+                
+                <b>131</b>&nbsp;solves
+                | <b>332</b>&nbsp;guesses
+                
+                | <b>147</b>&nbsp;teams
+                </a>
+                
+            </div>
+            
+        </td>
+        <td>
+            
+            
+            
+            <a class="puzzles-new" href="/solution/changes">Solution</a>
+            
+        </td>
+        
+    </tr>
+    
+    <tr>
+        <td>
+            
+            6
+            
+        </td>
+        <td>
+            <a href="/puzzle/the-earth-guide">
+                
+                
+                    The Earth Guide
+                
+            </a>
+            
+            
+            <div class="puzzles-inner">
+                
+                <a href="/stats/the-earth-guide">
+                
+                <b>109</b>&nbsp;solves
+                | <b>189</b>&nbsp;guesses
+                
+                | <b>115</b>&nbsp;teams
+                </a>
+                
+            </div>
+            
+        </td>
+        <td>
+            
+            
+            
+            <a class="puzzles-new" href="/solution/the-earth-guide">Solution</a>
+            
+        </td>
+        
+    </tr>
+    
+    <tr>
+        <td>
+            
+            7
+            
+        </td>
+        <td>
+            <a href="/puzzle/three">
+                
+                
+                    Three
+                
+            </a>
+            
+            
+            <div class="puzzles-inner">
+                
+                <a href="/stats/three">
+                
+                <b>151</b>&nbsp;solves
+                | <b>25984</b>&nbsp;guesses
+                
+                | <b>441</b>&nbsp;teams
+                </a>
+                
+            </div>
+            
+        </td>
+        <td>
+            
+            
+            
+            <a class="puzzles-new" href="/solution/three">Solution</a>
+            
+        </td>
+        
+    </tr>
+    
+    <tr>
+        <td>
+            
+            8
+            
+        </td>
+        <td>
+            <a href="/puzzle/cryptology">
+                
+                
+                    Cryptology
+                
+            </a>
+            
+            
+            <div class="puzzles-inner">
+                
+                <a href="/stats/cryptology">
+                
+                <b>220</b>&nbsp;solves
+                | <b>1458</b>&nbsp;guesses
+                
+                | <b>251</b>&nbsp;teams
+                </a>
+                
+            </div>
+            
+        </td>
+        <td>
+            
+            
+            
+            <a class="puzzles-new" href="/solution/cryptology">Solution</a>
+            
+        </td>
+        
+    </tr>
+    
+    <tr>
+        <td>
+            
+            9
+            
+        </td>
+        <td>
+            <a href="/puzzle/young-artists">
+                
+                
+                    Young Artists
+                
+            </a>
+            
+            
+            <div class="puzzles-inner">
+                
+                <a href="/stats/young-artists">
+                
+                <b>264</b>&nbsp;solves
+                | <b>123</b>&nbsp;guesses
+                
+                | <b>268</b>&nbsp;teams
+                </a>
+                
+            </div>
+            
+        </td>
+        <td>
+            
+            
+            
+            <a class="puzzles-new" href="/solution/young-artists">Solution</a>
+            
+        </td>
+        
+    </tr>
+    
+    <tr>
+        <td>
+            
+            10
+            
+        </td>
+        <td>
+            <a href="/puzzle/mythic-arms">
+                
+                
+                    Mythic Arms
+                
+            </a>
+            
+            
+            <div class="puzzles-inner">
+                
+                <a href="/stats/mythic-arms">
+                
+                <b>126</b>&nbsp;solves
+                | <b>220</b>&nbsp;guesses
+                
+                | <b>135</b>&nbsp;teams
+                </a>
+                
+            </div>
+            
+        </td>
+        <td>
+            
+            
+            
+            <a class="puzzles-new" href="/solution/mythic-arms">Solution</a>
+            
+        </td>
+        
+    </tr>
+    
+    <tr>
+        <td>
+            
+            11
+            
+        </td>
+        <td>
+            <a href="/puzzle/practical-guide">
+                
+                
+                    A Practical Guide to Choosing a Team Name
+                
+            </a>
+            
+            
+            <div class="puzzles-inner">
+                
+                <a href="/stats/practical-guide">
+                
+                <b>205</b>&nbsp;solves
+                | <b>207</b>&nbsp;guesses
+                
+                | <b>206</b>&nbsp;teams
+                </a>
+                
+            </div>
+            
+        </td>
+        <td>
+            
+            
+            
+            <a class="puzzles-new" href="/solution/practical-guide">Solution</a>
+            
+        </td>
+        
+    </tr>
+    
+    <tr>
+        <td>
+            
+            12
+            
+        </td>
+        <td>
+            <a href="/puzzle/all-things-big-and-small">
+                
+                
+                    All Things Big and Small
+                
+            </a>
+            
+            
+            <div class="puzzles-inner">
+                
+                <a href="/stats/all-things-big-and-small">
+                
+                <b>137</b>&nbsp;solves
+                | <b>217</b>&nbsp;guesses
+                
+                | <b>150</b>&nbsp;teams
+                </a>
+                
+            </div>
+            
+        </td>
+        <td>
+            
+            
+            
+            <a class="puzzles-new" href="/solution/all-things-big-and-small">Solution</a>
+            
+        </td>
+        
+    </tr>
+    
+    <tr>
+        <td>
+            
+        </td>
+        <td>
+            <a href="/puzzle/forward">
+                
+                <div class="puzzles-new">meta</div>
+                
+                
+                    Forward
+                
+            </a>
+            
+            
+            <div class="puzzles-inner">
+                
+                <a href="/stats/forward">
+                
+                <b>120</b>&nbsp;solves
+                | <b>208</b>&nbsp;guesses
+                
+                | <b>123</b>&nbsp;teams
+                </a>
+                
+            </div>
+            
+        </td>
+        <td>
+            
+            
+            
+            <a class="puzzles-new" href="/solution/forward">Solution</a>
+            
+        </td>
+        
+    </tr>
+    
+</tbody>
+
+
+    
+    <tbody class="blue" id="hibernating-and-flying-south-title">
+        <th colspan="4">
+            <h1>Hibernating and Flying South</h1>
+            
+        </th>
+    </tbody>
+    
+    
+<tbody class="puzzles-section" id="hibernating-and-flying-south-list">
+    
+    <tr>
+        <td>
+            
+            1
+            
+        </td>
+        <td>
+            <a href="/puzzle/everything-everywhere-all-at-once">
+                
+                
+                    Everything Everywhere All at Once
+                
+            </a>
+            
+            
+            <div class="puzzles-inner">
+                
+                <a href="/stats/everything-everywhere-all-at-once">
+                
+                <b>127</b>&nbsp;solves
+                | <b>316</b>&nbsp;guesses
+                
+                | <b>131</b>&nbsp;teams
+                </a>
+                
+            </div>
+            
+        </td>
+        <td>
+            
+            
+            
+            <a class="puzzles-new" href="/solution/everything-everywhere-all-at-once">Solution</a>
+            
+        </td>
+        
+    </tr>
+    
+    <tr>
+        <td>
+            
+            2
+            
+        </td>
+        <td>
+            <a href="/puzzle/abc">
+                
+                
+                    ✝️🔤🧩
+                
+            </a>
+            
+            
+            <div class="puzzles-inner">
+                
+                <a href="/stats/abc">
+                
+                <b>130</b>&nbsp;solves
+                | <b>168</b>&nbsp;guesses
+                
+                | <b>136</b>&nbsp;teams
+                </a>
+                
+            </div>
+            
+        </td>
+        <td>
+            
+            
+            
+            <a class="puzzles-new" href="/solution/abc">Solution</a>
+            
+        </td>
+        
+    </tr>
+    
+    <tr>
+        <td>
+            
+            3
+            
+        </td>
+        <td>
+            <a href="/puzzle/pocket-guide-to-travel">
+                
+                
+                    Pocket Guide to Travel
+                
+            </a>
+            
+            
+            <div class="puzzles-inner">
+                
+                <a href="/stats/pocket-guide-to-travel">
+                
+                <b>105</b>&nbsp;solves
+                | <b>127</b>&nbsp;guesses
+                
+                | <b>107</b>&nbsp;teams
+                </a>
+                
+            </div>
+            
+        </td>
+        <td>
+            
+            
+            
+            <a class="puzzles-new" href="/solution/pocket-guide-to-travel">Solution</a>
+            
+        </td>
+        
+    </tr>
+    
+    <tr>
+        <td>
+            
+            4
+            
+        </td>
+        <td>
+            <a href="/puzzle/oversimplified">
+                
+                
+                    Oversimplified
+                
+            </a>
+            
+            
+            <div class="puzzles-inner">
+                
+                <a href="/stats/oversimplified">
+                
+                <b>118</b>&nbsp;solves
+                | <b>381</b>&nbsp;guesses
+                
+                | <b>121</b>&nbsp;teams
+                </a>
+                
+            </div>
+            
+        </td>
+        <td>
+            
+            
+            
+            <a class="puzzles-new" href="/solution/oversimplified">Solution</a>
+            
+        </td>
+        
+    </tr>
+    
+    <tr>
+        <td>
+            
+            5
+            
+        </td>
+        <td>
+            <a href="/puzzle/the-dining-philosophers">
+                
+                
+                    The Dining Philosophers
+                
+            </a>
+            
+            
+            <div class="puzzles-inner">
+                
+                <a href="/stats/the-dining-philosophers">
+                
+                <b>81</b>&nbsp;solves
+                | <b>461</b>&nbsp;guesses
+                
+                | <b>100</b>&nbsp;teams
+                </a>
+                
+            </div>
+            
+        </td>
+        <td>
+            
+            
+            
+            <a class="puzzles-new" href="/solution/the-dining-philosophers">Solution</a>
+            
+        </td>
+        
+    </tr>
+    
+    <tr>
+        <td>
+            
+            6
+            
+        </td>
+        <td>
+            <a href="/puzzle/somewhere">
+                
+                
+                    Somewhere
+                
+            </a>
+            
+            
+            <div class="puzzles-inner">
+                
+                <a href="/stats/somewhere">
+                
+                <b>72</b>&nbsp;solves
+                | <b>337</b>&nbsp;guesses
+                
+                | <b>90</b>&nbsp;teams
+                </a>
+                
+            </div>
+            
+        </td>
+        <td>
+            
+            
+            
+            <a class="puzzles-new" href="/solution/somewhere">Solution</a>
+            
+        </td>
+        
+    </tr>
+    
+    <tr>
+        <td>
+            
+            7
+            
+        </td>
+        <td>
+            <a href="/puzzle/reap-what-you-sow">
+                
+                
+                    Reap What You Sow
+                
+            </a>
+            
+            
+            <div class="puzzles-inner">
+                
+                <a href="/stats/reap-what-you-sow">
+                
+                <b>117</b>&nbsp;solves
+                | <b>138</b>&nbsp;guesses
+                
+                | <b>119</b>&nbsp;teams
+                </a>
+                
+            </div>
+            
+        </td>
+        <td>
+            
+            
+            
+            <a class="puzzles-new" href="/solution/reap-what-you-sow">Solution</a>
+            
+        </td>
+        
+    </tr>
+    
+    <tr>
+        <td>
+            
+            8
+            
+        </td>
+        <td>
+            <a href="/puzzle/galactic-history-exam">
+                
+                
+                    Galactic History Exam
+                
+            </a>
+            
+            
+            <div class="puzzles-inner">
+                
+                <a href="/stats/galactic-history-exam">
+                
+                <b>80</b>&nbsp;solves
+                | <b>457</b>&nbsp;guesses
+                
+                | <b>102</b>&nbsp;teams
+                </a>
+                
+            </div>
+            
+        </td>
+        <td>
+            
+            
+            
+            <a class="puzzles-new" href="/solution/galactic-history-exam">Solution</a>
+            
+        </td>
+        
+    </tr>
+    
+    <tr>
+        <td>
+            
+            9
+            
+        </td>
+        <td>
+            <a href="/puzzle/a-winding-walk">
+                
+                
+                    A Winding Walk
+                
+            </a>
+            
+            
+            <div class="puzzles-inner">
+                
+                <a href="/stats/a-winding-walk">
+                
+                <b>80</b>&nbsp;solves
+                | <b>178</b>&nbsp;guesses
+                
+                | <b>91</b>&nbsp;teams
+                </a>
+                
+            </div>
+            
+        </td>
+        <td>
+            
+            
+            
+            <a class="puzzles-new" href="/solution/a-winding-walk">Solution</a>
+            
+        </td>
+        
+    </tr>
+    
+    <tr>
+        <td>
+            
+            10
+            
+        </td>
+        <td>
+            <a href="/puzzle/maze">
+                
+                
+                    Maze
+                
+            </a>
+            
+            
+            <div class="puzzles-inner">
+                
+                <a href="/stats/maze">
+                
+                <b>113</b>&nbsp;solves
+                | <b>127</b>&nbsp;guesses
+                
+                | <b>120</b>&nbsp;teams
+                </a>
+                
+            </div>
+            
+        </td>
+        <td>
+            
+            
+            
+            <a class="puzzles-new" href="/solution/maze">Solution</a>
+            
+        </td>
+        
+    </tr>
+    
+    <tr>
+        <td>
+            
+        </td>
+        <td>
+            <a href="/puzzle/hibernating-and-flying-south">
+                
+                <div class="puzzles-new">meta</div>
+                
+                
+                    Hibernating and Flying South
+                
+            </a>
+            
+            
+            <div class="puzzles-inner">
+                
+                <a href="/stats/hibernating-and-flying-south">
+                
+                <b>89</b>&nbsp;solves
+                | <b>174</b>&nbsp;guesses
+                
+                | <b>90</b>&nbsp;teams
+                </a>
+                
+            </div>
+            
+        </td>
+        <td>
+            
+            
+            
+            <a class="puzzles-new" href="/solution/hibernating-and-flying-south">Solution</a>
+            
+        </td>
+        
+    </tr>
+    
+</tbody>
+
+
+    
+    <tbody class="blue" id="worlds-end-concert-title">
+        <th colspan="4">
+            <h1>World&#x27;s End Concert</h1>
+            
+        </th>
+    </tbody>
+    
+    
+<tbody class="puzzles-section" id="worlds-end-concert-list">
+    
+    <tr>
+        <td>
+            
+            1
+            
+        </td>
+        <td>
+            <a href="/puzzle/babysit-the-supercomputer">
+                
+                
+                    Babysit the Supercomputer
+                
+            </a>
+            
+            
+            <div class="puzzles-inner">
+                
+                <a href="/stats/babysit-the-supercomputer">
+                
+                <b>117</b>&nbsp;solves
+                | <b>109</b>&nbsp;guesses
+                
+                | <b>122</b>&nbsp;teams
+                </a>
+                
+            </div>
+            
+        </td>
+        <td>
+            
+            
+            
+            <a class="puzzles-new" href="/solution/babysit-the-supercomputer">Solution</a>
+            
+        </td>
+        
+    </tr>
+    
+    <tr>
+        <td>
+            
+            2
+            
+        </td>
+        <td>
+            <a href="/puzzle/speedy-crosswording">
+                
+                
+                    Speedy Crosswording
+                
+            </a>
+            
+            
+            <div class="puzzles-inner">
+                
+                <a href="/stats/speedy-crosswording">
+                
+                <b>143</b>&nbsp;solves
+                | <b>907</b>&nbsp;guesses
+                
+                | <b>180</b>&nbsp;teams
+                </a>
+                
+            </div>
+            
+        </td>
+        <td>
+            
+            
+            
+            <a class="puzzles-new" href="/solution/speedy-crosswording">Solution</a>
+            
+        </td>
+        
+    </tr>
+    
+    <tr>
+        <td>
+            
+            3
+            
+        </td>
+        <td>
+            <a href="/puzzle/combat-roller">
+                
+                
+                    Combat Roller
+                
+            </a>
+            
+            
+            <div class="puzzles-inner">
+                
+                <a href="/stats/combat-roller">
+                
+                <b>103</b>&nbsp;solves
+                | <b>337</b>&nbsp;guesses
+                
+                | <b>113</b>&nbsp;teams
+                </a>
+                
+            </div>
+            
+        </td>
+        <td>
+            
+            
+            
+            <a class="puzzles-new" href="/solution/combat-roller">Solution</a>
+            
+        </td>
+        
+    </tr>
+    
+    <tr>
+        <td>
+            
+            4
+            
+        </td>
+        <td>
+            <a href="/puzzle/broken-jukebox">
+                
+                
+                    Broken Jukebox
+                
+            </a>
+            
+            
+            <div class="puzzles-inner">
+                
+                <a href="/stats/broken-jukebox">
+                
+                <b>78</b>&nbsp;solves
+                | <b>204</b>&nbsp;guesses
+                
+                | <b>87</b>&nbsp;teams
+                </a>
+                
+            </div>
+            
+        </td>
+        <td>
+            
+            
+            
+            <a class="puzzles-new" href="/solution/broken-jukebox">Solution</a>
+            
+        </td>
+        
+    </tr>
+    
+    <tr>
+        <td>
+            
+            5
+            
+        </td>
+        <td>
+            <a href="/puzzle/at-the-park">
+                
+                
+                    At the Park
+                
+            </a>
+            
+            
+            <div class="puzzles-inner">
+                
+                <a href="/stats/at-the-park">
+                
+                <b>109</b>&nbsp;solves
+                | <b>239</b>&nbsp;guesses
+                
+                | <b>119</b>&nbsp;teams
+                </a>
+                
+            </div>
+            
+        </td>
+        <td>
+            
+            
+            
+            <a class="puzzles-new" href="/solution/at-the-park">Solution</a>
+            
+        </td>
+        
+    </tr>
+    
+    <tr>
+        <td>
+            
+            6
+            
+        </td>
+        <td>
+            <a href="/puzzle/just-wait-an-hour">
+                
+                
+                    Just Wait an Hour
+                
+            </a>
+            
+            
+            <div class="puzzles-inner">
+                
+                <a href="/stats/just-wait-an-hour">
+                
+                <b>72</b>&nbsp;solves
+                | <b>399</b>&nbsp;guesses
+                
+                | <b>87</b>&nbsp;teams
+                </a>
+                
+            </div>
+            
+        </td>
+        <td>
+            
+            
+            
+            <a class="puzzles-new" href="/solution/just-wait-an-hour">Solution</a>
+            
+        </td>
+        
+    </tr>
+    
+    <tr>
+        <td>
+            
+            7
+            
+        </td>
+        <td>
+            <a href="/puzzle/me-the-worm">
+                
+                
+                    Me, the Worm
+                
+            </a>
+            
+            
+            <div class="puzzles-inner">
+                
+                <a href="/stats/me-the-worm">
+                
+                <b>101</b>&nbsp;solves
+                | <b>270</b>&nbsp;guesses
+                
+                | <b>111</b>&nbsp;teams
+                </a>
+                
+            </div>
+            
+        </td>
+        <td>
+            
+            
+            
+            <a class="puzzles-new" href="/solution/me-the-worm">Solution</a>
+            
+        </td>
+        
+    </tr>
+    
+    <tr>
+        <td>
+            
+            8
+            
+        </td>
+        <td>
+            <a href="/puzzle/piano-typer">
+                
+                
+                    Piano Typer
+                
+            </a>
+            
+            
+            <div class="puzzles-inner">
+                
+                <a href="/stats/piano-typer">
+                
+                <b>119</b>&nbsp;solves
+                | <b>245</b>&nbsp;guesses
+                
+                | <b>123</b>&nbsp;teams
+                </a>
+                
+            </div>
+            
+        </td>
+        <td>
+            
+            
+            
+            <a class="puzzles-new" href="/solution/piano-typer">Solution</a>
+            
+        </td>
+        
+    </tr>
+    
+    <tr>
+        <td>
+            
+        </td>
+        <td>
+            <a href="/puzzle/worlds-end-concert">
+                
+                <div class="puzzles-new">meta</div>
+                
+                
+                    World&#x27;s End Concert
+                
+            </a>
+            
+            
+            <div class="puzzles-inner">
+                
+                <a href="/stats/worlds-end-concert">
+                
+                <b>89</b>&nbsp;solves
+                | <b>115</b>&nbsp;guesses
+                
+                | <b>93</b>&nbsp;teams
+                </a>
+                
+            </div>
+            
+        </td>
+        <td>
+            
+            
+            
+            <a class="puzzles-new" href="/solution/worlds-end-concert">Solution</a>
+            
+        </td>
+        
+    </tr>
+    
+</tbody>
+
+
+    
+    <tbody id="the-cube-title">
+        <th colspan="4">
+            <h1>The Cube</h1>
+        </th>
+    </tbody>
+    
+    
+<tbody class="puzzles-section" id="the-cube-list">
+    
+    <tr>
+        <td>
+            
+            <svg viewBox="0 0 60 60" style="fill: none; stroke: currentColor; width: 30px; height: 30px; stroke-width: 4">
+                <path d="m50 2c-6-0-14 10-20 13-6 3 2-12-3-12s-10 5-14 10c-4 5-15 28-4 39 11 11 30-1 36-6s10-12 10-18-11 5-14 1 17-22 11-26c-1-1-2-1-2-1zm-28 23a13 13 0 0 1 0 0 13 13 0 0 1 13 13 13 13 0 0 1-13 13 13 13 0 0 1-13-13 13 13 0 0 1 13-13z"/>
+            </svg>
+            
+        </td>
+        <td>
+            <a href="/puzzle/the-cube">
+                
+                <div class="puzzles-new">meta</div>
+                
+                
+                    The Cube
+                
+            </a>
+            
+            
+            <div class="puzzles-inner">
+                
+                <a href="/stats/the-cube">
+                
+                <b>79</b>&nbsp;solves
+                | <b>26</b>&nbsp;guesses
+                
+                | <b>79</b>&nbsp;teams
+                </a>
+                
+            </div>
+            
+        </td>
+        <td>
+            
+            
+            
+            <a class="puzzles-new" href="/solution/the-cube">Solution</a>
+            
+        </td>
+        
+    </tr>
+    
+</tbody>
+
+
+</table>
+
+
+
+
+
+
+    </div>
+    
+
+    
+
+    
+</body>
+</html>

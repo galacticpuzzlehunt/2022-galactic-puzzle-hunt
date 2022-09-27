@@ -1,0 +1,312 @@
+
+
+
+
+
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    
+    <title>Galactic Puzzle Hunt</title>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=0.5">
+    <meta property="og:title" content="Galactic Puzzle Hunt 2022">
+    <meta property="og:description" content="Registration for this year's Galactic Puzzle Hunt is now open!">
+    <meta property="og:image" content="https://galacticpuzzlehunt.com/static/images/banner.png">
+    <meta property="twitter:card" content="summary_large_image">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Recursive:slnt,CASL,CRSV,MONO@-3,0.5,1,1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/skeleton.css">
+    <link rel="stylesheet" href="/static/css/base.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.19/jquery.touchSwipe.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.formset/1.2.2/jquery.formset.min.js"></script>
+    <script src="/jsi18n/"></script>
+    <script src="/static/js/sorttable.js"></script>
+    <script src="/static/js/tray.js"></script>
+    <script src="/static/js/notify.js"></script>
+    <script src="/static/js/time.js"></script>
+    
+    
+    <link rel="icon" sizes="16x16 32x32 48x48 64x64" href="/static/images/favicon.ico" type="image/vnd.microsoft.icon">
+    
+    
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-92192633-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-92192633-1');
+</script>
+
+</head>
+<body>
+    
+    <div id="background-glitch-wrapper" class="background-glitch">
+        <div class="glitch-1"></div>
+        <div class="glitch-2"></div>
+        <div class="glitch-3"></div>
+    </div>
+    
+    
+    <input id="shortcuts" type="checkbox">
+    
+    <nav>
+        <span class="tray">
+            <span id="tray-timer"></span>
+            <div class="top-tabs">
+                <a href="/">
+                    Home
+                </a>
+                
+                <a href="/rules">
+                    Rules
+                </a>
+                
+                
+                <a href="/story">
+                    Story
+                </a>
+                
+                
+                <a href="/puzzles">
+                    Puzzles
+                </a>
+                
+                <a href="/teams">
+                    Teams
+                </a>
+                
+                <a href="/faq">
+                    FAQ
+                </a>
+                
+                
+                <a href="/errata">
+                    Updates
+                </a>
+                
+                
+                <a href="/wrapup">
+                    Wrap-Up
+                </a>
+                
+                
+                <a href="https://galacticpuzzlehunt.com/archive">
+                    Archive
+                </a>
+                
+                
+                
+            </div>
+            <div class="top-left-actions">
+                
+
+<a href="/solution/navigation" class="btn">View solution</a>
+
+
+            </div>
+        </span>
+        <div class="top-right-actions">
+        
+        
+        </div>
+    </nav>
+    
+    
+    
+    
+    
+    <script>
+
+    
+    
+    let glitchTriggerFuncs = [];
+    let glitchTriggerReceived = false;
+    let glitchTriggerExReceived = false;
+    let glitchPageLoaded = false;
+    function processGlitchFuncs(ex) {
+        glitchTriggerFuncs.forEach((func) => {
+            func(ex);
+        });
+    }
+    function doGlitch(ex) {
+        glitchTriggerReceived = true;
+        if (ex) {
+            glitchTriggerExReceived = true;
+        }
+        if (glitchPageLoaded) {
+            processGlitchFuncs(ex);
+        }
+    }
+    window.addEventListener('load', () => {
+        glitchPageLoaded = true;
+        if (glitchTriggerExReceived) {
+            processGlitchFuncs(true);
+        }
+        else if (glitchTriggerReceived) {
+            processGlitchFuncs(false);
+        }
+    }, false);
+    
+    
+    
+    function registerOnGlitchHook(func) {
+        if (glitchTriggerExReceived) {
+            func(true);
+        }
+        else if (glitchTriggerReceived) {
+            func(false);
+        }
+        glitchTriggerFuncs.push(func);
+    }
+    
+
+    
+    
+    </script>
+    <div class="content">
+        
+<style>
+.info-row {
+  justify-content: center;
+  gap: 5%;
+}
+.info-row > div {
+  flex-basis: 30%;
+  flex-grow: 0;
+  box-sizing: border-box;
+}
+.info-row summary {
+  cursor: pointer;
+}
+.disabled-gadget {
+  background-color: #bbbcc3;
+}
+.disabled-gadget .info-desc {
+  opacity: 0.5;
+}
+.info-row table {
+  font-size: 200%;
+  font-family: Recursive, monospace;
+  margin: 56px auto;
+}
+.info-row table td {
+  padding: 10px;
+}
+</style>
+
+<main class="puzzle-main clipboard-container">
+
+<p>
+When you unlock a new round after Forward, the <a href="https://2021.galacticpuzzlehunt.com/puzzles">list of puzzles in 2021</a> changes to show notes next to the wormhole. The first note appears when Hibernating and Flying South is unlocked, after 6 Forward solves. The second note appears when World’s End Concert is unlocked, after 13 solves in the other two 2021 rounds with at least 4 solves in Hibernating and Flying South.
+</p>
+
+<div class="info-row">
+  <div>
+    <h4>
+      A Note
+    </h4>
+    <div class="info-desc">
+      <p>Our GAP researchers have determined that you can theoretically access a second device. You might want to revisit the <a href="https://2022.galacticpuzzlehunt.com/puzzles">other side of the wormhole</a>…</p>
+    </div>
+  </div>
+  <div>
+    <h4>
+      Another Note
+    </h4>
+    <div class="info-desc">
+      <p>Our GAP researchers have determined that you can theoretically access a third device. You might want to revisit the <a href="https://2022.galacticpuzzlehunt.com/puzzles">other side of the wormhole</a>…</p>
+    </div>
+  </div>
+</div>
+
+<p>
+When you return to the <a href="https://2022.galacticpuzzlehunt.com/puzzles">list of puzzles in 2022</a>, you’d see the following next to the wormhole.
+</p>
+
+<div class="info-row">
+  <div id="gadget-1">
+    <h4>
+      A Memory
+    </h4>
+    <div class="info-desc">
+      <p style="text-align: center; margin: 0">
+        <svg id="memory-1" width="200" height="200" viewBox="-100 -100 200 200" xmlns="http://www.w3.org/2000/svg">
+          <path id="opacities-0" d="M0 -90 A90 90 0 0 1 90 0  L0 0 Z" fill="green" opacity="1"/>
+          <path id="opacities-1" d="M90 0  A90 90 0 0 1 0 90  L0 0 Z" fill="yellow" opacity="1"/>
+          <path id="opacities-2" d="M0 90  A90 90 0 0 1 -90 0 L0 0 Z" fill="orange" opacity="1"/>
+          <path id="opacities-3" d="M-90 0 A90 90 0 0 1 0 -90 L0 0 Z" fill="blue" opacity="1"/>
+          <circle cx="0" cy="0" r="90" fill="none" stroke="black" stroke-width="3"/>
+        </svg>
+      </p>
+      <details>
+        <summary>You just remembered…</summary>
+        <p>…this crazy GAP fact: not only is it important <i>what</i> you submit, it’s also important <i>when</i> you submit. The proctor promises you that if you do it correctly and then turn in your exam, you’ll get access to a completely new set of test questions.</p>
+      </details>
+    </div>
+  </div>
+  <div id="gadget-2">
+    <h4>
+      Another Memory
+    </h4>
+    <div class="info-desc">
+      <table>
+        <tr>
+          <td id="concatenated-correct-0">&nbsp;</td>
+          <td id="concatenated-correct-1">&nbsp;</td>
+          <td id="concatenated-correct-2">&nbsp;</td>
+          <td id="concatenated-correct-3">&nbsp;</td>
+          <td id="concatenated-correct-4">&nbsp;</td>
+        </tr>
+        <tr>
+          <td id="concatenated-extract-0">·</td>
+          <td id="concatenated-extract-1">·</td>
+          <td id="concatenated-extract-2">·</td>
+          <td id="concatenated-extract-3">·</td>
+          <td id="concatenated-extract-4">·</td>
+        </tr>
+      </table>
+      <details>
+        <summary>You just remembered…</summary>
+        <p>…this crazy GAP fact: not only is it important <i>what</i> you submit, it’s also important in <i>what order</i> you submit. The proctor promises you that if you do it correctly and then turn in your exam, you’ll get a <span style="font-family: Recursive, monospace">CLEAR</span>er picture of what’s going on.</p>
+      </details>
+    </div>
+  </div>
+</div>
+
+<p>
+Solving puzzles in The Exam, either with the normal answer or the alternate answer, changed the above. You can simulate solving these puzzles by clicking the corresponding answer below:
+</p>
+
+<p id="status">
+</p>
+
+<div id="exam-table" style="margin: auto; max-width: fit-content;"></div>
+
+<script>
+const intro_puzzles = [{'name': 'Extreme Anagrams', 'answer': "HALLEY'S COMET", 'alternate': 'CHRYSLER'}, {'name': 'Naval Conflict', 'answer': 'LUSITANIA', 'alternate': 'ARCHDIOCESE'}, {'name': "What's the Difference?", 'answer': 'MORE POPULAR THAN JESUS', 'alternate': 'MAGNET'}, {'name': 'Nobody Knows What Your Perfect Puzzle Is, But You Will After Answering These Nine Questions', 'answer': 'STONEWALL', 'alternate': "CHEF'S TABLE"}, {'name': 'Eclairs and More @ Ovsljs* Opsvut', 'answer': 'GOODBYE, FAREWELL, AND AMEN', 'alternate': 'LYRIC'}, {'name': 'Shared Samples', 'answer': 'EDWARD VIII', 'alternate': 'CARNEGIE'}, {'name': 'Wordless', 'answer': 'MUKDEN INCIDENT', 'alternate': 'GENERAL MOTORS'}, {'name': 'Extreme Anagrams', 'answer': "HALLEY'S COMET", 'alternate': 'CHRYSLER'}, {'name': 'The Line', 'answer': 'MORE TIME', 'alternate': 'GAP YEAR'}];
+// change the extreme anagrams name
+intro_puzzles[7].name += " ";
+</script>
+
+<script src="/static/puzzle_resources/asteroid/h.js"></script>
+<script src="/static/puzzle_resources/asteroid/nav.js"></script>
+
+</main>
+
+    </div>
+    
+
+    
+
+    
+</body>
+</html>

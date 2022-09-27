@@ -1,0 +1,240 @@
+
+
+
+
+
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    
+    <title>Galactic Puzzle Hunt</title>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=0.5">
+    <meta property="og:title" content="Galactic Puzzle Hunt 2022">
+    <meta property="og:description" content="Registration for this year's Galactic Puzzle Hunt is now open!">
+    <meta property="og:image" content="https://galacticpuzzlehunt.com/static/images/banner.png">
+    <meta property="twitter:card" content="summary_large_image">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Recursive:slnt,CASL,CRSV,MONO@-3,0.5,1,1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/skeleton.css">
+    <link rel="stylesheet" href="/static/css/base.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.19/jquery.touchSwipe.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.formset/1.2.2/jquery.formset.min.js"></script>
+    <script src="/jsi18n/"></script>
+    <script src="/static/js/sorttable.js"></script>
+    <script src="/static/js/tray.js"></script>
+    <script src="/static/js/notify.js"></script>
+    <script src="/static/js/time.js"></script>
+    
+    
+    <link rel="icon" sizes="16x16 32x32 48x48 64x64" href="/static/images/favicon.ico" type="image/vnd.microsoft.icon">
+    
+    
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-92192633-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-92192633-1');
+</script>
+
+</head>
+<body>
+    
+    <div id="background-glitch-wrapper" class="background-glitch">
+        <div class="glitch-1"></div>
+        <div class="glitch-2"></div>
+        <div class="glitch-3"></div>
+    </div>
+    
+    
+    <input id="shortcuts" type="checkbox">
+    
+    <nav>
+        <span class="tray">
+            <span id="tray-timer"></span>
+            <div class="top-tabs">
+                <a href="/">
+                    Home
+                </a>
+                
+                <a class="selected-tab" href="/rules">
+                    Rules
+                </a>
+                
+                
+                <a href="/story">
+                    Story
+                </a>
+                
+                
+                <a href="/puzzles">
+                    Puzzles
+                </a>
+                
+                <a href="/teams">
+                    Teams
+                </a>
+                
+                <a href="/faq">
+                    FAQ
+                </a>
+                
+                
+                <a href="/errata">
+                    Updates
+                </a>
+                
+                
+                <a href="/wrapup">
+                    Wrap-Up
+                </a>
+                
+                
+                <a href="https://galacticpuzzlehunt.com/archive">
+                    Archive
+                </a>
+                
+                
+                
+            </div>
+            <div class="top-left-actions">
+                
+            </div>
+        </span>
+        <div class="top-right-actions">
+        
+        
+        </div>
+    </nav>
+    
+    
+    
+    
+    
+    <script>
+
+    
+    
+    let glitchTriggerFuncs = [];
+    let glitchTriggerReceived = false;
+    let glitchTriggerExReceived = false;
+    let glitchPageLoaded = false;
+    function processGlitchFuncs(ex) {
+        glitchTriggerFuncs.forEach((func) => {
+            func(ex);
+        });
+    }
+    function doGlitch(ex) {
+        glitchTriggerReceived = true;
+        if (ex) {
+            glitchTriggerExReceived = true;
+        }
+        if (glitchPageLoaded) {
+            processGlitchFuncs(ex);
+        }
+    }
+    window.addEventListener('load', () => {
+        glitchPageLoaded = true;
+        if (glitchTriggerExReceived) {
+            processGlitchFuncs(true);
+        }
+        else if (glitchTriggerReceived) {
+            processGlitchFuncs(false);
+        }
+    }, false);
+    
+    
+    
+    function registerOnGlitchHook(func) {
+        if (glitchTriggerExReceived) {
+            func(true);
+        }
+        else if (glitchTriggerReceived) {
+            func(false);
+        }
+        glitchTriggerFuncs.push(func);
+    }
+    
+
+    
+    
+    </script>
+    <div class="content">
+        
+
+<h1>Rules</h1>
+
+<main>
+    <div class="no-break">
+        <h4 id="Format">Format</h4>
+        <ul>
+            
+            
+            <li>The puzzlehunt starts on <strong><time datetime="2022-08-26T18:02:00-04:00" data-format="l, F j, Y \a\t g:i A T">Friday, August 26, 2022 at 6:02 PM EDT</time></strong> and ends on <strong><time datetime="2022-09-06T06:02:00-04:00" data-format="l, F j, Y \a\t g:i A T">Tuesday, September 6, 2022 at 6:02 AM EDT</time></strong>, at which point puzzle solutions will be available. 
+            
+            
+            However, we will leave the website running until <strong><time datetime="2022-09-26T18:02:00-04:00" data-format="l, F j, Y \a\t g:i A T">Monday, September 26, 2022 at 6:02 PM EDT</time></strong> so teams can still submit answers and go through the hunt at their own pace (see the <a href="/faq">FAQ</a> for a more detailed explanation).
+            </li>
+            <li>Teams have a maximum size of 10. If you would like to include additional inexperienced puzzlers on your team, please <a href="mailto:contact@galacticpuzzlehunt.com">email us</a> and we&rsquo;ll consider your request.</li>
+            <li>A few puzzles will be available at the start, and the primary way to unlock new puzzles is by solving puzzles and progressing through the hunt, although puzzles may also be unlocked over time.</li>
+            <li>Teams that complete the hunt will be ranked by the time at which they finish. Teams that do not complete the hunt will be ranked by number of puzzles solved and tie-broken by earliest last solve time.</li>
+        </ul>
+    </div>
+
+    <div class="no-break">
+        <h4 id="Solving">Solving</h4>
+        <ul>
+            <li>Each answer is a string of alphanumeric characters. Lowercase letters will be changed into uppercase, and any other characters will be stripped before checking for correctness.</li>
+            <li>You have <strong>20 total guesses</strong> for each puzzle. If you legitimately run out of guesses and need more, feel free to contact us, though we won&rsquo;t grant your request if we see that you were, for example, guessing random thematic answers, or brute-forcing all 10-letter words that end with S.</li>
+        </ul>
+    </div>
+
+    
+    <div class="no-break">
+        <h4 id="Hints">Hints</h4>
+        <ul>
+            
+            
+            <li>Starting on <strong><time datetime="2022-08-27T18:02:00-04:00" data-format="l, F j, Y">Saturday, August 27, 2022</time></strong>, teams will receive crib sheets at <strong><time datetime="2022-08-27T18:02:00-04:00" data-format="g:i A T">6:02 PM EDT</time></strong> each day until the end of the hunt. The number of crib sheets given each day will be at our discretion based on how the hunt is going.</li>
+            <li>Some crib sheets may only be usable on specific sets of puzzles in the hunt.</li>
+            <li>You can use a crib sheet to get help on a puzzle. This can be something like a nudge in the right direction (i.e. you give us your progress on the puzzle and we&rsquo;ll try to get you unstuck) or an answer to a question (e.g. &ldquo;Which answers to these crossword clues are wrong?&rdquo;).</li>
+            
+            <li>You can only have <strong>one open hint request</strong> at a time.</li>
+            
+</li>
+        </ul>
+    </div>
+    
+
+    <div class="no-break">
+        <h4 id="Other">Other</h4>
+        <ul>
+            <li>You may use any external sources for help, including other people, as long as they aren&rsquo;t helping other teams and aren&rsquo;t actively participating in the hunt.</li>
+            <li>While the hunt is live, you may not stream or post spoilers for the hunt in a place where other teams might see them.</li>
+            <li>You may not create multiple accounts or be on multiple teams.</li>
+            <li>It won&rsquo;t be necessary to look at the HTML source/JavaScript/CSS on any webpages for any puzzle, but you&rsquo;re welcome to look anyway.</li>
+            <li>We reserve the right to disqualify any team for unsportsmanlike conduct.</li>
+            <li>We reserve the right to change any of these rules. If there&rsquo;s a big change, we&rsquo;ll announce it to all teams.</li>
+            <li>If you have any questions about these rules, or if you want to contact us for any reason, email <a href="mailto:contact@galacticpuzzlehunt.com">contact@galacticpuzzlehunt.com</a>. We will get back to you as soon as we can.</li>
+        </ul>
+    </div>
+</main>
+
+
+    </div>
+    
+
+    
+
+    
+</body>
+</html>

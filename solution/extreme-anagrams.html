@@ -1,0 +1,355 @@
+
+
+
+
+
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    
+<title>Solution: Extreme Anagrams</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=0.5">
+    <meta property="og:title" content="Galactic Puzzle Hunt 2022">
+    <meta property="og:description" content="Registration for this year's Galactic Puzzle Hunt is now open!">
+    <meta property="og:image" content="https://galacticpuzzlehunt.com/static/images/banner.png">
+    <meta property="twitter:card" content="summary_large_image">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Recursive:slnt,CASL,CRSV,MONO@-3,0.5,1,1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/skeleton.css">
+    <link rel="stylesheet" href="/static/css/base.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.19/jquery.touchSwipe.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.formset/1.2.2/jquery.formset.min.js"></script>
+    <script src="/jsi18n/"></script>
+    <script src="/static/js/sorttable.js"></script>
+    <script src="/static/js/tray.js"></script>
+    <script src="/static/js/notify.js"></script>
+    <script src="/static/js/time.js"></script>
+    
+    
+    <link rel="icon" sizes="16x16 32x32 48x48 64x64" href="/static/images/favicon.ico" type="image/vnd.microsoft.icon">
+    
+    
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-92192633-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-92192633-1');
+</script>
+
+</head>
+<body>
+    
+    <div id="background-glitch-wrapper" class="background-glitch">
+        <div class="glitch-1"></div>
+        <div class="glitch-2"></div>
+        <div class="glitch-3"></div>
+    </div>
+    
+    
+    <input id="shortcuts" type="checkbox">
+    
+    <nav>
+        <span class="tray">
+            <span id="tray-timer"></span>
+            <div class="top-tabs">
+                <a href="/">
+                    Home
+                </a>
+                
+                <a href="/rules">
+                    Rules
+                </a>
+                
+                
+                <a href="/story">
+                    Story
+                </a>
+                
+                
+                <a class="selected-tab" href="/puzzles">
+                    Puzzles
+                </a>
+                
+                <a href="/teams">
+                    Teams
+                </a>
+                
+                <a href="/faq">
+                    FAQ
+                </a>
+                
+                
+                <a href="/errata">
+                    Updates
+                </a>
+                
+                
+                <a href="/wrapup">
+                    Wrap-Up
+                </a>
+                
+                
+                <a href="https://galacticpuzzlehunt.com/archive">
+                    Archive
+                </a>
+                
+                
+                
+            </div>
+            <div class="top-left-actions">
+                
+<a href="/puzzle/extreme-anagrams" class="btn">Back to the puzzle</a>
+
+            </div>
+        </span>
+        <div class="top-right-actions">
+        
+        
+        </div>
+    </nav>
+    
+    
+    
+    
+    
+    <script>
+
+    
+    
+    let glitchTriggerFuncs = [];
+    let glitchTriggerReceived = false;
+    let glitchTriggerExReceived = false;
+    let glitchPageLoaded = false;
+    function processGlitchFuncs(ex) {
+        glitchTriggerFuncs.forEach((func) => {
+            func(ex);
+        });
+    }
+    function doGlitch(ex) {
+        glitchTriggerReceived = true;
+        if (ex) {
+            glitchTriggerExReceived = true;
+        }
+        if (glitchPageLoaded) {
+            processGlitchFuncs(ex);
+        }
+    }
+    window.addEventListener('load', () => {
+        glitchPageLoaded = true;
+        if (glitchTriggerExReceived) {
+            processGlitchFuncs(true);
+        }
+        else if (glitchTriggerReceived) {
+            processGlitchFuncs(false);
+        }
+    }, false);
+    
+    
+    
+    function registerOnGlitchHook(func) {
+        if (glitchTriggerExReceived) {
+            func(true);
+        }
+        else if (glitchTriggerReceived) {
+            func(false);
+        }
+        glitchTriggerFuncs.push(func);
+    }
+    
+
+    
+    
+    </script>
+    <div class="content">
+        
+
+<style>
+h2 {
+    font-size: 2.5rem;
+    font-weight: normal;
+    font-style: italic;
+    margin-bottom: 2rem;
+}
+
+h4 {
+    font-size: 2rem;
+    font-weight: normal;
+    margin: 2rem 0;
+}
+</style>
+
+<h1>
+    Solution <span style="font-weight: 300">Extreme Anagrams</span>
+    <div class="solved-title-marker">Answer <span class="solved-title-answer spoiler">HALLEY&#x27;S COMET</span> / <span class="solved-title-answer spoiler">CHRYSLER</span></div>
+</h1>
+
+<main class="puzzle-main">
+    <h2 style="margin-top: 0">
+        Written by
+        
+Yannick Yao
+
+    </h2>
+
+    
+    <style>
+.box {
+  background: pink;
+}
+</style>
+
+<p>This puzzle consists of several lines of anagrammed text, where the letters are sorted in alphabetical order but all other aspects (capitalizations, punctuations, spaces) are preserved. Some of the features are quite recognizable as coming from a well-known sentence, such as &ldquo;N-O-O-O-R&rdquo; almost certainly corresponding to &ldquo;E-I-E-I-O&rdquo; in the nursery rhyme <i>Old Macdonald Had A Farm</i>, and some lines containing every letter at least once must necessarily come from a pangram. Using the letter distributions and other features, we can gradually find out the original sentences, which are always some famous sentences, including lyrics/poems, sayings, tongue twisters, and quotes:</p>
+<table>
+<thead>
+<tr>
+<th>Anagrammed text</th>
+<th>Original sentence</th>
+<th>Extracted letter</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Aaa aaa aaa a acc cc c ccennn nnn nno r s<span class="box">u</span>y?</td>
+<td>Can you can a can as a canner can can a c<span class="box">a</span>n?</td>
+<td>A</td>
+</tr>
+<tr>
+<td>Ab<span class="box">b</span>&rsquo;c ddeeg i jkno oo ors ttuvy.</td>
+<td>Do<span class="box">n</span>&rsquo;t judge a book by its cover.</td>
+<td>N</td>
+</tr>
+<tr>
+<td>Aace eegm, oo<span class="box">s</span>s yy.</td>
+<td>Easy come, ea<span class="box">s</span>y go.</td>
+<td>S</td>
+</tr>
+<tr>
+<td>Aaadeeeelm, mn norr <span class="box">S</span>ttwyy.&rsquo;</td>
+<td>Elementary, my dear <span class="box">W</span>atson.</td>
+<td>W</td>
+</tr>
+<tr>
+<td>Be er, Tttu<span class="box">u</span>?</td>
+<td>Et tu, Brut<span class="box">e</span>?</td>
+<td>E</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Aad<span class="box">d</span>e egh hio rss vyy.</td>
+<td>Eve<span class="box">r</span>y dog has his day.</td>
+<td>R</td>
+</tr>
+<tr>
+<td>Aadee ghiii k<span class="box">k</span>lmn nrstt.</td>
+<td>Great minds t<span class="box">h</span>ink alike.</td>
+<td>H</td>
+</tr>
+<tr>
+<td>Aac cccc cccc cdddd d dfhhhhhhi kkkkl lm <span class="box">o</span> ooooooooo ouuuu uuuww wwww?</td>
+<td>How much wood would a woodchuck chuck if <span class="box">a</span> woodchuck could chuck wood?</td>
+<td>A</td>
+</tr>
+<tr>
+<td>A aaaacc, ccc eeeeee, fi il<span class="box">l</span> mmmmoo rrr rrs ssuwy.</td>
+<td>I scream, you scream, we al<span class="box">l</span> scream for ice cream.</td>
+<td>L</td>
+</tr>
+<tr>
+<td>Aaaaa, aaa<span class="box">a</span>a Aaaa bcc ddd &ldquo;ddd,&rdquo; ddd dde &ldquo;eee eee&rdquo;; &ldquo;eef fhh&rdquo; hhh hhh h hhhhhh ijjlmn no orr stttttw.</td>
+<td>James, whi<span class="box">l</span>e John had had &ldquo;had,&rdquo; had had &ldquo;had had&rdquo;; &ldquo;had had&rdquo; had had a better effect on the teacher.</td>
+<td>L</td>
+</tr>
+<tr>
+<td>Aaa AacDdddee fhi i llmm, N-O-<span class="box">O</span>-O-R.</td>
+<td>Old MacDonald had a farm, E-I-<span class="box">E</span>-I-O.</td>
+<td>E</td>
+</tr>
+<tr>
+<td>Abcd e<span class="box">e</span> fgh iiij klmn ooopq rstuuv wxyz.</td>
+<td>Pack m<span class="box">y</span> box with five dozen liquor jugs.</td>
+<td>Y</td>
+</tr>
+<tr>
+<td>Acccd Deeee eeeefi i ikkk lo ppppppp pprrrs<span class="box">t</span>.</td>
+<td>Peter Piper picked a peck of pickled pepper<span class="box">s</span>.</td>
+<td>S</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>(Abcddde ee e eegh iiln orrsss <span class="box">s</span>tvv.</td>
+<td>Revenge is a dish best served <span class="box">c</span>old.</td>
+<td>C</td>
+</tr>
+<tr>
+<td>Aabde eee eei, Ll<span class="box">o</span>orrr rss stuv.</td>
+<td>Roses are red, Vi<span class="box">o</span>lets are blue.</td>
+<td>O</td>
+</tr>
+<tr>
+<td>Eeeh hm mno <span class="box">o</span>stwy!</td>
+<td>Show me the <span class="box">m</span>oney!</td>
+<td>M</td>
+</tr>
+<tr>
+<td>Abc deeef ghhij klm noooo pqrr st<span class="box">t</span> uuvw xyz.</td>
+<td>The quick brown fox jumps over th<span class="box">e</span> lazy dog.</td>
+<td>E</td>
+</tr>
+<tr>
+<td>Aadddd de e<span class="box">e</span>efi, iillnns tt uvww.)</td>
+<td>United we s<span class="box">t</span>and, divided we fall.</td>
+<td>T</td>
+</tr>
+</tbody>
+</table>
+<p>In addition, each line has a single underlined letter. Extracting the letter in the original sentence in the same position as the underlined letter gives ANSWER <strong>HALLEY&rsquo;S COMET</strong>.</p>
+<p>Now, notice that these lines are suspiciously given in alphabetical order by the original sentences, even though the extraction never required such ordering. Moreover, there are some punctuations (apostrophe at the end of line 4, parentheses at the start of line 14 and end of line 18) that do not appear in the original sentences, as well as two blank lines. </p>
+<p>Given the theme of this puzzle, we can intuit that we now need to anagram the first letters of the original sentences, as if it was given in the form of CDEE&rsquo;E EGHIJOPP (RRSTU), into a clue-phrase. Assuming that the word in parentheses is the enumeration of the answer, this anagrams into the clue-phrase JEEP&rsquo;S PRODUCER (EIGHT). The current producer of Jeep SUVs is Stellantis, also known as <strong>CHRYSLER</strong>, so this is the second answer.</p>
+
+    
+    
+    <h2 id="authors-notes">Author&rsquo;s Notes</h2>
+    <p>In puzzle hunts, unclued anagrams are almost always frowned upon, and even when clued they tend to be on words or short phrases. Therefore, I found it interesting to try making a puzzle explicitly about anagramming, especially with long strings that online tools (such as Nutrimatic) cannot solve. I tried to pick sentences with unusual features to make identification a bit easier, although some of them might still be difficult without tools. </p>
+<p>Here are some sentences that didn&rsquo;t make it into the puzzle, if you want some additional challenges:</p>
+<ul>
+<li>Aa, A aaa Ddeeh Hiim moo Pprrr R. sswwx.</li>
+<li>Aaac c cddeeee ghiii kl noopp rsstt t vwy.</li>
+<li>A aeee fghii ijll lmn noo O&rsquo;s ttuuwwy.</li>
+<li>Add eeii kll mmnnno oooo oprr Ssttwy.</li>
+</ul>
+<p>(A small hint: these sentences are still in alphabetical order.) </p>
+    
+
+    
+    
+
+    
+</main>
+
+
+    </div>
+    
+
+    
+
+    
+</body>
+</html>

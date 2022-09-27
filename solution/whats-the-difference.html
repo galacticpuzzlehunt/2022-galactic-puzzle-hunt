@@ -1,0 +1,254 @@
+
+
+
+
+
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    
+<title>Solution: What&#x27;s the Difference?</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=0.5">
+    <meta property="og:title" content="Galactic Puzzle Hunt 2022">
+    <meta property="og:description" content="Registration for this year's Galactic Puzzle Hunt is now open!">
+    <meta property="og:image" content="https://galacticpuzzlehunt.com/static/images/banner.png">
+    <meta property="twitter:card" content="summary_large_image">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Recursive:slnt,CASL,CRSV,MONO@-3,0.5,1,1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/skeleton.css">
+    <link rel="stylesheet" href="/static/css/base.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.19/jquery.touchSwipe.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.formset/1.2.2/jquery.formset.min.js"></script>
+    <script src="/jsi18n/"></script>
+    <script src="/static/js/sorttable.js"></script>
+    <script src="/static/js/tray.js"></script>
+    <script src="/static/js/notify.js"></script>
+    <script src="/static/js/time.js"></script>
+    
+    
+    <link rel="icon" sizes="16x16 32x32 48x48 64x64" href="/static/images/favicon.ico" type="image/vnd.microsoft.icon">
+    
+    
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-92192633-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-92192633-1');
+</script>
+
+</head>
+<body>
+    
+    <div id="background-glitch-wrapper" class="background-glitch">
+        <div class="glitch-1"></div>
+        <div class="glitch-2"></div>
+        <div class="glitch-3"></div>
+    </div>
+    
+    
+    <input id="shortcuts" type="checkbox">
+    
+    <nav>
+        <span class="tray">
+            <span id="tray-timer"></span>
+            <div class="top-tabs">
+                <a href="/">
+                    Home
+                </a>
+                
+                <a href="/rules">
+                    Rules
+                </a>
+                
+                
+                <a href="/story">
+                    Story
+                </a>
+                
+                
+                <a class="selected-tab" href="/puzzles">
+                    Puzzles
+                </a>
+                
+                <a href="/teams">
+                    Teams
+                </a>
+                
+                <a href="/faq">
+                    FAQ
+                </a>
+                
+                
+                <a href="/errata">
+                    Updates
+                </a>
+                
+                
+                <a href="/wrapup">
+                    Wrap-Up
+                </a>
+                
+                
+                <a href="https://galacticpuzzlehunt.com/archive">
+                    Archive
+                </a>
+                
+                
+                
+            </div>
+            <div class="top-left-actions">
+                
+<a href="/puzzle/whats-the-difference" class="btn">Back to the puzzle</a>
+
+            </div>
+        </span>
+        <div class="top-right-actions">
+        
+        
+        </div>
+    </nav>
+    
+    
+    
+    
+    
+    <script>
+
+    
+    
+    let glitchTriggerFuncs = [];
+    let glitchTriggerReceived = false;
+    let glitchTriggerExReceived = false;
+    let glitchPageLoaded = false;
+    function processGlitchFuncs(ex) {
+        glitchTriggerFuncs.forEach((func) => {
+            func(ex);
+        });
+    }
+    function doGlitch(ex) {
+        glitchTriggerReceived = true;
+        if (ex) {
+            glitchTriggerExReceived = true;
+        }
+        if (glitchPageLoaded) {
+            processGlitchFuncs(ex);
+        }
+    }
+    window.addEventListener('load', () => {
+        glitchPageLoaded = true;
+        if (glitchTriggerExReceived) {
+            processGlitchFuncs(true);
+        }
+        else if (glitchTriggerReceived) {
+            processGlitchFuncs(false);
+        }
+    }, false);
+    
+    
+    
+    function registerOnGlitchHook(func) {
+        if (glitchTriggerExReceived) {
+            func(true);
+        }
+        else if (glitchTriggerReceived) {
+            func(false);
+        }
+        glitchTriggerFuncs.push(func);
+    }
+    
+
+    
+    
+    </script>
+    <div class="content">
+        
+
+<style>
+h2 {
+    font-size: 2.5rem;
+    font-weight: normal;
+    font-style: italic;
+    margin-bottom: 2rem;
+}
+
+h4 {
+    font-size: 2rem;
+    font-weight: normal;
+    margin: 2rem 0;
+}
+</style>
+
+<h1>
+    Solution <span style="font-weight: 300">What&#x27;s the Difference?</span>
+    <div class="solved-title-marker">Answer <span class="solved-title-answer spoiler">MORE POPULAR THAN JESUS</span> / <span class="solved-title-answer spoiler">MAGNET</span></div>
+</h1>
+
+<main class="puzzle-main">
+    <h2 style="margin-top: 0">
+        Written by
+        
+Brian Chen, Jenna Himawan, Max Murin, and CJ Quines
+
+    </h2>
+
+    
+    <style>
+  img.i {
+    max-width: 100px;
+    max-height: 100px;
+  }
+</style>
+<p>This puzzle consists of a series of images, each of which contains a number in the bottom right. The number is an enumeration of the depicted item.</p>
+<p>Additionally, clicking on each image opens an &ldquo;enlarged&rdquo; version of the image with an additional smaller item.</p>
+<table><tr><th>Enlarged image</th><th>Big thing</th><th>Small thing (from enlarged image)</th></tr><tr><td><img class="i" src="whats-the-difference/d1.jpg" alt="A downward-pointing equilateral triangle outlined in purple and filled with a gradient going from white on top to black on the bottom, with a feathered creature standing inside of it; with a 4 in the bottom right; the creature has black eyes, a few orange feathers near its eyes, some gray feathers around its head and arms, no beak, and two webbed feet"></td><td>AVEN</td><td>PORG</td></tr><tr><td><img class="i" src="whats-the-difference/i2.jpg" alt="A regular hexagon suggesting a cube in isometric view, white on the top and bottom-left faces and black with a superimposed rectangle of a person staring intently from behind a cross-shaped gap in a metallic brown surface on the bottom-right face, with a 4 in the bottom right"></td><td>BASH</td><td>RITE</td></tr><tr><td><img class="i" src="whats-the-difference/n.jpg" alt="A purplish-brown ellipsoid slightly curving upwards, with a cartoon shape atop it, with a 4 in the bottom right; the long, straight shape is white with a black outline and has four nubs, two on both sides"></td><td>BEAN</td><td>BONE</td></tr><tr><td><img class="i" src="whats-the-difference/s.jpg" alt="An actor in a suit holding a pistol next to two straight black-and-white poles featuring two handles on the top and two footrests a little distance from the bottom, with a 4 in the bottom right"></td><td>BOND</td><td>POGOS</td></tr><tr><td><img class="i" src="whats-the-difference/e1.jpg" alt="A humanoid creature with light purplish-gray skin covered in mechanical body parts and tubes, which are black except for a red pentagonal implant covering the left eye; with a hand and an arrow pointing to some blemished parts of a finger in the bottom left, and a 4 in the bottom right"></td><td>BORG</td><td>CALLUS</td></tr><tr><td><img class="i" src="whats-the-difference/r.jpg" alt="2 lilies with green stems, a white base, and pink petals, with a man in a beige hat and coat and one finger in his mouth in the bottom left, with a 6 in the bottom right"></td><td>CALLAS</td><td>CURLY</td></tr><tr><td><img class="i" src="whats-the-difference/e2.jpg" alt="A pot of thick orange liquid with meat and some herbs, with 2 copies of a black-and-white MS Paint character wearing sunglasses and a shirt featuring a phonograph record cut in two halves standing on it, with a 5 in the bottom right"></td><td>CURRY</td><td>DAVES</td></tr><tr><td><img class="i" src="whats-the-difference/d2.jpg" alt="Black-and-white photo of a man with an extremely curved mustache, with a pyramidal mound of orange paste in a bowl in front of him, with a 4 in the bottom right"></td><td>DALI</td><td>MISO</td></tr><tr><td><img class="i" src="whats-the-difference/x.jpg" alt="2 white birds holding olive branches, with a person scratching an irritated patch of skin in the bottom left, with a 5 in the bottom right"></td><td>DOVES</td><td>RASH</td></tr><tr><td><img class="i" src="whats-the-difference/o.jpg" alt="A country silhouette with a brown quadrupedal mammal inside it, with a 4 in the bottom right"></td><td>IRAN</td><td>BEAR</td></tr><tr><td><img class="i" src="whats-the-difference/c.jpg" alt="A green fruit, round except for a bump to the left, with a green tool with a flat metal base, a hollow handle, and various switches and knobs next to it, with a 4 in the bottom right"></td><td>LIME</td><td>IRON</td></tr><tr><td><img class="i" src="whats-the-difference/i1.jpg" alt="An array of 35 company symbols arranged into columns of rainbow colors, with a blocky metal cooking appliance on the bottom of the central purple column, with a 5 in the bottom right"></td><td>LOGOS</td><td>OVEN</td></tr><tr><td><img class="i" src="whats-the-difference/m.jpg" alt="A horse and a female gender symbol, whose top half is obscured by a pink heart-shaped fruit, with a 4 in the bottom right"></td><td>MARE</td><td>PEACH</td></tr><tr><td><img class="i" src="whats-the-difference/a2.jpg" alt="A green canister with an obscured name, labeled 'Provides 8 Vitamins & Minerals' and 'Chocolate Malt Beverage Mix' and depicting a basketball player holding a light brown planet, with a 4 in the bottom right"></td><td>MILO</td><td>PLUTO</td></tr><tr><td><img class="i" src="whats-the-difference/a1.jpg" alt="A long, straight wooden implement with the left half being flat and teardrop-shaped and the right half being a thin handle, with a red-nosed, buck-toothed cartoon chipmunk standing on it and a 3 in the bottom right"></td><td>OAR</td><td>DALE</td></tr><tr><td><img class="i" src="whats-the-difference/e3.jpg" alt="A yellow-brown fish with an emoji pig nose, with a 5 in the bottom right"></td><td>PERCH</td><td>SNOUT</td></tr><tr><td><img class="i" src="whats-the-difference/t2.jpg" alt="A white stone sculpture of a bearded man's head, with a quarter musical rest in his beard, with a 5 in the bottom right"></td><td>PLATO</td><td>REST</td></tr><tr><td><img class="i" src="whats-the-difference/a3.jpg" alt="A poster of eight people posing, among which one has been replaced by a cartoon man in overalls and with heavy white makeup and gloves, with a 4 in the bottom right"></td><td>RENT</td><td>MIME</td></tr><tr><td><img class="i" src="whats-the-difference/f.jpg" alt="A bowl of white cooked grains with a long-eared mammal next to it, with a 4 in the bottom right"></td><td>RICE</td><td>HARE</td></tr><tr><td><img class="i" src="whats-the-difference/t1.jpg" alt="A cartoon boy in a beige hat and uniform, wearing a symmetric knotted red scarf, brown belt, and brown shoes, and holding a red flag in one hand and a cylindrical glass jar with a metal screw-on cap in the other; with a 5 in the bottom right"></td><td>SCOUT</td><td>JAR</td></tr></table>
+
+<p>We may notice the &ldquo;big things&rdquo; are provided in alphabetical order (implying that we need to re-sort) and that the &ldquo;small things&rdquo; are one letter off from a different image&rsquo;s &ldquo;big thing&rdquo;. We can therefore reorder these items in a cycle.</p>
+<p>Reading out the letters from the &ldquo;small things&rdquo; that are different from the &ldquo;big thing&rdquo; letters gives the answer: <strong>MORE POPULAR THAN JESUS</strong>.</p>
+<table><tr><th>Enlarged image</th><th>Big thing</th><th>Small thing (from enlarged image)</th><th>Corresponding small thing&rsquo;s different letter</th></tr><tr><td><img class="i" src="whats-the-difference/c.jpg" alt="A green fruit, round except for a bump to the left, with a green tool with a flat metal base, a hollow handle, and various switches and knobs next to it, with a 4 in the bottom right"></td><td>LIME</td><td>IRON</td><td>M</td></tr><tr><td><img class="i" src="whats-the-difference/o.jpg" alt="A country silhouette with a brown quadrupedal mammal inside it, with a 4 in the bottom right"></td><td>IRAN</td><td>BEAR</td><td>O</td></tr><tr><td><img class="i" src="whats-the-difference/n.jpg" alt="A purplish-brown ellipsoid slightly curving upwards, with a cartoon shape atop it, with a 4 in the bottom right; the long, straight shape is white with a black outline and has four nubs, two on both sides"></td><td>BEAN</td><td>BONE</td><td>R</td></tr><tr><td><img class="i" src="whats-the-difference/s.jpg" alt="An actor in a suit holding a pistol next to two straight black-and-white poles featuring two handles on the top and two footrests a little distance from the bottom, with a 4 in the bottom right"></td><td>BOND</td><td>POGOS</td><td>E</td></tr><tr><td><img class="i" src="whats-the-difference/i1.jpg" alt="An array of 35 company symbols arranged into columns of rainbow colors, with a blocky metal cooking appliance on the bottom of the central purple column, with a 5 in the bottom right"></td><td>LOGOS</td><td>OVEN</td><td>P</td></tr><tr><td><img class="i" src="whats-the-difference/d1.jpg" alt="A downward-pointing equilateral triangle outlined in purple and filled with a gradient going from white on top to black on the bottom, with a feathered creature standing inside of it; with a 4 in the bottom right; the creature has black eyes, a few orange feathers near its eyes, some gray feathers around its head and arms, no beak, and two webbed feet"></td><td>AVEN</td><td>PORG</td><td>O</td></tr><tr><td><img class="i" src="whats-the-difference/e1.jpg" alt="A humanoid creature with light purplish-gray skin covered in mechanical body parts and tubes, which are black except for a red pentagonal implant covering the left eye; with a hand and an arrow pointing to some blemished parts of a finger in the bottom left, and a 4 in the bottom right"></td><td>BORG</td><td>CALLUS</td><td>P</td></tr><tr><td><img class="i" src="whats-the-difference/r.jpg" alt="2 lilies with green stems, a white base, and pink petals, with a man in a beige hat and coat and one finger in his mouth in the bottom left, with a 6 in the bottom right"></td><td>CALLAS</td><td>CURLY</td><td>U</td></tr><tr><td><img class="i" src="whats-the-difference/e2.jpg" alt="A pot of thick orange liquid with meat and some herbs, with 2 copies of a black-and-white MS Paint character wearing sunglasses and a shirt featuring a phonograph record cut in two halves standing on it, with a 5 in the bottom right"></td><td>CURRY</td><td>DAVES</td><td>L</td></tr><tr><td><img class="i" src="whats-the-difference/x.jpg" alt="2 white birds holding olive branches, with a person scratching an irritated patch of skin in the bottom left, with a 5 in the bottom right"></td><td>DOVES</td><td>RASH</td><td>A</td></tr><tr><td><img class="i" src="whats-the-difference/i2.jpg" alt="A regular hexagon suggesting a cube in isometric view, white on the top and bottom-left faces and black with a superimposed rectangle of a person staring intently from behind a cross-shaped gap in a metallic brown surface on the bottom-right face, with a 4 in the bottom right"></td><td>BASH</td><td>RITE</td><td>R</td></tr><tr><td><img class="i" src="whats-the-difference/f.jpg" alt="A bowl of white cooked grains with a long-eared mammal next to it, with a 4 in the bottom right"></td><td>RICE</td><td>HARE</td><td>T</td></tr><tr><td><img class="i" src="whats-the-difference/m.jpg" alt="A horse and a female gender symbol, whose top half is obscured by a pink heart-shaped fruit, with a 4 in the bottom right"></td><td>MARE</td><td>PEACH</td><td>H</td></tr><tr><td><img class="i" src="whats-the-difference/e3.jpg" alt="A yellow-brown fish with an emoji pig nose, with a 5 in the bottom right"></td><td>PERCH</td><td>SNOUT</td><td>A</td></tr><tr><td><img class="i" src="whats-the-difference/t1.jpg" alt="A cartoon boy in a beige hat and uniform, wearing a symmetric knotted red scarf, brown belt, and brown shoes, and holding a red flag in one hand and a cylindrical glass jar with a metal screw-on cap in the other; with a 5 in the bottom right"></td><td>SCOUT</td><td>JAR</td><td>N</td></tr><tr><td><img class="i" src="whats-the-difference/a1.jpg" alt="A long, straight wooden implement with the left half being flat and teardrop-shaped and the right half being a thin handle, with a red-nosed, buck-toothed cartoon chipmunk standing on it and a 3 in the bottom right"></td><td>OAR</td><td>DALE</td><td>J</td></tr><tr><td><img class="i" src="whats-the-difference/d2.jpg" alt="Black-and-white photo of a man with an extremely curved mustache, with a pyramidal mound of orange paste in a bowl in front of him, with a 4 in the bottom right"></td><td>DALI</td><td>MISO</td><td>E</td></tr><tr><td><img class="i" src="whats-the-difference/a2.jpg" alt="A green canister with an obscured name, labeled 'Provides 8 Vitamins & Minerals' and 'Chocolate Malt Beverage Mix' and depicting a basketball player holding a light brown planet, with a 4 in the bottom right"></td><td>MILO</td><td>PLUTO</td><td>S</td></tr><tr><td><img class="i" src="whats-the-difference/t2.jpg" alt="A white stone sculpture of a bearded man's head, with a quarter musical rest in his beard, with a 5 in the bottom right"></td><td>PLATO</td><td>REST</td><td>U</td></tr><tr><td><img class="i" src="whats-the-difference/a3.jpg" alt="A poster of eight people posing, among which one has been replaced by a cartoon man in overalls and with heavy white makeup and gloves, with a 4 in the bottom right"></td><td>RENT</td><td>MIME</td><td>S</td></tr></table>
+
+<p>Now for the second part of this puzzle, we need to download the image files. One way to realize this is that inbox emoji are present next to the download link, and it is worded in a way that calls attention.</p>
+<p>Putting the image files in the extraction order from the first part, and reading the filenames, gives the message CONSIDER EXIF METADATA.</p>
+<table><tr><th>Enlarged image</th><th>Big thing</th><th>Small thing (from enlarged image)</th><th>Corresponding small thing&rsquo;s different letter</th><th>Filename</th></tr><tr><td><img class="i" src="whats-the-difference/c.jpg" alt="A green fruit, round except for a bump to the left, with a green tool with a flat metal base, a hollow handle, and various switches and knobs next to it, with a 4 in the bottom right"></td><td>LIME</td><td>IRON</td><td>M</td><td>c</td></tr><tr><td><img class="i" src="whats-the-difference/o.jpg" alt="A country silhouette with a brown quadrupedal mammal inside it, with a 4 in the bottom right"></td><td>IRAN</td><td>BEAR</td><td>O</td><td>o</td></tr><tr><td><img class="i" src="whats-the-difference/n.jpg" alt="A purplish-brown ellipsoid slightly curving upwards, with a cartoon shape atop it, with a 4 in the bottom right; the long, straight shape is white with a black outline and has four nubs, two on both sides"></td><td>BEAN</td><td>BONE</td><td>R</td><td>n</td></tr><tr><td><img class="i" src="whats-the-difference/s.jpg" alt="An actor in a suit holding a pistol next to two straight black-and-white poles featuring two handles on the top and two footrests a little distance from the bottom, with a 4 in the bottom right"></td><td>BOND</td><td>POGOS</td><td>E</td><td>s</td></tr><tr><td><img class="i" src="whats-the-difference/i1.jpg" alt="An array of 35 company symbols arranged into columns of rainbow colors, with a blocky metal cooking appliance on the bottom of the central purple column, with a 5 in the bottom right"></td><td>LOGOS</td><td>OVEN</td><td>P</td><td>i1</td></tr><tr><td><img class="i" src="whats-the-difference/d1.jpg" alt="A downward-pointing equilateral triangle outlined in purple and filled with a gradient going from white on top to black on the bottom, with a feathered creature standing inside of it; with a 4 in the bottom right; the creature has black eyes, a few orange feathers near its eyes, some gray feathers around its head and arms, no beak, and two webbed feet"></td><td>AVEN</td><td>PORG</td><td>O</td><td>d1</td></tr><tr><td><img class="i" src="whats-the-difference/e1.jpg" alt="A humanoid creature with light purplish-gray skin covered in mechanical body parts and tubes, which are black except for a red pentagonal implant covering the left eye; with a hand and an arrow pointing to some blemished parts of a finger in the bottom left, and a 4 in the bottom right"></td><td>BORG</td><td>CALLUS</td><td>P</td><td>e1</td></tr><tr><td><img class="i" src="whats-the-difference/r.jpg" alt="2 lilies with green stems, a white base, and pink petals, with a man in a beige hat and coat and one finger in his mouth in the bottom left, with a 6 in the bottom right"></td><td>CALLAS</td><td>CURLY</td><td>U</td><td>r</td></tr><tr><td><img class="i" src="whats-the-difference/e2.jpg" alt="A pot of thick orange liquid with meat and some herbs, with 2 copies of a black-and-white MS Paint character wearing sunglasses and a shirt featuring a phonograph record cut in two halves standing on it, with a 5 in the bottom right"></td><td>CURRY</td><td>DAVES</td><td>L</td><td>e2</td></tr><tr><td><img class="i" src="whats-the-difference/x.jpg" alt="2 white birds holding olive branches, with a person scratching an irritated patch of skin in the bottom left, with a 5 in the bottom right"></td><td>DOVES</td><td>RASH</td><td>A</td><td>x</td></tr><tr><td><img class="i" src="whats-the-difference/i2.jpg" alt="A regular hexagon suggesting a cube in isometric view, white on the top and bottom-left faces and black with a superimposed rectangle of a person staring intently from behind a cross-shaped gap in a metallic brown surface on the bottom-right face, with a 4 in the bottom right"></td><td>BASH</td><td>RITE</td><td>R</td><td>i2</td></tr><tr><td><img class="i" src="whats-the-difference/f.jpg" alt="A bowl of white cooked grains with a long-eared mammal next to it, with a 4 in the bottom right"></td><td>RICE</td><td>HARE</td><td>T</td><td>f</td></tr><tr><td><img class="i" src="whats-the-difference/m.jpg" alt="A horse and a female gender symbol, whose top half is obscured by a pink heart-shaped fruit, with a 4 in the bottom right"></td><td>MARE</td><td>PEACH</td><td>H</td><td>m</td></tr><tr><td><img class="i" src="whats-the-difference/e3.jpg" alt="A yellow-brown fish with an emoji pig nose, with a 5 in the bottom right"></td><td>PERCH</td><td>SNOUT</td><td>A</td><td>e3</td></tr><tr><td><img class="i" src="whats-the-difference/t1.jpg" alt="A cartoon boy in a beige hat and uniform, wearing a symmetric knotted red scarf, brown belt, and brown shoes, and holding a red flag in one hand and a cylindrical glass jar with a metal screw-on cap in the other; with a 5 in the bottom right"></td><td>SCOUT</td><td>JAR</td><td>N</td><td>t1</td></tr><tr><td><img class="i" src="whats-the-difference/a1.jpg" alt="A long, straight wooden implement with the left half being flat and teardrop-shaped and the right half being a thin handle, with a red-nosed, buck-toothed cartoon chipmunk standing on it and a 3 in the bottom right"></td><td>OAR</td><td>DALE</td><td>J</td><td>a1</td></tr><tr><td><img class="i" src="whats-the-difference/d2.jpg" alt="Black-and-white photo of a man with an extremely curved mustache, with a pyramidal mound of orange paste in a bowl in front of him, with a 4 in the bottom right"></td><td>DALI</td><td>MISO</td><td>E</td><td>d2</td></tr><tr><td><img class="i" src="whats-the-difference/a2.jpg" alt="A green canister with an obscured name, labeled 'Provides 8 Vitamins & Minerals' and 'Chocolate Malt Beverage Mix' and depicting a basketball player holding a light brown planet, with a 4 in the bottom right"></td><td>MILO</td><td>PLUTO</td><td>S</td><td>a2</td></tr><tr><td><img class="i" src="whats-the-difference/t2.jpg" alt="A white stone sculpture of a bearded man's head, with a quarter musical rest in his beard, with a 5 in the bottom right"></td><td>PLATO</td><td>REST</td><td>U</td><td>t2</td></tr><tr><td><img class="i" src="whats-the-difference/a3.jpg" alt="A poster of eight people posing, among which one has been replaced by a cartoon man in overalls and with heavy white makeup and gloves, with a 4 in the bottom right"></td><td>RENT</td><td>MIME</td><td>S</td><td>a3</td></tr></table>
+
+<p>If we inspect the metadata of each image (either the small or large version), we find that each one has a GPS location. The GPS locations correspond to the &ldquo;centers&rdquo; of cities in Google maps.</p>
+<table><tr><th>Enlarged image</th><th>Big thing</th><th>GPS</th><th>City</th></tr><tr><td><img class="i" src="whats-the-difference/d1.jpg" alt="A downward-pointing equilateral triangle outlined in purple and filled with a gradient going from white on top to black on the bottom, with a feathered creature standing inside of it; with a 4 in the bottom right; the creature has black eyes, a few orange feathers near its eyes, some gray feathers around its head and arms, no beak, and two webbed feet"></td><td>AVEN</td><td>51°7'40"N, 1°18'48"E</td><td>DOVER</td></tr><tr><td><img class="i" src="whats-the-difference/i2.jpg" alt="A regular hexagon suggesting a cube in isometric view, white on the top and bottom-left faces and black with a superimposed rectangle of a person staring intently from behind a cross-shaped gap in a metallic brown surface on the bottom-right face, with a 4 in the bottom right"></td><td>BASH</td><td>36°22'17"N, 140°26'7"E</td><td>MITO</td></tr><tr><td><img class="i" src="whats-the-difference/n.jpg" alt="A purplish-brown ellipsoid slightly curving upwards, with a cartoon shape atop it, with a 4 in the bottom right; the long, straight shape is white with a black outline and has four nubs, two on both sides"></td><td>BEAN</td><td>12°2'47"S, 77°2'34"W</td><td>LIMA</td></tr><tr><td><img class="i" src="whats-the-difference/s.jpg" alt="An actor in a suit holding a pistol next to two straight black-and-white poles featuring two handles on the top and two footrests a little distance from the bottom, with a 4 in the bottom right"></td><td>BOND</td><td>13°10'26"N, 123°24'57"E</td><td>OAS</td></tr><tr><td><img class="i" src="whats-the-difference/e1.jpg" alt="A humanoid creature with light purplish-gray skin covered in mechanical body parts and tubes, which are black except for a red pentagonal implant covering the left eye; with a hand and an arrow pointing to some blemished parts of a finger in the bottom left, and a 4 in the bottom right"></td><td>BORG</td><td>6°31'27"N, 3°22'42"E</td><td>LAGOS</td></tr><tr><td><img class="i" src="whats-the-difference/r.jpg" alt="2 lilies with green stems, a white base, and pink petals, with a man in a beige hat and coat and one finger in his mouth in the bottom left, with a 6 in the bottom right"></td><td>CALLAS</td><td>44°3'30"N, 121°18'55"W</td><td>BEND</td></tr><tr><td><img class="i" src="whats-the-difference/e2.jpg" alt="A pot of thick orange liquid with meat and some herbs, with 2 copies of a black-and-white MS Paint character wearing sunglasses and a shirt featuring a phonograph record cut in two halves standing on it, with a 5 in the bottom right"></td><td>CURRY</td><td>43°52'38"N, 11°6'6"E</td><td>PRATO</td></tr><tr><td><img class="i" src="whats-the-difference/d2.jpg" alt="Black-and-white photo of a man with an extremely curved mustache, with a pyramidal mound of orange paste in a bowl in front of him, with a 4 in the bottom right"></td><td>DALI</td><td>31°57'8"S, 115°51'41"E</td><td>PERTH</td></tr><tr><td><img class="i" src="whats-the-difference/x.jpg" alt="2 white birds holding olive branches, with a person scratching an irritated patch of skin in the bottom left, with a 5 in the bottom right"></td><td>DOVES</td><td>41°55'13"N, 79°38'24"W</td><td>CORRY</td></tr><tr><td><img class="i" src="whats-the-difference/o.jpg" alt="A country silhouette with a brown quadrupedal mammal inside it, with a 4 in the bottom right"></td><td>IRAN</td><td>32°46'36"N, 96°47'49"W</td><td>DALLAS</td></tr><tr><td><img class="i" src="whats-the-difference/c.jpg" alt="A green fruit, round except for a bump to the left, with a green tool with a flat metal base, a hollow handle, and various switches and knobs next to it, with a 4 in the bottom right"></td><td>LIME</td><td>3°27'6"N, 76°31'55"W</td><td>CALI</td></tr><tr><td><img class="i" src="whats-the-difference/i1.jpg" alt="An array of 35 company symbols arranged into columns of rainbow colors, with a blocky metal cooking appliance on the bottom of the central purple column, with a 5 in the bottom right"></td><td>LOGOS</td><td>51°22'43"N, 2°21'38"W</td><td>BATH</td></tr><tr><td><img class="i" src="whats-the-difference/m.jpg" alt="A horse and a female gender symbol, whose top half is obscured by a pink heart-shaped fruit, with a 4 in the bottom right"></td><td>MARE</td><td>35°41'55"N, 0°38'6"W</td><td>ORAN</td></tr><tr><td><img class="i" src="whats-the-difference/a2.jpg" alt="A green canister with an obscured name, labeled 'Provides 8 Vitamins & Minerals' and 'Chocolate Malt Beverage Mix' and depicting a basketball player holding a light brown planet, with a 4 in the bottom right"></td><td>MILO</td><td>46°56'52"N, 7°26'51"E</td><td>BERN</td></tr><tr><td><img class="i" src="whats-the-difference/a1.jpg" alt="A long, straight wooden implement with the left half being flat and teardrop-shaped and the right half being a thin handle, with a red-nosed, buck-toothed cartoon chipmunk standing on it and a 3 in the bottom right"></td><td>OAR</td><td>30°14'8"N, 92°5'40"W</td><td>SCOTT</td></tr><tr><td><img class="i" src="whats-the-difference/e3.jpg" alt="A yellow-brown fish with an emoji pig nose, with a 5 in the bottom right"></td><td>PERCH</td><td>41°27'6"N, 82°2'8"W</td><td>AVON</td></tr><tr><td><img class="i" src="whats-the-difference/t2.jpg" alt="A white stone sculpture of a bearded man's head, with a quarter musical rest in his beard, with a 5 in the bottom right"></td><td>PLATO</td><td>4°10'33"N, 73°30'33"E</td><td>MALE</td></tr><tr><td><img class="i" src="whats-the-difference/a3.jpg" alt="A poster of eight people posing, among which one has been replaced by a cartoon man in overalls and with heavy white makeup and gloves, with a 4 in the bottom right"></td><td>RENT</td><td>43°42'36"N, 7°15'43"E</td><td>NICE</td></tr><tr><td><img class="i" src="whats-the-difference/f.jpg" alt="A bowl of white cooked grains with a long-eared mammal next to it, with a 4 in the bottom right"></td><td>RICE</td><td>47°58'4"N, 11°21'20"E</td><td>BERG</td></tr><tr><td><img class="i" src="whats-the-difference/t1.jpg" alt="A cartoon boy in a beige hat and uniform, wearing a symmetric knotted red scarf, brown belt, and brown shoes, and holding a red flag in one hand and a cylindrical glass jar with a metal screw-on cap in the other; with a 5 in the bottom right"></td><td>SCOUT</td><td>39°31'49"N, 119°48'50"W</td><td>RENO</td></tr></table>
+
+<p>Again, we see that the cities are 1 letter away from the &ldquo;big things&rdquo;. Re-sorting in cycle order and reading the city letters:</p>
+<table><tr><th>Enlarged image</th><th>Big thing</th><th>GPS</th><th>City</th><th>City&rsquo;s different letter</th></tr><tr><td><img class="i" src="whats-the-difference/e1.jpg" alt="A humanoid creature with light purplish-gray skin covered in mechanical body parts and tubes, which are black except for a red pentagonal implant covering the left eye; with a hand and an arrow pointing to some blemished parts of a finger in the bottom left, and a 4 in the bottom right"></td><td>BORG</td><td>6°31'27"N, 3°22'42"E</td><td>LAGOS</td><td>A</td></tr><tr><td><img class="i" src="whats-the-difference/i1.jpg" alt="An array of 35 company symbols arranged into columns of rainbow colors, with a blocky metal cooking appliance on the bottom of the central purple column, with a 5 in the bottom right"></td><td>LOGOS</td><td>51°22'43"N, 2°21'38"W</td><td>BATH</td><td>T</td></tr><tr><td><img class="i" src="whats-the-difference/i2.jpg" alt="A regular hexagon suggesting a cube in isometric view, white on the top and bottom-left faces and black with a superimposed rectangle of a person staring intently from behind a cross-shaped gap in a metallic brown surface on the bottom-right face, with a 4 in the bottom right"></td><td>BASH</td><td>36°22'17"N, 140°26'7"E</td><td>MITO</td><td>T</td></tr><tr><td><img class="i" src="whats-the-difference/a2.jpg" alt="A green canister with an obscured name, labeled 'Provides 8 Vitamins & Minerals' and 'Chocolate Malt Beverage Mix' and depicting a basketball player holding a light brown planet, with a 4 in the bottom right"></td><td>MILO</td><td>46°56'52"N, 7°26'51"E</td><td>BERN</td><td>R</td></tr><tr><td><img class="i" src="whats-the-difference/n.jpg" alt="A purplish-brown ellipsoid slightly curving upwards, with a cartoon shape atop it, with a 4 in the bottom right; the long, straight shape is white with a black outline and has four nubs, two on both sides"></td><td>BEAN</td><td>12°2'47"S, 77°2'34"W</td><td>LIMA</td><td>A</td></tr><tr><td><img class="i" src="whats-the-difference/c.jpg" alt="A green fruit, round except for a bump to the left, with a green tool with a flat metal base, a hollow handle, and various switches and knobs next to it, with a 4 in the bottom right"></td><td>LIME</td><td>3°27'6"N, 76°31'55"W</td><td>CALI</td><td>C</td></tr><tr><td><img class="i" src="whats-the-difference/d2.jpg" alt="Black-and-white photo of a man with an extremely curved mustache, with a pyramidal mound of orange paste in a bowl in front of him, with a 4 in the bottom right"></td><td>DALI</td><td>31°57'8"S, 115°51'41"E</td><td>PERTH</td><td>T</td></tr><tr><td><img class="i" src="whats-the-difference/e3.jpg" alt="A yellow-brown fish with an emoji pig nose, with a 5 in the bottom right"></td><td>PERCH</td><td>41°27'6"N, 82°2'8"W</td><td>AVON</td><td>O</td></tr><tr><td><img class="i" src="whats-the-difference/d1.jpg" alt="A downward-pointing equilateral triangle outlined in purple and filled with a gradient going from white on top to black on the bottom, with a feathered creature standing inside of it; with a 4 in the bottom right; the creature has black eyes, a few orange feathers near its eyes, some gray feathers around its head and arms, no beak, and two webbed feet"></td><td>AVEN</td><td>51°7'40"N, 1°18'48"E</td><td>DOVER</td><td>R</td></tr><tr><td><img class="i" src="whats-the-difference/x.jpg" alt="2 white birds holding olive branches, with a person scratching an irritated patch of skin in the bottom left, with a 5 in the bottom right"></td><td>DOVES</td><td>41°55'13"N, 79°38'24"W</td><td>CORRY</td><td>O</td></tr><tr><td><img class="i" src="whats-the-difference/e2.jpg" alt="A pot of thick orange liquid with meat and some herbs, with 2 copies of a black-and-white MS Paint character wearing sunglasses and a shirt featuring a phonograph record cut in two halves standing on it, with a 5 in the bottom right"></td><td>CURRY</td><td>43°52'38"N, 11°6'6"E</td><td>PRATO</td><td>R</td></tr><tr><td><img class="i" src="whats-the-difference/t2.jpg" alt="A white stone sculpture of a bearded man's head, with a quarter musical rest in his beard, with a 5 in the bottom right"></td><td>PLATO</td><td>4°10'33"N, 73°30'33"E</td><td>MALE</td><td>L</td></tr><tr><td><img class="i" src="whats-the-difference/m.jpg" alt="A horse and a female gender symbol, whose top half is obscured by a pink heart-shaped fruit, with a 4 in the bottom right"></td><td>MARE</td><td>35°41'55"N, 0°38'6"W</td><td>ORAN</td><td>O</td></tr><tr><td><img class="i" src="whats-the-difference/o.jpg" alt="A country silhouette with a brown quadrupedal mammal inside it, with a 4 in the bottom right"></td><td>IRAN</td><td>32°46'36"N, 96°47'49"W</td><td>DALLAS</td><td>D</td></tr><tr><td><img class="i" src="whats-the-difference/r.jpg" alt="2 lilies with green stems, a white base, and pink petals, with a man in a beige hat and coat and one finger in his mouth in the bottom left, with a 6 in the bottom right"></td><td>CALLAS</td><td>44°3'30"N, 121°18'55"W</td><td>BEND</td><td>E</td></tr><tr><td><img class="i" src="whats-the-difference/s.jpg" alt="An actor in a suit holding a pistol next to two straight black-and-white poles featuring two handles on the top and two footrests a little distance from the bottom, with a 4 in the bottom right"></td><td>BOND</td><td>13°10'26"N, 123°24'57"E</td><td>OAS</td><td>S</td></tr><tr><td><img class="i" src="whats-the-difference/a1.jpg" alt="A long, straight wooden implement with the left half being flat and teardrop-shaped and the right half being a thin handle, with a red-nosed, buck-toothed cartoon chipmunk standing on it and a 3 in the bottom right"></td><td>OAR</td><td>30°14'8"N, 92°5'40"W</td><td>SCOTT</td><td>T</td></tr><tr><td><img class="i" src="whats-the-difference/t1.jpg" alt="A cartoon boy in a beige hat and uniform, wearing a symmetric knotted red scarf, brown belt, and brown shoes, and holding a red flag in one hand and a cylindrical glass jar with a metal screw-on cap in the other; with a 5 in the bottom right"></td><td>SCOUT</td><td>39°31'49"N, 119°48'50"W</td><td>RENO</td><td>O</td></tr><tr><td><img class="i" src="whats-the-difference/a3.jpg" alt="A poster of eight people posing, among which one has been replaced by a cartoon man in overalls and with heavy white makeup and gloves, with a 4 in the bottom right"></td><td>RENT</td><td>43°42'36"N, 7°15'43"E</td><td>NICE</td><td>N</td></tr><tr><td><img class="i" src="whats-the-difference/f.jpg" alt="A bowl of white cooked grains with a long-eared mammal next to it, with a 4 in the bottom right"></td><td>RICE</td><td>47°58'4"N, 11°21'20"E</td><td>BERG</td><td>E</td></tr></table>
+
+<p>The cluephrase ATTRACTOR OR LODESTONE solves to the answer <strong>MAGNET</strong>.</p>
+
+    
+    
+    <h2 id="authors-notes">Author&rsquo;s Notes</h2>
+    <p>This puzzle was partially written on a Caltrain ride from San Francisco to Mountain View. Jenna outlined the
+idea to CJ in a slightly quieter voice than usual, while gesturing at the Google Sheets app on her phone saying things
+like &ldquo;this cluephrase&rdquo; or &ldquo;this answer&rdquo; and fervently hoping no one within earshot who planned
+to do GPH was paying attention.</p>
+    
+
+    
+    
+
+    
+</main>
+
+
+    </div>
+    
+
+    
+
+    
+</body>
+</html>

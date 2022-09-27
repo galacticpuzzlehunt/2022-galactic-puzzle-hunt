@@ -1,0 +1,348 @@
+
+
+
+
+
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    
+    <title>Galactic Puzzle Hunt</title>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=0.5">
+    <meta property="og:title" content="Galactic Puzzle Hunt 2022">
+    <meta property="og:description" content="Registration for this year's Galactic Puzzle Hunt is now open!">
+    <meta property="og:image" content="https://galacticpuzzlehunt.com/static/images/banner.png">
+    <meta property="twitter:card" content="summary_large_image">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Recursive:slnt,CASL,CRSV,MONO@-3,0.5,1,1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/skeleton.css">
+    <link rel="stylesheet" href="/static/css/base.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.19/jquery.touchSwipe.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.formset/1.2.2/jquery.formset.min.js"></script>
+    <script src="/jsi18n/"></script>
+    <script src="/static/js/sorttable.js"></script>
+    <script src="/static/js/tray.js"></script>
+    <script src="/static/js/notify.js"></script>
+    <script src="/static/js/time.js"></script>
+    
+    
+    <link rel="icon" sizes="16x16 32x32 48x48 64x64" href="/static/images/favicon.ico" type="image/vnd.microsoft.icon">
+    
+    
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-92192633-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-92192633-1');
+</script>
+
+</head>
+<body>
+    
+    <div id="background-glitch-wrapper" class="background-glitch">
+        <div class="glitch-1"></div>
+        <div class="glitch-2"></div>
+        <div class="glitch-3"></div>
+    </div>
+    
+    
+    <input id="shortcuts" type="checkbox">
+    
+    <nav>
+        <span class="tray">
+            <span id="tray-timer"></span>
+            <div class="top-tabs">
+                <a href="/">
+                    Home
+                </a>
+                
+                <a href="/rules">
+                    Rules
+                </a>
+                
+                
+                <a href="/story">
+                    Story
+                </a>
+                
+                
+                <a href="/puzzles">
+                    Puzzles
+                </a>
+                
+                <a href="/teams">
+                    Teams
+                </a>
+                
+                <a href="/faq">
+                    FAQ
+                </a>
+                
+                
+                <a href="/errata">
+                    Updates
+                </a>
+                
+                
+                <a href="/wrapup">
+                    Wrap-Up
+                </a>
+                
+                
+                <a href="https://galacticpuzzlehunt.com/archive">
+                    Archive
+                </a>
+                
+                
+                
+            </div>
+            <div class="top-left-actions">
+                
+<a href="/navigation" class="btn">Back to the puzzle</a>
+
+            </div>
+        </span>
+        <div class="top-right-actions">
+        
+        
+        </div>
+    </nav>
+    
+    
+    
+    
+    
+    <script>
+
+    
+    
+    let glitchTriggerFuncs = [];
+    let glitchTriggerReceived = false;
+    let glitchTriggerExReceived = false;
+    let glitchPageLoaded = false;
+    function processGlitchFuncs(ex) {
+        glitchTriggerFuncs.forEach((func) => {
+            func(ex);
+        });
+    }
+    function doGlitch(ex) {
+        glitchTriggerReceived = true;
+        if (ex) {
+            glitchTriggerExReceived = true;
+        }
+        if (glitchPageLoaded) {
+            processGlitchFuncs(ex);
+        }
+    }
+    window.addEventListener('load', () => {
+        glitchPageLoaded = true;
+        if (glitchTriggerExReceived) {
+            processGlitchFuncs(true);
+        }
+        else if (glitchTriggerReceived) {
+            processGlitchFuncs(false);
+        }
+    }, false);
+    
+    
+    
+    function registerOnGlitchHook(func) {
+        if (glitchTriggerExReceived) {
+            func(true);
+        }
+        else if (glitchTriggerReceived) {
+            func(false);
+        }
+        glitchTriggerFuncs.push(func);
+    }
+    
+
+    
+    
+    </script>
+    <div class="content">
+        
+<style>
+.info-row {
+  justify-content: center;
+  gap: 5%;
+}
+.info-row > div {
+  flex-basis: 30%;
+  flex-grow: 0;
+  box-sizing: border-box;
+}
+.info-row summary {
+  cursor: pointer;
+}
+.disabled-gadget {
+  background-color: #bbbcc3;
+}
+.disabled-gadget .info-desc {
+  opacity: 0.5;
+}
+.info-row table {
+  font-size: 200%;
+  font-family: Recursive, monospace;
+  margin: 56px auto;
+}
+.info-row table td {
+  padding: 10px;
+}
+#gadget-2 table td {
+  text-align: center;
+}
+#gadget-2 table tr:first-child {
+  font-size: 2rem;
+}
+
+</style>
+<main class="puzzle-main">
+
+<h4>Opening the wormhole</h4>
+
+<p>Submitting <span class="answer">MORE TIME</span> to The Line <a href="/victory%253Fintro">resets the exam</a>, removing submitted answers and unlocked puzzles. Submitting <span class="answer">GAP YEAR</span> to The Line/The Square <a href="/victory?intro_alt">opens a wormhole</a> to GPH 2021, which contains either the Forward, Hibernating and Flying South, or World’s End Concert round.</p>
+
+<h4>Forward</h4>
+<p>The Forward round is unlocked when <span class="answer">GAP YEAR</span> is initially submitted to The Line/The Square. If other rounds are unlocked by having enough solves in 2021 rounds, the wormhole will open to Forward only if the conditions for unlocking those rounds are not met (see below).
+
+</p>
+
+<h4>Hibernating and Flying South</h4>
+<p><em>(Unlocked after 6 Forward solves)</em></p>
+
+<div class="info-row">
+  <div id="gadget-1">
+    <h4>
+      A Memory
+    </h4>
+    <div class="info-desc">
+      <p style="text-align: center; margin: 0">
+        <svg id="memory-1" width="200" height="200" viewBox="-100 -100 200 200" xmlns="http://www.w3.org/2000/svg">
+          <path id="opacities-0" d="M0 -90 A90 90 0 0 1 90 0  L0 0 Z" fill="green" opacity="1"/>
+          <path id="opacities-1" d="M90 0  A90 90 0 0 1 0 90  L0 0 Z" fill="yellow" opacity="1"/>
+          <path id="opacities-2" d="M0 90  A90 90 0 0 1 -90 0 L0 0 Z" fill="orange" opacity="1"/>
+          <path id="opacities-3" d="M-90 0 A90 90 0 0 1 0 -90 L0 0 Z" fill="blue" opacity="1"/>
+          <circle cx="0" cy="0" r="90" fill="none" stroke="black" stroke-width="3"/>
+        </svg>
+      </p>
+      <details>
+        <summary>You just remembered…</summary>
+        <p>…this crazy GAP fact: not only is it important <i>what</i> you submit, it’s also important <i>when</i> you submit. The proctor promises you that if you do it correctly and then turn in your exam, you’ll get access to a completely new set of test questions.</p>
+      </details>
+    </div>
+  </div>
+</div>
+<p>Every feeder answer submitted adds a line to A Memory corresponding to the seconds hand of a clock at the time the answer was submitted. When five or more answers are in the same quadrant, and GAP YEAR is submitted to The Line/The Square, the wormhole opens to the Hibernating and Flying South round. The color of the quadrant corresponds to the season that is unlocked: green for spring, yellow for summer, orange for fall, and blue for winter.</p>
+
+<h4>World’s End Concert</h4>
+<p><em>(Unlocked after 13 solves in the other two 2021 rounds with at least 4 solves in Hibernating and Flying South)</em></p>
+
+<div class="info-row">
+  <div id="gadget-2">
+    <h4>
+      Another Memory
+    </h4>
+    <div class="info-desc">
+      <table>
+        <tr>
+          <td id="concatenated-correct-0">8</td>
+          <td id="concatenated-correct-1">20</td>
+          <td id="concatenated-correct-2">28</td>
+          <td id="concatenated-correct-3">40</td>
+          <td id="concatenated-correct-4">54</td>
+        </tr>
+        <tr>
+          <td id="concatenated-extract-0">C</td>
+          <td id="concatenated-extract-1">L</td>
+          <td id="concatenated-extract-2">E</td>
+          <td id="concatenated-extract-3">A</td>
+          <td id="concatenated-extract-4">R</td>
+        </tr>
+      </table>
+      <details>
+        <summary>You just remembered…</summary>
+        <p>…this crazy GAP fact: not only is it important <i>what</i> you submit, it’s also important in <i>what order</i> you submit. The proctor promises you that if you do it correctly and then turn in your exam, you’ll get a <span style="font-family: Recursive, monospace">CLEAR</span>er picture of what’s going on.</p>
+      </details>
+    </div>
+  </div>
+</div>
+
+<p>Submitting feeder answers adds letters to Another Memory, until five letters are extracted. If the letters read CLEAR and GAP YEAR is submitted to The Line/The Square, the wormhole opens to the World’s End Concert round. The letters extracted are the 8th, 20th, 28th, 40th, 54th of the concatenated alphabetic string of submitted answers, which were picked to allow access even if some answers weren’t found in The Exam. One way to get CLEAR:
+<ul>
+  <!-- sic ' instead of ’ -->
+  <li>HALLEY'S <b>C</b>OMET</li>
+  <li>STONEWA<b>L</b>L</li>
+  <li>GOODBY<b>E</b>, FAREWELL, AND <b>A</b>MEN</li>
+  <li>MORE POPULA<b>R</b> THAN JESUS</li>
+</ul>
+</p>
+
+</main>
+<script>
+const gid = (id) => document.getElementById(id);
+
+function setOpacity(id, num) {
+  gid(`opacities-${id}`).style.opacity = num;
+}
+
+function addPoint(x2, y2) {
+  const e = document.createElementNS("http://www.w3.org/2000/svg", "line");
+  Object.entries({
+    id: "line",
+    x1: 0,
+    y1: 0,
+    x2,
+    y2,
+    stroke: "black",
+    "stroke-width": "3",
+  }).forEach(([k, v]) => e.setAttribute(k, v));
+  gid("memory-1").appendChild(e);
+}
+
+function setPoint(x2, y2) {
+  gid("line").setAttribute("x2", x2);
+  gid("line").setAttribute("y2", y2);
+}
+
+function tick() {
+  const now = Date.now();
+  const sec = Math.floor(now / 1000);
+  const msec = now % 1000;
+  const quad = Math.floor(sec / 15) % 4;
+  const theta = ((sec + msec / 1000) / 60) * 2 * Math.PI;
+  setPoint(90 * Math.sin(theta), -90 * Math.cos(theta));
+  [0, 1, 2, 3].forEach((id) => setOpacity(id, id === quad? 0.8 : 0.3));
+  window.requestAnimationFrame(tick);
+}
+
+const now = Date.now();
+const sec = Math.floor(now / 1000);
+const msec = now % 1000;
+const quad = Math.floor(sec / 15) % 4;
+const theta = ((sec + msec / 1000) / 60) * 2 * Math.PI;
+addPoint(90 * Math.sin(theta), -90 * Math.cos(theta));
+[0, 1, 2, 3].forEach((id) => setOpacity(id, id === quad? 0.8 : 0.3));
+
+tick()
+
+</script>
+
+    </div>
+    
+
+    
+
+    
+</body>
+</html>

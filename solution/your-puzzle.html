@@ -1,0 +1,917 @@
+
+
+
+
+
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    
+<title>Solution: Nobody Knows What Your Perfect Puzzle Is, But You Will After Answering These Nine Questions</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=0.5">
+    <meta property="og:title" content="Galactic Puzzle Hunt 2022">
+    <meta property="og:description" content="Registration for this year's Galactic Puzzle Hunt is now open!">
+    <meta property="og:image" content="https://galacticpuzzlehunt.com/static/images/banner.png">
+    <meta property="twitter:card" content="summary_large_image">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Recursive:slnt,CASL,CRSV,MONO@-3,0.5,1,1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/skeleton.css">
+    <link rel="stylesheet" href="/static/css/base.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.19/jquery.touchSwipe.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.formset/1.2.2/jquery.formset.min.js"></script>
+    <script src="/jsi18n/"></script>
+    <script src="/static/js/sorttable.js"></script>
+    <script src="/static/js/tray.js"></script>
+    <script src="/static/js/notify.js"></script>
+    <script src="/static/js/time.js"></script>
+    
+    
+    <link rel="icon" sizes="16x16 32x32 48x48 64x64" href="/static/images/favicon.ico" type="image/vnd.microsoft.icon">
+    
+    
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-92192633-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-92192633-1');
+</script>
+
+</head>
+<body>
+    
+    <div id="background-glitch-wrapper" class="background-glitch">
+        <div class="glitch-1"></div>
+        <div class="glitch-2"></div>
+        <div class="glitch-3"></div>
+    </div>
+    
+    
+    <input id="shortcuts" type="checkbox">
+    
+    <nav>
+        <span class="tray">
+            <span id="tray-timer"></span>
+            <div class="top-tabs">
+                <a href="/">
+                    Home
+                </a>
+                
+                <a href="/rules">
+                    Rules
+                </a>
+                
+                
+                <a href="/story">
+                    Story
+                </a>
+                
+                
+                <a class="selected-tab" href="/puzzles">
+                    Puzzles
+                </a>
+                
+                <a href="/teams">
+                    Teams
+                </a>
+                
+                <a href="/faq">
+                    FAQ
+                </a>
+                
+                
+                <a href="/errata">
+                    Updates
+                </a>
+                
+                
+                <a href="/wrapup">
+                    Wrap-Up
+                </a>
+                
+                
+                <a href="https://galacticpuzzlehunt.com/archive">
+                    Archive
+                </a>
+                
+                
+                
+            </div>
+            <div class="top-left-actions">
+                
+<a href="/puzzle/your-puzzle" class="btn">Back to the puzzle</a>
+
+            </div>
+        </span>
+        <div class="top-right-actions">
+        
+        
+        </div>
+    </nav>
+    
+    
+    
+    
+    
+    <script>
+
+    
+    
+    let glitchTriggerFuncs = [];
+    let glitchTriggerReceived = false;
+    let glitchTriggerExReceived = false;
+    let glitchPageLoaded = false;
+    function processGlitchFuncs(ex) {
+        glitchTriggerFuncs.forEach((func) => {
+            func(ex);
+        });
+    }
+    function doGlitch(ex) {
+        glitchTriggerReceived = true;
+        if (ex) {
+            glitchTriggerExReceived = true;
+        }
+        if (glitchPageLoaded) {
+            processGlitchFuncs(ex);
+        }
+    }
+    window.addEventListener('load', () => {
+        glitchPageLoaded = true;
+        if (glitchTriggerExReceived) {
+            processGlitchFuncs(true);
+        }
+        else if (glitchTriggerReceived) {
+            processGlitchFuncs(false);
+        }
+    }, false);
+    
+    
+    
+    function registerOnGlitchHook(func) {
+        if (glitchTriggerExReceived) {
+            func(true);
+        }
+        else if (glitchTriggerReceived) {
+            func(false);
+        }
+        glitchTriggerFuncs.push(func);
+    }
+    
+
+    
+    
+    </script>
+    <div class="content">
+        
+
+<style>
+h2 {
+    font-size: 2.5rem;
+    font-weight: normal;
+    font-style: italic;
+    margin-bottom: 2rem;
+}
+
+h4 {
+    font-size: 2rem;
+    font-weight: normal;
+    margin: 2rem 0;
+}
+</style>
+
+<h1>
+    Solution <span style="font-weight: 300">Nobody Knows What Your Perfect Puzzle Is, But You Will After Answering These Nine Questions</span>
+    <div class="solved-title-marker">Answer <span class="solved-title-answer spoiler">STONEWALL</span> / <span class="solved-title-answer spoiler">CHEF&#x27;S TABLE</span></div>
+</h1>
+
+<main class="puzzle-main">
+    <h2 style="margin-top: 0">
+        Written by
+        
+Amon Ge
+
+    </h2>
+
+    
+    <style>
+  @font-face{
+      font-family: 'Andika';
+      src: url(/static/puzzle_resources/your-puzzle/AndikaPhon-R.woff)
+          format('woff');
+  }
+
+  .ipa {
+      font-family: 'Andika', serif;
+  }
+
+  #cluephrases td:first-child {
+    font-family: monospace;
+  }
+
+  .selectors {
+    text-align: center;
+    margin: 1rem 0;
+  }
+
+  .selectors button {
+    margin-bottom: 0;
+    /* margin: 0 1px; */
+
+    text-transform: initial;
+    font-size: initial;
+    font-weight: initial;
+    padding: 0 1rem;
+
+    border: 0px;
+    border-radius: 0;
+
+    background-color: rgba(0, 136, 119, 0.1);
+    /* color: #eef; */
+    transition: 0.3s;
+  }
+
+  .selectors button:hover {
+    background-color: #3ba;
+    color: #fff;
+  }
+
+  button.selected {
+    background-color: #087;
+    color: #eee;
+  }
+
+  button.selected:hover {
+    background-color: #087;
+    color: #eee;
+  }
+
+
+</style>
+<script src="/static/puzzle_resources/your-puzzle/soln-8wgt5bkB3u/your-puzzle-soln.js"></script>
+
+<p>After submitting the quiz, we receive a puzzle according to our choices, and our choices are locked <span class="glitch" data-text="forever in eternity">forever in eternity</span>. Select a puzzle to see it and its solution.</p>
+<div class="selectors"><button id="toggle-alicebob" onclick="toggleSoln(this, '.alicebob')">alicebob</button><button id="toggle-backsolve" onclick="toggleSoln(this, '.backsolve')">backsolve</button><button id="toggle-ball" onclick="toggleSoln(this, '.ball')">ball</button><button id="toggle-extract" onclick="toggleSoln(this, '.extract')">extract</button><button id="toggle-frogorf" onclick="toggleSoln(this, '.frogorf')">frogorf</button><button id="toggle-id" onclick="toggleSoln(this, '.id')">id</button><button id="toggle-magic" onclick="toggleSoln(this, '.magic')">magic</button><button id="toggle-masyu" onclick="toggleSoln(this, '.masyu')">masyu</button><button id="toggle-submit" onclick="toggleSoln(this, '.submit')">submit</button><button id="toggle-words" onclick="toggleSoln(this, '.words')">words</button></div>
+<div class="nested-solution alicebob"><link rel="stylesheet" type="text/css" href="/static/puzzle_resources/your-puzzle/soln-8wgt5bkB3u/your-puzzle-soln.css" /><button onclick="togglePuzzle(this, '.alicebob')">show/hide puzzle:</button><div class="alicebob nested-puzzle"><style>
+    code {
+        color: rgb(208, 63, 34);
+        font-size: 1.8rem;
+    }
+
+    .img img {
+        display: block;
+        margin: auto;
+    }
+</style><div class="clipboard-container"><p class="flavor">
+        You&rsquo;d love a conundrum: a long list of instructions you have to carefully follow in order to get the answer!<br>
+        Your teammate says, &ldquo;I already spent the last eight hours on this puzzle, just check my sheet. I know that Bob is on the far right...&rdquo;<br>
+        Their sheet is incomprehensible, and no one wants to check their work.
+    </p><p><strong>Alice</strong> sends a message to <strong>Bob</strong>: <code>Hello, I&rsquo;m Alice!</code></p><p>Oh no! Some interlopers are between Alice and Bob, who modify the message, and instead of Alice&rsquo;s name, Bob ends up receiving <strong>the answer to the puzzle</strong> instead.</p><p>All messages start with <code>Hello, I&rsquo;m</code>. Messages are case-insensitive and ignore all non-alphabetic characters.</p><p>Every message is sent to the person immediately to the right of the sender, and only that person.</p><p>Interlopers are all in a line, receive the message from their left, modify the message, and send the modified message to their right.</p><p>Correctly order the interlopers to find out what message Bob received!</p><div class="img"><img src="/static/puzzle_resources/your-puzzle/alicebob.png"></div><p><strong>Interlopers:</strong></p><ul><li><strong>Count von Count</strong> counts the number of &lsquo;count&rsquo;s in his name, and inserts that number, spelled out in English, after <code>Hello, I&rsquo;m</code>, but before the rest of the message. </li><li><strong>Eve</strong> overhears the message, records it on her cold storage blockchain wallet, and retransmits the message unmodified. </li><li><strong>Mallory</strong> makes sure every <code>L</code> in the message is paired, adding one <code>L</code> to any odd length sequence of consecutive <code>L</code>s. </li><li><strong>Monkey</strong> randomly hits keys on their keyboard, appending an infinite number of random characters to the message. </li><li><strong>Sunny</strong> melts (deletes) <code>ICE</code> in the message as well as everything after <code>ICE</code>.
+        </li><li><strong>Zero</strong> looks for a written number in the message, and thinks of that number. She inserts the number one less than the number she&rsquo;s thinking of, spelled out in English, one letter after <code>Hello, I&rsquo;m</code> in the message. Hey, the length of the message is now the number she&rsquo;s thinking of to the power of four!</li><li><strong>Zulu</strong> moves the fourth last letter in the message x characters to the left and replaces it with y, where x is the length of the NATO phonetic alphabet codeword for that letter, and y is the next letter in that codeword.
+            <ul><li>(Example: if the fourth last letter is B, move it 5 characters left and replace it with R, as in BRAVO).</li></ul></li></ul><p><strong>Order:</strong>&nbsp;<em>(before = left, after = right)</em></p><ul><li><strong>Count von Count</strong> is (at most the number of &lsquo;count&rsquo;s in his name)th, among the interlopers, from the left.</li><li><strong>Eve</strong> is second among the interlopers.</li><li><strong>Mallory</strong> is not fourth or fifth.</li><li><strong>Monkey</strong> is right after Mallory, but not last.</li><li><strong>Sunny</strong> is before the person after him, and after the person before him.</li><li><strong>Zero</strong> isn&rsquo;t last either.</li><li><strong>Zulu</strong> is right after Zero.</li><li>Actually, all the interlopers are in alphabetical order, left to right. Good thing you read this first, right?
+        </li></ul></div></div><div><p>
+    The interlopers stand in alphabetical order, so we just have to send the message along:
+  </p></div><table><tr><th>Sender</th><th>Message</th></tr><tr><td>Alice</td><td><code>HELLOIMALICE</code></td></tr><tr><td>Count von Count</td><td><code>HELLOIMTWOALICE</code></td></tr><tr><td>Eve</td><td><code>HELLOIMTWOALICE</code></td></tr><tr><td>Mallory</td><td><code>HELLOIMTWOALLICE</code></td></tr><tr><td>Monkey</td><td><code>HELLOIMTWOALLICETHELANTHORNISTHEMOONITHEMANINTHEMOON...</code></td></tr><tr><td>Sunny</td><td><code>HELLOIMTWOALL</code></td></tr><tr><td>Zero</td><td><code>HELLOIMTONEWOALL</code> (len 16)</td></tr><tr><td>Zulu</td><td><code>HELLOIMSTONEWALL</code> (OSCAR: O, left 5 → S)</td></tr></table>
+
+Bob receives the message, <code>Hello, I&rsquo;m STONEWALL</code>, so the answer is <span class="answer">STONEWALL</span>.
+
+<div class="note">
+  This puzzle is for all you beautiful people who spend eight hours solving a puzzle and no one else wants to check your incomprehensible sheet.
+  Also, I love <a href="https://en.wikipedia.org/wiki/Alice_and_Bob" target="_blank" rel="noopener noreferrer">these characters</a>.
+</div></div>
+<div class="nested-solution backsolve"><link rel="stylesheet" type="text/css" href="/static/puzzle_resources/your-puzzle/soln-8wgt5bkB3u/your-puzzle-soln.css" /><button onclick="togglePuzzle(this, '.backsolve')">show/hide puzzle:</button><div class="backsolve nested-puzzle"><p class="flavor">
+  Wow, we&rsquo;ve found the perfect puzzle for you, one that requires absolutely no effo—Wait, your team already backsolved this puzzle somehow? They&rsquo;re saying it solves to the cluephrase <strong>FREE ANS IS STONEWALL.</strong> Huh, okay.
+</p></div><div>
+  The answer is <span class="answer">STONEWALL</span>.
+</div><div class="note">This puzzle is for all you beautiful people who spend eight hours solving a puzzle but then it gets backsolved. I believe this beats <a href="https://2019.galacticpuzzlehunt.com/static/puzzle_resources/ten-years-later/9.jpg" target="_blank" rel="noopener noreferrer">bowl of Cheerios</a> for the easiest puzzle we&rsquo;ve ever written.</div></div>
+<div class="nested-solution ball"><link rel="stylesheet" type="text/css" href="/static/puzzle_resources/your-puzzle/soln-8wgt5bkB3u/your-puzzle-soln.css" /><button onclick="togglePuzzle(this, '.ball')">show/hide puzzle:</button><div class="ball nested-puzzle"><p class="flavor">You&rsquo;re one of the types that like to discover key insights.</p><img src="/static/puzzle_resources/your-puzzle/ball.svg"
+    style="max-width: 100%;"></div><div><p>
+    As clued by &ldquo;type&rdquo; and &ldquo;key&rdquo; in the flavortext, the animation is the outline of a keyboard (on most mobile devices). The moving ball simulates someone&rsquo;s finger swiping over the keyboard to type a sentence. We can overlay an image of keyboard keys or try the same swipes on our <a href="https://youtu.be/ly10r6m_-n8?t=25" target="_blank" rel="noopener noreferrer">phones</a> to reproduce the typed message: <em>THE GAY INN IN GREENWICH</em>.
+  </p><p><a href="https://en.wikipedia.org/wiki/Stonewall_Inn" target="_blank" rel="noopener noreferrer">Stonewall Inn</a> is a notable gay bar in Greenwich Village, New York City, so the answer is <span class="answer">STONEWALL</span>.
+  </p></div><img src="/static/puzzle_resources/your-puzzle/soln-8wgt5bkB3u/ball-overlay.svg"
+    style="max-width: 100%;"><div class="note">Remember when swiping was cool? In fact, the fastest typers on mobile are swipers<sup>[citation needed]</sup>. I don&rsquo;t swipe — I use dvorak to type on my phone, which is the dumbest decision I ever made in my life since autocorrect his no edea whet vowels I type in any ward.</div></div>
+<div class="nested-solution extract"><link rel="stylesheet" type="text/css" href="/static/puzzle_resources/your-puzzle/soln-8wgt5bkB3u/your-puzzle-soln.css" /><button onclick="togglePuzzle(this, '.extract')">show/hide puzzle:</button><div class="extract nested-puzzle"><div class="clipboard-container"><p class="flavor">
+        Your team marked this puzzle as SOE: stuck on extraction.
+    </p><div style="margin-top: 2rem;"><ul><li>Administrative Command, Amphibious Forces, Pacific Fleet Subordinate Command</li><li>Automated Teller Machine, Human Immunodeficiency Virus, Redundant Acronym Syndrome</li><li>By the way</li><li>Eddie ate dynamite, good-bye Eddie, every good boy deserves fudge</li><li>Ethylenediaminetetraacetic acid, dichlorodiphenyltrichloroethane, γ-aminobutyric acid, monosodium glutamate</li><li>Exempli gratia: si vales bene est ego valeo, Senatus populusque Romanus, anno Domini, requiescat in pace; quod erat demonstrandum</li><li>Extracellular matrix metalloproteinase inducer</li><li>HERschel Observations Edge-on Spirals</li><li>Large Binocular Telescope Near-infrared Spectroscopic Utility with Camera and Integral Field Unit for Extragalactic Research for the win, Chicago Air Shower Array; Broad LAteral Non-imaging Cerenkov Array for the lose</li><li>Laugh out loud! As far as I know, in real life (away from keyboard) I love you, too much information. What do you mean?</li><li>New Spring, Lord of Chaos, Knife of Dreams, A Memory of Light</li><li>North Atlantic Treaty Organization, Commonwealth of Independent States, Unión de Naciones Suramericanas, United Nations Educational, Scientific and Cultural Organization</li><li>On behalf of United States Code Congressional and Administrative News, Statute of Limitations, Supreme Court of the United States</li><li>Role playing game, kill, deaths, assists, damage per second, downloadable content, area of effect</li><li>Service Level Agreement: end of day. For what it&rsquo;s worth, Chief Executive Officer out of office</li><li>There ain&rsquo;t no such thing as a free lunch, except bacon lettuce tomato</li><li>Thomas A. Swift&rsquo;s Electric Rifle</li><li>Today I f***ed up, original poster, am I the a**hole? Ask me anything. Too long; didn&rsquo;t read</li><li>Well developed, well nourished / negative to date</li><li>What You See Is What You Get, Formula Translation, Completely Automated Public Turing Test to tell Computers and Humans Apart</li><li>YAML ain&rsquo;t markup language, GNU&rsquo;s Not Unix, PHP: Hypertext Preprocessor</li><li>You only live once</li></ul></div></div></div><div><p>
+    All the clues are acronyms (or abbreviations, initialisms, etc.) or combinations of acronyms. 
+  </p><p>
+    The flavortext suggests we need to extract from these acronyms, and question 9 of the quiz asks about extracting from a list of identified information. Unlike the other questions, question 9 only accepts one correct answer (immediately marking other answers incorrect):
+  </p><p><input type="radio"><strong>Sort by</strong> length (of each clue’s alphabetic characters, removing spaces), and 
+  </p><p><input type="radio"><strong>Index by</strong> first letters. 
+  </p><p>
+    After converting each clue to acronyms, they all have unique lengths, which also suggests sorting by their lengths.
+  </p></div><table id="extract-table"><tr><th>acronym</th><th>source</th><th>clue</th></tr><tr><td>BTW</td><td>online</td><td>By the way</td></tr><tr><td>YOLO</td><td>online</td><td>You only live once</td></tr><tr><td>TASER</td><td>real</td><td>Thomas A. Swift&rsquo;s Electric Rifle</td></tr><tr><td>HEROES</td><td><a href="https://lweb.cfa.harvard.edu/~gpetitpas/Links/Astroacro.html" target="_blank" rel="noopener noreferrer">astronomy</a></td><td>HERschel Observations Edge-on Spirals</td></tr><tr><td>EMMPRIN</td><td>biology</td><td>Extracellular matrix metalloproteinase inducer</td></tr><tr><td>WDWNNGTD</td><td>medicine</td><td>Well developed, well nourished / negative to date</td></tr><tr><td>ATMHIVRAS</td><td>redundant</td><td>Automated Teller Machine, Human Immunodeficiency Virus, Redundant Acronym Syndrome</td></tr><tr><td>YAMLGNUPHP</td><td>tech / recursive</td><td>YAML ain&rsquo;t markup language, GNU&rsquo;s Not Unix, PHP: Hypertext Preprocessor</td></tr><tr><td>EADGBEEGBDF</td><td>music</td><td>Eddie ate dynamite, good-bye Eddie, every good boy deserves fudge</td></tr><tr><td>NSLOCKODAMOL</td><td><a href="https://wot.fandom.com/wiki/New_Spring" target="_blank" rel="noopener noreferrer">lit. series</a></td><td>New Spring, Lord of Chaos, Knife of Dreams, A Memory of Light</td></tr><tr><td>TANSTAAFLEBLT</td><td>real</td><td>There ain&rsquo;t no such thing as a free lunch, except bacon lettuce tomato</td></tr><tr><td>EDTADDTGABAMSG</td><td>chemistry</td><td>Ethylenediaminetetraacetic acid, dichlorodiphenyltrichloroethane, γ-aminobutyric acid, monosodium glutamate</td></tr><tr><td>RPGKDADPSDLCAOE</td><td>online (games)</td><td>Role playing game, kill, deaths, assists, damage per second, downloadable content, area of effect</td></tr><tr><td>SLAEODFWIWCEOOOO</td><td>business</td><td>Service Level Agreement: end of day. For what it&rsquo;s worth, Chief Executive Officer out of office</td></tr><tr><td>TIFUOPAITAAMATLDR</td><td>online (reddit)</td><td>Today I f***ed up, original poster, am I the a**hole? Ask me anything. Too long; didn&rsquo;t read</td></tr><tr><td>OBOUSCCANSOLSCOTUS</td><td><a href="https://en.wikipedia.org/wiki/List_of_legal_abbreviations" target="_blank" rel="noopener noreferrer">legal</a></td><td>On behalf of United States Code Congressional and Administrative News, Statute of Limitations, Supreme Court of the United States</td></tr><tr><td>NATOCISUNASURUNESCO</td><td>politics</td><td>North Atlantic Treaty Organization, Commonwealth of Independent States, Unión de Naciones Suramericanas, United Nations Educational, Scientific and Cultural Organization</td></tr><tr><td>EGSVBEEVSPQRADRIPQED</td><td><a href="https://en.wikipedia.org/wiki/List_of_Latin_abbreviations" target="_blank" rel="noopener noreferrer">latin</a></td><td>Exempli gratia: si vales bene est ego valeo, Senatus populusque Romanus, anno Domini, requiescat in pace; quod erat demonstrandum</td></tr><tr><td>WYSIWYGFORTRANCAPTCHA</td><td>tech</td><td>What You See Is What You Get, Formula Translation, Completely Automated Public Turing Test to tell Computers and Humans Apart</td></tr><tr><td>ADCOMSUBORDCOMPHIBSPAC</td><td>military</td><td>Administrative Command, Amphibious Forces, Pacific Fleet Subordinate Command</td></tr><tr><td>LUCIFERFTWCASABLANCAFTL</td><td><a href="https://lweb.cfa.harvard.edu/~gpetitpas/Links/Astroacro.html" target="_blank" rel="noopener noreferrer">astronomy</a></td><td>Large Binocular Telescope Near-infrared Spectroscopic Utility with Camera and Integral Field Unit for Extragalactic Research for the win, Chicago Air Shower Array; Broad LAteral Non-imaging Cerenkov Array for the lose</td></tr><tr><td>LOLAFAIKIRLAFKILYTMIWDYM</td><td>online</td><td>Laugh out loud! As far as I know, in real life (away from keyboard) I love you, too much information. What do you mean?</td></tr></table><div><p>Reading the first letters gives the cluephrase BY THE WAY ENTER STONEWALL. 
+    The answer is <span class="answer">STONEWALL</span>.
+  </p></div><div class="note">wow yet another <a href="https://www.puzzlehunt.net/glossary#isis" target="_blank" rel="noopener noreferrer">ISIS</a> puzzle stuck on extraction (last update 11 hours ago) </div></div>
+<div class="nested-solution frogorf"><link rel="stylesheet" type="text/css" href="/static/puzzle_resources/your-puzzle/soln-8wgt5bkB3u/your-puzzle-soln.css" /><button onclick="togglePuzzle(this, '.frogorf')">show/hide puzzle:</button><div class="frogorf nested-puzzle"><style>
+    #frogorf {
+        width: 80%;
+        height: 450px;
+        border: none;
+        display: block;
+        margin: auto;
+    }
+
+    .tt {
+        display: block;
+        margin: auto;
+        text-align: center;
+        font-size: 1.2rem;
+        font-style: italic;
+    }
+</style><p class="flavor">
+    Oh, that&rsquo;s what you like? How incredibly niche... just like this infuriating puzzle game about an inscrutable film!<br></p><iframe 
+    id="frogorf"
+    src="/static/puzzle_resources/your-puzzle/frogorf.html"
+></iframe><div class="tt">(click inside the game to focus)</div></div><div><iframe 
+    id="frogorf-soln-video"
+    style="display: block; margin: 2rem auto;"
+    width="650" height="550" src="https://www.youtube.com/embed/oxBKXutu1fI?enablejsapi=1&cc_load_policy=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><p>The messages after each level read EXCELLENT! ANSWER: STONEWALL. The answer is <span class="answer">STONEWALL</span>.</p></div><div class="note"><div><p>
+      The feeling of opening a puzzlescript game:
+    </p><p class="reply"><em>Oh wow, I can&rsquo;t wait to click buttons, wee, so fun!</em> (0–30 seconds)
+    </p><p class="reply"><em>I hate this game</em> (30+ seconds)
+    </p></div><p>The &ldquo;inscrutable film&rdquo; referenced is TENET, which is about <span class="spoiler">travelling forwards and backwards in time by entering time machines called &ldquo;turnstiles&rdquo;. FROG enters the turnstile (goal) to become GORF, who enters the turnstile to become FROG, in a time loop — a clue that similar funky time shenanigans are about to happen in the hunt.</span></p><p>
+    &ldquo;Time moves as you move&rdquo; references the game SUPERHOT, but this left-right time mechanic is from an earlier game, Braid (World 4).
+  </p><p>
+    This game was lovingly made with <a href="https://auroriax.github.io/PuzzleScript/" target="_blank" rel="noopener noreferrer">PuzzleScript Plus</a>, a community extension of PuzzleScript that adds nice features including level select and an automatic solver (great for making nearly impossible levels). The implementation of lily grabbing with FROG&rsquo;s tongue is based off <a href="https://gist.github.com/jcmiller11/156704f3f2a5b0eb500b86adfff5c15e" target="_blank" rel="noopener noreferrer">Hookshit Thing by jcGyo</a>.
+  </p><p>Haven&rsquo;t had enough? Play the <a href="/static/puzzle_resources/your-puzzle/soln-8wgt5bkB3u/frogorf-bonus.html" target="_blank" rel="noopener noreferrer">FROGORF BONUS LEVELS</a>.</p></div></div>
+<div class="nested-solution id"><link rel="stylesheet" type="text/css" href="/static/puzzle_resources/your-puzzle/soln-8wgt5bkB3u/your-puzzle-soln.css" /><button onclick="togglePuzzle(this, '.id')">show/hide puzzle:</button><div class="id nested-puzzle"><style>
+    .pics {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: center;
+        margin: auto;
+        /* width: 80%; */
+        border: none;
+    }
+
+    .pic {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 450px;
+    }
+
+    .face {
+        display: inline-block;
+        /* text-align: center; */
+        /* vertical-align: middle; */
+        position: relative;
+        width: 143px;
+        height: 110px;
+    }
+
+    .face .num {
+        top: 40px;
+        left: 60px;
+        font-size: 5rem;
+        /* font-weight: bold; */
+        color: rgb(204, 105, 30);
+        /* text-shadow: 2px 2px 0 black; */
+    }
+
+    .face .inner {
+        position:absolute;
+    }
+
+</style><div class="clipboard-container"><p class="flavor">
+        You love identifying things? You&rsquo;re in the right place, here&rsquo;s a bunch of random identities! Click the images to reverse search them. After you&rsquo;re done identifying, index the given numbers to extract one or two letters from each identity, read in the given order, and close your million browser tabs.
+    </p><div class="pics"><div class="pic"><a href="https://www.google.com/searchbyimage?image_url=https%3A%2F%2F2022.galacticpuzzlehunt.com%2Fstatic%2Fpuzzle_resources%2Fyour-puzzle%2Fid-3q5Qg6dsvk%2F1.png" target="_blank" rel="noopener noreferrer"><img src="/static/puzzle_resources/your-puzzle/id-3q5Qg6dsvk/1.png"></a><div class="face"><div class="inner"><img src="/static/puzzle_resources/your-puzzle/id-3q5Qg6dsvk/face.png"></div><div class="inner num">4</div></div></div><div class="pic"><a href="https://www.google.com/searchbyimage?image_url=https%3A%2F%2F2022.galacticpuzzlehunt.com%2Fstatic%2Fpuzzle_resources%2Fyour-puzzle%2Fid-3q5Qg6dsvk%2F2.png" target="_blank" rel="noopener noreferrer"><img src="/static/puzzle_resources/your-puzzle/id-3q5Qg6dsvk/2.png"></a><div class="face"><div class="inner"><img src="/static/puzzle_resources/your-puzzle/id-3q5Qg6dsvk/face.png"></div><div class="inner num">3</div></div></div><div class="pic"><a href="https://www.google.com/searchbyimage?image_url=https%3A%2F%2F2022.galacticpuzzlehunt.com%2Fstatic%2Fpuzzle_resources%2Fyour-puzzle%2Fid-3q5Qg6dsvk%2F3.png" target="_blank" rel="noopener noreferrer"><img src="/static/puzzle_resources/your-puzzle/id-3q5Qg6dsvk/3.png"></a><div class="face"><div class="inner"><img src="/static/puzzle_resources/your-puzzle/id-3q5Qg6dsvk/face.png"></div><div class="inner num">7</div></div></div><div class="pic"><a href="https://www.google.com/searchbyimage?image_url=https%3A%2F%2F2022.galacticpuzzlehunt.com%2Fstatic%2Fpuzzle_resources%2Fyour-puzzle%2Fid-3q5Qg6dsvk%2F4.png" target="_blank" rel="noopener noreferrer"><img src="/static/puzzle_resources/your-puzzle/id-3q5Qg6dsvk/4.png"></a><div class="face"><div class="inner"><img src="/static/puzzle_resources/your-puzzle/id-3q5Qg6dsvk/face.png"></div><div class="inner num">2</div></div></div><div class="pic"><a href="https://www.google.com/searchbyimage?image_url=https%3A%2F%2F2022.galacticpuzzlehunt.com%2Fstatic%2Fpuzzle_resources%2Fyour-puzzle%2Fid-3q5Qg6dsvk%2F5.png" target="_blank" rel="noopener noreferrer"><img src="/static/puzzle_resources/your-puzzle/id-3q5Qg6dsvk/5.png"></a><div class="face"><div class="inner"><img src="/static/puzzle_resources/your-puzzle/id-3q5Qg6dsvk/face.png"></div><div class="inner num">1</div></div></div><div class="pic"><a href="https://www.google.com/searchbyimage?image_url=https%3A%2F%2F2022.galacticpuzzlehunt.com%2Fstatic%2Fpuzzle_resources%2Fyour-puzzle%2Fid-3q5Qg6dsvk%2F6.png" target="_blank" rel="noopener noreferrer"><img src="/static/puzzle_resources/your-puzzle/id-3q5Qg6dsvk/6.png"></a><div class="face"><div class="inner"><img src="/static/puzzle_resources/your-puzzle/id-3q5Qg6dsvk/face.png"></div><div class="inner num">5</div></div></div><div class="pic"><a href="https://www.google.com/searchbyimage?image_url=https%3A%2F%2F2022.galacticpuzzlehunt.com%2Fstatic%2Fpuzzle_resources%2Fyour-puzzle%2Fid-3q5Qg6dsvk%2F7.png" target="_blank" rel="noopener noreferrer"><img src="/static/puzzle_resources/your-puzzle/id-3q5Qg6dsvk/7.png"></a><div class="face"><div class="inner"><img src="/static/puzzle_resources/your-puzzle/id-3q5Qg6dsvk/face.png"></div><div class="inner num">3</div></div></div><div class="pic"><a href="https://www.google.com/searchbyimage?image_url=https%3A%2F%2F2022.galacticpuzzlehunt.com%2Fstatic%2Fpuzzle_resources%2Fyour-puzzle%2Fid-3q5Qg6dsvk%2F8.png" target="_blank" rel="noopener noreferrer"><img src="/static/puzzle_resources/your-puzzle/id-3q5Qg6dsvk/8.png"></a><div class="face"><div class="inner"><img src="/static/puzzle_resources/your-puzzle/id-3q5Qg6dsvk/face.png"></div><div class="inner num">4</div></div></div><div class="pic"><a href="https://www.google.com/searchbyimage?image_url=https%3A%2F%2F2022.galacticpuzzlehunt.com%2Fstatic%2Fpuzzle_resources%2Fyour-puzzle%2Fid-3q5Qg6dsvk%2F9.png" target="_blank" rel="noopener noreferrer"><img src="/static/puzzle_resources/your-puzzle/id-3q5Qg6dsvk/9.png"></a><div class="face"><div class="inner"><img src="/static/puzzle_resources/your-puzzle/id-3q5Qg6dsvk/face.png"></div><div class="inner num">6</div></div></div><div class="pic"><a href="https://www.google.com/searchbyimage?image_url=https%3A%2F%2F2022.galacticpuzzlehunt.com%2Fstatic%2Fpuzzle_resources%2Fyour-puzzle%2Fid-3q5Qg6dsvk%2F10.png" target="_blank" rel="noopener noreferrer"><img src="/static/puzzle_resources/your-puzzle/id-3q5Qg6dsvk/10.png"></a><div class="face"><div class="inner"><img src="/static/puzzle_resources/your-puzzle/id-3q5Qg6dsvk/face.png"></div><div class="inner num">5</div></div></div><div class="pic"><a href="https://www.google.com/searchbyimage?image_url=https%3A%2F%2F2022.galacticpuzzlehunt.com%2Fstatic%2Fpuzzle_resources%2Fyour-puzzle%2Fid-3q5Qg6dsvk%2F11.png" target="_blank" rel="noopener noreferrer"><img src="/static/puzzle_resources/your-puzzle/id-3q5Qg6dsvk/11.png"></a><div class="face"><div class="inner"><img src="/static/puzzle_resources/your-puzzle/id-3q5Qg6dsvk/facehalf.png"></div><div class="inner num">3</div></div></div></div></div></div><div><p>
+    Use your RISing powers for good! As suggested by the supervillain mask and disguise glasses, we want to index the same number into each super&rsquo;s hero/villain alias as well as their real (&lsquo;secret&rsquo;) identity. This works for everyone except Gwen Stacy, who is just a regular person with one regular name. All the indices come before spaces or other punctuation in their names, so the extracted letters are unambiguous.
+  </p></div><table><tr><th></th><th></th><th>index</th><th>mask (alias)</th><th>real identity</th></tr><tr><td>A</td><td>J</td><td>4</td><td>Solarman</td><td><a href="https://marvel.fandom.com/wiki/Benjamin_Tucker_(Earth-616)" target="_blank" rel="noopener noreferrer">Benjamin Tucker</a></td></tr><tr><td>L</td><td>E</td><td>3</td><td>Molecule Man</td><td><a href="https://marvel.fandom.com/wiki/Owen_Reece_(Earth-616)" target="_blank" rel="noopener noreferrer">Owen Reece</a></td></tr><tr><td>I</td><td>R</td><td>7</td><td>Blackbird</td><td><a href="https://marvel.fandom.com/wiki/Heather_O%27Gara_(Earth-616)" target="_blank" rel="noopener noreferrer">Heather O&rsquo;Gara</a></td></tr><tr><td>A</td><td>R</td><td>2</td><td>Valkyrie</td><td><a href="https://marvel.fandom.com/wiki/Brunnhilde_(Earth-616)" target="_blank" rel="noopener noreferrer">Brunnhilde</a></td></tr><tr><td>S</td><td>Y</td><td>1</td><td>Snow Queen</td><td><a href="https://marvel.fandom.com/wiki/Yi_Yang_(Earth-616)" target="_blank" rel="noopener noreferrer">Yi Yang</a></td></tr><tr><td>O</td><td>S</td><td>5</td><td>Unicorn</td><td><a href="https://marvel.fandom.com/wiki/Milos_Masaryk_(Earth-616)" target="_blank" rel="noopener noreferrer">Milos Masaryk</a></td></tr><tr><td>F</td><td>L</td><td>3</td><td>Elf with a Gun</td><td><a href="https://marvel.fandom.com/wiki/Melf_(Earth-616)" target="_blank" rel="noopener noreferrer">Melf</a></td></tr><tr><td>M</td><td>E</td><td>4</td><td>Gamma-Burn</td><td><a href="https://marvel.fandom.com/wiki/Ethel_Gaxton_(Earth-616)" target="_blank" rel="noopener noreferrer">Ethel Gaxton</a></td></tr><tr><td>C</td><td>D</td><td>6</td><td>Protector</td><td><a href="https://marvel.fandom.com/wiki/Gerald_Marsh_(Earth-616)" target="_blank" rel="noopener noreferrer">Gerald Marsh</a></td></tr><tr><td>U</td><td>G</td><td>5</td><td>Conquest</td><td><a href="https://marvel.fandom.com/wiki/Bridget_Malone_(Earth-616)" target="_blank" rel="noopener noreferrer">Bridget Malone</a></td></tr><tr><td></td><td>E</td><td>3</td><td></td><td><a href="https://marvel.fandom.com/wiki/Gwendolyne_Stacy_(Earth-616)" target="_blank" rel="noopener noreferrer">Gwendolyne Stacy</a></td></tr></table><div><p>Reading top-down, we get the cluephrase ALIAS OF MCU JERRY SLEDGE. <a href="https://marvel.fandom.com/wiki/Jerry_Sledge_(Earth-616)" target="_blank" rel="noopener noreferrer">Jerry Sledge</a>&rsquo;s alias is <span class="answer">STONEWALL</span>, which is the answer.</p></div><div class="note"><p>
+    &ldquo;Great, another dataset I care nothing about and have to identify a million things from,&rdquo; cried everyone except one nerd. &ldquo;Wait, but Jerry Sledge isn&rsquo;t in the Marvel Cinematic Universe!&rdquo; cried the one nerd. Congrats, this puzzle was for you. And you&rsquo;re right. <em>For now.</em> For real though, MCU gets way better Google results than something technically correct like the PMU (Prime Marvel Universe).
+  </p><p>
+    And just remember, whenever you have to open a million tabs to solve a puzzle, that puzzle&rsquo;s author opened a billion tabs to write it. Yes, I wrote a script to scrape the entire Marvel wiki to handpick these ridiculous superheroes. <a href="https://fivethirtyeight.datasettes.com/fivethirtyeight/comic-characters~2Fmarvel-wikia-data" target="_blank" rel="noopener noreferrer">This dataset</a> helped me scrape the wiki (but it doesn&rsquo;t have the pairings from secret identities to hero names).
+  </p></div></div>
+<div class="nested-solution magic"><link rel="stylesheet" type="text/css" href="/static/puzzle_resources/your-puzzle/soln-8wgt5bkB3u/your-puzzle-soln.css" /><button onclick="togglePuzzle(this, '.magic')">show/hide puzzle:</button><div class="magic nested-puzzle"><style>
+    .play {
+        margin: auto;
+        height: 90%;
+        width: 90%;
+        font-family: Georgia, Palatino, "Times New Roman", Times, serif;
+        /* font-size: 100%; */
+        background: white;
+        /* line-height: 1.4; */
+        padding: 20px;
+    }
+
+    #parser {
+        max-height: 30vh;
+        hyphens: auto;
+        overflow-y: auto;
+    }
+    .command {
+        width: 90%;
+        font-weight: bold;
+    }
+
+    .response {
+        margin: 0 0 1rem;
+    }
+
+    .secret {
+        font-family: monospace;
+        /* if you have time, you can use trick of background-color for each spanning redactle to get rid of the seams */
+    }
+
+    #typer {
+        cursor: text;
+    }
+
+    #typer input {
+        background: inherit;
+        font-family: inherit;
+        letter-spacing: inherit;
+        font-size: inherit;
+        width: 90%;
+    }
+
+</style><div class="play"><div id="parser"><div><b>Magic Words</b></div><div>An Interaction Fiction</div><div>Release 1 / Serial number 170220 / Inform 7 build F4K3 (I6/v6.33 lib 6/12N)</div><hr><div><b>Sealed Chamber</b></div><div><p>
+                You once again find yourself stuck in a black-and-white, half-century-old, barely-passable work of &lsquo;fiction&rsquo; with no way out. If only you knew the magic words.
+            </p></div></div><div id="typer" onclick="document.getElementById('typer-input').focus()">
+        ><input id="typer-input" class="command" type="text" autofocus maxlength="64"></div></div><script>
+    const answer = "Lo! Your answer is STONEWALL."
+    const redact = "01  4512 643625 30 9a7b8a879 "
+    const redactChar = "█"
+    const revealOrder = " 0123456789ab"
+
+    let progress = Array.from([...answer].entries())
+        .map(([i, c]) => redact[i] !== " " ? redactChar:c)
+        .join('')
+
+    const magicWords = [
+        ["ABRACADABRA","ABRAKADABRA",],
+        ["ALAKAZAM",],
+        ["HOCUS POCUS",],
+        ["OPEN SESAME",],
+        ["ZIMZALABIM","SIMSALABIM","SIM SIM SALA BIM",],
+        ["PRESTO","PRESTO CHANGO","HEY PRESTO",],
+        ["AJJI MAJJI LA TARAJJI",],
+        ["JANTAR MANTAR JADU MANTAR",],
+        ["BIBBIDI BOBBIDI BOO",],
+        ["YU MO GUI GWAI FAI DI ZAO","YIU MO GWAI GWAAI FAAI DI JAU","妖魔鬼怪快哋走","妖魔鬼怪快啲走",],
+        ["KLAATU BARADA NIKTO",],
+        ["SHAZAM",],
+        ["FHTAGN","PH'NGLUI MGLW'NAFH CTHULHU R'LYEH WGAH'NAGL FHTAGN","CTHULHU FHTAGN",],
+        ["FUS RO DAH",],
+        ["XYZZY",],
+        ["PLUGH",],
+        ["PLOVER",],
+        ["SQUEAMISH OSSIFRAGE",],
+        ["DEADBEEF",],
+        ["PRETTY PLEASE WITH A CHERRY ON TOP",],
+        ["PRETTY PLEASE",],
+        ["PLEASE",],
+        ["EXPELLIARMUS",],
+        ["ANNARASUMANARA","안나라수마나라",],
+        ["OM","AUM","ॐ", "ओम्"],
+        ["DOUBLEDOUBLETOILANDTROUBLE","FIREBURNANDCAULDRONBUBBLE",],
+        ["WIÐ FÆRSTICE","WITH FAERSTICE",],
+        ["GESUNDHEIT",],
+        ["THERE'S NO PLACE LIKE HOME",],
+        ["AMEN","AMIN","AMEEN","آمين","אָמֵן",],
+        ["THE MAGIC WORDS",],
+        ["WIGGLE WAGGLE",],
+        ["IZZY WIZZY LET'S GET BUSY",],
+        ["VOILA", "VOILÀ"],
+    ].map(xs=>xs.map(x=>clean(x)))
+
+    const easterEggs = {
+        "HELP":      "You&rsquo;ll need to ask more nicely.",
+        "ANSWER":    "You&rsquo;ll need to ask more nicely.",
+        "THANKS":    "You&rsquo;re welcome!",
+        "THANK YOU": "You&rsquo;re welcome!",
+        "TY":        "You&rsquo;re welcome!",
+        "THX":       "You&rsquo;re welcome!",
+    }
+
+    let points = 1
+
+    let found = 0n // bits are set for each word found, need BigInt because << is 32-bit and we have more words
+
+    function reveal() {
+        if (points < revealOrder.length)
+            points += 1
+
+        let showChars = revealOrder.slice(0, points)
+        progress = Array.from([...answer].entries())
+            .map(([i, c]) => showChars.includes(redact[i]) ? c : redactChar)
+            .join('')
+    }
+
+    function clean(s) {
+        // convert string to uppercase, remove specials but keep meaningful chars
+        return s.toUpperCase().replace(/[\s'"!.,\-~`<>(){}&;\\\/]/g, "")
+    }
+
+    let parser = document.getElementById("parser")
+    let typerInput = document.getElementById("typer-input")
+
+    // client-side text adventure
+    function find(s) {
+        // find a magic word in the parser
+        // returns response if s is an easter egg or already found
+
+        let c = clean(s)
+
+        for (let [i, word] of magicWords.entries()) {
+            // special case: please can come at end of c 
+            if (word.includes(c) || (word.includes("PLEASE") && c.endsWith("PLEASE"))) {
+                if (found & (1n << BigInt(i))) {
+                    return "You already used that spell."
+                } else {
+                    found += (1n << BigInt(i))
+                    return true
+                }
+            }
+        }
+
+        for (let [egg, response] of Object.entries(easterEggs)) {
+            if (clean(egg) === c)
+                return response
+        }
+
+        return false
+    }
+
+    typerInput.addEventListener('keydown', e=>{
+        if (e.key === "Enter") {
+            let text = typerInput.value
+
+            let output = document.createElement("div")
+            output.innerHTML = "&gt;<span class=\"command\"></span>"
+            output.querySelector(".command").appendChild(document.createTextNode(text))
+
+            // response
+            let f = find(text)
+            let response = document.createElement("div")
+            response.classList.add("response")
+
+            if (f === true) {
+                reveal()
+                response.innerHTML = "A hollow voice says, &ldquo;<span class=\"secret\">" + progress + "</span>&rdquo;"
+            } else if (f === false) {
+                response.innerHTML = "You can&rsquo;t do that without saying the magic words."
+            } else {
+                // special response (already found, easter egg)
+                response.innerHTML = f
+            } 
+
+            // cleanup
+            typerInput.value = ""
+            parser.appendChild(output)
+            parser.appendChild(response)
+            parser.scrollTop = parser.scrollHeight
+        }
+
+    })
+
+</script></div><div><p>
+    We can&rsquo;t do anything in the game except say magic words. What are magic words? Well, if we ask for &ldquo;help&rdquo;, we receive the patronizing response, &ldquo;You’ll need to ask more nicely.&rdquo; That might clue us in to saying &ldquo;please&rdquo;, or &ldquo;help please&rdquo;, which is accepted as a magic word. Other magic words/phrases we might try are &ldquo;open sesame&rdquo; (useful for opening a sealed chamber), &ldquo;abracadabra&rdquo; (classic), &ldquo;xyzzy&rdquo; (a reoccurring magic word in interactive fiction), or even &ldquo;the magic words&rdquo; (how childish). 
+  </p><p>
+    After saying a magic word, we receive a response about a hollow voice saying something. (This is a reference to the influential Zork games where a hollow voice would teach you the magic word plugh, and say &ldquo;Fool&rdquo; after casting it, after which many interactive fiction (IF) games added similar easter eggs for <a href="http://www.plover.net/~davidw/responses/xyzzy.html" target="_blank" rel="noopener noreferrer">xyzzy</a>, <a href="http://www.plover.net/~davidw/responses/plugh.html" target="_blank" rel="noopener noreferrer">plugh</a>, and <a href="http://www.plover.net/~davidw/responses/plover.html" target="_blank" rel="noopener noreferrer">plover</a>). Every magic word we say reveals two letters from the hollow voice, until eventually we can read &ldquo;Lo! Your answer is STONEWALL.&rdquo; The answer is <span class="answer">STONEWALL</span>.
+  </p></div><div><p>Full list of accepted magic words (many of which can be found on <a href="https://en.wikipedia.org/wiki/Magic_word" target="_blank" rel="noopener noreferrer">Wikipedia</a>):</p><table><tr><th>magic word/phrase</th><th>alternates</th><th>source</th></tr><tr><td>PLEASE</td><td>&lt;anything&gt; PLEASE</td><td>being polite</td></tr><tr><td>PRETTY PLEASE</td><td></td><td></td></tr><tr><td>PRETTY PLEASE WITH A CHERRY ON TOP</td><td></td><td></td></tr><tr><td>THE MAGIC WORDS</td><td></td><td>being a smart aleck</td></tr><tr><td>ABRACADABRA</td><td></td><td>classic magic, or classic <a href="https://bulbapedia.bulbagarden.net/wiki/Abra_(Pok%C3%A9mon)" target="_blank" rel="noopener noreferrer">Pokémon</a></td></tr><tr><td>ALAKAZAM</td><td></td><td></td></tr><tr><td>XYZZY</td><td></td><td>interactive fiction</td></tr><tr><td>PLUGH</td><td></td><td></td></tr><tr><td>PLOVER</td><td></td><td></td></tr><tr><td>PRESTO</td><td>PRESTO CHANGO, HEY PRESTO</td><td>magic</td></tr><tr><td>HOCUS POCUS</td><td></td><td></td></tr><tr><td>AJJI MAJJI LA TARAJJI</td><td></td><td></td></tr><tr><td>JANTAR MANTAR JADU MANTAR</td><td></td><td></td></tr><tr><td>VOILA</td><td>VOILÀ</td><td></td></tr><tr><td>OPEN SESAME</td><td></td><td>Ali Baba and the Forty Thieves</td></tr><tr><td>BIBBIDI BOBBIDI BOO</td><td></td><td>Cinderella</td></tr><tr><td>ZIMZALABIM</td><td>SIMSALABIM, SIM SIM SALA BIM</td><td>magic, <a href="https://www.youtube.com/watch?v=YBnGBb1wg98" target="_blank" rel="noopener noreferrer">Red Velvet</a></td></tr><tr lang="zh-HK"><td>妖魔鬼怪快啲走</td><td>妖魔鬼怪快哋走, YU MO GUI GWAI FAI DI ZAO, YIU MO GWAI GWAAI FAAI DI JAU</td><td><a href="https://www.youtube.com/watch?v=eojrxXWMdcU" target="_blank" rel="noopener noreferrer">Jackie Chan Adventures</a></td></tr><tr><td>KLAATU BARADA NIKTO</td><td></td><td>The Day the Earth Stood Still</td></tr><tr><td>THERE&rsquo;S NO PLACE LIKE HOME</td><td></td><td><a href="https://youtu.be/zJ6VT7ciR1o" target="_blank" rel="noopener noreferrer">The Wizard of Oz</a></td></tr><tr><td>SHAZAM</td><td></td><td>Captain Marvel (the <a href="https://en.wikipedia.org/wiki/Captain_Marvel_(DC_Comics)" target="_blank" rel="noopener noreferrer">other one</a>)</td></tr><tr><td>WIGGLE WAGGLE</td><td></td><td>The Wiggles</td></tr><tr><td>IZZY WIZZY LET&rsquo;S GET BUSY</td><td></td><td>The Sooty Show</td></tr><tr><td>PH&rsquo;NGLUI MGLW&rsquo;NAFH CTHULHU R&rsquo;LYEH WGAH&rsquo;NAGL FHTAGN</td><td>CTHULHU FHTAGN, FHTAGN</td><td>The Call of Cthulhu</td></tr><tr><td>FUS RO DAH</td><td></td><td>The Elder Scrolls V: Skyrim</td></tr><tr><td>안나라수마나라</td><td>ANNARASUMANARA</td><td>the webtoon and <a href="https://en.wikipedia.org/wiki/The_Sound_of_Magic" target="_blank" rel="noopener noreferrer">K-drama</a></td></tr><tr><td>SQUEAMISH OSSIFRAGE</td><td></td><td><a href="https://en.wikipedia.org/wiki/The_Magic_Words_are_Squeamish_Ossifrage" target="_blank" rel="noopener noreferrer">RSA ciphertext</a></td></tr><tr><td>DEADBEEF</td><td></td><td><a href="https://en.wikipedia.org/w/index.php?title=Magic_number_(programming)" target="_blank" rel="noopener noreferrer">magic hexspeak value</a></td></tr><tr><td>EXPELLIARMUS</td><td></td><td>Harry Potter</td></tr><tr><td>DOUBLE DOUBLE TOIL AND TROUBLE</td><td>FIRE BURN AND CAULDRON BUBBLE</td><td>Macbeth</td></tr><tr><td>WIÐ FÆRSTICE</td><td>WITH FAERSTICE</td><td><a href="https://en.wikipedia.org/wiki/Wi%C3%B0_f%C3%A6rstice" target="_blank" rel="noopener noreferrer">Anglo-Saxon charm</a></td></tr><tr><td>OM</td><td>AUM, ॐ, ओम्</td><td>Sanskrit sacred sound</td></tr><tr><td>AMEN</td><td>AMIN, AMEEN, آمين ,אָמֵן</td><td>Abrahamic affirmation</td></tr><tr><td>GESUNDHEIT</td><td></td><td>German anti-sneeze incantation</td></tr></table></div><div class="note"><p>
+    If you&rsquo;ve been around puzzlehunts as long as I have, you&rsquo;ll remember all those teams named &ldquo;plugh (pronounced plugh)&rdquo; dominating the Aussie hunt leaderboards back in the day. This puzzle is a shoutout to them. (I never imagined that I&rsquo;d one day join another leaderboard-topping team, back then only known to me as the mysterious <a href="https://thirdwest.scripts.mit.edu/~thirdwest/wiki/index.php?title=Main_Page" target="_blank" rel="noopener noreferrer">[pi]</a>.)
+  </p><p>
+    I&rsquo;m very happy that this ancient genre has retained so much staying power in puzzlehunts. There are some truly great pieces of interaction fiction that I think are well worth your time, and I hope that puzzlehunts can continue to serve as a gateway drug for zoomers to discover this boomer media. Play my favourite IF, <a href="http://adamcadre.ac/if/photopia.html" target="_blank" rel="noopener noreferrer">Photopia</a>.
+  </p><p>
+    My first exposure to IF (and xyzzy, plugh, and plover) was the <a href="https://kol.coldfront.net/thekolwiki/index.php/Strange_Leaflet_Quest" target="_blank" rel="noopener noreferrer">Strange Leaflet</a> in Kingdom of Loathing. Now I use <a href="https://www.openstenoproject.org/plover/" target="_blank" rel="noopener noreferrer">plover</a> daily to learn stenography!
+  </p></div></div>
+<div class="nested-solution masyu"><link rel="stylesheet" type="text/css" href="/static/puzzle_resources/your-puzzle/soln-8wgt5bkB3u/your-puzzle-soln.css" /><button onclick="togglePuzzle(this, '.masyu')">show/hide puzzle:</button><div class="masyu nested-puzzle"><style>
+    .masyu-grid {
+        border: 4px solid black;
+        margin: auto;
+    }
+    .masyu-grid td {
+        border: .5px dashed grey;
+        min-width: 40px;
+        height: 40px;
+        text-align: center;
+        vertical-align: middle;
+        padding: 0;
+    }
+
+    .c {
+        width: 30px;
+        height: 30px;
+        background-color: white;
+        border-radius: 50%;
+        border: 2px solid black;
+        display: block;
+        margin: auto;
+        vertical-align: middle;
+        text-align: center;
+    }
+
+    .g {
+        background-color: #bbb;
+    }
+
+    .masyu-list > li {
+        list-style-type: none;
+    }
+
+    .masyu-img {
+        height: 22px;
+        vertical-align: text-bottom;
+        padding-right: 5px;
+    }
+</style><p class="flavor">
+    Don&rsquo;t you hate it when you solve your favorite logic puzzle but get stuck on extraction? Here&rsquo;s how you extract this one: read the letters traversed by the loop, in loop order.
+</p><div><p><strong>
+            Masyu:
+        </strong></p><p><ul class="masyu-list"><li>
+                Draw a single closed loop through all circled cells.
+            </li><li><img class="masyu-img" src="/static/puzzle_resources/your-puzzle/masyu-w.png"><strong>white circles</strong>: loop goes straight through, then turns in at least one of the cells before/after loop
+            </li><li><img class="masyu-img" src="/static/puzzle_resources/your-puzzle/masyu-b.png"><strong>black circles</strong>: loop turns, and goes straight in both cells before/after loop
+            </li><li><img class="masyu-img" src="/static/puzzle_resources/your-puzzle/masyu-g.png"><strong>grey circles</strong>: are either white or black circles
+            </li></ul></p></div><table class="masyu-grid"><tr><td>S</td><td>O</td><td>C</td><td>A</td><td>T</td></tr><tr><td>N</td><td>E</td><td><span class="c g"></span></td><td>L</td><td>L</td></tr><tr><td><span class="c"></span></td><td><span class="c g"></span></td><td>L</td><td>L</td><td><span class="c g"></span></td></tr><tr><td>O</td><td>W</td><td><span class="c g"></span></td><td>A</td><td>I</td></tr><tr><td>T</td><td><span class="c g"></span></td><td>S</td><td>N</td><td><span class="c g"></span></td></tr></table><br><p>
+    Links to solve online (no answer checking): 
+    <a href="https://swaroopg92.github.io/penpa-edit/#m=solve&p=tZTfb5swEMff+SsqP/uBn2nCW5e106QuXddMVYRQ5aRugwpxZshaEaV/e++ObNjApk3TRLhcPjHnr819XX7bCS15BFcw5i734PL9Md2hi58f1zyrchmf8LNdtVYaEs6vLi74g8hL6STHUamTMJ9xuj2WvtaL14StMr3K5d0l417q7Osv8b6+i5P0wOuvbTpu05t4D3EW75nvsjhhN4wHVA7qegiuDOAjmBogQHBmgBDB3AATBLMWBDTLuQGoKOj9CaioAUJ6xAQkzASnHaXhGMFtCyKqYSiNqMZHA4w60iOqYexHZK8Fts2jzVvA5gVYbsKt7YelYIlxj2Kd3tgQ96FPB8dGuN4eHeEaOxTkXZBIn+IcXjqvA4rvKboUI4qXNOac4i3FKcWQ4ojGnGLbOE7iN+2LV/RnGbbrZbaRJzOlC5FD096sxVbC91QVW1VmlWTQsqxU+V250w9iJVlMHc+JbXbFUmoL5Uptcyhpwexxo7Qc/AuhvH8cGr9U+r5T/VnkuQUa/1qo2WsLVTqzfgut1bNFClGtLbAUFfi9XGdbu5LcVLaAStgSxZPozFa0az447IXRnfjcH3GfToRJXF/z+gN0snF28PoajoRPMVupYpkxPBYSRl0FTZHACB5Aet6kPqS39D9m0wZ6LuSzduwCUqs9689xUs85w8ne0dOYskJ9B730GP1uBADAl/dyhOXuXj3tjsOoqc9Ibr34vVJMG6WYDSjFBfyzUuPtDcidpIfmRbh/dRybp8t/MvHL0WxKD/oN8IDlgA5a68h77gLe8xFO2LcS0AE3Ae0aClDfUwB7tgL2C2dh1a65UFXXXzhVz2I4lemyJHUoewM=" target="_blank" rel="noopener noreferrer">penpa-edit</a>, 
+    <a href="https://puzz.link/p?mashu/v:/5/5/0065220ii" target="_blank" rel="noopener noreferrer">puzz.link</a></p></div><div><h5>Masyu solution:</h5><ol><li>The white circle in R3C1 (row 3, column 1) must have straight lines through it, so they can only go vertically.</li><li>R5C5 must be black, because the loop must go through it and turn in that corner.</li><li>Now consider R5C2. If it&rsquo;s black, it extends up to R3C2 and right to R5C4, but then the line in R4C1 is cut off. So it must be white.</li><li>Extending the lines, R2C1 must now turn to R2C2. Now R3C2 must be white because it has no room for a vertical line of length 3.</li><li>In the same logic, R4C3 must be white, R3C5 must be white, and finally R2C3 must be white.</li></ol><img style="width: 300px; height:300px; " src="/static/puzzle_resources/your-puzzle/soln-8wgt5bkB3u/soln-masyu.png"></p>
+    The letters along the loop read CALL IN STONEWALL. The answer is <span class="answer">STONEWALL</span>.
+  <p></p></div><div class="note">I love masyu. Shoutouts to <a href="https://web.archive.org/web/20181222203226/http://www.maths.usyd.edu.au/ub/sums/puzzlehunt/2018/puzzles/A3S4_On_the_Twelfth_Day_of_Christ-masyu.pdf" target="_blank" rel="noopener noreferrer">On The Twelfth Day of Christ-masyu</a>, where I was stuck on extraction.</div></div>
+<div class="nested-solution submit"><link rel="stylesheet" type="text/css" href="/static/puzzle_resources/your-puzzle/soln-8wgt5bkB3u/your-puzzle-soln.css" /><button onclick="togglePuzzle(this, '.submit')">show/hide puzzle:</button><div class="submit nested-puzzle"><style>
+    #reply {
+        display: none;
+    }
+</style><p class="flavor">
+    The perfect puzzle is like a recipe — it requires creativity, gives just as much as you put in, and is always a little different each time.
+</p><div><p>
+        You know what, why don&rsquo;t you make it yourself?
+    </p><p>
+        Write a (very easy) puzzle and send it to us at <a href="mailto:galacticpuzzlesetters+mypuzzle@gmail.com" target="_blank" rel="noopener noreferrer">galacticpuzzlesetters+mypuzzle@gmail.com</a>.
+    </p></div></div><div><p>
+    After we send in a brilliant, elegant, and very easy puzzle, we get the reply:
+  </p><p class="reply"><em>Thank you for your excellent puzzle! We forgot to mention one thing — it should extract to the cluephrase, <strong>ENTER ANS STONEWALL</strong>.</em></p><p>
+    If we send in a puzzle that extracts to that cluephrase, we&rsquo;ll get the reply:
+  </p><p class="reply"><em>Thank you for your excellent puzzle! We loved the part where we extracted the cluephrase, <strong>ENTER ANS STONEWALL</strong>!</em></p><p>The answer is <span class="answer">STONEWALL</span>.</p></div><div class="note">My friends at /r/PictureGame love to solve puzzles fast, until they get to a submission request, where nobody will want to do it. This puzzle is for them.</div></div>
+<div class="nested-solution words"><link rel="stylesheet" type="text/css" href="/static/puzzle_resources/your-puzzle/soln-8wgt5bkB3u/your-puzzle-soln.css" /><button onclick="togglePuzzle(this, '.words')">show/hide puzzle:</button><div class="words nested-puzzle"><style>
+    @font-face{
+        font-family: 'Recursive';
+        src: url(/static/puzzle_resources/your-puzzle/recursive.woff2)
+            format('woff2-variations');
+    }
+
+    .words-grid {
+        border: 2px solid black;
+
+    }
+    .words-grid td {
+        border: 1px solid black;
+        min-width: 40px;
+        height: 40px;
+        text-align: center;
+        padding: 0;
+    }
+
+    .empty {
+        background-color: #000000;
+    }
+
+    .y {
+        background-color: rgb(165, 221, 214);
+    }
+
+    .click{
+        color: #087;
+        font-weight: bold;
+        cursor: pointer;
+        border-radius: 5px;
+    }
+
+    .clues {
+        font-family: 'Recursive';
+        opacity: 1;
+        transition: 0.5s;
+
+    }
+
+    #like, #no-like, #not-sure, #words-flavor {
+        opacity: 1;
+        transition: 0.25s;
+    }
+
+    ruby {
+        ruby-position: under;
+    }
+
+    rt {
+        opacity: 0;
+        display: none;
+        transition: 0.5s;
+    }
+
+    .bar {
+        opacity: 0;
+        display: none;
+        transition: 0.5s;
+        font-variation-settings: 'CASL' 0, 'CRSV' 1, 'wght' 300, 'MONO' 0, 'slnt' 0;
+        color:rgb(111, 111, 111);
+        transition: 0.5s;
+    }
+
+    .unhighlight{
+        opacity: 1;
+        font-variation-settings: 'CASL' 0, 'CRSV' 1, 'wght' 400, 'MONO' 0, 'slnt' 0;
+        transition: 0.5s;
+    }
+
+    .force.defn, .highlight.defn{
+        font-variation-settings: 'CASL' 0, 'CRSV' 1, 'wght' 700, 'MONO' 0, 'slnt' 0;
+        transition: 0.5s;
+    }
+
+    .force.fodder, .highlight.fodder{
+        font-variation-settings: 'CASL' 0, 'CRSV' 1, 'wght' 500, 'MONO' 100, 'slnt' 0;
+        color:rgb(51, 129, 177);
+        transition: 0.5s;
+    }
+
+    .force.indicator, .highlight.indicator{
+        font-variation-settings: 'CASL' 1, 'CRSV' 1, 'wght' 500, 'MONO' 0, 'slnt' -10;
+        color:rgb(162, 89, 30);
+        transition: 0.5s;
+    }
+
+    .force.synonym, .highlight.synonym{
+        font-variation-settings: 'CASL' 0.2, 'CRSV' 1, 'wght' 600, 'MONO' 0, 'slnt' -5;
+        color:#5f5bb0;
+        transition: 0.5s;
+    }
+
+    .force.link, .highlight.link{
+        font-variation-settings: 'CASL' 0, 'CRSV' 1, 'wght' 450, 'MONO' 0, 'slnt' -10;
+        color: rgb(169, 76, 124);
+        transition: 0.5s;
+    }
+
+    .force.unimportant, .highlight.unimportant{
+        font-variation-settings: 'CASL' 0, 'CRSV' 1, 'wght' 300, 'MONO' 0, 'slnt' 0;
+        color:rgb(111, 111, 111);
+        transition: 0.5s;
+    }
+
+</style><div class="clipboard-container"><p class="flavor" id="words-flavor">
+        Why cross your words when you can check them twice with the same clue?
+    </p><div>
+        You like cryptics?
+            <span id="like">Great!<br></span>
+        You don&rsquo;t like cryptics?
+            <span id="no-like">Click <span class="click" id="delete" onclick="toggleDelete(this)">here</span> to delete them.<br></span>
+        You&rsquo;re not sure?
+            <span id="not-sure">Click <span class="click" id="toggleHighlight" onclick="toggleHighlight(this)">here</span> to toggle helpful indicator highlighting.</span></div><br><div style="display: block; overflow: auto;"><div class="one-half column"><table class="words-grid"><tr><td>1</td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td></tr><tr><td></td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td>7</td><td class="empty"></td><td class="empty"></td><td class="empty"></td></tr><tr><td></td><td>2</td><td class="empty"></td><td>4</td><td class="empty"></td><td class="empty"></td><td></td><td class="empty"></td><td class="empty"></td><td>10</td></tr><tr><td></td><td></td><td>3</td><td></td><td>5</td><td>6</td><td></td><td>8</td><td>9</td><td></td></tr><tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td class="y"></td><td class="y"></td><td class="y"></td><td class="y"></td><td class="y"></td><td class="y"></td><td class="y"></td><td class="y"></td><td class="y"></td><td class="y"></td></tr><tr><td class="empty"></td><td class="y"></td><td class="y"></td><td class="y"></td><td class="y"></td><td class="y"></td><td class="y"></td><td class="y"></td><td class="y"></td><td class="y"></td></tr><tr><td class="empty"></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td class="empty"></td><td></td><td></td><td></td><td></td><td></td><td class="empty"></td><td></td><td></td><td></td></tr><tr><td class="empty"></td><td class="empty"></td><td class="empty"></td><td></td><td class="empty"></td><td></td><td class="empty"></td><td></td><td class="empty"></td><td></td></tr></table></div><div class="one-half column"><p><b>Down</b></p><ol class="clues"><li><span class="defn unhighlight">An instrument that points North or draws circles</span><span class="cryptic">&#32;<ruby class="fodder unhighlight">encompassed<rt>fodder</rt></ruby>&#32;<ruby class="indicator unhighlight">within<rt>containment</rt></ruby></span></li><li><span class="defn unhighlight">&ldquo;Will you marry me?&rdquo; is one example</span><span class="cryptic">&#32;<ruby class="indicator unhighlight">odd<rt>alternate letters</rt></ruby>&#32;<ruby class="fodder unhighlight">part of pool&rsquo;s table<rt>fodder</rt></ruby></span></li><li><span class="defn unhighlight">Not sick</span><span class="cryptic"><span class="unimportant unhighlight">? </span><ruby class="synonym unhighlight">Cure<rt>synonym</rt></ruby><span class="bar"> |</span>&#32;
+                        <ruby class="synonym unhighlight">your old English<rt>synonym</rt></ruby><span class="unimportant unhighlight">!</span></span></li><li><span class="defn unhighlight">Color between green and blue</span><span class="cryptic">&#32;<ruby class="indicator unhighlight">called<rt>homophone</rt></ruby>&#32;<ruby class="fodder unhighlight">&ldquo;Turk Ways&rdquo;<rt>fodder</rt></ruby></span></li><li><span class="defn unhighlight">Ho Chi Minh City and Hanoi&rsquo;s country</span><span class="cryptic">&#32;<span class="unimportant unhighlight">where</span>&#32;
+                    <ruby class="fodder unhighlight">V<rt>fodder</rt></ruby>&#32;
+                    <ruby class="link unhighlight">and<rt>link</rt></ruby>&#32;
+                    <ruby class="fodder unhighlight">Taemin<rt>fodder</rt></ruby>&#32;<ruby class="indicator unhighlight">collaborated<rt>anagram</rt></ruby></span></li><li><span class="defn unhighlight">Spectators at a performance</span><span class="cryptic">&#32;<ruby class="indicator unhighlight">cracked up<rt>anagram</rt></ruby><span class="unimportant unhighlight">, </span><ruby class="fodder unhighlight">i.e., a dunce<rt>fodder</rt></ruby></span></li><li><span class="defn unhighlight">Urban center known for skyscrapers and landmarks</span><span class="cryptic"><span class="unimportant unhighlight">, </span><ruby class="synonym unhighlight">not up<rt>synonym</rt></ruby><span class="bar"> |</span>&#32;
+                        <ruby class="synonym unhighlight">city<rt>synonym</rt></ruby></span></li><li><span class="defn unhighlight">Sweet spice used in pumpkin pie and breakfast rolls</span><span class="cryptic"><span class="unimportant unhighlight">, </span><ruby class="fodder unhighlight">conman in<rt>fodder</rt></ruby>&#32;<ruby class="indicator unhighlight">disguise<rt>anagram</rt></ruby></span></li><li><span class="defn unhighlight">Largest ape with silver backs</span><span class="cryptic">&#32;
+                        <ruby class="synonym unhighlight">barbecue<rt>synonym</rt></ruby>&#32;
+                        <ruby class="indicator unhighlight">with<rt>containment</rt></ruby>&#32;
+                        <ruby class="synonym unhighlight">zero<rt>abbr.</rt></ruby>&#32;
+                        <span class="unimportant unhighlight">and</span>&#32;
+                        <ruby class="synonym unhighlight">one<rt>abbr.</rt></ruby></span></li><li><span class="defn unhighlight">Convert from one language to another</span><span class="cryptic">&#32;
+                        <ruby class="synonym unhighlight">announcement at rail platform<rt>synonymous-phrase</rt></ruby>&#32;
+                        <ruby class="fodder unhighlight">I<rt>fodder</rt></ruby>&#32;
+                        <ruby class="indicator unhighlight">missed<rt>deletion</rt></ruby></span></li></ol></div></div></div><script>
+    const highlightClasses = '.defn, .fodder, .indicator, .synonym, .link, .unimportant'
+
+    document.querySelectorAll('rt, .bar').forEach(e=>e.classList.add('no-copy'))
+
+    async function highlight() {
+        //highlight
+        document.querySelectorAll('.unhighlight').forEach(e=> e.classList.remove('unhighlight'))
+        document.querySelectorAll(highlightClasses).forEach(e => e.classList.add('highlight'))
+
+        // add tooltips
+        document.querySelectorAll('rt, .bar').forEach(e => e.style.opacity = 1)
+        document.querySelectorAll('rt').forEach(e=>e.style.display = 'block')
+        document.querySelectorAll('.bar').forEach(e=>e.style.display = 'inline')
+
+
+    }
+
+    async function unhighlight() {
+        document.querySelectorAll('.highlight').forEach(e=> e.classList.remove('highlight'))
+        document.querySelectorAll(highlightClasses).forEach(e => e.classList.add('unhighlight'))
+
+        // hide tooltips
+        document.querySelectorAll('rt, .bar').forEach(e => e.style.opacity = 0)
+        await sleep(500)
+        document.querySelectorAll('rt, .bar').forEach(e => e.style.display = "none")
+    }
+
+    // toggle indicator highlighting
+    function toggleHighlight(el) {
+        if (el.classList.contains('highlighted')) {
+            unhighlight()
+        } else {
+            highlight()
+        }
+        el.classList.toggle('highlighted');
+    }
+
+    async function toggleDelete(el) {
+        const like = document.getElementById('like')
+        const noLike = document.getElementById('no-like')
+        const notSure = document.getElementById('not-sure')
+        const wordsFlavor = document.getElementById('words-flavor')
+        const cryptics = document.querySelectorAll('.cryptic')
+
+        like.style.opacity = 0
+        noLike.style.opacity = 0
+        notSure.style.opacity = 0
+        wordsFlavor.style.opacity = 0
+
+        if (el.id === "delete") {
+            cryptics.forEach(e=>{
+                e.style.opacity = 0
+                e.style.display = 'none'
+            })
+            unhighlight()
+            await sleep(250)
+            like.innerHTML = 'Click <span class="click" id="undelete" onclick="toggleDelete(this)">here</span> to make the clues cryptic again.<br>'
+            noLike.innerHTML = 'Great!<br>'
+            notSure.innerHTML = 'Too bad!'
+            wordsFlavor.innerHTML = 'Why cross your words when the clues are so easy?'
+
+        } else {
+            cryptics.forEach(e=> {
+                e.style.opacity = 1
+                e.style.display = 'inline'
+            })
+            await sleep(250)
+            like.innerHTML = 'Great!<br>'
+            noLike.innerHTML = 'Click <span class="click" id="delete" onclick="toggleDelete(this)">here</span> to delete them.<br>'
+            notSure.innerHTML = 'Click <span class="click" id="toggleHighlight" onclick="toggleHighlight(this)">here</span> to toggle helpful indicator highlighting.'
+            wordsFlavor.innerHTML = 'Why cross your words when you can check them twice with the same clue?'
+        }
+
+        like.style.opacity = 1
+        noLike.style.opacity = 1
+        notSure.style.opacity = 1
+        wordsFlavor.style.opacity = 1
+
+    }
+</script></div><div class="words-soln"><p>Fill in the crossword grid by the regular clues/definitions and/or by the cryptic wordplay clues. The highlighted lines read: SOLUTION IS STONEWALL. The answer is <span class="answer">STONEWALL</span>.</p><table style="margin: 1rem auto;" class="words-grid"><tr><td>C</td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td></tr><tr><td>O</td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td>D</td><td class="empty"></td><td class="empty"></td><td class="empty"></td></tr><tr><td>M</td><td>P</td><td class="empty"></td><td>T</td><td class="empty"></td><td class="empty"></td><td>O</td><td class="empty"></td><td class="empty"></td><td>T</td></tr><tr><td>P</td><td>R</td><td>H</td><td>U</td><td>V</td><td>A</td><td>W</td><td>C</td><td>G</td><td>R</td></tr><tr><td>A</td><td>O</td><td>E</td><td>R</td><td>I</td><td>U</td><td>N</td><td>I</td><td>O</td><td>A</td></tr><tr><td>S</td><td>P</td><td>A</td><td>Q</td><td>E</td><td>D</td><td>T</td><td>N</td><td>R</td><td>N</td></tr><tr><td class="y">S</td><td class="y">O</td><td class="y">L</td><td class="y">U</td><td class="y">T</td><td class="y">I</td><td class="y">O</td><td class="y">N</td><td class="y">I</td><td class="y">S</td></tr><tr><td class="empty"></td><td class="y">S</td><td class="y">T</td><td class="y">O</td><td class="y">N</td><td class="y">E</td><td class="y">W</td><td class="y">A</td><td class="y">L</td><td class="y">L</td></tr><tr><td class="empty"></td><td>A</td><td>H</td><td>I</td><td>A</td><td>N</td><td>N</td><td>M</td><td>L</td><td>A</td></tr><tr><td class="empty"></td><td>L</td><td>Y</td><td>S</td><td>M</td><td>C</td><td class="empty"></td><td>O</td><td>A</td><td>T</td></tr><tr><td class="empty"></td><td class="empty"></td><td class="empty"></td><td>E</td><td class="empty"></td><td>E</td><td class="empty"></td><td>N</td><td class="empty"></td><td>E</td></tr></table><table><tr><th>answer</th><th>cryptic notation</th><th>clue</th></tr><tr><td>COMPASS</td><td>_COMPASS_</td><td class="clues"><span class="defn force">An instrument that points North or draws circles</span><span class="cryptic">&#32;<ruby class="fodder force">encompassed<rt>fodder</rt></ruby>&#32;<ruby class="indicator force">within<rt>containment</rt></ruby></span></td></tr><tr><td>PROPOSAL</td><td>P_R_O_P_O_S_A_L_</td><td class="clues"><span class="defn force">&ldquo;Will you marry me?&rdquo; is one example</span><span class="cryptic">&#32;<ruby class="indicator force">odd<rt>alternate letters</rt></ruby>&#32;<ruby class="fodder force">part of pool&rsquo;s table<rt>fodder</rt></ruby></span></td></tr><tr><td>HEALTHY</td><td>HEAL + THY</td><td class="clues"><span class="defn force">Not sick</span><span class="cryptic"><span class="unimportant force">? </span><ruby class="synonym force">Cure<rt>synonym</rt></ruby><span class="bar"> |</span>&#32;
+            <ruby class="synonym force">your old English<rt>synonym</rt></ruby><span class="unimportant force">!</span></span></td></tr><tr><td>TURQUOISE</td><td>&ldquo;TURQUOISE&rdquo;</td><td class="clues"><span class="defn force">Color between green and blue</span><span class="cryptic">&#32;<ruby class="indicator force">called<rt>homophone</rt></ruby>&#32;<ruby class="fodder force">&ldquo;Turk Ways&rdquo;<rt>fodder</rt></ruby></span></td></tr><tr><td>VIETNAM</td><td>V+IETNAM*</td><td class="clues"><span class="defn force">Ho Chi Minh City and Hanoi&rsquo;s country</span><span class="cryptic">&#32;<span class="unimportant force">where</span>&#32;
+        <ruby class="fodder force">V<rt>fodder</rt></ruby>&#32;
+        <ruby class="link force">and<rt>link</rt></ruby>&#32;
+        <ruby class="fodder force">Taemin<rt>fodder</rt></ruby>&#32;<ruby class="indicator force">collaborated<rt>anagram</rt></ruby></span></td></tr><tr><td>AUDIENCE</td><td>AUDIENCE*</td><td class="clues"><span class="defn force">Spectators at a performance</span><span class="cryptic">&#32;<ruby class="indicator force">cracked up<rt>anagram</rt></ruby><span class="unimportant force">, </span><ruby class="fodder force">i.e., a dunce<rt>fodder</rt></ruby></span></td></tr><tr><td>DOWNTOWN</td><td>DOWN + TOWN</td><td class="clues"><span class="defn force">Urban center known for skyscrapers and landmarks</span><span class="cryptic"><span class="unimportant force">, </span><ruby class="synonym force">not up<rt>synonym</rt></ruby><span class="bar"> |</span>&#32;
+            <ruby class="synonym force">city<rt>synonym</rt></ruby></span></td></tr><tr><td>CINNAMON</td><td>CINNAMON*</td><td class="clues"><span class="defn force">Sweet spice used in pumpkin pie and breakfast rolls</span><span class="cryptic"><span class="unimportant force">, </span><ruby class="fodder force">conman in<rt>fodder</rt></ruby>&#32;<ruby class="indicator force">disguise<rt>anagram</rt></ruby></span></td></tr><tr><td>GORILLA</td><td>G(O)RILL+A</td><td class="clues"><span class="defn force">Largest ape with silver backs</span><span class="cryptic">&#32;
+            <ruby class="synonym force">barbecue<rt>synonym</rt></ruby>&#32;
+            <ruby class="indicator force">with<rt>containment</rt></ruby>&#32;
+            <ruby class="synonym force">zero<rt>abbr.</rt></ruby>&#32;
+            <span class="unimportant force">and</span>&#32;
+            <ruby class="synonym force">one<rt>abbr.</rt></ruby></span></td></tr><tr><td>TRANSLATE</td><td>TRA(i)NS LATE</td><td class="clues"><span class="defn force">Convert from one language to another</span><span class="cryptic">&#32;
+            <ruby class="synonym force">announcement at rail platform<rt>synonymous-phrase</rt></ruby>&#32;
+            <ruby class="fodder force">I<rt>fodder</rt></ruby>&#32;
+            <ruby class="indicator force">missed<rt>deletion</rt></ruby></span></td></tr></table></p></div><div class="note">As a decidedly non-lover of cryptics, I decided to write a cryptic that was completely optional. However, in testing, no one was brave enough to delete the cryptics. This puzzle is dedicated to the cryptic solvers on teams, without whom we would have to touch the cryptics.</div></div>
+
+<h4>Okay, but what&rsquo;s the <span class="glitch" data-text="answer">answer</span>?</h4>
+<p>After writing the exam over and over, we&rsquo;ve seen lots of puzzles, all of which give the answer <span class="answer spoiler">STONEWALL</span>. (To make teams&rsquo; lives easier, they receive a toast notification if their completed, but not yet submitted, quiz will give them a puzzle they&rsquo;ve seen before. After seeing five unique puzzles, the toast also tracks how many puzzles they&rsquo;ve seen out of all ten.)</p>
+<p>But now we&rsquo;re stuck on extraction... again! How we can extract again? In fact, all the cluephrases from different puzzles have unique lengths. We can use the same extraction clued by question 9 (sort by length, index first letter) to get the <span class="glitch" data-text="answer">answer</span>:</p>
+<table id="cluephrases"><tr><th>cluephrase</th><th>your puzzle</th></tr><tr><td>CALLINSTONEWALL</td><td><a href="#masyu" onclick="toggleSoln(document.getElementById('toggle-masyu'), '.masyu', true)">masyu</a></td></tr><tr><td>HELLOIMSTONEWALL</td><td><a href="#alicebob" onclick="toggleSoln(document.getElementById('toggle-alicebob'), '.alicebob', true)">alicebob</a></td></tr><tr><td>ENTERANSSTONEWALL</td><td><a href="#submit" onclick="toggleSoln(document.getElementById('toggle-submit'), '.submit', true)">submit</a></td></tr><tr><td>FREEANSISSTONEWALL</td><td><a href="#backsolve" onclick="toggleSoln(document.getElementById('toggle-backsolve'), '.backsolve', true)">backsolve</a></td></tr><tr><td>SOLUTIONISSTONEWALL</td><td><a href="#words" onclick="toggleSoln(document.getElementById('toggle-words'), '.words', true)">words</a></td></tr><tr><td>THEGAYINNINGREENWICH</td><td><a href="#ball" onclick="toggleSoln(document.getElementById('toggle-ball'), '.ball', true)">ball</a></td></tr><tr><td>ALIASOFMCUJERRYSLEDGE</td><td><a href="#id" onclick="toggleSoln(document.getElementById('toggle-id'), '.id', true)">id</a></td></tr><tr><td>BYTHEWAYENTERSTONEWALL</td><td><a href="#extract" onclick="toggleSoln(document.getElementById('toggle-extract'), '.extract', true)">extract</a></td></tr><tr><td>LOYOURANSWERISSTONEWALL</td><td><a href="#magic" onclick="toggleSoln(document.getElementById('toggle-magic'), '.magic', true)">magic</a></td></tr><tr><td>EXCELLENTANSWERSTONEWALL</td><td><a href="#frogorf" onclick="toggleSoln(document.getElementById('toggle-frogorf'), '.frogorf', true)">frogorf</a></td></tr></table>
+
+<p>Reading the first letters gives the <span class="glitch" data-text="answer">answer</span>, <b>CHEF&rsquo;S TABLE</b>. </p>
+<p>It&rsquo;s worth noting that after we know that the answer to each puzzle is <span class="answer">STONEWALL</span>, we can shortcut many puzzles by just finding each cluephrase&rsquo;s length and first letter. This lets us skip solving the conundrum, the rest of the crossword, much of the ID, FROGORF level 3, and so on.</p>
+
+    
+    
+    <h2 id="authors-notes">Author&rsquo;s Notes</h2>
+    <p>I&rsquo;ve had this &ldquo;Buzzfeed personality quiz&rdquo; idea for several years, and our team had similar ideas during early brainstorming. I imagined a question about insight vs. grunt work which would give you a <a href="https://2019.galacticpuzzlehunt.com/puzzle/observatory.html" target="_blank" rel="noopener noreferrer">minimalist</a>&#32;<a href="https://www.mezzacotta.net/puzzle/cisra/2009/A-2-Meet-Your-Match.pdf" target="_blank" rel="noopener noreferrer">extraction</a>&#32;<a href="#ball" onclick="toggleSoln(document.getElementById('toggle-ball'), '.ball', true)">puzzle</a> vs. a <a href="#id" onclick="toggleSoln(document.getElementById('toggle-id'), '.id', true)">puzzle</a> where you have to identify 9000 animals.</p>
+<p>The Exam theme for our first round was the perfect place for this puzzle and for invoking some <a href="https://www.google.com/search?q=scantron&tbm=isch" target="_blank" rel="noopener noreferrer">scantron bubble</a> trauma. Our time loop mechanic gave me the idea of hiding the <span class="glitch" data-text="answer">answer</span> across all the puzzles, even though you can only submit the quiz <span class="glitch" data-text="once">once</span>. Haven&rsquo;t you ever wanted to go back in time and rewrite an exam?</p>
+<p>Check out our <a href="/wrapup" target="_blank" rel="noopener noreferrer">wrap-up</a> for funny puzzle submissions and statistics on teams&rsquo; initial answers to the quiz.</p>
+<p><strong>Q: What is <span class="ipa">[ɰäˑkʷʰːɯ̟ᵝꜛɰa̠̞kʰɯ̥]</span>?</strong> </p>
+<p>A: A not-trying-very-hard IPA transcription of <a href="https://www.youtube.com/watch?v=A5OLaBlQP9I" target="_blank" rel="noopener noreferrer">something</a> to snipe the weeb linguists.</p>
+<p><strong>Q: How were puzzles assigned?</strong></p>
+<p>A: Like other personality quizzes, every answer to questions 1–8 (question 9 only has the one correct answer) is assigned weights to the ten puzzles. After adding up your weights, we give you the puzzle you scored the highest on (breaking ties by the alphabetic order of the internal puzzle names). I chose the weights by hand and simulated quiz answers to make sure puzzles were diversely distributed (although <a href="#backsolve" onclick="toggleSoln(document.getElementById('toggle-backsolve'), '.backsolve', true)">backsolve</a> was deliberately weighted to be uncommon.)</p>
+<p>Full table of weights:</p>
+<table id="weights"><thead><tr><th></th><th>alicebob</th><th>backsolve</th><th>ball</th><th>extract</th><th>frogorf</th><th>id</th><th>magic</th><th>masyu</th><th>submit</th><th>words</th></tr></thead><tbody><tr><th>What&rsquo;s your favourite part of a puzzlehunt?</th><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>GOING FAST</td><td></td><td>2</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Surprises in puzzles, story, and design</td><td></td><td></td><td></td><td></td><td>2</td><td></td><td>2</td><td></td><td></td><td></td></tr><tr><td>Unlocking a puzzle catered to my extremely niche interest</td><td></td><td></td><td></td><td></td><td>1</td><td>2</td><td></td><td></td><td>1</td><td></td></tr><tr><td>Having fun with my teammates</td><td></td><td></td><td></td><td>1</td><td>1</td><td></td><td>1</td><td></td><td></td><td>1</td></tr><tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><th>What best describes your experience with puzzlehunts?</th><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>It&rsquo;s all very new to me! I know every puzzle has an answer, does that count?</td><td></td><td></td><td></td><td>1</td><td>1</td><td></td><td>1</td><td>1</td><td>1</td><td>1</td></tr><tr><td>I&rsquo;m a novice — I know that a number (n) often means either an enumeration (something n characters long), or an index (taking the nth letter)</td><td></td><td></td><td></td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td></tr><tr><td>I can handle some puzzles, and I&rsquo;ve even solved a meta or two.</td><td>1</td><td></td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td></tr><tr><td>I&rsquo;m ready to cheese your metas, and backsolve the rest.</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td></td><td>1</td><td>1</td><td>1</td></tr><tr><td>ↈ ROMAN NUMERAL MY MIT MYSTERY HUNT COIN COLLECTION</td><td>1</td><td></td><td>1</td><td>1</td><td>1</td><td></td><td></td><td>1</td><td></td><td>1</td></tr><tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><th>You&rsquo;re now a puzzle expert. What&rsquo;s your superpower?</th><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Gridless Printer&rsquo;s Devilry anagrind Flats</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td>4</td></tr><tr><td>Double Liar Cipher Dosufuwa-Like Slalom</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td>4</td><td></td><td></td></tr><tr><td>Using ARRAYFORMULA, I can find eigenletters of all ordered and unordered sets known to mankind</td><td></td><td></td><td></td><td>2</td><td></td><td>1</td><td></td><td></td><td></td><td></td></tr><tr><td>Yandex crop RIS didn&rsquo;t work? I&rsquo;ll try context aware inpainting first, or maybe I&rsquo;ll just 3D model it in Minecraft</td><td></td><td></td><td></td><td></td><td>1</td><td>2</td><td></td><td></td><td></td><td></td></tr><tr><td class="ipa">/ɰäˑkʷʰːɯ̟ᵝꜛɰa̠̞kʰɯ̥/</td><td></td><td></td><td>1</td><td></td><td></td><td></td><td></td><td></td><td>2</td><td></td></tr><tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><th>What is a logic puzzle?</th><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>An Einstein puzzle, like Q is lying in the blue house eating tofu and W is in the Reliant Robin speaking Bengali</td><td>2</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>A grid puzzle with number or shape clues, like Sudoku, Slitherlink, Nurikabe, Tapa, Fillomino, Country Road...</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td>2</td><td></td><td></td></tr><tr><td>An open ended engineering game often about optimizing the number of steps in your solution, like Baba Is You or Opus Magnum</td><td></td><td></td><td></td><td></td><td>2</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>A detailed list of constraints and instructions that must be carefully followed to the letter to discover that we end up in a landlocked country in West Africa</td><td>2</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Something I&rsquo;m not interested in</td><td></td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td></td><td>1</td><td>1</td></tr><tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><th>When do you start putting letters into Nutrimatic?</th><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>What&rsquo;s Nutrimatic?</td><td>1</td><td></td><td>1</td><td></td><td>1</td><td></td><td></td><td>1</td><td>1</td><td></td></tr><tr><td>I solve every clue for that 100% feeling, no WoFing allowed</td><td></td><td></td><td></td><td></td><td></td><td></td><td>4</td><td></td><td></td><td></td></tr><tr><td>Around half the letters</td><td></td><td></td><td></td><td>2</td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td><code>AAAAAAAAAAeA*</code></td><td></td><td></td><td></td><td>1</td><td></td><td>1</td><td>1</td><td>1</td><td></td><td>1</td></tr><tr><td>I only use Qat</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td>2</td><td></td></tr><tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><th>How much effort do you like to spend solving puzzles?</th><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Zero</td><td></td><td>4</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>I like to get the insight and make my teammates do all the work</td><td></td><td></td><td>4</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>I&rsquo;m fine with grunt work, but I&rsquo;m not great at insights/extraction</td><td>1</td><td></td><td></td><td>1</td><td></td><td>1</td><td></td><td>1</td><td></td><td></td></tr><tr><td>I&rsquo;ll spend every waking moment solving (what is sleep?)</td><td>2</td><td></td><td>1</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><th>What&rsquo;s the optimal number of people working on a puzzle?</th><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>1: [claimed offline] THIS IS MY PUZZLE, NO ONE ELSE TOUCH IT</td><td>1</td><td></td><td></td><td></td><td>1</td><td></td><td>1</td><td>1</td><td></td><td></td></tr><tr><td>2–3: The sweet spot of productivity</td><td></td><td></td><td>1</td><td>1</td><td></td><td></td><td>1</td><td></td><td>1</td><td>1</td></tr><tr><td>4+: Many hands make grunt work!</td><td></td><td></td><td></td><td>1</td><td></td><td>1</td><td></td><td></td><td>1</td><td></td></tr><tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><th>What &ldquo;generation&rdquo; of puzzles match your interests?</th><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Jigsaws and knitting</td><td></td><td></td><td>1</td><td></td><td></td><td></td><td></td><td></td><td>2</td><td></td></tr><tr><td>Crosswords, armchair treasure hunts, and the NPL</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td>2</td></tr><tr><td>Advanced math or programming</td><td>2</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td>1</td><td></td></tr><tr><td>Interactive games and escape rooms</td><td></td><td></td><td></td><td></td><td>2</td><td></td><td>2</td><td></td><td></td><td></td></tr><tr><td>Mazes, word searches, and Connect the Dots</td><td></td><td></td><td></td><td></td><td></td><td>2</td><td></td><td>1</td><td></td><td></td></tr></tbody></table>
+    
+
+    
+    
+
+    
+</main>
+
+
+    </div>
+    
+
+    
+
+    
+</body>
+</html>

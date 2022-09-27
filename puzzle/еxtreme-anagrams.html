@@ -1,0 +1,233 @@
+
+
+
+
+
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    
+<title>Extreme Anagrams</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=0.5">
+    <meta property="og:title" content="Galactic Puzzle Hunt 2022">
+    <meta property="og:description" content="Registration for this year's Galactic Puzzle Hunt is now open!">
+    <meta property="og:image" content="https://galacticpuzzlehunt.com/static/images/banner.png">
+    <meta property="twitter:card" content="summary_large_image">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Recursive:slnt,CASL,CRSV,MONO@-3,0.5,1,1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/skeleton.css">
+    <link rel="stylesheet" href="/static/css/base.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.19/jquery.touchSwipe.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.formset/1.2.2/jquery.formset.min.js"></script>
+    <script src="/jsi18n/"></script>
+    <script src="/static/js/sorttable.js"></script>
+    <script src="/static/js/tray.js"></script>
+    <script src="/static/js/notify.js"></script>
+    <script src="/static/js/time.js"></script>
+    
+    
+    <link rel="icon" sizes="16x16 32x32 48x48 64x64" href="/static/images/favicon.ico" type="image/vnd.microsoft.icon">
+    
+    
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-92192633-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-92192633-1');
+</script>
+
+</head>
+<body>
+    
+    <div id="background-glitch-wrapper" class="background-glitch">
+        <div class="glitch-1"></div>
+        <div class="glitch-2"></div>
+        <div class="glitch-3"></div>
+    </div>
+    
+    
+    <input id="shortcuts" type="checkbox">
+    
+    <nav>
+        <span class="tray">
+            <span id="tray-timer"></span>
+            <div class="top-tabs">
+                <a href="/">
+                    Home
+                </a>
+                
+                <a href="/rules">
+                    Rules
+                </a>
+                
+                
+                <a href="/story">
+                    Story
+                </a>
+                
+                
+                <a class="selected-tab" href="/puzzles">
+                    Puzzles
+                </a>
+                
+                <a href="/teams">
+                    Teams
+                </a>
+                
+                <a href="/faq">
+                    FAQ
+                </a>
+                
+                
+                <a href="/errata">
+                    Updates
+                </a>
+                
+                
+                <a href="/wrapup">
+                    Wrap-Up
+                </a>
+                
+                
+                <a href="https://galacticpuzzlehunt.com/archive">
+                    Archive
+                </a>
+                
+                
+                
+            </div>
+            <div class="top-left-actions">
+                
+
+
+
+
+<a href="/post-hunt-solve/%D0%B5xtreme-anagrams" class="btn">Check your answer spoiler-free</a>
+
+
+
+<a href="/solution/%D0%B5xtreme-anagrams" class="btn">View solution</a>
+<a href="/stats/%D0%B5xtreme-anagrams" class="btn">Stats</a>
+
+
+            </div>
+        </span>
+        <div class="top-right-actions">
+        
+        
+        </div>
+    </nav>
+    
+    
+    
+    
+    
+    <script>
+
+    
+    
+    let glitchTriggerFuncs = [];
+    let glitchTriggerReceived = false;
+    let glitchTriggerExReceived = false;
+    let glitchPageLoaded = false;
+    function processGlitchFuncs(ex) {
+        glitchTriggerFuncs.forEach((func) => {
+            func(ex);
+        });
+    }
+    function doGlitch(ex) {
+        glitchTriggerReceived = true;
+        if (ex) {
+            glitchTriggerExReceived = true;
+        }
+        if (glitchPageLoaded) {
+            processGlitchFuncs(ex);
+        }
+    }
+    window.addEventListener('load', () => {
+        glitchPageLoaded = true;
+        if (glitchTriggerExReceived) {
+            processGlitchFuncs(true);
+        }
+        else if (glitchTriggerReceived) {
+            processGlitchFuncs(false);
+        }
+    }, false);
+    
+    
+    
+    function registerOnGlitchHook(func) {
+        if (glitchTriggerExReceived) {
+            func(true);
+        }
+        else if (glitchTriggerReceived) {
+            func(false);
+        }
+        glitchTriggerFuncs.push(func);
+    }
+    
+
+    
+    
+    </script>
+    <div class="content">
+        
+
+<h1>
+    Extreme Anagrams
+    
+    
+</h1>
+
+
+
+<main class="puzzle-main clipboard-container">
+    
+    
+    
+    <p>Aaa aaa aaa a acc cc c ccennn nnn nno r s<u class="no-copy">u</u><span class="copy-only">[u]</span>y?<br>
+Ab<u class="no-copy">b</u><span class="copy-only">[b]</span>&rsquo;c ddeeg i jkno oo ors ttuvy.<br>
+Aace eegm, oo<u class="no-copy">s</u><span class="copy-only">[s]</span>s yy.<br>
+Aaadeeeelm, mn norr <u class="no-copy">S</u><span class="copy-only">[S]</span>ttwyy.&rsquo;<br>
+Be er, Tttu<u class="no-copy">u</u><span class="copy-only">[u]</span>?</p>
+<p>Aad<u class="no-copy">d</u><span class="copy-only">[d]</span>e egh hio rss vyy.<br>
+Aadee ghiii k<u class="no-copy">k</u><span class="copy-only">[k]</span>lmn nrstt.<br>
+Aac cccc cccc cdddd d dfhhhhhhi kkkkl lm <u class="no-copy">o</u><span class="copy-only">[o]</span> ooooooooo ouuuu uuuww wwww?<br>
+A aaaacc, ccc eeeeee, fi il<u class="no-copy">l</u><span class="copy-only">[l]</span> mmmmoo rrr rrs ssuwy.<br>
+Aaaaa, aaa<u class="no-copy">a</u><span class="copy-only">[a]</span>a Aaaa bcc ddd &ldquo;ddd,&rdquo; ddd dde &ldquo;eee eee&rdquo;; &ldquo;eef fhh&rdquo; hhh hhh h hhhhhh ijjlmn no orr stttttw.<br>
+Aaa AacDdddee fhi i llmm, N-O-<u class="no-copy">O</u><span class="copy-only">[O]</span>-O-R.<br>
+Abcd e<u class="no-copy">e</u><span class="copy-only">[e]</span> fgh iiij klmn ooopq rstuuv wxyz.<br>
+Acccd Deeee eeeefi i ikkk lo ppppppp pprrrs<u class="no-copy">t</u><span class="copy-only">[t]</span>.<br></p>
+<p>(Abcddde ee e eegh iiln orrsss <u class="no-copy">s</u><span class="copy-only">[s]</span>tvv.<br>
+Aabde eee eei, Ll<u class="no-copy">o</u><span class="copy-only">[o]</span>orrr rss stuv.<br>
+Eeeh hm mno <u class="no-copy">o</u><span class="copy-only">[o]</span>stwy!<br>
+Abc deeef ghhij klm noooo pqrr st<u class="no-copy">t</u><span class="copy-only">[t]</span> uuvw xyz.<br>
+Aadddd de e<u class="no-copy">e</u><span class="copy-only">[e]</span>efi, iillnns tt uvww.)</p>
+<p><button class="btn clipboard-button"></button></p>
+    
+    
+
+    
+</main>
+
+<script src="/static/js/copyjack.js"></script>
+
+
+    </div>
+    
+
+    
+
+    
+</body>
+</html>

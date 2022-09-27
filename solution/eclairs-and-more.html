@@ -1,0 +1,434 @@
+
+
+
+
+
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    
+<title>Solution: Eclairs and More @ Ovsljs* Opsvut</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=0.5">
+    <meta property="og:title" content="Galactic Puzzle Hunt 2022">
+    <meta property="og:description" content="Registration for this year's Galactic Puzzle Hunt is now open!">
+    <meta property="og:image" content="https://galacticpuzzlehunt.com/static/images/banner.png">
+    <meta property="twitter:card" content="summary_large_image">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Recursive:slnt,CASL,CRSV,MONO@-3,0.5,1,1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/skeleton.css">
+    <link rel="stylesheet" href="/static/css/base.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.19/jquery.touchSwipe.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.formset/1.2.2/jquery.formset.min.js"></script>
+    <script src="/jsi18n/"></script>
+    <script src="/static/js/sorttable.js"></script>
+    <script src="/static/js/tray.js"></script>
+    <script src="/static/js/notify.js"></script>
+    <script src="/static/js/time.js"></script>
+    
+    
+    <link rel="icon" sizes="16x16 32x32 48x48 64x64" href="/static/images/favicon.ico" type="image/vnd.microsoft.icon">
+    
+    
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-92192633-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-92192633-1');
+</script>
+
+</head>
+<body>
+    
+    <div id="background-glitch-wrapper" class="background-glitch">
+        <div class="glitch-1"></div>
+        <div class="glitch-2"></div>
+        <div class="glitch-3"></div>
+    </div>
+    
+    
+    <input id="shortcuts" type="checkbox">
+    
+    <nav>
+        <span class="tray">
+            <span id="tray-timer"></span>
+            <div class="top-tabs">
+                <a href="/">
+                    Home
+                </a>
+                
+                <a href="/rules">
+                    Rules
+                </a>
+                
+                
+                <a href="/story">
+                    Story
+                </a>
+                
+                
+                <a class="selected-tab" href="/puzzles">
+                    Puzzles
+                </a>
+                
+                <a href="/teams">
+                    Teams
+                </a>
+                
+                <a href="/faq">
+                    FAQ
+                </a>
+                
+                
+                <a href="/errata">
+                    Updates
+                </a>
+                
+                
+                <a href="/wrapup">
+                    Wrap-Up
+                </a>
+                
+                
+                <a href="https://galacticpuzzlehunt.com/archive">
+                    Archive
+                </a>
+                
+                
+                
+            </div>
+            <div class="top-left-actions">
+                
+<a href="/puzzle/eclairs-and-more" class="btn">Back to the puzzle</a>
+
+            </div>
+        </span>
+        <div class="top-right-actions">
+        
+        
+        </div>
+    </nav>
+    
+    
+    
+    
+    
+    <script>
+
+    
+    
+    let glitchTriggerFuncs = [];
+    let glitchTriggerReceived = false;
+    let glitchTriggerExReceived = false;
+    let glitchPageLoaded = false;
+    function processGlitchFuncs(ex) {
+        glitchTriggerFuncs.forEach((func) => {
+            func(ex);
+        });
+    }
+    function doGlitch(ex) {
+        glitchTriggerReceived = true;
+        if (ex) {
+            glitchTriggerExReceived = true;
+        }
+        if (glitchPageLoaded) {
+            processGlitchFuncs(ex);
+        }
+    }
+    window.addEventListener('load', () => {
+        glitchPageLoaded = true;
+        if (glitchTriggerExReceived) {
+            processGlitchFuncs(true);
+        }
+        else if (glitchTriggerReceived) {
+            processGlitchFuncs(false);
+        }
+    }, false);
+    
+    
+    
+    function registerOnGlitchHook(func) {
+        if (glitchTriggerExReceived) {
+            func(true);
+        }
+        else if (glitchTriggerReceived) {
+            func(false);
+        }
+        glitchTriggerFuncs.push(func);
+    }
+    
+
+    
+    
+    </script>
+    <div class="content">
+        
+
+<style>
+h2 {
+    font-size: 2.5rem;
+    font-weight: normal;
+    font-style: italic;
+    margin-bottom: 2rem;
+}
+
+h4 {
+    font-size: 2rem;
+    font-weight: normal;
+    margin: 2rem 0;
+}
+</style>
+
+<h1>
+    Solution <span style="font-weight: 300">Eclairs and More @ Ovsljs* Opsvut</span>
+    <div class="solved-title-marker">Answer <span class="solved-title-answer spoiler">GOODBYE, FAREWELL, AND AMEN</span> / <span class="solved-title-answer spoiler">LYRIC</span></div>
+</h1>
+
+<main class="puzzle-main">
+    <h2 style="margin-top: 0">
+        Written by
+        
+Mark
+
+    </h2>
+
+    
+    
+
+<p>
+We start by observing that the names of the menu items often end with the same five-letter word &ldquo;OPSVU&rdquo;, suggesting a substitution cipher. As suggested by the overall theming and title of the puzzle, the menu items are in fact enciphered names of donuts from Dunkin&rsquo; Donuts. However, as clued by the flavortext &ldquo;the new flavors each kept something from the old ones&rdquo;, each donut name has a letter that was copied directly from the original name, rather than substituted.
+</p>
+
+<p>
+Upon deciphering the donut names, we observe that the menu items are ordered alphabetically by the donut names. At the same time, we identify the objects in each image and observe that the price of each menu item gives an enumeration for the object name. We notice that each object name starts with a different letter from A to V. Using this as a sorting order for the letters &ldquo;kept the same&rdquo; in the donut names, we arrive at the first answer <b>GOODBYE, FAREWELL AND AMEN</b>.
+</p>
+
+<p>
+In looking for the second answer, we make one of several observations:
+</p>
+
+<ul>
+<li>The images have so far been underconstrained. Studying the images more carefully, we notice that many of them are &ldquo;holey&rdquo;. In fact, they all have a well-defined number of holes, from a topological perspective, which is a rather unusual property.</li>
+<li>The substitution cipher takes &ldquo;B&rdquo; to &ldquo;&amp;&rdquo;, which look similar to each other because they both have two holes.</li>
+<li>The rest of the substitution cipher contains two cycles in alphabetical order, one containing the letters &ldquo;ADOPQR&rdquo; and the other containing the rest of the alphabet. (It also takes apostrophes to asterisks and È to Ḟ.) Studying the letters &ldquo;ADOPQR&rdquo; carefully or entering &ldquo;ADOPQR&rdquo; into a search engine reveals that they form the set of letters with exactly one hole.</li>
+<li>Donuts are canonically known for their holes.</li>
+<li>A mug appears in the puzzle. A common joke states that donuts and mugs are the same, at least to topologists, because they both have one hole.</li>
+<li>The flavortext mentions a &ldquo;whole&rdquo; revamp, which is a pun on &ldquo;hole&rdquo;.</li>
+</ul>
+
+<p>
+Counting the number of holes in each object, indexing them into the donut names and sorting by object name gives the letters ITSTHEWORDSOFASONGFIVÈ, which we parse as the cluephrase IT&rsquo;S THE WORDS OF A SONG (5). This clues the second answer, <b>LYRIC</b>.
+</p>
+
+<table>
+<tr><th>Enciphered name</th><th>Original name</th><th>Common letter</th><th>Object pictured in the image</th><th>Number of holes</th><th>Index number of holes into donut name</th></tr>
+<tr>
+<td>DQQMF *S TQJEE OPSVU</td>
+<td>APPLE &rsquo;N SPICE DONUT</td>
+<td>E</td>
+<td>KEY</td>
+<td>8</td>
+<td>S</td>
+</tr>
+<tr>
+<td>DQQLF EAVN<span class="puzzlealtfont">&amp;</span> OPSVU</td>
+<td>APPLE CRUMB DONUT</td>
+<td>L</td>
+<td>NEEDLE</td>
+<td>1</td>
+<td>A</td>
+</tr>
+<tr>
+<td><span class="puzzlealtfont">&amp;</span>DWDAJDS LAENF OPSVU</td>
+<td>BAVARIAN KREME DONUT</td>
+<td>E</td>
+<td>URSA MAJOR</td>
+<td>3</td>
+<td>V</td>
+</tr>
+<tr>
+<td><span class="puzzlealtfont">&amp;</span>JTMDAL</td>
+<td>BISMARK</td>
+<td>M</td>
+<td>TRYPTOPHAN</td>
+<td>2</td>
+<td>I</td>
+</tr>
+<tr>
+<td>EIPEPMDUF BVUUFASVU OPSVU</td>
+<td>CHOCOLATE BUTTERNUT DONUT</td>
+<td>B</td>
+<td>EIGHT</td>
+<td>2</td>
+<td>H</td>
+</tr>
+<tr>
+<td>EIPEPMAUF GAPTUFO OPSVU</td>
+<td>CHOCOLATE FROSTED DONUT</td>
+<td>A</td>
+<td>PRETZEL</td>
+<td>3</td>
+<td>O</td>
+</tr>
+<tr>
+<td>EIPEPMDUF GAPTUEO XJUI TQAJSLMFT OPSVU</td>
+<td>CHOCOLATE FROSTED WITH SPRINKLES DONUT</td>
+<td>E</td>
+<td>GEAR</td>
+<td>17</td>
+<td>W</td>
+</tr>
+<tr>
+<td>EJSNDNPS OPSVU</td>
+<td>CINNAMON DONUT</td>
+<td>N</td>
+<td>QUIDDITCH</td>
+<td>4</td>
+<td>N</td>
+</tr>
+<tr>
+<td>GAFSEI EAVMMEA</td>
+<td>FRENCH CRULLER</td>
+<td>E</td>
+<td>MUG</td>
+<td>1</td>
+<td>F</td>
+</tr>
+<tr>
+<td>HMDCFO EIPEPMDUF DPSVU</td>
+<td>GLAZED CHOCOLATE DONUT</td>
+<td>D</td>
+<td>RUBBER BAND</td>
+<td>1</td>
+<td>G</td>
+</tr>
+<tr>
+<td>HMACFO TUADX<span class="puzzlealtfont">&amp;</span>FAAZ OPSVU</td>
+<td>GLAZED STRAWBERRY DONUT</td>
+<td>A</td>
+<td>INTERNET</td>
+<td>15</td>
+<td>R</td>
+</tr>
+<tr>
+<td>KFMMZ OOSVU</td>
+<td>JELLY DONUT</td>
+<td>O</td>
+<td>BRICK</td>
+<td>10</td>
+<td>T</td>
+</tr>
+<tr>
+<td>NAQMF GAPTUFO OPSVU</td>
+<td>MAPLE FROSTED DONUT</td>
+<td>A</td>
+<td>SNOWFLAKE</td>
+<td>6</td>
+<td>F</td>
+</tr>
+<tr>
+<td>NDQMF WDSJMMD ERḞNF OPSVU</td>
+<td>MAPLE VANILLA CRÈME DONUT</td>
+<td>R</td>
+<td>JAIL BARS</td>
+<td>18</td>
+<td>D</td>
+</tr>
+<tr>
+<td>PMO FDTIJPSFO OPSVU</td>
+<td>OLD FASHIONED DONUT</td>
+<td>F</td>
+<td>HOSE</td>
+<td>1</td>
+<td>O</td>
+</tr>
+<tr>
+<td>QPWOFAFO OPSVU</td>
+<td>POWDERED DONUT</td>
+<td>W</td>
+<td>LEXUS</td>
+<td>2</td>
+<td>O</td>
+</tr>
+<tr>
+<td>TOVA EAFDN OPSVU</td>
+<td>SOUR CREAM DONUT</td>
+<td>O</td>
+<td>COIN or CASH</td>
+<td>1</td>
+<td>S</td>
+</tr>
+<tr>
+<td>TUADX<span class="puzzlealtfont">&amp;</span>FAAY GAPTUFO OPSVU</td>
+<td>STRAWBERRY FROSTED DONUT</td>
+<td>Y</td>
+<td>FIORI</td>
+<td>7</td>
+<td>E</td>
+</tr>
+<tr>
+<td>WDNJMMD EAḞNF OPSVU</td>
+<td>VANILLA CRÈME DONUT</td>
+<td>N</td>
+<td>VENT</td>
+<td>10</td>
+<td>E</td>
+</tr>
+<tr>
+<td>WDSJMMD GAPTUFD OPSVU</td>
+<td>VANILLA FROSTED DONUT</td>
+<td>D</td>
+<td>DREAMCATCHER</td>
+<td>12</td>
+<td>T</td>
+</tr>
+<tr>
+<td>WDSJMLD GAPTUFO TQAJSLMFT OPSVU</td>
+<td>VANILLA FROSTED SPRINKLES DONUT</td>
+<td>L</td>
+<td>OCARINA</td>
+<td>15</td>
+<td>S</td>
+</tr>
+<tr>
+<td>WDSJMMD IFDOMJGIU OPSVU</td>
+<td>VANILLA HEADLIGHT DONUT</td>
+<td>G</td>
+<td>ABACUS</td>
+<td>13</td>
+<td>I</td>
+</tr>
+
+</table>
+
+
+    
+    
+    <h2 id="authors-notes">Author&rsquo;s Notes</h2>
+    <p>Counting the number of holes in the ocarina can be a little tricky. There are 16 holes, including the windway, going &ldquo;into&rdquo; the body of the ocarina, but the ocarina is actually topologically equivalent to a flat disc with 15 holes.</p>
+    
+
+    
+    
+
+    
+</main>
+
+
+    </div>
+    
+
+    
+
+    
+</body>
+</html>

@@ -1,0 +1,152 @@
+/* For statification */
+div#puztimer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+div.centered {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+div.flex-container {
+  display: flex;
+  flex-direction: row;
+}
+
+div.crossword-holder {
+  display: inline-block;
+}
+
+.bar {
+  position: relative;
+}
+
+.bar > * {
+  background-color: white;
+  border: 1px solid currentColor;
+  padding: 1em;
+  height: 28em;
+}
+
+table.crossword {
+  border-collapse: collapse;
+}
+
+table.crossword td {
+  border: 1px solid black;
+  box-shadow: 0 0 0 1px black;
+  position: relative;
+  padding: 0px;
+  background-clip: padding-box;
+}
+
+table.crossword td:not(.wall) { background-color: white; }
+
+table.crossword td sup {
+  font-size: 10px;
+  left: 2px;
+  position: absolute;
+  top: 5px;
+}
+
+table.crossword td div {
+  font-family: monospace;
+  height: 2em;
+  line-height: 2em;
+  text-align: center;
+  width: 2em;
+}
+
+table.crossword .wall      { background-color: #000;  }
+
+table.crossword td:hover:not(.wall) {
+  background-color: #ff9;
+}
+
+div.bar {
+  display: flex;
+  max-height: 100%;
+  text-align: left;
+}
+
+ol#across, ol#down {
+  margin: 0px;
+  overflow: auto;
+  padding: 5px;
+  position: relative;
+  width: 250px;
+  height: 27em;
+}
+
+ol#across li, ol#down li {
+  margin-bottom: 0px;
+  padding-bottom: 5px;
+}
+
+ol#across li:hover:not([data-sel=clue], [data-sel=cross]) {
+  background-color: #ff9;
+}
+
+ol#down li:hover:not([data-sel=clue], [data-sel=cross]) {
+  background-color: #ff9;
+}
+
+[data-sel=clue]  { background-color: #ff0; }
+[data-sel=cross] { background-color: #ffb; }
+
+[data-sel=cell] {
+  border: none;
+  display: block;
+  outline: 1.5px solid black;
+  transform: scale(1.2);
+  z-index: 1;
+}
+
+[data-sel=light] {
+  background-image: repeating-linear-gradient(
+      45deg, rgba(0, 0, 0, 0.15) 0% 5%, transparent 5% 12.5%);
+  background-origin: border-box;
+}
+
+[data-dir]:before, [data-dir]:after {
+  position: absolute;
+  background: inherit;
+  width: 10px;
+  height: 10px;
+  border: 2.5px none black;
+}
+[data-dir~=l]:before {
+  content: "";
+  left: -5px;
+  top: 50%;
+  transform-origin: top left;
+  transform: scale(0.5, 1) rotate(-45deg);
+  border-style: solid none none solid;
+}
+[data-dir~=r]:after {
+  content: "";
+  right: -5px;
+  bottom: 50%;
+  transform-origin: bottom right;
+  transform: scale(0.5, 1) rotate(-45deg);
+  border-style: none solid solid none;
+}
+[data-dir~=u]:before {
+  content: "";
+  top: -5px;
+  right: 50%;
+  transform-origin: top right;
+  transform: scale(1, 0.5) rotate(-45deg);
+  border-style: solid solid none none;
+}
+[data-dir~=d]:after {
+  content: "";
+  bottom: -5px;
+  left: 50%;
+  transform-origin: bottom left;
+  transform: scale(1, 0.5) rotate(-45deg);
+  border-style: none none solid solid;
+}

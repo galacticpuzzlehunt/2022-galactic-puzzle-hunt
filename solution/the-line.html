@@ -1,0 +1,570 @@
+
+
+
+
+
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    
+<title>Solution: The Line</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=0.5">
+    <meta property="og:title" content="Galactic Puzzle Hunt 2022">
+    <meta property="og:description" content="Registration for this year's Galactic Puzzle Hunt is now open!">
+    <meta property="og:image" content="https://galacticpuzzlehunt.com/static/images/banner.png">
+    <meta property="twitter:card" content="summary_large_image">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Recursive:slnt,CASL,CRSV,MONO@-3,0.5,1,1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/skeleton.css">
+    <link rel="stylesheet" href="/static/css/base.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.19/jquery.touchSwipe.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.formset/1.2.2/jquery.formset.min.js"></script>
+    <script src="/jsi18n/"></script>
+    <script src="/static/js/sorttable.js"></script>
+    <script src="/static/js/tray.js"></script>
+    <script src="/static/js/notify.js"></script>
+    <script src="/static/js/time.js"></script>
+    
+    
+    <link rel="icon" sizes="16x16 32x32 48x48 64x64" href="/static/images/favicon.ico" type="image/vnd.microsoft.icon">
+    
+    
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-92192633-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-92192633-1');
+</script>
+
+</head>
+<body>
+    
+    <div id="background-glitch-wrapper" class="background-glitch">
+        <div class="glitch-1"></div>
+        <div class="glitch-2"></div>
+        <div class="glitch-3"></div>
+    </div>
+    
+    
+    <input id="shortcuts" type="checkbox">
+    
+    <nav>
+        <span class="tray">
+            <span id="tray-timer"></span>
+            <div class="top-tabs">
+                <a href="/">
+                    Home
+                </a>
+                
+                <a href="/rules">
+                    Rules
+                </a>
+                
+                
+                <a href="/story">
+                    Story
+                </a>
+                
+                
+                <a class="selected-tab" href="/puzzles">
+                    Puzzles
+                </a>
+                
+                <a href="/teams">
+                    Teams
+                </a>
+                
+                <a href="/faq">
+                    FAQ
+                </a>
+                
+                
+                <a href="/errata">
+                    Updates
+                </a>
+                
+                
+                <a href="/wrapup">
+                    Wrap-Up
+                </a>
+                
+                
+                <a href="https://galacticpuzzlehunt.com/archive">
+                    Archive
+                </a>
+                
+                
+                
+            </div>
+            <div class="top-left-actions">
+                
+<a href="/puzzle/the-line" class="btn">Back to the puzzle</a>
+
+            </div>
+        </span>
+        <div class="top-right-actions">
+        
+        
+        </div>
+    </nav>
+    
+    
+    
+    
+    
+    <script>
+
+    
+    
+    let glitchTriggerFuncs = [];
+    let glitchTriggerReceived = false;
+    let glitchTriggerExReceived = false;
+    let glitchPageLoaded = false;
+    function processGlitchFuncs(ex) {
+        glitchTriggerFuncs.forEach((func) => {
+            func(ex);
+        });
+    }
+    function doGlitch(ex) {
+        glitchTriggerReceived = true;
+        if (ex) {
+            glitchTriggerExReceived = true;
+        }
+        if (glitchPageLoaded) {
+            processGlitchFuncs(ex);
+        }
+    }
+    window.addEventListener('load', () => {
+        glitchPageLoaded = true;
+        if (glitchTriggerExReceived) {
+            processGlitchFuncs(true);
+        }
+        else if (glitchTriggerReceived) {
+            processGlitchFuncs(false);
+        }
+    }, false);
+    
+    
+    
+    function registerOnGlitchHook(func) {
+        if (glitchTriggerExReceived) {
+            func(true);
+        }
+        else if (glitchTriggerReceived) {
+            func(false);
+        }
+        glitchTriggerFuncs.push(func);
+    }
+    
+
+    
+    
+    </script>
+    <div class="content">
+        
+
+<style>
+h2 {
+    font-size: 2.5rem;
+    font-weight: normal;
+    font-style: italic;
+    margin-bottom: 2rem;
+}
+
+h4 {
+    font-size: 2rem;
+    font-weight: normal;
+    margin: 2rem 0;
+}
+</style>
+
+<h1>
+    Solution <span style="font-weight: 300">The Line</span>
+    <div class="solved-title-marker">Answer <span class="solved-title-answer spoiler">MORE TIME</span> / <span class="solved-title-answer spoiler">GAP YEAR</span></div>
+</h1>
+
+<main class="puzzle-main">
+    <h2 style="margin-top: 0">
+        Written by
+        
+Brian Chen, Sam Kim, CJ Quines, and Anderson Wang
+
+    </h2>
+
+    
+    <style>
+.letter-grid {
+    white-space: pre;
+    font-family: monospace, monospace;
+    font-size: 1.5rem;
+    line-height: 1.25;
+}
+
+.the-line .letter-row {
+    background-color: yellow;
+}
+
+.the-square .letter-row {
+    background-color: cyan;
+}
+</style>
+<h3>The Line</h3>
+
+<p>Each of the answers is associated with an event in the twentieth century. This is supported by the title of the puzzle, &ldquo;The Line&rdquo;, which suggests a timeline.</p>
+<ul>
+<li>EDWARD VIII was King of the United Kingdom from January 20, 1936 until his abdication in December 11, 1936.</li>
+<li>GOODBYE, FAREWELL, AND AMEN was an episode of M*A*S*H that ran on February 28, 1983.</li>
+<li>HALLEY&rsquo;S COMET is a comet that reached perihelion on April 20, 1910.</li>
+<li>HALLEY&rsquo;S COMET is a comet that reached perihelion on February 9, 1986.</li>
+<li>The LUSITANIA was a cruise ship that was sunk on May 7, 1915.</li>
+<li>&ldquo;MORE POPULAR THAN JESUS&rdquo; was a remark made by John Lennon in a March 1966 interview.</li>
+<li>The MUKDEN INCIDENT was a conflict that started on September 18, 1931.</li>
+<li>The STONEWALL inn was the site of gay liberation riots from June 28, 1969 to July 3, 1969.</li>
+</ul>
+<p>Some of these events don&rsquo;t have a well-defined date. For example, EDWARD VIII reigned for a whole year, HALLEY&rsquo;S COMET was visible for about a month, and &ldquo;MORE POPULAR THAN JESUS&rdquo; was said in an interview before it appeared in print. All, however, have a well-defined year, which we can sort by.</p>
+<ul>
+<li>1910: HALLEY&rsquo;S COMET</li>
+<li>1915: LUSITANIA</li>
+<li>1931: MUKDEN INCIDENT</li>
+<li>1936: EDWARD VIII</li>
+<li>1966: MORE POPULAR THAN JESUS</li>
+<li>1969: STONEWALL</li>
+<li>1983: GOODBYE, FAREWELL, AND AMEN</li>
+<li>1986: HALLEY&rsquo;S COMET</li>
+</ul>
+<p>The span of years, from 1910 to 1986, is 77 years, which is also the length of the given string. The events start and end with HALLEY&rsquo;S COMET, and the string starts and ends with S. This suggests matching the span of years to letters in the string, one year to one letter.</p>
+<table>
+<thead>
+<tr>
+<th>Title</th>
+<th>Answer</th>
+<th>Year</th>
+<th>Index</th>
+<th>Letter</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Extreme Anagrams</td>
+<td>HALLEY&rsquo;S COMET</td>
+<td>1910</td>
+<td>1</td>
+<td>S</td>
+</tr>
+<tr>
+<td>Naval Conflict</td>
+<td>LUSITANIA</td>
+<td>1915</td>
+<td>6</td>
+<td>I</td>
+</tr>
+<tr>
+<td>Wordless</td>
+<td>MUKDEN INCIDENT</td>
+<td>1931</td>
+<td>22</td>
+<td>X</td>
+</tr>
+<tr>
+<td>Shared Samples</td>
+<td>EDWARD VIII</td>
+<td>1936</td>
+<td>27</td>
+<td>T</td>
+</tr>
+<tr>
+<td>What&rsquo;s the Difference?</td>
+<td>MORE POPULAR THAN JESUS</td>
+<td>1966</td>
+<td>57</td>
+<td>U</td>
+</tr>
+<tr>
+<td>Nobody Knows...</td>
+<td>STONEWALL</td>
+<td>1969</td>
+<td>60</td>
+<td>R</td>
+</tr>
+<tr>
+<td>Eclairs and More...</td>
+<td>GOODBYE, FAREWELL, AND AMEN</td>
+<td>1983</td>
+<td>74</td>
+<td>N</td>
+</tr>
+<tr>
+<td>Extreme Anagrams</td>
+<td>HALLEY&rsquo;S COMET</td>
+<td>1986</td>
+<td>77</td>
+<td>S</td>
+</tr>
+</tbody>
+</table>
+<p>Reading the letters in the order of years, we read SIX TURNS. We now consider some information we haven&rsquo;t used yet:</p>
+<ul>
+<li>We&rsquo;re given a picture of a grid, and the phrase SIX TURNS, which suggests finding a path in the grid that turns six times.</li>
+<li>The grid has the letter S in the center, which is the first letter of the given string, and the next few letters going off to the right, with one letter in each grid cell.</li>
+<li>The title of each puzzle starts with a letter that clues a cardinal direction. Counting the HALLEY&rsquo;S COMET puzzle once, we have a list of seven directions. Following these directions would give a path that makes six turns.</li>
+</ul>
+<p>Putting these together, we want to use the letters to trace a path in the given grid, starting at the S in the center, and going east, then north, then west, then south, then west, then north, then east. The remaining question is how many letters to go in each direction before turning.</p>
+<p>We earlier matched letters to years, and we can use that matching again, by turning at the letters corresponding to the events. The first letter is S, we move east until we reach the I, we move north until we reach the X, etc. In other words, taking the differences between years gives us the number of letters to move in each direction before turning.</p>
+<table>
+<thead>
+<tr>
+<th>Title</th>
+<th>Direction</th>
+<th>Year</th>
+<th>Difference</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Extreme Anagrams</td>
+<td>E</td>
+<td>1910</td>
+<td>5</td>
+</tr>
+<tr>
+<td>Naval Conflict</td>
+<td>N</td>
+<td>1915</td>
+<td>16</td>
+</tr>
+<tr>
+<td>Wordless</td>
+<td>W</td>
+<td>1931</td>
+<td>5</td>
+</tr>
+<tr>
+<td>Shared Samples</td>
+<td>S</td>
+<td>1936</td>
+<td>30</td>
+</tr>
+<tr>
+<td>What&rsquo;s the Difference?</td>
+<td>W</td>
+<td>1966</td>
+<td>3</td>
+</tr>
+<tr>
+<td>Nobody Knows...</td>
+<td>N</td>
+<td>1969</td>
+<td>14</td>
+</tr>
+<tr>
+<td>Éclairs and More...</td>
+<td>E</td>
+<td>1983</td>
+<td>3</td>
+</tr>
+<tr>
+<td>Extreme Anagrams</td>
+<td>E</td>
+<td>1986</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>By placing the letters in the grid, we see that the path forms a loop, confirming our approach is correct. Further confirmation comes from the path starting and ending with the same letter, S, at the same event, HALLEY&rsquo;S COMET.</p>
+<p class="letter-grid the-line">      T V P U E X
+      G         R
+      Y         U
+      E         A
+      I         E
+      T         N
+      P         D
+      O         W
+      A         S
+      S         T
+      C         E
+      A         R
+<span class="letter-row">      M         O</span>
+      T         A
+<span class="letter-row">      R         E</span>
+      T         W
+N E R S T U G C I
+H     E          
+<span class="letter-row">T     I          </span>
+R     E          
+<span class="letter-row">M     E          </span>
+A     B          
+R     P          
+A     L          
+K     E          
+L     D          
+A     N          
+R     O          
+F     H          
+P     S          
+R H E U          </p>
+
+<p>Reading the highlighted rows spells the answer, <strong>MORE TIME</strong>.</p>
+<h3>The Square</h3>
+
+<p>After submitting the answer to the previous puzzle, &ldquo;The Line&rdquo;, the website restarts with zero puzzles solved. Solving the puzzles with the same answers reveals the same puzzle. Eventually, solvers discover that each puzzle has an alternate answer, shown in the table below.</p>
+<table>
+<thead>
+<tr>
+<th>Title</th>
+<th>Answer</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Extreme Anagrams</td>
+<td>CHRYSLER</td>
+</tr>
+<tr>
+<td>Naval Conflict</td>
+<td>ARCHDIOCESE</td>
+</tr>
+<tr>
+<td>Wordless</td>
+<td>GENERAL MOTORS</td>
+</tr>
+<tr>
+<td>Shared Samples</td>
+<td>CARNEGIE</td>
+</tr>
+<tr>
+<td>What&rsquo;s the Difference?</td>
+<td>MAGNET</td>
+</tr>
+<tr>
+<td>Nobody Knows...</td>
+<td>CHEF&rsquo;S TABLE</td>
+</tr>
+<tr>
+<td>Eclairs and More...</td>
+<td>LYRIC</td>
+</tr>
+<tr>
+<td>Extreme Anagrams</td>
+<td>CHRYSLER</td>
+</tr>
+</tbody>
+</table>
+<p>Submitting enough of these alternate answers changes the title to &ldquo;The Square&rdquo;, and changes the rows highlighted in the grid.</p>
+<p class="letter-grid the-square">      T V P U E X
+<span class="letter-row">      G         R</span>
+      Y         U
+<span class="letter-row">      E         A</span>
+      I         E
+<span class="letter-row">      T         N</span>
+      P         D
+<span class="letter-row">      O         W</span>
+      A         S
+<span class="letter-row">      S         T</span>
+      C         E
+<span class="letter-row">      A         R</span>
+      M         O
+<span class="letter-row">      T         A</span>
+      R         E
+<span class="letter-row">      T         W</span>
+N E R S T U G C I
+<span class="letter-row">H     E          </span>
+T     I          
+<span class="letter-row">R     E          </span>
+M     E          
+<span class="letter-row">A     B          </span>
+R     P          
+<span class="letter-row">A     L          </span>
+K     E          
+<span class="letter-row">L     D          </span>
+A     N          
+<span class="letter-row">R     O          </span>
+F     H          
+<span class="letter-row">P     S          </span>
+R H E U          </p>
+
+<p>Reading the highlighted rows now spells a phrase: GREAT, NOW START AT WHERE A BALL DROPS. This clues the <a href="https://en.wikipedia.org/wiki/Times_Square_Ball">Times Square ball drop</a>, a New Year&rsquo;s Eve celebration held in Times Square. This is supported by the title of the puzzle: as &ldquo;The Line&rdquo; required a timeline, it makes sense for &ldquo;The Square&rdquo; to refer to Times Square.</p>
+<p>The picture of the grid, and the reference to Times Square, clues the New York borough Manhattan, which is known for its grid layout. This suggests matching the letters to places in Manhattan.</p>
+<p>The phrase &ldquo;start at where a ball drops&rdquo; clues us towards how to do this. The ball drops in Times Square, but more specifically, from the building <a href="https://en.wikipedia.org/wiki/One_Times_Square">One Times Square</a>. The building stands on a block of Manhattan, which suggests placing the S on the grid at the block that has One Times Square. Then, the cardinal directions correspond to real-world cardinal directions, and we place one letter per block.</p>
+<p>We now use the alternate answers. Each of the alternate answers clues a building in Manhattan, which is in a certain block. It also turns out that each block lies on the section of the path corresponding to the puzzle answer (e.g. CHRYSLER is matched with the first answer HALLEY&rsquo;S COMET, and the first section of the path before turning goes through the Chrysler Building)&mdash;this helps us clear up any potential ambiguities.</p>
+<ul>
+<li>ARCHDIOCESE refers to the Archdiocese of New York, in the block bounded by 55th and 56th Streets, and 1st and 2nd Avenues. (But see the author&rsquo;s notes.)</li>
+<li>CARNEGIE refers to Carnegie Hall, in the block bounded by 56th and 57th Streets, and 6th and 7th Avenues.</li>
+<li>CHEF&rsquo;S TABLE refers to the Chef&rsquo;s Table at Brooklyn Fare, in the block bounded by 37th and 38th Streets, and 9th and 10th Avenues.</li>
+<li>CHRYSLER refers to the Chrysler Building, in the block bounded by 42nd and 43rd Streets, and 3rd and Park Avenues.</li>
+<li>GENERAL MOTORS refers to the General Motors Building, in the block bounded by 58th and 59th Streets, and Park and 5th Avenues.</li>
+<li>LYRIC refers to the Lyric Theatre, in the block bounded by 42nd and 43rd Streets, and 7th and 8th Avenues.</li>
+<li>MAGNET refers to the Magnet Theater, in the block bounded by 28th and 29th Streets, and 7th and 8th Avenues.</li>
+</ul>
+<p>(Alternatively, we could interpret each square as an intersection instead of a block, but we would get the same result as long as we&rsquo;re consistent by, e.g. always using the intersection at the southwest corner of the block containing the corresponding building.)</p>
+<p>One Times Square itself is in the block bounded by 42nd and 43rd Streets, and 6th and 7th Avenues. This gives us the following map:</p>
+<p class="letter-grid the-square">      T V <span class="letter-row">P</span> U E X
+      G         R
+      <span class="letter-row">Y</span>         U
+      E         <span class="letter-row">A</span>
+      I         E
+      T         N
+      P         D
+      O         W
+      A         S
+      S         T
+      C         E
+      A         R
+      M         O
+      T         A
+      R         E
+      T         W
+N E <span class="letter-row">R</span> S T U <span class="letter-row">G</span> C I
+H     E          
+T     I          
+R     E          
+M     E          
+<span class="letter-row">A</span>     B          
+R     P          
+A     L          
+K     E          
+L     D          
+A     N          
+R     O          
+F     H          
+P     S          
+R H <span class="letter-row">E</span> U          </p>
+
+<p>Reading the letters corresponding to the blocks, in the order of the path, spells the answer, <strong>GAP YEAR</strong>.</p>
+
+    
+    
+    <h2 id="authors-notes">Author&rsquo;s Notes</h2>
+    <p>The idea always involved the timeline / Times Square pun, but it went through three quite different versions before reaching the current one.</p>
+<p>The first version consisted of only a single meta, where we gave a grid of letters instead of a string. This combined the timeline and Times Square ahas in a single puzzle, which was too hard for an intro meta.</p>
+<p>In the second version, we split the timeline and Times Square ahas into two metas. This meant we could replace the grid with a string, as now solvers had to construct the path on their own. But there wasn&rsquo;t much guidance to making the path for The Square, and solvers got stuck on that step.</p>
+<p>In the third version, we introduced the picture of the grid in The Square and added an S in the center cell to make the path construction easier. This still didn&rsquo;t work&mdash;the aha of constructing the path <em>and</em> matching it to Times Square was still too much. We decided to move the path-construction aha to The Line, giving the current version of the puzzles. (The additional faded letters, T, U, and G, came even later, only a few days before hunt start.)</p>
+<p>When we constructed this puzzle, Google Maps labeled the location we intended for ARCHDIOCESE to clue as simply &ldquo;Archdiocese of New York&rdquo;, but a few weeks before hunt start, we noticed that the label had changed to the much less compelling &ldquo;Catholic Charities of the Archdiocese of New York&rdquo;. As a result, many solvers understandably tried to associate this answer with St. Patrick&rsquo;s Cathedral instead. Unfortunately, by the time we noticed the change, it was too late to modify the puzzle and its feeder in time for the hunt. <a href="https://archny.org/about/contact/">https://archny.org/about/contact/</a> lists their offices at the address used in the puzzle, though.</p>
+<p>CJ: The old The Line answer was TIME&rsquo;S LOT, which I thought was an excellent pun, but didn&rsquo;t make sense story-wise so we had to throw it out. I like the current pair of answers though: MORE TIME ties into the time loop story, and GAP YEAR is a great opener for the 2021 reveal.</p>
+<p>During the hunt, a number of teams got the MORE TIME answer just by guessing. Unfortunately this meant that they were doubly stuck on The Square, as they didn&rsquo;t have the solution to The Line. Sorry about that!</p>
+    
+
+    
+    
+
+    
+</main>
+
+
+    </div>
+    
+
+    
+
+    
+</body>
+</html>

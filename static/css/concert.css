@@ -1,0 +1,396 @@
+@media screen {
+    html, .background-glitch {
+        background:
+            url(/static/images/concert.svg),
+            url(/static/images/concert.svg),
+            linear-gradient(to top, #606060, #2B2B2B);
+        background-position: bottom -70px left, bottom -70px left 100px, bottom;
+        background-repeat: repeat-x, repeat-x, no-repeat;
+        background-attachment: fixed;
+        background-color: #2B2B2B;
+    }
+
+    body {
+        color: #f9f8f5;
+    }
+
+    h1, h2, h3, h4 {
+        color: #f9f8f5;
+    }
+
+    h1, h2, .form-row, .note, .info-row h4, .puzzles-answer > :first-child, #loop-timer, .loop-shade {
+        color: #6e540c;
+        background: 
+            linear-gradient(to top right, transparent, #ffffffbb 80%, #ffffffbb 90%, transparent),
+            linear-gradient(to top right, #fff982bb, #e0ddacbb);
+        border-left: 0px;
+        box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    }
+
+    .puzzle-main.puzzle-main h1, .puzzle-main.puzzle-main h2 {
+        padding: 5px;
+    }
+
+    h1:not(#title1):before {
+        content: "";
+        position: absolute;
+        background: linear-gradient(to left, transparent, #e0ddacbb 0.5rem, #e0ddacbb 80%, transparent);
+        top: 0;
+        height: 1px;
+        left: 0;
+        right: -1rem;
+    }
+
+    a {
+        color: #e0ddac;
+    }
+
+    a:hover, a:focus {
+        color: #f9f8f5;
+    }
+
+    a.delete-row {
+        color: #6e540c;
+    }
+    a.delete-row:hover, a.delete-row:focus {
+        color: #bd9e48;
+    }
+
+    input[type=text], input[type=password], input[type=email] {
+        background-image: none;
+        color: inherit;
+    }
+
+    .puzzle-main {
+        color: initial;
+    }
+
+    .puzzle-main a {
+        color: #6e540c;
+    }
+
+    .puzzle-main a:hover, .puzzle-main a:focus {
+        color: #544007;
+    }
+
+    .puzzle-main-corner-1 { top: 0; left: 0; }
+    .puzzle-main-corner-2 { top: 0; right: 0; }
+    .puzzle-main-corner-3 { bottom: 0; left: 0; }
+    .puzzle-main-corner-4 { bottom: 0; right: 0; }
+
+    .btn {
+        color: #6e540c;
+        background-color: #e0ddac;
+    }
+
+    .btn:hover, .btn:focus {
+        color: #6e540c;
+        background-color: #f9f8f5;
+    }
+
+    .btn:disabled {
+        filter: brightness(0.5);
+        background-color: #e0ddac;
+        cursor: initial;
+    }
+
+    .shortcuts {
+        border: 2px solid #f9f8f5;
+        background-color: #6e540c;
+    }
+
+    .list-table td {
+        border-color: #f9f8f5;
+    }
+
+    .list-table th {
+        background-color: #6e540c77;
+        box-shadow: inset 0 -2px 0 0 #f9f8f5;
+    }
+
+    .form-row, .note {
+        border-color: currentColor;
+    }
+
+    .info-row > div {
+        border: none;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .info-row > div:not(.rating):before {
+        content: "";
+        position: absolute;
+        background: linear-gradient(to left, transparent, #e0ddacbb 0.5rem, #e0ddacbb 80%, transparent);
+        top: 0;
+        height: 1px;
+        left: 0;
+        right: -1rem;
+    }
+
+    .info-row > div:not(.rating):after {
+        content: "";
+        position: absolute;
+        background: linear-gradient(to bottom, transparent, #e0ddacbb 0.5rem, #e0ddacbb 80%, transparent);
+        right: 0;
+        width: 1px;
+        bottom: 0;
+        top: -1rem;
+    }
+
+    .info-row h4 {
+        font-weight: bold;
+        padding: 0.5rem 2rem;
+        border-top-right-radius: 2em;
+        border: 2px solid #f9f8f5;
+        border-bottom: none;
+    }
+
+    .info-desc {
+        border: 2px solid #f9f8f5;
+        border-top: none;
+        flex-grow: 1;
+    }
+
+    .solved-title-marker {
+        color: #6e540c;
+    }
+
+    .solved-title-answer {
+        background-color: #4a2;
+        color: #f9f8f5;
+        padding: 0 0.5rem;
+    }
+
+    .puzzles-list th {
+        padding-bottom: 0;
+    }
+
+    .puzzles-section {
+        position: relative;
+    }
+
+    .puzzles-section:before {
+        content: "";
+        position: absolute;
+        background: linear-gradient(to left, transparent, #e0ddacbb 0.5rem, #e0ddacbb 80%, transparent);
+        bottom: 0;
+        height: 1px;
+        left: 0;
+        right: -1rem;
+    }
+
+    .puzzles-section:after {
+        content: "";
+        position: absolute;
+        background: linear-gradient(to top, transparent, #e0ddacbb 0.5rem, #e0ddacbb 80%, transparent);
+        right: 0;
+        width: 1px;
+        top: 0;
+        bottom: -1rem;
+    }
+
+    .puzzles-section tr:last-child:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        border: 2px solid #f9f8f5;
+        border-left: none;
+        z-index: -1;
+        pointer-events: none;
+    }
+
+    .puzzles-section tr:first-child td {
+        padding-top: 24px;
+    }
+
+    .puzzles-section tr:last-child td {
+        padding-bottom: 24px;
+    }
+
+    .puzzles-section td:last-child {
+        padding-right: 24px;
+    }
+
+    .puzzles-answer > :first-child {
+        border-bottom: 2px solid #f9f8f5;
+    }
+
+    .puzzles-new {
+        background-color: #e0ddac;
+        color: #6e540c;
+    }
+
+    .puzzles-new:hover, a:hover .puzzles-new {
+        background-color: #f9f8f5;
+        color: #6e540c;
+    }
+
+    .glitch::before {
+        background: #ffffff0b;
+        color: #f9b4f5;
+    }
+
+    .glitch::after {
+        background: #ffffff0b;
+        color: #f9c3c2;
+    }
+
+    nav {
+        position: relative;
+        z-index: 700;
+    }
+
+    #loop-reset {
+        animation: loop-show 1s 1;
+        position: fixed;
+        inset: 0;
+        background: radial-gradient(#000b, #0008);
+        z-index: 100;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    @keyframes loop-show {
+        from { opacity: 0; filter: blur(1rem); }
+        to { opacity: 1; filter: none; }
+    }
+
+    #loop-reset:not(.loop-resetting) {
+        display: none;
+    }
+
+    .loop-resetting ~ .content {
+        transition: filter 1s;
+        filter: blur(1rem);
+    }
+
+    #loop-reset form {
+        text-align: center;
+    }
+
+    #loop-reset svg {
+        width: 720px;
+        height: 320px;
+        fill: none;
+        stroke: currentColor;
+    }
+
+    #loop-reset use {
+        stroke-width: 4;
+    }
+
+    #loop-reset path {
+        stroke-width: 8;
+    }
+
+    #loop-reset div {
+        font-size: 65px;
+        margin: -105px 0 45px 0;
+    }
+
+    #loop-reset table {
+        width: 500px;
+        margin: auto;
+    }
+
+    #loop-reset td {
+        border: none;
+    }
+
+    #loop-reset .btn {
+        width: 100%;
+        box-sizing: border-box;
+        text-align: center;
+        margin: 0;
+    }
+}
+
+@media screen and (min-width: 961px) {
+    .top-tabs {
+        border-bottom: 2px solid #f9f8f5;
+        margin-bottom: 2.5rem;
+    }
+
+    .top-tabs a:before {
+        content: "";
+        position: absolute;
+        background: linear-gradient(to top, transparent, #e0ddacbb 0.5rem, #e0ddacbb 80%, transparent);
+        left: -1rem;
+        width: 1px;
+        bottom: -1rem;
+        top: 50%;
+    }
+
+    .top-tabs a:after {
+        content: "";
+        position: absolute;
+        background: linear-gradient(to top, transparent, #e0ddacbb 0.5rem, #e0ddacbb 80%, transparent);
+        right: -1rem;
+        width: 1px;
+        bottom: -1rem;
+        top: 50%;
+    }
+
+    #loop-indicator {
+        position: fixed;
+        left: 0;
+        top: -60px;
+        width: 60px;
+        height: calc(100vh + 60px);
+        fill: none;
+        stroke: #f9f8f5;
+        stroke-width: 2;
+        pointer-events: none;
+        z-index: 200;
+    }
+
+    #loop-timer {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        font-size: 4rem;
+        line-height: 4rem;
+        width: 60px;
+        text-align: center;
+        padding: 0.5rem 0;
+        white-space: pre;
+        font-family: Recursive, monospace;
+        pointer-events: none;
+        z-index: 200;
+    }
+}
+
+@media screen and (max-width: 960px) {
+    .tray:before {
+        background-color: #544007;
+        box-shadow: 0px 5px #544007; /* Kill the tiny line between the 2 sections. */
+    }
+
+    #tray-timer,
+    .tray:after {
+        color: #e0ddac;
+        background-image:
+            linear-gradient(#544007, #544007),
+            linear-gradient(to right, transparent, #e0ddacbb 20%, #e0ddacbb 80%, transparent);
+        background-size: 100% 48px, 100% 1px;
+        background-position: top, 0 48px;
+    }
+
+    .top-tabs a:before, .top-tabs a:after {
+        content: initial;
+    }
+
+    .info-row > div:not(:first-child) {
+        margin-top: 1em;
+    }
+
+    #loop-indicator, #loop-timer {
+        display: none;
+    }
+}

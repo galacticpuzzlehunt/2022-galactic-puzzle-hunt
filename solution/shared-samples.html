@@ -1,0 +1,540 @@
+
+
+
+
+
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    
+<title>Solution: Shared Samples</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=0.5">
+    <meta property="og:title" content="Galactic Puzzle Hunt 2022">
+    <meta property="og:description" content="Registration for this year's Galactic Puzzle Hunt is now open!">
+    <meta property="og:image" content="https://galacticpuzzlehunt.com/static/images/banner.png">
+    <meta property="twitter:card" content="summary_large_image">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Recursive:slnt,CASL,CRSV,MONO@-3,0.5,1,1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/skeleton.css">
+    <link rel="stylesheet" href="/static/css/base.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.19/jquery.touchSwipe.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.formset/1.2.2/jquery.formset.min.js"></script>
+    <script src="/jsi18n/"></script>
+    <script src="/static/js/sorttable.js"></script>
+    <script src="/static/js/tray.js"></script>
+    <script src="/static/js/notify.js"></script>
+    <script src="/static/js/time.js"></script>
+    
+    
+    <link rel="icon" sizes="16x16 32x32 48x48 64x64" href="/static/images/favicon.ico" type="image/vnd.microsoft.icon">
+    
+    
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-92192633-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-92192633-1');
+</script>
+
+</head>
+<body>
+    
+    <div id="background-glitch-wrapper" class="background-glitch">
+        <div class="glitch-1"></div>
+        <div class="glitch-2"></div>
+        <div class="glitch-3"></div>
+    </div>
+    
+    
+    <input id="shortcuts" type="checkbox">
+    
+    <nav>
+        <span class="tray">
+            <span id="tray-timer"></span>
+            <div class="top-tabs">
+                <a href="/">
+                    Home
+                </a>
+                
+                <a href="/rules">
+                    Rules
+                </a>
+                
+                
+                <a href="/story">
+                    Story
+                </a>
+                
+                
+                <a class="selected-tab" href="/puzzles">
+                    Puzzles
+                </a>
+                
+                <a href="/teams">
+                    Teams
+                </a>
+                
+                <a href="/faq">
+                    FAQ
+                </a>
+                
+                
+                <a href="/errata">
+                    Updates
+                </a>
+                
+                
+                <a href="/wrapup">
+                    Wrap-Up
+                </a>
+                
+                
+                <a href="https://galacticpuzzlehunt.com/archive">
+                    Archive
+                </a>
+                
+                
+                
+            </div>
+            <div class="top-left-actions">
+                
+<a href="/puzzle/shared-samples" class="btn">Back to the puzzle</a>
+
+            </div>
+        </span>
+        <div class="top-right-actions">
+        
+        
+        </div>
+    </nav>
+    
+    
+    
+    
+    
+    <script>
+
+    
+    
+    let glitchTriggerFuncs = [];
+    let glitchTriggerReceived = false;
+    let glitchTriggerExReceived = false;
+    let glitchPageLoaded = false;
+    function processGlitchFuncs(ex) {
+        glitchTriggerFuncs.forEach((func) => {
+            func(ex);
+        });
+    }
+    function doGlitch(ex) {
+        glitchTriggerReceived = true;
+        if (ex) {
+            glitchTriggerExReceived = true;
+        }
+        if (glitchPageLoaded) {
+            processGlitchFuncs(ex);
+        }
+    }
+    window.addEventListener('load', () => {
+        glitchPageLoaded = true;
+        if (glitchTriggerExReceived) {
+            processGlitchFuncs(true);
+        }
+        else if (glitchTriggerReceived) {
+            processGlitchFuncs(false);
+        }
+    }, false);
+    
+    
+    
+    function registerOnGlitchHook(func) {
+        if (glitchTriggerExReceived) {
+            func(true);
+        }
+        else if (glitchTriggerReceived) {
+            func(false);
+        }
+        glitchTriggerFuncs.push(func);
+    }
+    
+
+    
+    
+    </script>
+    <div class="content">
+        
+
+<style>
+h2 {
+    font-size: 2.5rem;
+    font-weight: normal;
+    font-style: italic;
+    margin-bottom: 2rem;
+}
+
+h4 {
+    font-size: 2rem;
+    font-weight: normal;
+    margin: 2rem 0;
+}
+</style>
+
+<h1>
+    Solution <span style="font-weight: 300">Shared Samples</span>
+    <div class="solved-title-marker">Answer <span class="solved-title-answer spoiler">EDWARD VIII</span> / <span class="solved-title-answer spoiler">CARNEGIE</span></div>
+</h1>
+
+<main class="puzzle-main">
+    <h2 style="margin-top: 0">
+        Written by
+        
+Alan Huang
+
+    </h2>
+
+    
+    <style>
+.blank {
+  letter-spacing: -0.15em;
+}
+</style>
+
+<p>The clues solve to twenty answers, two of which start with each of the first ten consonants.</p>
+<table>
+<thead>
+<tr>
+<th>Clue</th>
+<th>Answer</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Custodian</td>
+<td>JANITOR</td>
+</tr>
+<tr>
+<td>Ebb</td>
+<td>LET UP</td>
+</tr>
+<tr>
+<td>Slush <span class="blank">____</span></td>
+<td>FUND</td>
+</tr>
+<tr>
+<td>Ash <span class="blank">____</span> &amp; Misty</td>
+<td>KETCHUM</td>
+</tr>
+<tr>
+<td>H5N1 virus, e.g.</td>
+<td>BIRD FLU</td>
+</tr>
+<tr>
+<td>Lunch list</td>
+<td>MENU</td>
+</tr>
+<tr>
+<td>He/him/<span class="blank">____</span></td>
+<td>HIS</td>
+</tr>
+<tr>
+<td>Biker</td>
+<td>CYCLIST</td>
+</tr>
+<tr>
+<td>New York flight hub</td>
+<td>JFK AIRPORT</td>
+</tr>
+<tr>
+<td>Lexington, <span class="blank">____</span></td>
+<td>KENTUCKY</td>
+</tr>
+<tr>
+<td>Taking drugs</td>
+<td>HIGH</td>
+</tr>
+<tr>
+<td>Pnictogen</td>
+<td>BISMUTH</td>
+</tr>
+<tr>
+<td>Jesus</td>
+<td>CHRIST</td>
+</tr>
+<tr>
+<td>Protracting</td>
+<td>DRAGGING OUT</td>
+</tr>
+<tr>
+<td>4-qt. unit</td>
+<td>GALLON</td>
+</tr>
+<tr>
+<td>LS, RX company</td>
+<td>LEXUS</td>
+</tr>
+<tr>
+<td>UF mascot</td>
+<td>GATOR</td>
+</tr>
+<tr>
+<td>Curd, e.g.</td>
+<td>DAIRY PRODUCT</td>
+</tr>
+<tr>
+<td>Hair</td>
+<td>FUR</td>
+</tr>
+<tr>
+<td>Sun&rsquo;s 1st planet</td>
+<td>MERCURY</td>
+</tr>
+</tbody>
+</table>
+<p>When paired up by first letter, the two answers have the same pattern of vowels (AEIOU, always in that order with no repeats). We can read these as five-bit binary, with 1 indicating that the vowel is present. This gives the first answer, <strong>EDWARD VIII</strong>.</p>
+<table>
+<thead>
+<tr>
+<th>Word</th>
+<th>Word</th>
+<th>Vowels</th>
+<th>Binary</th>
+<th>Letter</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>BIRD FLU</td>
+<td>BISMUTH</td>
+<td>IU</td>
+<td>00101</td>
+<td>E</td>
+</tr>
+<tr>
+<td>CHRIST</td>
+<td>CYCLIST</td>
+<td>I</td>
+<td>00100</td>
+<td>D</td>
+</tr>
+<tr>
+<td>DAIRY PRODUCT</td>
+<td>DRAGGING OUT</td>
+<td>AIOU</td>
+<td>10111</td>
+<td>W</td>
+</tr>
+<tr>
+<td>FUND</td>
+<td>FUR</td>
+<td>U</td>
+<td>00001</td>
+<td>A</td>
+</tr>
+<tr>
+<td>GALLON</td>
+<td>GATOR</td>
+<td>AO</td>
+<td>10010</td>
+<td>R</td>
+</tr>
+<tr>
+<td>HIGH</td>
+<td>HIS</td>
+<td>I</td>
+<td>00100</td>
+<td>D</td>
+</tr>
+<tr>
+<td>JANITOR</td>
+<td>JFK AIRPORT</td>
+<td>AIO</td>
+<td>10110</td>
+<td>V</td>
+</tr>
+<tr>
+<td>KENTUCKY</td>
+<td>KETCHUM</td>
+<td>EU</td>
+<td>01001</td>
+<td>I</td>
+</tr>
+<tr>
+<td>LET UP</td>
+<td>LEXUS</td>
+<td>EU</td>
+<td>01001</td>
+<td>I</td>
+</tr>
+<tr>
+<td>MENU</td>
+<td>MERCURY</td>
+<td>EU</td>
+<td>01001</td>
+<td>I</td>
+</tr>
+</tbody>
+</table>
+<p>We may have noticed that the clues are sometimes awkwardly worded and are not in any obvious order. They also have no repeated vowels, though here the vowels are not always in AEIOU order. We can again assemble five-bit binary from which subset of AEIOU appears in the clue; this reads WHAT MELLON UNIVERSITY going down the list, which clues <strong>CARNEGIE</strong>.</p>
+<table>
+<thead>
+<tr>
+<th>Clue</th>
+<th>Vowels</th>
+<th>Binary</th>
+<th>Letter</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Custodian</td>
+<td>AIOU</td>
+<td>10111</td>
+<td>W</td>
+</tr>
+<tr>
+<td>Ebb</td>
+<td>E</td>
+<td>01000</td>
+<td>H</td>
+</tr>
+<tr>
+<td>Slush <span class="blank">____</span></td>
+<td>U</td>
+<td>00001</td>
+<td>A</td>
+</tr>
+<tr>
+<td>Ash <span class="blank">____</span> &amp; Misty</td>
+<td>AI</td>
+<td>10100</td>
+<td>T</td>
+</tr>
+<tr>
+<td>H5N1 virus, e.g.</td>
+<td>EIU</td>
+<td>01101</td>
+<td>M</td>
+</tr>
+<tr>
+<td>Lunch list</td>
+<td>IU</td>
+<td>00101</td>
+<td>E</td>
+</tr>
+<tr>
+<td>He/him/<span class="blank">____</span></td>
+<td>EI</td>
+<td>01100</td>
+<td>L</td>
+</tr>
+<tr>
+<td>Biker</td>
+<td>EI</td>
+<td>01100</td>
+<td>L</td>
+</tr>
+<tr>
+<td>New York flight hub</td>
+<td>EIOU</td>
+<td>01111</td>
+<td>O</td>
+</tr>
+<tr>
+<td>Lexington, <span class="blank">____</span></td>
+<td>EIO</td>
+<td>01110</td>
+<td>N</td>
+</tr>
+<tr>
+<td>Taking drugs</td>
+<td>AIU</td>
+<td>10101</td>
+<td>U</td>
+</tr>
+<tr>
+<td>Pnictogen</td>
+<td>EIO</td>
+<td>01110</td>
+<td>N</td>
+</tr>
+<tr>
+<td>Jesus</td>
+<td>EU</td>
+<td>01001</td>
+<td>I</td>
+</tr>
+<tr>
+<td>Protracting</td>
+<td>AIO</td>
+<td>10110</td>
+<td>V</td>
+</tr>
+<tr>
+<td>4-qt. unit</td>
+<td>IU</td>
+<td>00101</td>
+<td>E</td>
+</tr>
+<tr>
+<td>LS, RX company</td>
+<td>AO</td>
+<td>10010</td>
+<td>R</td>
+</tr>
+<tr>
+<td>UF mascot</td>
+<td>AOU</td>
+<td>10011</td>
+<td>S</td>
+</tr>
+<tr>
+<td>Curd, e.g.</td>
+<td>EU</td>
+<td>01001</td>
+<td>I</td>
+</tr>
+<tr>
+<td>Hair</td>
+<td>AI</td>
+<td>10100</td>
+<td>T</td>
+</tr>
+<tr>
+<td>Sun&rsquo;s 1st planet</td>
+<td>AEU</td>
+<td>11001</td>
+<td>Y</td>
+</tr>
+</tbody>
+</table>
+
+    
+    
+    <h2 id="authors-notes">Author&rsquo;s Notes</h2>
+    <p>This idea first came up for MIT Mystery Hunt 2021, but it was never written.</p>
+    
+
+    
+    
+
+    
+</main>
+
+
+    </div>
+    
+
+    
+
+    
+</body>
+</html>

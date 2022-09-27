@@ -1,0 +1,296 @@
+
+
+
+
+
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    
+    <title>Galactic Puzzle Hunt</title>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=0.5">
+    <meta property="og:title" content="Galactic Puzzle Hunt 2022">
+    <meta property="og:description" content="Registration for this year's Galactic Puzzle Hunt is now open!">
+    <meta property="og:image" content="https://galacticpuzzlehunt.com/static/images/banner.png">
+    <meta property="twitter:card" content="summary_large_image">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Recursive:slnt,CASL,CRSV,MONO@-3,0.5,1,1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/skeleton.css">
+    <link rel="stylesheet" href="/static/css/base.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.19/jquery.touchSwipe.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.formset/1.2.2/jquery.formset.min.js"></script>
+    <script src="/jsi18n/"></script>
+    <script src="/static/js/sorttable.js"></script>
+    <script src="/static/js/tray.js"></script>
+    <script src="/static/js/notify.js"></script>
+    <script src="/static/js/time.js"></script>
+    
+    
+    <link rel="icon" sizes="16x16 32x32 48x48 64x64" href="/static/images/favicon.ico" type="image/vnd.microsoft.icon">
+    
+    
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-92192633-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-92192633-1');
+</script>
+
+</head>
+<body>
+    
+    <div id="background-glitch-wrapper" class="background-glitch">
+        <div class="glitch-1"></div>
+        <div class="glitch-2"></div>
+        <div class="glitch-3"></div>
+    </div>
+    
+    
+    <input id="shortcuts" type="checkbox">
+    
+    <nav>
+        <span class="tray">
+            <span id="tray-timer"></span>
+            <div class="top-tabs">
+                <a href="/">
+                    Home
+                </a>
+                
+                <a href="/rules">
+                    Rules
+                </a>
+                
+                
+                <a href="/story">
+                    Story
+                </a>
+                
+                
+                <a href="/puzzles">
+                    Puzzles
+                </a>
+                
+                <a href="/teams">
+                    Teams
+                </a>
+                
+                <a class="selected-tab" href="/faq">
+                    FAQ
+                </a>
+                
+                
+                <a href="/errata">
+                    Updates
+                </a>
+                
+                
+                <a href="/wrapup">
+                    Wrap-Up
+                </a>
+                
+                
+                <a href="https://galacticpuzzlehunt.com/archive">
+                    Archive
+                </a>
+                
+                
+                
+            </div>
+            <div class="top-left-actions">
+                
+            </div>
+        </span>
+        <div class="top-right-actions">
+        
+        
+        </div>
+    </nav>
+    
+    
+    
+    
+    
+    <script>
+
+    
+    
+    let glitchTriggerFuncs = [];
+    let glitchTriggerReceived = false;
+    let glitchTriggerExReceived = false;
+    let glitchPageLoaded = false;
+    function processGlitchFuncs(ex) {
+        glitchTriggerFuncs.forEach((func) => {
+            func(ex);
+        });
+    }
+    function doGlitch(ex) {
+        glitchTriggerReceived = true;
+        if (ex) {
+            glitchTriggerExReceived = true;
+        }
+        if (glitchPageLoaded) {
+            processGlitchFuncs(ex);
+        }
+    }
+    window.addEventListener('load', () => {
+        glitchPageLoaded = true;
+        if (glitchTriggerExReceived) {
+            processGlitchFuncs(true);
+        }
+        else if (glitchTriggerReceived) {
+            processGlitchFuncs(false);
+        }
+    }, false);
+    
+    
+    
+    function registerOnGlitchHook(func) {
+        if (glitchTriggerExReceived) {
+            func(true);
+        }
+        else if (glitchTriggerReceived) {
+            func(false);
+        }
+        glitchTriggerFuncs.push(func);
+    }
+    
+
+    
+    
+    </script>
+    <div class="content">
+        
+
+<h1>FAQs</h1>
+
+<main>
+    <div class="no-break">
+        <h4>What should I do?</h4>
+        <p>Solve the puzzles!</p>
+    </div>
+
+    <div class="no-break">
+        <h4>How do I do that?</h4>
+        <p>Each puzzle has an underlying pattern or insight, which you need to figure out (somewhat like the <a href="https://en.wikipedia.org/wiki/Crossword#Themes">theme</a> of a crossword puzzle). Once you figure out what to do with the data, you will clearly get an answer to submit, which is almost always an English word or phrase, proper noun, emoji, or something similarly intelligible. Puzzles can come in many different forms; the only real commonality is that you usually receive no direct instructions, so it&rsquo;s up to you to figure out how to make sense of the information you&rsquo;re given. You can read a longer introduction to puzzlehunts <a href="https://blog.vero.site/post/puzzlehunts" target="_blank">here</a>.</p>
+        <p>If you are new to puzzles and are interested in seeing some examples, or if you&rsquo;re looking for some practice, we recommend looking at <a target="_blank" href="https://galacticpuzzlehunt.com/archive">previous Galactic Puzzle Hunts</a> or puzzles from other online hunts such as <a target="_blank" href ="https://teammatehunt.com/">Teammate Hunt</a>, <a target="_blank" href="https://puzzlepotluck.com/">Puzzle Potluck</a>, or <a target="_blank" href="https://reddothunt.sg/2018">REDDOThunt</a>.</p>
+    </div>
+
+    <div class="no-break">
+        <h4>Do I need to have a 10-person team?</h4>
+        <p>You certainly don&rsquo;t need to, and we believe the hunt will be fun for teams of all sizes. However, there will be a sizeable number of puzzles, so we recommend having closer to 10 people if you want to finish the hunt.</p>
+    </div>
+
+    <div class="no-break">
+        <h4>How many puzzles will there be?</h4>
+        <p>Around <span class="glitch" data-text="10">10</span>. The hunt will be similar in length to previous Galactic Puzzle Hunts.</p>
+    </div>
+
+    <div class="no-break">
+        <h4>Do we really need to solve all the puzzles in <span class="glitch" data-text="one hour">one hour</span>?</h4>
+        <p>We&rsquo;re sure you won&rsquo;t have trouble doing that, but just in case, you can consider the <a href="/rules">rules</a> to be authoritative about when the hunt starts and ends.</p>
+    </div>
+
+    <div class="no-break">
+        <h4>What exactly happens when the hunt ends?</h4>
+        <p>When the hunt ends on <time datetime="2022-09-06T06:02:00-04:00" data-format="l, F j, Y">Tuesday, September 6, 2022</time>, the scoreboard will be frozen and solutions for all the puzzles will be released, and we will prepare a wrap-up to be available soon after. However, if you have not finished and still want to experience the whole hunt, you&rsquo;ll still be able to register new teams, submit answers on the website, and progress through the hunt until <time datetime="2022-09-26T18:02:00-04:00" data-format="l, F j, Y">Monday, September 26, 2022</time>. The only difference is that you won&rsquo;t be able to use hints after the hunt ends.</p>
+        <p>After <time datetime="2022-09-26T18:02:00-04:00" data-format="l, F j, Y">Monday, September 26, 2022</time>, you can still do the puzzles and check your answers spoiler-free, but you will not be able to track your progress on the website.</p>
+    </div>
+
+    <div class="no-break">
+        <h4>Is there a tip jar?</h4>
+        <p>If you&rsquo;d like to support the Galactic Puzzle Hunt, you can donate <a target="_blank" href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=L4CVDVR3VTLZJ">here</a>.</p>
+    </div>
+
+    <div class="no-break">
+        <h4>I think there&rsquo;s a mistake in this puzzle!</h4>
+        <p>Please describe the error in an email to <a href="mailto:contact@galacticpuzzlehunt.com">contact@galacticpuzzlehunt.com</a> and we&rsquo;ll try to correct it.</p>
+    </div>
+
+    <div class="no-break">
+        <h4>Can I write code that interacts with the Galactic Puzzle Hunt puzzles / server?</h4>
+        <p>This will not be necessary to complete any aspect of the puzzlehunt. However, if you want to do this, please limit any automated requests to at most 1/second for our server&rsquo;s sake. We may disqualify teams that egregiously violate this request.</p>
+    </div>
+
+    <div class="no-break">
+        <h4>I&rsquo;m working on an interactive puzzle and I think it broke. What should I do?</h4>
+        <p>Some interactive parts of the hunt store information in your browser. If we have a bug and the data becomes corrupted or out of sync, the puzzle may behave oddly or stop working. You can click this button to reset it: <a class="btn" href="javascript:localStorage.clear()">Clear local storage</a></p>
+        <p>Note: This will affect all puzzles in the hunt that store data this way, and may erase your local work on those puzzles, so be sure you have it recorded somewhere. It won&rsquo;t affect any state shared with your team or your overall progress in the hunt. If your problem isn&rsquo;t caused by bad local data, then unfortunately clicking the button won&rsquo;t help and you should <a href="mailto:contact@galacticpuzzlehunt.com">contact us</a>. (If you do, depending on the symptoms, we might ask you if you&rsquo;ve tried clearing, or give you instructions to send us a copy of your data while in the broken state.)</p>
+      
+    </div>
+
+    <div class="no-break">
+        <h4>How can I learn about future Galactic Puzzle Hunts?</h4>
+        <p>Join our <a target="_blank" href="https://groups.google.com/g/galacticpuzzlehunt">mailing list</a>! (Click &ldquo;Join group&rdquo; after the link.)</p>
+    </div>
+
+    <div class="no-break">
+        <h4>Why isn&rsquo;t there a Galactic Puzzle Hunt 2021 in the <a href="/archive">archive</a>?</h4>
+        <p>We were busy writing the <a href="https://puzzles.mit.edu/2021/">2021 MIT Mystery Hunt</a> and we didn&rsquo;t have time to make the Galactic Puzzle Hunt that year. However, if you look closely, Galactic Puzzle Hunt 2020 actually took place in the year 2021. We had prepared Galactic Puzzle Hunt 2020 to run in 2020, but delayed it because of the Mystery Hunt.</p>
+    </div>
+
+    <div class="no-break">
+        <h4>I&rsquo;m stuck on a puzzle. What should I do?</h4>
+        <p>Here are some general puzzle tips that might be useful:</p>
+        <ul>
+            <li>Thoroughly check the work that you&rsquo;ve already done. Fixing a small mistake or incorrect assumption can greatly help with getting unstuck.</li>
+            <li>Get fresh eyes on the puzzle, or conversely, take a break and look at something else.</li>
+            <li>Consider what information you haven&rsquo;t used yet.</li>
+            <li>It can be useful to put everything you have into your favorite search engine.</li>
+            <li>Look at <a href="https://devjoe.appspot.com/huntindex/index/keywords.html">similar examples</a> of the puzzle type you&rsquo;re working on.</li>
+            <li><a target="_blank" href="https://beta.vero.site/try">Have you tried&hellip;</a></li>
+        </ul>
+        
+        <p>Remember that after hints are released, you can also use them to get a nudge in the right direction. Please use them if you&rsquo;re stuck!</p>
+        
+    </div>
+
+    <div class="no-break">
+        <h4>Who&rsquo;s running this hunt?</h4>
+        <p>We are ✈✈✈ Galactic Trendsetters ✈✈✈, an MIT Mystery Hunt team loosely affiliated with Floor Pi, a hall in MIT&rsquo;s East Campus dormitory.</p>
+    </div>
+
+    <div class="no-break">
+        <h4>Are there any prizes?</h4>
+        <p>No.</p>
+    </div>
+
+    <div class="no-break">
+        <h4>Is there a physical component to the hunt? Will I ever need to be in a particular location to solve a puzzle?</h4>
+        <p>No.</p>
+    </div>
+
+    <div class="no-break">
+        <h4>Is there a registration deadline?</h4>
+        <p>No.</p>
+    </div>
+
+    <div class="no-break">
+        <h4>This website&rsquo;s pretty cool.</h4>
+        <p>That&rsquo;s not a question, but if you&rsquo;re interested in running your own puzzlehunt using our software, you can check out <a href="https://github.com/galacticpuzzlehunt/gph-site">gph-site</a>.</p>
+    </div>
+
+    <div class="no-break">
+        <h4>I have a question that&rsquo;s not on this list!</h4>
+        <p>Contact us at <a href="mailto:contact@galacticpuzzlehunt.com">contact@galacticpuzzlehunt.com</a> and we&rsquo;ll do our best to answer it.</p>
+    </div>
+</main>
+
+
+    </div>
+    
+
+    
+
+    
+</body>
+</html>

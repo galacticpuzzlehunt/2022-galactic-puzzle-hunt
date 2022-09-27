@@ -1,0 +1,450 @@
+
+
+
+
+
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    
+<title>What&#x27;s the Difference?</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=0.5">
+    <meta property="og:title" content="Galactic Puzzle Hunt 2022">
+    <meta property="og:description" content="Registration for this year's Galactic Puzzle Hunt is now open!">
+    <meta property="og:image" content="https://galacticpuzzlehunt.com/static/images/banner.png">
+    <meta property="twitter:card" content="summary_large_image">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Recursive:slnt,CASL,CRSV,MONO@-3,0.5,1,1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/skeleton.css">
+    <link rel="stylesheet" href="/static/css/base.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.19/jquery.touchSwipe.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.formset/1.2.2/jquery.formset.min.js"></script>
+    <script src="/jsi18n/"></script>
+    <script src="/static/js/sorttable.js"></script>
+    <script src="/static/js/tray.js"></script>
+    <script src="/static/js/notify.js"></script>
+    <script src="/static/js/time.js"></script>
+    
+    
+    <link rel="icon" sizes="16x16 32x32 48x48 64x64" href="/static/images/favicon.ico" type="image/vnd.microsoft.icon">
+    
+    
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-92192633-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-92192633-1');
+</script>
+
+</head>
+<body>
+    
+    <div id="background-glitch-wrapper" class="background-glitch">
+        <div class="glitch-1"></div>
+        <div class="glitch-2"></div>
+        <div class="glitch-3"></div>
+    </div>
+    
+    
+    <input id="shortcuts" type="checkbox">
+    
+    <nav>
+        <span class="tray">
+            <span id="tray-timer"></span>
+            <div class="top-tabs">
+                <a href="/">
+                    Home
+                </a>
+                
+                <a href="/rules">
+                    Rules
+                </a>
+                
+                
+                <a href="/story">
+                    Story
+                </a>
+                
+                
+                <a class="selected-tab" href="/puzzles">
+                    Puzzles
+                </a>
+                
+                <a href="/teams">
+                    Teams
+                </a>
+                
+                <a href="/faq">
+                    FAQ
+                </a>
+                
+                
+                <a href="/errata">
+                    Updates
+                </a>
+                
+                
+                <a href="/wrapup">
+                    Wrap-Up
+                </a>
+                
+                
+                <a href="https://galacticpuzzlehunt.com/archive">
+                    Archive
+                </a>
+                
+                
+                
+            </div>
+            <div class="top-left-actions">
+                
+
+
+
+
+<a href="/post-hunt-solve/whats-the-difference" class="btn">Check your answer spoiler-free</a>
+
+
+
+<a href="/solution/whats-the-difference" class="btn">View solution</a>
+<a href="/stats/whats-the-difference" class="btn">Stats</a>
+
+
+            </div>
+        </span>
+        <div class="top-right-actions">
+        
+        
+        </div>
+    </nav>
+    
+    
+    
+    
+    
+    <script>
+
+    
+    
+    let glitchTriggerFuncs = [];
+    let glitchTriggerReceived = false;
+    let glitchTriggerExReceived = false;
+    let glitchPageLoaded = false;
+    function processGlitchFuncs(ex) {
+        glitchTriggerFuncs.forEach((func) => {
+            func(ex);
+        });
+    }
+    function doGlitch(ex) {
+        glitchTriggerReceived = true;
+        if (ex) {
+            glitchTriggerExReceived = true;
+        }
+        if (glitchPageLoaded) {
+            processGlitchFuncs(ex);
+        }
+    }
+    window.addEventListener('load', () => {
+        glitchPageLoaded = true;
+        if (glitchTriggerExReceived) {
+            processGlitchFuncs(true);
+        }
+        else if (glitchTriggerReceived) {
+            processGlitchFuncs(false);
+        }
+    }, false);
+    
+    
+    
+    function registerOnGlitchHook(func) {
+        if (glitchTriggerExReceived) {
+            func(true);
+        }
+        else if (glitchTriggerReceived) {
+            func(false);
+        }
+        glitchTriggerFuncs.push(func);
+    }
+    
+
+    
+    
+    </script>
+    <div class="content">
+        
+
+<h1>
+    What&#x27;s the Difference?
+    
+    
+</h1>
+
+
+
+<main class="puzzle-main clipboard-container">
+    
+    
+    
+    
+<style>
+.puzzle-main {
+  text-align: center;
+}
+
+.images-flexbox {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+
+.sr-only {
+	position: absolute;
+	left:-9999px;
+}
+
+.img-button {
+	background-color: transparent;
+	height: auto;
+	padding: 0px;
+	margin: 0px;
+	border: 0px;
+	line-height: normal;
+}
+
+.img-button:hover, .img-button:focus {opacity: 0.7;}
+
+.img-button:focus {outline: auto 5px -webkit-focus-ring-color;}
+
+/* Source: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_modal_img */
+.small-img {
+	border-radius: 5px;
+	cursor: pointer;
+	transition: 0.3s;
+}
+
+/* The Modal (background) */
+.modal {
+	display: none; /* Hidden by default */
+	position: fixed; /* Stay in place */
+	z-index: 1; /* Sit on top */
+	/* padding-top: 100px; Location of the box */
+	left: 0;
+	top: 0;
+	width: 100%; /* Full width */
+	height: 100%; /* Full height */
+	overflow: auto; /* Enable scroll if needed */
+	background-color: rgb(0,0,0); /* Fallback color */
+	background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (image) */
+.modal-content {
+	margin: auto;
+	display: block;
+	max-height: 100%;
+	max-width: 800px;
+	object-fit: scale-down;
+}
+
+/* Adjust for the tray at the top of the page. */
+@media screen and (max-width: 960px) {
+	.modal {
+		padding-top: 3rem;
+		height: calc(100% - 3rem);
+	}
+}
+
+/* Add Animation */
+.modal-content {  
+	-webkit-animation-name: zoom;
+	-webkit-animation-duration: 0.6s;
+	animation-name: zoom;
+	animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+	from {-webkit-transform:scale(0)} 
+	to {-webkit-transform:scale(1)}
+}
+
+@keyframes zoom {
+	from {transform:scale(0)} 
+	to {transform:scale(1)}
+}
+
+/* The Close Button */
+.close {
+	float: right;
+	margin: 5px;
+	color: #f1f1f1;
+	font-size: 40px;
+	font-weight: bold;
+	transition: 0.3s;	
+	height: auto;
+	border: 0px;
+	line-height: normal;
+	background-color: transparent;
+}
+
+.close:hover,
+.close:focus {
+	color: #bbb;
+	text-decoration: none;
+	cursor: pointer;
+	outline: auto 5px -webkit-focus-ring-color;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+	.modal-content {
+		width: 100%;
+	}
+}
+
+img.emoji {
+	height: 1em;
+	width: 1em;
+	margin: 0 .05em 0 .1em;
+	vertical-align: -0.1em;
+}
+</style>
+<a href="/static/puzzle_resources/whats-the-difference/imgs-256ec810.zip" download>
+	📥 Download images as .zip file for more detailed analysis 📥
+</a>
+<div id="images-flexbox">
+	<button class="img-button" id="d1-button"><img id="d1" class="small-img" src="/static/puzzle_resources/whats-the-difference/imgs-7ab14e62/d1_small.jpg" alt="A downward-pointing equilateral triangle outlined in purple and filled with a gradient going from white on top to black on the bottom, with a 4 in the bottom right"></button>
+	<button class="img-button" id="i2-button"><img id="i2" class="small-img" src="/static/puzzle_resources/whats-the-difference/imgs-7ab14e62/i2_small.jpg" alt="A regular hexagon suggesting a cube in isometric view, white on the top and bottom-left faces and black with a white dollar sign and green underscore on the bottom-right face, with a 4 in the bottom right"></button>
+	<button class="img-button" id="n-button"><img id="n" class="small-img" src="/static/puzzle_resources/whats-the-difference/imgs-7ab14e62/n_small.jpg", alt="A purplish-brown ellipsoid slightly curving upwards, with a 4 in the bottom right"></button>
+	<button class="img-button" id="s-button"><img id="s" class="small-img" src="/static/puzzle_resources/whats-the-difference/imgs-7ab14e62/s_small.jpg", alt="An actor in a suit holding a pistol, with a 4 in the bottom right"></button>
+	<button class="img-button" id="e1-button"><img id="e1" class="small-img" src="/static/puzzle_resources/whats-the-difference/imgs-7ab14e62/e1_small.jpg", alt="A humanoid creature with light purplish-gray skin covered in mechanical body parts and tubes, which are black except for a red pentagonal implant covering the left eye; with a 4 in the bottom right"></button>
+	<button class="img-button" id="r-button"><img id="r" class="small-img" src="/static/puzzle_resources/whats-the-difference/imgs-7ab14e62/r_small.jpg", alt="2 lilies with green stems, a white base, and pink petals, a 6 in the bottom right"></button>
+	<button class="img-button" id="e2-button"><img id="e2" class="small-img" src="/static/puzzle_resources/whats-the-difference/imgs-7ab14e62/e2_small.jpg", alt="A pot of thick orange liquid with meat and some herbs, with a 5 in the bottom right"></button>
+	<button class="img-button" id="d2-button"><img id="d2" class="small-img" src="/static/puzzle_resources/whats-the-difference/imgs-7ab14e62/d2_small.jpg", alt="Black-and-white photo of a man with an extremely curved mustache, with a 4 in the bottom right"></button>
+	<button class="img-button" id="x-button"><img id="x" class="small-img" src="/static/puzzle_resources/whats-the-difference/imgs-7ab14e62/x_small.jpg", alt="2 white birds holding olive branches, with a 5 in the bottom right"></button>
+	<button class="img-button" id="o-button"><img id="o" class="small-img" src="/static/puzzle_resources/whats-the-difference/imgs-7ab14e62/o_small.jpg", alt="A country silhouette, with a 4 in the bottom right"></button>
+	<button class="img-button" id="c-button"><img id="c" class="small-img" src="/static/puzzle_resources/whats-the-difference/imgs-7ab14e62/c_small.jpg", alt="A green fruit, round except for a bump to the left, with a 4 in the bottom right"></button>
+	<button class="img-button" id="i1-button"><img id="i1" class="small-img" src="/static/puzzle_resources/whats-the-difference/imgs-7ab14e62/i1_small.jpg", alt="An array of 35 company symbols arranged into columns of rainbow colors, with a 5 in the bottom right"></button>
+	<button class="img-button" id="m-button"><img id="m" class="small-img" src="/static/puzzle_resources/whats-the-difference/imgs-7ab14e62/m_small.jpg", alt="A horse and a female gender symbol, with a 4 in the bottom right"></button>
+	<button class="img-button" id="a2-button"><img id="a2" class="small-img" src="/static/puzzle_resources/whats-the-difference/imgs-7ab14e62/a2_small.jpg", alt="A green canister with an obscured name, labeled 'Provides 8 Vitamins & Minerals' and 'Chocolate Malt Beverage Mix' and depicting a basketball player, with a 4 in the bottom right"></button>
+	<button class="img-button" id="a1-button"><img id="a1" class="small-img" src="/static/puzzle_resources/whats-the-difference/imgs-7ab14e62/a1_small.jpg", alt="A long, straight wooden implement with the left half being flat and teardrop-shaped and the right half being a thin handle, with a 3 in the bottom right"></button>
+	<button class="img-button" id="e3-button"><img id="e3" class="small-img" src="/static/puzzle_resources/whats-the-difference/imgs-7ab14e62/e3_small.jpg", alt="A yellow-brown fish, with a 5 in the bottom right"></button>
+	<button class="img-button" id="t2-button"><img id="t2" class="small-img" src="/static/puzzle_resources/whats-the-difference/imgs-7ab14e62/t2_small.jpg", alt="A white stone sculpture of a bearded man's head, with a 5 in the bottom right"></button>
+	<button class="img-button" id="a3-button"><img id="a3" class="small-img" src="/static/puzzle_resources/whats-the-difference/imgs-7ab14e62/a3_small.jpg", alt="A poster of eight people posing, with a 4 in the bottom right"></button>
+	<button class="img-button" id="f-button"><img id="f" class="small-img" src="/static/puzzle_resources/whats-the-difference/imgs-7ab14e62/f_small.jpg", alt="A bowl of white cooked grains, with a 4 in the bottom right"></button>
+	<button class="img-button" id="t1-button"><img id="t1" class="small-img" src="/static/puzzle_resources/whats-the-difference/imgs-7ab14e62/t1_small.jpg", alt="A cartoon boy in a beige hat and uniform, wearing a symmetric knotted red scarf, brown belt, and brown shoes, and holding a red flag; with a 5 in the bottom right"></button>
+</div>
+<script src="https://twemoji.maxcdn.com/v/latest/twemoji.min.js" crossorigin="anonymous"></script>
+
+    
+    
+
+    
+</main>
+
+<script src="/static/js/copyjack.js"></script>
+
+
+    </div>
+    
+
+<div class="modal" role="dialog" onkeydown="onModalKeyDown(event)" onclick="onModalClick()" aria-labelledby="modal-title">
+	<span id="modal-title" class="sr-only">Enlarged image</span>
+	<button class="close" aria-label="Close image modal">&times;</button>
+	<img class="modal-content" onclick="onModalImgClick(event)">
+</div>
+<script>
+	const nonModals = Array.from(document.body.childNodes).filter(child => child.classList && !child.classList.contains("modal"));
+	const modal = document.getElementsByClassName("modal")[0];
+	const modalContent = document.getElementsByClassName("modal-content")[0];
+	const closeBtn = document.getElementsByClassName("close")[0];
+	const imgBtns = document.getElementsByClassName("img-button");
+
+	const alts = {
+		"d1": "A downward-pointing equilateral triangle outlined in purple and filled with a gradient going from white on top to black on the bottom, with a feathered creature standing inside of it; with a 4 in the bottom right; the creature has black eyes, a few orange feathers near its eyes, some gray feathers around its head and arms, no beak, and two webbed feet",
+		"i2": "A regular hexagon suggesting a cube in isometric view, white on the top and bottom-left faces and black with a superimposed rectangle of a person staring intently from behind a cross-shaped gap in a metallic brown surface on the bottom-right face, with a 4 in the bottom right",
+		"n": "A purplish-brown ellipsoid slightly curving upwards, with a cartoon shape atop it, with a 4 in the bottom right; the long, straight shape is white with a black outline and has four nubs, two on both sides",
+		"s": "An actor in a suit holding a pistol next to two straight black-and-white poles featuring two handles on the top and two footrests a little distance from the bottom, with a 4 in the bottom right",
+		"e1": "A humanoid creature with light purplish-gray skin covered in mechanical body parts and tubes, which are black except for a red pentagonal implant covering the left eye; with a hand and an arrow pointing to some blemished parts of a finger in the bottom left, and a 4 in the bottom right",
+		"r": "2 lilies with green stems, a white base, and pink petals, with a man in a beige hat and coat and one finger in his mouth in the bottom left, with a 6 in the bottom right",
+		"e2": "A pot of thick orange liquid with meat and some herbs, with 2 copies of a black-and-white MS Paint character wearing sunglasses and a shirt featuring a phonograph record cut in two halves standing on it, with a 5 in the bottom right",
+		"d2": "Black-and-white photo of a man with an extremely curved mustache, with a pyramidal mound of orange paste in a bowl in front of him, with a 4 in the bottom right",
+		"x": "2 white birds holding olive branches, with a person scratching an irritated patch of skin in the bottom left, with a 5 in the bottom right",
+		"o": "A country silhouette with a brown quadrupedal mammal inside it, with a 4 in the bottom right",
+		"c": "A green fruit, round except for a bump to the left, with a green tool with a flat metal base, a hollow handle, and various switches and knobs next to it, with a 4 in the bottom right",
+		"i1": "An array of 35 company symbols arranged into columns of rainbow colors, with a blocky metal cooking appliance on the bottom of the central purple column, with a 5 in the bottom right",
+		"m": "A horse and a female gender symbol, whose top half is obscured by a pink heart-shaped fruit, with a 4 in the bottom right",
+		"a2": "A green canister with an obscured name, labeled 'Provides 8 Vitamins & Minerals' and 'Chocolate Malt Beverage Mix' and depicting a basketball player holding a light brown planet, with a 4 in the bottom right",
+		"a1": "A long, straight wooden implement with the left half being flat and teardrop-shaped and the right half being a thin handle, with a red-nosed, buck-toothed cartoon chipmunk standing on it and a 3 in the bottom right",
+		"e3": "A yellow-brown fish with an emoji pig nose, with a 5 in the bottom right",
+		"t2": "A white stone sculpture of a bearded man's head, with a quarter musical rest in his beard, with a 5 in the bottom right",
+		"a3": "A poster of eight people posing, among which one has been replaced by a cartoon man in overalls and with heavy white makeup and gloves, with a 4 in the bottom right",
+		"f": "A bowl of white cooked grains with a long-eared mammal next to it, with a 4 in the bottom right",
+		"t1": "A cartoon boy in a beige hat and uniform, wearing a symmetric knotted red scarf, brown belt, and brown shoes, and holding a red flag in one hand and a cylindrical glass jar with a metal screw-on cap in the other; with a 5 in the bottom right",
+	}
+
+	const closeModal = () => {
+		nonModals.forEach(nonModal => nonModal.ariaHidden = false);
+		modal.style.display = "none";
+		const id = modalContent.id.replace("_large", "-button");
+		document.getElementById(id).focus();
+		modalContent.id = "";
+		modalContent.src = "";
+		modalContent.alt = "";
+	}
+
+	const onModalKeyDown = (e) => {
+		if (e.code === "Escape") {
+			closeModal();
+		} else if (e.code === "Tab") {
+			e.preventDefault();
+		}
+	}
+
+	const onDocumentBodyKeyDown = (e) => {
+		if (e.code === "Escape") {
+			closeModal();
+		}
+	}
+	
+	const onModalClick = () => {
+		closeModal();
+	}
+
+	const onModalImgClick = (e) => {
+		e.stopPropagation();
+	}
+
+	for (const imgBtn of imgBtns) {
+		imgBtn.onclick = () => {
+			nonModals.forEach(nonModal => nonModal.ariaHidden = true);
+			modal.style.display = "block";
+			const img = imgBtn.querySelector(".small-img");
+			modalContent.id = `${img.id}_large`;
+			const stopIdx = img.src.indexOf("_small");
+			modalContent.src = img.src.substring(0, stopIdx)+".jpg";
+			modalContent.alt = alts[img.id];
+			closeBtn.focus();
+		}
+	}
+	
+	closeBtn.onclick = () => closeModal();
+
+	document.body.addEventListener('keydown', (e) => onDocumentBodyKeyDown(e));
+</script>
+
+
+    
+
+    
+</body>
+</html>

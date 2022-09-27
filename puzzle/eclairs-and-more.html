@@ -1,0 +1,373 @@
+
+
+
+
+
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    
+<title>Eclairs and More @ Ovsljs* Opsvut</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=0.5">
+    <meta property="og:title" content="Galactic Puzzle Hunt 2022">
+    <meta property="og:description" content="Registration for this year's Galactic Puzzle Hunt is now open!">
+    <meta property="og:image" content="https://galacticpuzzlehunt.com/static/images/banner.png">
+    <meta property="twitter:card" content="summary_large_image">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Recursive:slnt,CASL,CRSV,MONO@-3,0.5,1,1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/skeleton.css">
+    <link rel="stylesheet" href="/static/css/base.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.19/jquery.touchSwipe.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.formset/1.2.2/jquery.formset.min.js"></script>
+    <script src="/jsi18n/"></script>
+    <script src="/static/js/sorttable.js"></script>
+    <script src="/static/js/tray.js"></script>
+    <script src="/static/js/notify.js"></script>
+    <script src="/static/js/time.js"></script>
+    
+    
+    <link rel="icon" sizes="16x16 32x32 48x48 64x64" href="/static/images/favicon.ico" type="image/vnd.microsoft.icon">
+    
+    
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-92192633-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-92192633-1');
+</script>
+
+</head>
+<body>
+    
+    <div id="background-glitch-wrapper" class="background-glitch">
+        <div class="glitch-1"></div>
+        <div class="glitch-2"></div>
+        <div class="glitch-3"></div>
+    </div>
+    
+    
+    <input id="shortcuts" type="checkbox">
+    
+    <nav>
+        <span class="tray">
+            <span id="tray-timer"></span>
+            <div class="top-tabs">
+                <a href="/">
+                    Home
+                </a>
+                
+                <a href="/rules">
+                    Rules
+                </a>
+                
+                
+                <a href="/story">
+                    Story
+                </a>
+                
+                
+                <a class="selected-tab" href="/puzzles">
+                    Puzzles
+                </a>
+                
+                <a href="/teams">
+                    Teams
+                </a>
+                
+                <a href="/faq">
+                    FAQ
+                </a>
+                
+                
+                <a href="/errata">
+                    Updates
+                </a>
+                
+                
+                <a href="/wrapup">
+                    Wrap-Up
+                </a>
+                
+                
+                <a href="https://galacticpuzzlehunt.com/archive">
+                    Archive
+                </a>
+                
+                
+                
+            </div>
+            <div class="top-left-actions">
+                
+
+
+
+
+<a href="/post-hunt-solve/eclairs-and-more" class="btn">Check your answer spoiler-free</a>
+
+
+
+<a href="/solution/eclairs-and-more" class="btn">View solution</a>
+<a href="/stats/eclairs-and-more" class="btn">Stats</a>
+
+
+            </div>
+        </span>
+        <div class="top-right-actions">
+        
+        
+        </div>
+    </nav>
+    
+    
+    
+    
+    
+    <script>
+
+    
+    
+    let glitchTriggerFuncs = [];
+    let glitchTriggerReceived = false;
+    let glitchTriggerExReceived = false;
+    let glitchPageLoaded = false;
+    function processGlitchFuncs(ex) {
+        glitchTriggerFuncs.forEach((func) => {
+            func(ex);
+        });
+    }
+    function doGlitch(ex) {
+        glitchTriggerReceived = true;
+        if (ex) {
+            glitchTriggerExReceived = true;
+        }
+        if (glitchPageLoaded) {
+            processGlitchFuncs(ex);
+        }
+    }
+    window.addEventListener('load', () => {
+        glitchPageLoaded = true;
+        if (glitchTriggerExReceived) {
+            processGlitchFuncs(true);
+        }
+        else if (glitchTriggerReceived) {
+            processGlitchFuncs(false);
+        }
+    }, false);
+    
+    
+    
+    function registerOnGlitchHook(func) {
+        if (glitchTriggerExReceived) {
+            func(true);
+        }
+        else if (glitchTriggerReceived) {
+            func(false);
+        }
+        glitchTriggerFuncs.push(func);
+    }
+    
+
+    
+    
+    </script>
+    <div class="content">
+        
+
+<h1>
+    Eclairs and More @ Ovsljs* Opsvut
+    
+    
+</h1>
+
+
+
+<main class="puzzle-main clipboard-container">
+    
+    
+    
+    
+<style>
+@font-face {
+	font-family: Dunkin;
+	src: url("/static/puzzle_resources/eclairs-and-more/DunkinMain.otf") format("opentype");
+}
+@font-face {
+	font-family: DunkinAlt;
+	src: url("/static/puzzle_resources/eclairs-and-more/FredokaOne-Regular.ttf") format("truetype");
+}
+.puzzleheader {
+	margin-bottom: 1em;
+}
+.puzzlemain {
+	font-family: 'Dunkin';
+	text-align: center;
+	background-color: white;
+	padding-bottom: 1em;
+	padding-top: 1em;
+	border: 5px double #999;
+}
+.puzzlealtfont {
+	font-family: 'DunkinAlt';
+}
+.puzzleimgwrapper {
+}
+.puzzleimg {
+	max-height: 8em;
+	max-width: 100%;
+}
+.puzzleorange {
+	color: #ff671f;
+}
+.puzzlepink {
+	color: #e11383;
+}
+.puzzlename {
+	font-size: 0.8em;
+}
+.puzzleprice {
+	font-size: 0.7em;
+}
+.puzzlewrapper {
+	display: inline-grid;
+	grid-template-columns: repeat(auto-fit, 160px);
+	column-gap: 3em;
+	justify-content: center;
+	width: 90%;
+}
+.puzzleitem {
+	align-self: end;
+}
+.puzzleitemline {
+	text-align: left;
+	height: 7em;
+}
+</style>
+
+<p class="flavor">We gave our menu a whole revamp! You&rsquo;ll like how the new flavors each kept something from the old ones.</p>
+
+<div class="puzzlemain">
+<h2 class="puzzleheader"><span class="puzzleorange">OVSLJS*</span> <span class="puzzlepink">OPSVUT</span></h2>
+
+<div class="puzzlewrapper">
+<div class="puzzleitem">
+<div class="puzzleimgwrapper"><img class="puzzleimg" src="/static/puzzle_resources/eclairs-and-more/img0.png" /></div>
+<div class="puzzleitemline"><span class="puzzlepink puzzlename">DQQMF *S TQJEE OPSVU</span><br /><span class="puzzleorange puzzleprice">$3</span></div>
+</div>
+<div class="puzzleitem">
+<div class="puzzleimgwrapper"><img class="puzzleimg" src="/static/puzzle_resources/eclairs-and-more/img1.png" /></div>
+<div class="puzzleitemline"><span class="puzzlepink puzzlename">DQQLF EAVN<span class="puzzlealtfont">&amp;</span> OPSVU</span><br /><span class="puzzleorange puzzleprice">$6</span></div>
+</div>
+<div class="puzzleitem">
+<div class="puzzleimgwrapper"><img class="puzzleimg" src="/static/puzzle_resources/eclairs-and-more/img2.png" /></div>
+<div class="puzzleitemline"><span class="puzzlepink puzzlename"><span class="puzzlealtfont">&amp;</span>DWDAJDS LAENF OPSVU</span><br /><span class="puzzleorange puzzleprice">$9</span></div>
+</div>
+<div class="puzzleitem">
+<div class="puzzleimgwrapper"><img class="puzzleimg" src="/static/puzzle_resources/eclairs-and-more/img3.png" /></div>
+<div class="puzzleitemline"><span class="puzzlepink puzzlename"><span class="puzzlealtfont">&amp;</span>JTMDAL</span><br /><span class="puzzleorange puzzleprice">$10</span></div>
+</div>
+<div class="puzzleitem">
+<div class="puzzleimgwrapper"><img class="puzzleimg" src="/static/puzzle_resources/eclairs-and-more/img4.png" /></div>
+<div class="puzzleitemline"><span class="puzzlepink puzzlename">EIPEPMDUF BVUUFASVU OPSVU</span><br /><span class="puzzleorange puzzleprice">$5</span></div>
+</div>
+<div class="puzzleitem">
+<div class="puzzleimgwrapper"><img class="puzzleimg" src="/static/puzzle_resources/eclairs-and-more/img5.png" /></div>
+<div class="puzzleitemline"><span class="puzzlepink puzzlename">EIPEPMAUF GAPTUFO OPSVU</span><br /><span class="puzzleorange puzzleprice">$7</span></div>
+</div>
+<div class="puzzleitem">
+<div class="puzzleimgwrapper"><img class="puzzleimg" src="/static/puzzle_resources/eclairs-and-more/img6.png" /></div>
+<div class="puzzleitemline"><span class="puzzlepink puzzlename">EIPEPMDUF GAPTUEO XJUI TQAJSLMFT OPSVU</span><br /><span class="puzzleorange puzzleprice">$4</span></div>
+</div>
+<div class="puzzleitem">
+<div class="puzzleimgwrapper"><img class="puzzleimg" src="/static/puzzle_resources/eclairs-and-more/img7.png" /></div>
+<div class="puzzleitemline"><span class="puzzlepink puzzlename">EJSNDNPS OPSVU</span><br /><span class="puzzleorange puzzleprice">$9</span></div>
+</div>
+<div class="puzzleitem">
+<div class="puzzleimgwrapper"><img class="puzzleimg" src="/static/puzzle_resources/eclairs-and-more/img8.png" /></div>
+<div class="puzzleitemline"><span class="puzzlepink puzzlename">GAFSEI EAVMMEA</span><br /><span class="puzzleorange puzzleprice">$3</span></div>
+</div>
+<div class="puzzleitem">
+<div class="puzzleimgwrapper"><img class="puzzleimg" src="/static/puzzle_resources/eclairs-and-more/img9.png" /></div>
+<div class="puzzleitemline"><span class="puzzlepink puzzlename">HMDCFO EIPEPMDUF DPSVU</span><br /><span class="puzzleorange puzzleprice">$10</span></div>
+</div>
+<div class="puzzleitem">
+<div class="puzzleimgwrapper"><img class="puzzleimg" src="/static/puzzle_resources/eclairs-and-more/img10.png" /></div>
+<div class="puzzleitemline"><span class="puzzlepink puzzlename">HMACFO TUADX<span class="puzzlealtfont">&amp;</span>FAAZ OPSVU</span><br /><span class="puzzleorange puzzleprice">$8</span></div>
+</div>
+<div class="puzzleitem">
+<div class="puzzleimgwrapper"><img class="puzzleimg" src="/static/puzzle_resources/eclairs-and-more/img11.png" /></div>
+<div class="puzzleitemline"><span class="puzzlepink puzzlename">KFMMZ OOSVU</span><br /><span class="puzzleorange puzzleprice">$5</span></div>
+</div>
+<div class="puzzleitem">
+<div class="puzzleimgwrapper"><img class="puzzleimg" src="/static/puzzle_resources/eclairs-and-more/img12.png" /></div>
+<div class="puzzleitemline"><span class="puzzlepink puzzlename">NAQMF GAPTUFO OPSVU</span><br /><span class="puzzleorange puzzleprice">$9</span></div>
+</div>
+<div class="puzzleitem">
+<div class="puzzleimgwrapper"><img class="puzzleimg" src="/static/puzzle_resources/eclairs-and-more/img13.png" /></div>
+<div class="puzzleitemline"><span class="puzzlepink puzzlename">NDQMF WDSJMMD ERḞNF OPSVU</span><br /><span class="puzzleorange puzzleprice">$8</span></div>
+</div>
+<div class="puzzleitem">
+<div class="puzzleimgwrapper"><img class="puzzleimg" src="/static/puzzle_resources/eclairs-and-more/img14.png" /></div>
+<div class="puzzleitemline"><span class="puzzlepink puzzlename">PMO FDTIJPSFO OPSVU</span><br /><span class="puzzleorange puzzleprice">$4</span></div>
+</div>
+<div class="puzzleitem">
+<div class="puzzleimgwrapper"><img class="puzzleimg" src="/static/puzzle_resources/eclairs-and-more/img15.png" /></div>
+<div class="puzzleitemline"><span class="puzzlepink puzzlename">QPWOFAFO OPSVU</span><br /><span class="puzzleorange puzzleprice">$5</span></div>
+</div>
+<div class="puzzleitem">
+<div class="puzzleimgwrapper"><img class="puzzleimg" src="/static/puzzle_resources/eclairs-and-more/img16.png" /></div>
+<div class="puzzleitemline"><span class="puzzlepink puzzlename">TOVA EAFDN OPSVU</span><br /><span class="puzzleorange puzzleprice">$4</span></div>
+</div>
+<div class="puzzleitem">
+<div class="puzzleimgwrapper"><img class="puzzleimg" src="/static/puzzle_resources/eclairs-and-more/img17.png" /></div>
+<div class="puzzleitemline"><span class="puzzlepink puzzlename">TUADX<span class="puzzlealtfont">&amp;</span>FAAY GAPTUFO OPSVU</span><br /><span class="puzzleorange puzzleprice">$5</span></div>
+</div>
+<div class="puzzleitem">
+<div class="puzzleimgwrapper"><img class="puzzleimg" src="/static/puzzle_resources/eclairs-and-more/img18.png" /></div>
+<div class="puzzleitemline"><span class="puzzlepink puzzlename">WDNJMMD EAḞNF OPSVU</span><br /><span class="puzzleorange puzzleprice">$4</span></div>
+</div>
+<div class="puzzleitem">
+<div class="puzzleimgwrapper"><img class="puzzleimg" src="/static/puzzle_resources/eclairs-and-more/img19.png" /></div>
+<div class="puzzleitemline"><span class="puzzlepink puzzlename">WDSJMMD GAPTUFD OPSVU</span><br /><span class="puzzleorange puzzleprice">$12</span></div>
+</div>
+<div class="puzzleitem">
+<div class="puzzleimgwrapper"><img class="puzzleimg" src="/static/puzzle_resources/eclairs-and-more/img20.png" /></div>
+<div class="puzzleitemline"><span class="puzzlepink puzzlename">WDSJMLD GAPTUFO TQAJSLMFT OPSVU</span><br /><span class="puzzleorange puzzleprice">$7</span></div>
+</div>
+<div class="puzzleitem">
+<div class="puzzleimgwrapper"><img class="puzzleimg" src="/static/puzzle_resources/eclairs-and-more/img21.png" /></div>
+<div class="puzzleitemline"><span class="puzzlepink puzzlename">WDSJMMD IFDOMJGIU OPSVU</span><br /><span class="puzzleorange puzzleprice">$6</span></div>
+</div>
+
+</div>
+
+</div>
+
+<button class="btn clipboard-button"></button>
+
+    
+    
+
+    
+</main>
+
+<script src="/static/js/copyjack.js"></script>
+
+
+    </div>
+    
+
+    
+
+    
+</body>
+</html>

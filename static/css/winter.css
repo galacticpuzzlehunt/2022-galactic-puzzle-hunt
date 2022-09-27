@@ -1,0 +1,16 @@
+@media screen {
+  :root {
+      --background-image-url: url(/static/images/winter.jpg);
+      --background-top-rgb: 195, 218, 223;
+
+      --background-bottom-rgb: 145, 176, 179;
+      --primary-content-rgb: 249, 248, 245;
+      --secondary-content-rgb: 73, 103, 106; /* Make sure this has enough contrast with primary content rgb. */
+      --tertiary-content-rgb: 52, 73, 75;
+
+      --button-hover-background-color: rgb(61, 86, 88);
+      --button-inverse-hover-background-color: rgb(192, 210, 212);
+
+      --decorative-line-color: rgb(142, 174, 177);
+  }
+}

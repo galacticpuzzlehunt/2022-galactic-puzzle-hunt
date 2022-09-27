@@ -1,0 +1,279 @@
+.puzzle-main {
+  color: #49659d;
+  font-family: monospace;
+}
+
+.myoph-intro-paragraph {
+  margin-bottom: 30px;
+}
+
+.tab-display {
+  margin: auto;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #d2def4;
+}
+
+.puzzle-tab {
+  display: inline-block;
+  border: 1px solid gray;
+  cursor: pointer;
+  padding: 5px;
+  margin: 3px;
+  font-size: 1.5rem;
+
+  background: #49669d;
+}
+
+.puzzle-tab.selected {
+  background: green;
+}
+
+.puzzle-tab:hover {
+  background: orange;
+  color: white;
+}
+
+/* .myoph-header {
+  text-align: center;
+  font-size: 2.4rem;
+  color: gold;
+  font-weight: bold;
+  margin-bottom: 20px;
+} */
+
+.myoph-status {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #49669d;
+  /* color: lightblue; */
+  margin-bottom: 15px;
+}
+
+.copy-clipboard {
+  position: relative;
+}
+
+.myoph-toolbar-container {
+  position: absolute;
+  right: 35px;
+}
+
+.myoph-toolbar-btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 999px;
+  width: 30px;
+  height: 30px;
+  border: 1px solid gray;
+  background: #49669d;
+  margin-left: 6px;
+
+  cursor: pointer;
+}
+
+.myoph-toolbar-btn:hover {
+  background: orange;
+  color: white;
+}
+
+.myoph-toolbar-btn img {
+  width: 20px;
+  height: 20px;
+  margin-top: 5px;
+  filter: invert(94%) sepia(91%) saturate(694%) hue-rotate(176deg) brightness(100%) contrast(92%);
+}
+
+#_myoph-dummy-copy-text {
+  display: none;
+}
+
+.myoph-puzzle-instructions {
+  text-align: left;
+  color: #49669d;
+  /* color: lightblue; */
+  
+  width: 500px;
+  margin: auto auto 15px auto;
+}
+
+.myoph-puzzle-instructions > span {
+  display: block;
+  margin-bottom: 16px;
+}
+
+.myoph-puzzle-instructions ul {
+  display: inline-block;
+  border: 1px dashed #49669d /* lightblue */;
+  border-radius: 15px;
+  padding: 10px 25px 10px 33px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.myoph-puzzle-instructions li {
+  margin-bottom: 0px;
+}
+
+.myoph-ca-container {
+  text-align: center;
+}
+
+.myoph-ca-display {
+  display: inline-block;
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 20px;
+  background: #bfefbf;
+  padding: 10px 30px;
+  border-radius: 25px;
+  color: #103102;
+}
+
+.myoph-ca-display b {
+  color: green;
+}
+
+.myoph-draw {
+  display: block;
+  margin: auto;
+  background: white;
+}
+
+textarea {
+  resize: none;
+}
+
+.myoph-input-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.myoph-mc-qh {
+  font-size: 1.2rem;
+  color: #49669d;
+}
+
+.myoph-mc-qr {
+  margin-bottom: 20px;
+}
+
+.myoph-mc-textbox {
+  display: inline-block;
+}
+
+.myoph-cc-textarea {
+  background: lightblue !important;
+  width: 32ch;
+  font-family: Recursive, monospace;
+  letter-spacing: 0.2ch;
+}
+
+.myoph-mc-text {
+  width: 8ch !important;
+  background: lightblue !important;
+  margin: 3px !important;
+}
+
+.myoph-meta-container {
+  margin: 20px auto;
+  display: table;
+  border-spacing: 0 10px;
+}
+
+.myoph-meta-row {
+  display: table-row;
+}
+
+.myoph-meta-row > div {
+  display: table-cell;
+  width: 29px;
+  vertical-align: middle;
+}
+
+.myoph-meta-letter {
+  font-weight: bold;
+  color: #49669d /* lightblue */;
+}
+
+.myoph-meta-letters-row > div {
+  border: 1px solid #49669d /* lightblue */;
+  height: 30px;
+  text-align: center;
+}
+
+.myoph-meta-source-row > div {
+  writing-mode: vertical-lr;
+  font-size: 1.2rem;
+  color: rgba(0, 0, 0, 65%);
+}
+
+.myoph-audio-textarea {
+  width: 300px;
+  height: 200px;
+}
+
+.myoph-akari-root {
+  text-align: center;
+}
+
+.myoph-akari-row {
+  line-height: 1rem;
+}
+
+.myoph-akari-cell {
+  display: inline-block;
+  font-size: 2rem;
+  color: gray;
+  cursor: pointer;
+  border: 1px solid gray;
+  width: 40px;
+  height: 40px;
+  background: white;
+  line-height: 2rem;
+}
+
+.myoph-akari-cell-contents {
+  width: 100%;
+  height: 100%;
+  background: black;
+  position: relative;
+}
+
+.myoph-akari-cell .myoph-akari-cell-contents::after {
+  position: absolute;
+  left: 11px;
+  top: 10px;
+  font-size: 3rem;
+}
+
+.myoph-akari-cell-2 .myoph-akari-cell-contents::after {
+  content: '0';
+}
+
+.myoph-akari-cell-3 .myoph-akari-cell-contents::after {
+  content: '1';
+}
+
+.myoph-akari-cell-4 .myoph-akari-cell-contents::after {
+  content: '2';
+}
+
+.myoph-akari-cell-5 .myoph-akari-cell-contents::after {
+  content: '3';
+}
+
+.myoph-akari-cell-6 .myoph-akari-cell-contents::after {
+  content: '4';
+}
+
+.myoph-submit {
+  font-size: 1.5rem;
+}
+
+.myoph-submit-pending {
+  pointer-events: none;
+  background: #becfd4 !important;
+  border: #081448 !important;
+}

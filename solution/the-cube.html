@@ -1,0 +1,309 @@
+
+
+
+
+
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    
+<title>Solution: The Cube</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=0.5">
+    <meta property="og:title" content="Galactic Puzzle Hunt 2022">
+    <meta property="og:description" content="Registration for this year's Galactic Puzzle Hunt is now open!">
+    <meta property="og:image" content="https://galacticpuzzlehunt.com/static/images/banner.png">
+    <meta property="twitter:card" content="summary_large_image">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Recursive:slnt,CASL,CRSV,MONO@-3,0.5,1,1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/skeleton.css">
+    <link rel="stylesheet" href="/static/css/base.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.19/jquery.touchSwipe.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.formset/1.2.2/jquery.formset.min.js"></script>
+    <script src="/jsi18n/"></script>
+    <script src="/static/js/sorttable.js"></script>
+    <script src="/static/js/tray.js"></script>
+    <script src="/static/js/notify.js"></script>
+    <script src="/static/js/time.js"></script>
+    
+    
+    <link rel="icon" sizes="16x16 32x32 48x48 64x64" href="/static/images/favicon.ico" type="image/vnd.microsoft.icon">
+    
+    
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-92192633-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-92192633-1');
+</script>
+
+</head>
+<body>
+    
+    <div id="background-glitch-wrapper" class="background-glitch">
+        <div class="glitch-1"></div>
+        <div class="glitch-2"></div>
+        <div class="glitch-3"></div>
+    </div>
+    
+    
+    <input id="shortcuts" type="checkbox">
+    
+    <nav>
+        <span class="tray">
+            <span id="tray-timer"></span>
+            <div class="top-tabs">
+                <a href="/">
+                    Home
+                </a>
+                
+                <a href="/rules">
+                    Rules
+                </a>
+                
+                
+                <a href="/story">
+                    Story
+                </a>
+                
+                
+                <a class="selected-tab" href="/puzzles">
+                    Puzzles
+                </a>
+                
+                <a href="/teams">
+                    Teams
+                </a>
+                
+                <a href="/faq">
+                    FAQ
+                </a>
+                
+                
+                <a href="/errata">
+                    Updates
+                </a>
+                
+                
+                <a href="/wrapup">
+                    Wrap-Up
+                </a>
+                
+                
+                <a href="https://galacticpuzzlehunt.com/archive">
+                    Archive
+                </a>
+                
+                
+                
+            </div>
+            <div class="top-left-actions">
+                
+<a href="/puzzle/the-cube" class="btn">Back to the puzzle</a>
+
+            </div>
+        </span>
+        <div class="top-right-actions">
+        
+        
+        </div>
+    </nav>
+    
+    
+    
+    
+    
+    <script>
+
+    
+    
+    let glitchTriggerFuncs = [];
+    let glitchTriggerReceived = false;
+    let glitchTriggerExReceived = false;
+    let glitchPageLoaded = false;
+    function processGlitchFuncs(ex) {
+        glitchTriggerFuncs.forEach((func) => {
+            func(ex);
+        });
+    }
+    function doGlitch(ex) {
+        glitchTriggerReceived = true;
+        if (ex) {
+            glitchTriggerExReceived = true;
+        }
+        if (glitchPageLoaded) {
+            processGlitchFuncs(ex);
+        }
+    }
+    window.addEventListener('load', () => {
+        glitchPageLoaded = true;
+        if (glitchTriggerExReceived) {
+            processGlitchFuncs(true);
+        }
+        else if (glitchTriggerReceived) {
+            processGlitchFuncs(false);
+        }
+    }, false);
+    
+    
+    
+    function registerOnGlitchHook(func) {
+        if (glitchTriggerExReceived) {
+            func(true);
+        }
+        else if (glitchTriggerReceived) {
+            func(false);
+        }
+        glitchTriggerFuncs.push(func);
+    }
+    
+
+    
+    
+    </script>
+    <div class="content">
+        
+
+<style>
+h2 {
+    font-size: 2.5rem;
+    font-weight: normal;
+    font-style: italic;
+    margin-bottom: 2rem;
+}
+
+h4 {
+    font-size: 2rem;
+    font-weight: normal;
+    margin: 2rem 0;
+}
+</style>
+
+<h1>
+    Solution <span style="font-weight: 300">The Cube</span>
+    <div class="solved-title-marker">Answer <span class="solved-title-answer spoiler">WHACK TO THE FUTURE</span></div>
+</h1>
+
+<main class="puzzle-main">
+    <h2 style="margin-top: 0">
+        Written by
+        
+Brian Chen, CJ Quines, Anderson Wang, and Ben Yang
+
+    </h2>
+
+    
+    <style>.math{font-family:Recursive,monospace}</style>
+
+<h3>Part 1 (2021)</h3>
+<p>The first part of this puzzle asks us to collect all 14 energy nodes. We are given a map, which shows us a rectangular prism, a radar that appears to show distances to the nodes, and a fuel gauge. Looking at the puzzles on 2021, we see all three main rounds (Forward, Hibernating and Flying South, and World’s End Concert) are visible at once. Furthermore, there is now a crosshair icon next to each of the puzzles.</p>
+<p>Our first step is to understand what sort of space we are in and how to navigate. By clicking on the crosshair icons, we can observe the fuel gauge decreasing and the distances on the radar changing. Through playing around with this, we can hypothesize and confirm several facts:</p>
+<ul>
+<li>We are inside a 8&times;10&times;12 rectangular prism</li>
+<li>One unit of fuel is spent for every unit of distance traveled</li>
+<li>The radar shows Manhattan distances to the energy nodes</li>
+<li>Clicking on the crosshair icon next to a puzzle will cause you to move to a target value within one dimension (and keep you stationary in the other two dimensions)</li>
+<li>Each of the rounds corresponds to a different dimension, and each puzzle corresponds to a different target value in that dimension</li>
+<li>When we pass over an energy node it is collected and the letter on said node is revealed</li>
+</ul>
+<p>From this amount of information, it is possible to devise a set of movements that will collect all energy nodes. However, we may also notice that the correspondence of puzzles to target values is given by the order in which feeder answers are used in the three main round metas. That is, if a puzzle’s answer provides the <span class="math">n</span>th letter to the answer of the corresponding meta, then that puzzle’s crosshair icon will set the corresponding coordinate to <span class="math">n</span>. We will adopt the convention of using the <span class="math">x</span>-coordinate for the dimension of size 8, the <span class="math">y</span>-coordinate for the dimension of size 10, and the <span class="math">z</span>-coordinate for the dimension of size 12.</p>
+<table><tr><th><span class="math">x</span>-coordinate
+    <th><span class="math">y</span>-coordinate
+    <th><span class="math">z</span>-coordinate
+  </tr><tr style="vertical-align: top"><td><ol><li>Babysit the Supercomputer
+        <li>At the Park
+        <li>Combat Roller
+        <li>Broken Jukebox
+        <li>Just Wait an Hour
+        <li>Piano Typer
+        <li>Speedy Crosswording
+        <li>Me, the Worm
+      </ol></td><td><ol><li>Maze
+        <li>Pocket Guide to Travel
+        <li>✝️🔤🧩
+        <li>Reap What You Sow
+        <li>Galactic History Exam
+        <li>A Winding Walk
+        <li>Everything Everywhere All at Once
+        <li>Oversimplified
+        <li>The Dining Philosophers
+        <li>Somewhere
+      </ol></td><td><ol><li>A Practical Guide to Choosing a Team Name
+        <li>Bullet Curtain
+        <li>Changes
+        <li>Young Artists
+        <li>Mythic Arms
+        <li>All Things Big and Small
+        <li>Duality
+        <li>Make Your Own Puzzle Hunt
+        <li>horse_ebooks
+        <li>Cryptology
+        <li>The Earth Guide
+        <li>Three
+      </ol></td></tr></table>
+
+<p>Once we have collected all 14 energy nodes, we are directed back to 2022 for the second part of this puzzle. For reference, here are the energy node locations, in the order shown on the radar:</p>
+<ul>
+<li>(1, 3, 7)</li>
+<li>(1, 3, 7)</li>
+<li>(1, 1, 7)</li>
+<li>(1, 1, 12)</li>
+<li>(8, 3, 7)</li>
+<li>(1, 7, 3)</li>
+<li>(1, 10, 8)</li>
+<li>(1, 10, 3)</li>
+<li>(8, 3, 3)</li>
+<li>(7, 1, 12)</li>
+<li>(7, 1, 1)</li>
+<li>(7, 10, 8)</li>
+<li>(8, 7, 3)</li>
+<li>(7, 10, 1)</li>
+</ul>
+<h3>Part 2 (2022)</h3>
+<p>We are now presented with the long string that previously appeared in The Line and The Square, along with a list of trigrams. The reappearance of this long string suggests that we may once again wish to write the letters along a cyclic path. Looking back at the coordinates of the energy nodes we found in the first part, we notice that there is a unique (modulo traversing it forwards or backwards) cyclic path that collects all of them while moving directly to an uncollected energy node at each step. This path has length 77 (counting the starting location twice), which is the length of the string. Trying both traversal orders, when we write the letters of the string along the path, we notice that one of them has the letters from the nodes align with the letter from the string, which further confirms that this step is the correct thing to do. The path now gives us an order on the set of 14 letters from the energy nodes, and it spells out the cluephrase SEE DEVICE NAMES.</p>
+<table><tr><th>Energy node letter</th><th>Location</th><th>Puzzle movement used</th><th>Location on path</th></tr><tr><td>S</td><td>(1, 3, 7)</td><td><blank></td><td>1</td></tr><tr><td>E</td><td>(8, 3, 7)</td><td>Me, the Worm</td><td>8</td></tr><tr><td>E</td><td>(8, 3, 3)</td><td>Changes</td><td>12</td></tr><tr><td>D</td><td>(8, 7, 3)</td><td>Everything Everywhere All at Once</td><td>16</td></tr><tr><td>E</td><td>(1, 7, 3)</td><td>Babysit the Supercomputer</td><td>23</td></tr><tr><td>V</td><td>(1, 10, 3)</td><td>Somewhere</td><td>26</td></tr><tr><td>I</td><td>(1, 10, 8)</td><td>Make Your Own Puzzle Hunt</td><td>31</td></tr><tr><td>C</td><td>(7, 10, 8)</td><td>Speedy Crosswording</td><td>37</td></tr><tr><td>E</td><td>(7, 10, 1)</td><td>A Practical Guide to Choosing a Team Name</td><td>44</td></tr><tr><td>N</td><td>(7, 1, 1)</td><td>Maze</td><td>53</td></tr><tr><td>A</td><td>(7, 1, 12)</td><td>Three</td><td>64</td></tr><tr><td>M</td><td>(1, 1, 12)</td><td>Babysit the Supercomputer</td><td>70</td></tr><tr><td>E</td><td>(1, 1, 7)</td><td>Duality</td><td>75</td></tr><tr><td>S</td><td>(1, 3, 7)</td><td>✝️🔤🧩</td><td>77</td></tr></table>
+
+<p>The cluephrase leads us back to the three main round metapuzzle answers, which are the devices we acquired: AIRHORNS, THYMESCALE, and SHUTTLECLOCK. We notice that each of the trigrams can be formed by taking one letter from each of these answers, which corresponds to a unique coordinate <span class="math">(a,b,c)</span>, where the trigram is the <span class="math">a</span>th letter of AIRHORNS, the <span class="math">b</span>th letter of THYMESCALE, and the <span class="math">c</span>th letter of SHUTTLECLOCK. These coordinates also happen to lie along our path:</p>
+<table><tr><th>Trigram</th><th>Coordinates</th><th>Location on path</th><th>Letter</th></tr><tr><td>SSU</td><td>(8,6,3)</td><td>15</td><td>W</td></tr><tr><td>NTE</td><td>(7,1,7)</td><td>59</td><td>H</td></tr><tr><td>OCU</td><td>(5,7,3)</td><td>19</td><td>A</td></tr><tr><td>OYE</td><td>(5,3,7)</td><td>5</td><td>C</td></tr><tr><td>OTK</td><td>(5,1,12)</td><td>66</td><td>K</td></tr><tr><td>SMU</td><td>(8,4,3)</td><td>13</td><td>T</td></tr><tr><td>NTH</td><td>(7,1,2)</td><td>54</td><td>O</td></tr><tr><td>IYE</td><td>(2,3,7)</td><td>2</td><td>T</td></tr><tr><td>NTU</td><td>(7,1,3)</td><td>55</td><td>H</td></tr><tr><td>SYE</td><td>(8,3,7)</td><td>8</td><td>E</td></tr><tr><td>NTO</td><td>(7,1,10)</td><td>62</td><td>F</td></tr><tr><td>AAU</td><td>(1,8,3)</td><td>24</td><td>U</td></tr><tr><td>ATO</td><td>(1,1,10)</td><td>72</td><td>T</td></tr><tr><td>HCU</td><td>(4,7,3)</td><td>20</td><td>U</td></tr><tr><td>AHE</td><td>(1,2,7)</td><td>76</td><td>R</td></tr><tr><td>ACU</td><td>(1,7,3)</td><td>23</td><td>E</td></tr></table>
+
+<p>These letters give us the final answer, <strong>WHACK TO THE FUTURE</strong>.</p>
+<h3>Easter Egg</h3>
+<p>We also have a bonus hidden in this set of metapuzzles (The Line, The Square, The Cube). The long string shared among these puzzles is used to extract a total of three cluephrases and three answers:</p>
+<table><tr><th>Puzzle</th><th>Cluephrase</th><th>Answer</th></tr><tr><td>The Line</td><td>SIX TURNS</td><td>MORE TIME</td></tr><tr><td>The Square</td><td>GREAT NOW START AT WHERE A BALL DROPS</td><td>GAP YEAR</td></tr><tr><td>The Cube</td><td>SEE DEVICE NAMES</td><td>WHACK TO THE FUTURE</td></tr></table>
+
+<p>This uses up almost all of the letters in the string, except for 8. These 8 not yet constrained letters are at positions 3, 14, 18, 33, 35, 49, 51, and 68. If we look at the letters at these positions, we get the phrase <strong>USE PAPER</strong>, suggesting a strategy that, according to the mechanics of the game rock-paper-scissors, may work against the asteroid. Longtime GPH participants may also recognize this as a callback to our first hunt in 2017, the <a href="https://2017.galacticpuzzlehunt.com">Puzzleball Championships</a>.</p>
+
+    
+    
+    <h2 id="authors-notes">Author&rsquo;s Notes</h2>
+    <p>The endgame and metameta was written after all the other metas and answers were basically finalized (except of course for the yet unconstrained letters in the string from The Line/The Square, which we always intended to use). It was purely a coincidence that all three metas extracted one letter from each feeder answer, which we were happy to be able to use in this puzzle.</p>
+<p>With computer assistance, we tried many, many cluephrases, sets of indexes, and 3D paths to find one that was as neat as possible. About the only aspect in which the metameta affected the rest of the hunt was that we used the word “device” in story text to describe the three meta answers to accommodate the cluephrase we ended up with.</p>
+<p>At first, the endgame worked by having solvers navigate “to” a puzzle by actually submitting the correct answer to that puzzle. Flavor-wise, we thought this would conclude the time loop theme in the classic way by requiring solvers to achieve a “golden loop” in how they solved the main round puzzles, similar to how they solved the intro round puzzles in a different way to access the main round. However, this required an inelegant crutch to allow solvers to submit a puzzle more than once; more problematically, during our big testsolve, our solvers did not try interacting with the endgame by submitting puzzles and we didn’t think of an elegant way to encourage them to do so, so we switched to the much more obvious crosshairs buttons on the puzzles page.</p>
+<p>Brian: Fun fact: I actually wrote the bruteforcing script in a programming language I conceived and implemented starting roughly two weeks before the construction effort, for not particularly related reasons. I don’t know why I did this.</p>
+<p>CJ: After the second revision of The Line split the meta into The Line and The Square, the potential for The Cube was pointed out. The logical sequence would be timeline, Times Square, <a href="https://en.wikipedia.org/wiki/Time_Cube">Time Cube</a>. We didn’t have any ideas for how to make Time Cube work, though. I’d like to apologize to any solvers who hoped to see a Time Cube puzzle.</p>
+    
+
+    
+    
+
+    
+</main>
+
+
+    </div>
+    
+
+    
+
+    
+</body>
+</html>

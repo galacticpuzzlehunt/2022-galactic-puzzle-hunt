@@ -1,0 +1,301 @@
+
+
+
+
+
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    
+    <title>Galactic Puzzle Hunt</title>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=0.5">
+    <meta property="og:title" content="Galactic Puzzle Hunt 2022">
+    <meta property="og:description" content="Registration for this year's Galactic Puzzle Hunt is now open!">
+    <meta property="og:image" content="https://galacticpuzzlehunt.com/static/images/banner.png">
+    <meta property="twitter:card" content="summary_large_image">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Recursive:slnt,CASL,CRSV,MONO@-3,0.5,1,1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/skeleton.css">
+    <link rel="stylesheet" href="/static/css/base.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.19/jquery.touchSwipe.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.formset/1.2.2/jquery.formset.min.js"></script>
+    <script src="/jsi18n/"></script>
+    <script src="/static/js/sorttable.js"></script>
+    <script src="/static/js/tray.js"></script>
+    <script src="/static/js/notify.js"></script>
+    <script src="/static/js/time.js"></script>
+    
+    
+    <link rel="icon" sizes="16x16 32x32 48x48 64x64" href="/static/images/favicon.ico" type="image/vnd.microsoft.icon">
+    
+    
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-92192633-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-92192633-1');
+</script>
+
+</head>
+<body>
+    
+    <div id="background-glitch-wrapper" class="background-glitch">
+        <div class="glitch-1"></div>
+        <div class="glitch-2"></div>
+        <div class="glitch-3"></div>
+    </div>
+    
+    
+    <input id="shortcuts" type="checkbox">
+    
+    <nav>
+        <span class="tray">
+            <span id="tray-timer"></span>
+            <div class="top-tabs">
+                <a class="selected-tab" href="/">
+                    Home
+                </a>
+                
+                <a href="/rules">
+                    Rules
+                </a>
+                
+                
+                <a href="/story">
+                    Story
+                </a>
+                
+                
+                <a href="/puzzles">
+                    Puzzles
+                </a>
+                
+                <a href="/teams">
+                    Teams
+                </a>
+                
+                <a href="/faq">
+                    FAQ
+                </a>
+                
+                
+                <a href="/errata">
+                    Updates
+                </a>
+                
+                
+                <a href="/wrapup">
+                    Wrap-Up
+                </a>
+                
+                
+                <a href="https://galacticpuzzlehunt.com/archive">
+                    Archive
+                </a>
+                
+                
+                
+            </div>
+            <div class="top-left-actions">
+                
+            </div>
+        </span>
+        <div class="top-right-actions">
+        
+        
+        </div>
+    </nav>
+    
+    
+    
+    
+    
+    <script>
+
+    
+    
+    let glitchTriggerFuncs = [];
+    let glitchTriggerReceived = false;
+    let glitchTriggerExReceived = false;
+    let glitchPageLoaded = false;
+    function processGlitchFuncs(ex) {
+        glitchTriggerFuncs.forEach((func) => {
+            func(ex);
+        });
+    }
+    function doGlitch(ex) {
+        glitchTriggerReceived = true;
+        if (ex) {
+            glitchTriggerExReceived = true;
+        }
+        if (glitchPageLoaded) {
+            processGlitchFuncs(ex);
+        }
+    }
+    window.addEventListener('load', () => {
+        glitchPageLoaded = true;
+        if (glitchTriggerExReceived) {
+            processGlitchFuncs(true);
+        }
+        else if (glitchTriggerReceived) {
+            processGlitchFuncs(false);
+        }
+    }, false);
+    
+    
+    
+    function registerOnGlitchHook(func) {
+        if (glitchTriggerExReceived) {
+            func(true);
+        }
+        else if (glitchTriggerReceived) {
+            func(false);
+        }
+        glitchTriggerFuncs.push(func);
+    }
+    
+
+    
+    
+    </script>
+    <div class="content">
+        
+
+<style>
+@media print {
+    a {
+        text-decoration: none;
+        color: inherit;
+    }
+
+    .feedback, .register {
+        display: none;
+    }
+
+    .print-register {
+        text-align: center;
+        margin: 20px 0 40px;
+    }
+}
+
+@media screen {
+    .print-register {
+        display: none;
+    }
+
+    .feedback, .register {
+        text-align: center;
+        margin-bottom: 40px;
+    }
+
+    .register a {
+        display: inline-block;
+        text-decoration: none;
+        font-size: 4rem;
+        line-height: 12rem;
+    }
+
+    .register svg {
+        height: 12rem;
+        vertical-align: middle;
+        margin-right: -4rem;
+    }
+}
+
+h1 {
+    color: #222;
+    padding: 0;
+    border: none;
+    background: none;
+    text-align: center;
+}
+
+#title1 {
+    font-size: 64px;
+}
+
+#title2 {
+    font-size: 166px;
+    line-height: 0.7;
+    margin-bottom: 0.6em;
+}
+
+.footnote {
+    font-size: 80%;
+    line-height: 1.5;
+}
+</style>
+
+<h1 id="title1">Galactic Puzzle Hunt <span style="font-weight: 300">2022</span></h1>
+<h1 id="title2">The Exam</h1>
+
+
+<div class="feedback">
+
+Pencils down! The Galactic Aptitude Test has come to an end. Your scores are now final.
+
+<br>
+
+
+
+Please fill out our <a href="https://docs.google.com/forms/d/e/1FAIpQLSf_p8qcCOT_XzBejOmDaZdlBdzeYKjNsVWIpUvXrijN3XIbOQ/viewform">feedback form</a> and check out our <a href="/wrapup">wrap-up</a>!
+
+
+<br>
+<b>If you&rsquo;d like to hear from us about future events, please join our 
+<a target="_blank" href="https://groups.google.com/g/galacticpuzzlehunt">interest list</a>.</b>
+</div>
+
+
+<div class="info-row">
+    <div>
+        <h4>What</h4>
+        <div class="info-desc">
+            The Galactic Aptitude Test, or GAP test, is a <span class="glitch" data-text="one-hour">one-hour</span> standardized exam featuring around <span class="glitch" data-text="ten">ten</span> challenges on a variety of subjects. Study hard, do well, and change your life!<sup>*</sup>
+            <br><br>
+            <div class="footnote"><sup>*</sup>Studying hard not a guarantee of doing well. #2 pencil required.</div>
+        </div>
+    </div>
+    <div>
+        <h4>When</h4>
+        <div class="info-desc">
+            
+            
+            
+            The hunt began on <time datetime="2022-08-26T18:02:00-04:00" data-format="F j, Y \a\t g:i A T">August 26, 2022 at 6:02 PM EDT</time>, and ended on <time datetime="2022-09-06T06:02:00-04:00" data-format="F j, Y \a\t g:i A T">September 6, 2022 at 6:02 AM EDT</time>.
+            
+        </div>
+    </div>
+    <div>
+        <h4>Who</h4>
+        <div class="info-desc">
+            This was a puzzlehunt run by
+            ✈&#xfeff;✈&#xfeff;✈ Galactic Trendsetters ✈&#xfeff;✈&#xfeff;✈,
+            and was a follow-up
+            to the previous <a href="https://galacticpuzzlehunt.com/archive">Galactic Puzzle Hunts</a>.
+            
+        </div>
+    </div>
+</div>
+
+
+
+
+    </div>
+    
+
+    
+
+    
+</body>
+</html>

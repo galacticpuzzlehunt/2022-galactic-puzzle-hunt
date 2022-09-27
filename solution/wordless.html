@@ -1,0 +1,493 @@
+
+
+
+
+
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    
+<title>Solution: Wordless</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=0.5">
+    <meta property="og:title" content="Galactic Puzzle Hunt 2022">
+    <meta property="og:description" content="Registration for this year's Galactic Puzzle Hunt is now open!">
+    <meta property="og:image" content="https://galacticpuzzlehunt.com/static/images/banner.png">
+    <meta property="twitter:card" content="summary_large_image">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Recursive:slnt,CASL,CRSV,MONO@-3,0.5,1,1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/skeleton.css">
+    <link rel="stylesheet" href="/static/css/base.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.19/jquery.touchSwipe.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.formset/1.2.2/jquery.formset.min.js"></script>
+    <script src="/jsi18n/"></script>
+    <script src="/static/js/sorttable.js"></script>
+    <script src="/static/js/tray.js"></script>
+    <script src="/static/js/notify.js"></script>
+    <script src="/static/js/time.js"></script>
+    
+    
+    <link rel="icon" sizes="16x16 32x32 48x48 64x64" href="/static/images/favicon.ico" type="image/vnd.microsoft.icon">
+    
+    
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-92192633-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-92192633-1');
+</script>
+
+</head>
+<body>
+    
+    <div id="background-glitch-wrapper" class="background-glitch">
+        <div class="glitch-1"></div>
+        <div class="glitch-2"></div>
+        <div class="glitch-3"></div>
+    </div>
+    
+    
+    <input id="shortcuts" type="checkbox">
+    
+    <nav>
+        <span class="tray">
+            <span id="tray-timer"></span>
+            <div class="top-tabs">
+                <a href="/">
+                    Home
+                </a>
+                
+                <a href="/rules">
+                    Rules
+                </a>
+                
+                
+                <a href="/story">
+                    Story
+                </a>
+                
+                
+                <a class="selected-tab" href="/puzzles">
+                    Puzzles
+                </a>
+                
+                <a href="/teams">
+                    Teams
+                </a>
+                
+                <a href="/faq">
+                    FAQ
+                </a>
+                
+                
+                <a href="/errata">
+                    Updates
+                </a>
+                
+                
+                <a href="/wrapup">
+                    Wrap-Up
+                </a>
+                
+                
+                <a href="https://galacticpuzzlehunt.com/archive">
+                    Archive
+                </a>
+                
+                
+                
+            </div>
+            <div class="top-left-actions">
+                
+<a href="/puzzle/wordless" class="btn">Back to the puzzle</a>
+
+            </div>
+        </span>
+        <div class="top-right-actions">
+        
+        
+        </div>
+    </nav>
+    
+    
+    
+    
+    
+    <script>
+
+    
+    
+    let glitchTriggerFuncs = [];
+    let glitchTriggerReceived = false;
+    let glitchTriggerExReceived = false;
+    let glitchPageLoaded = false;
+    function processGlitchFuncs(ex) {
+        glitchTriggerFuncs.forEach((func) => {
+            func(ex);
+        });
+    }
+    function doGlitch(ex) {
+        glitchTriggerReceived = true;
+        if (ex) {
+            glitchTriggerExReceived = true;
+        }
+        if (glitchPageLoaded) {
+            processGlitchFuncs(ex);
+        }
+    }
+    window.addEventListener('load', () => {
+        glitchPageLoaded = true;
+        if (glitchTriggerExReceived) {
+            processGlitchFuncs(true);
+        }
+        else if (glitchTriggerReceived) {
+            processGlitchFuncs(false);
+        }
+    }, false);
+    
+    
+    
+    function registerOnGlitchHook(func) {
+        if (glitchTriggerExReceived) {
+            func(true);
+        }
+        else if (glitchTriggerReceived) {
+            func(false);
+        }
+        glitchTriggerFuncs.push(func);
+    }
+    
+
+    
+    
+    </script>
+    <div class="content">
+        
+
+<style>
+h2 {
+    font-size: 2.5rem;
+    font-weight: normal;
+    font-style: italic;
+    margin-bottom: 2rem;
+}
+
+h4 {
+    font-size: 2rem;
+    font-weight: normal;
+    margin: 2rem 0;
+}
+</style>
+
+<h1>
+    Solution <span style="font-weight: 300">Wordless</span>
+    <div class="solved-title-marker">Answer <span class="solved-title-answer spoiler">MUKDEN INCIDENT</span> / <span class="solved-title-answer spoiler">GENERAL MOTORS</span></div>
+</h1>
+
+<main class="puzzle-main">
+    <h2 style="margin-top: 0">
+        Written by
+        
+Ashley Kim and Charles Tam<br>Implementation by Alan Huang
+
+    </h2>
+
+    
+    <style>
+.full-text {
+  font-family: Recursive, monospace;
+}
+
+.full-text p {
+  white-space: pre-line;
+}
+</style>
+
+<p>This puzzle consists of passages of text in which most of the words have been
+blacked out. We can see the length of each missing word, and make guesses to
+reveal them. To start out, we can guess some common and general-subject words to
+get a lay of the land and check what kinds of things we might be talking
+about. Some useful tips for guessing strategy:</p>
+<ul><li>Punctuation can be a giveaway for certain things; for example, a paragraph
+    leading off with something that looks like a pair of dates usually refers to
+    a person.</li><li>In addition to more obvious common words like “can”, “have”, and “be”,
+    words like “made” or “used” (preceding “of”, “for”, or “to”) are helpful for
+    identifying words that might be materials or actions.</li><li>Guessing numbers and quantifiers (“any”, “all”, “some”, “every”, “none”,
+    “more”, “most”, “less”, “least”) can give useful information like when a
+    thing involves exactly two of something else, or possesses exactly four of
+    something.</li><li>The words “century”, “centuries”, “modern”, “electric”, and “middle”
+    (anticipating “ages”) can narrow down how old a concept or device is.</li></ul>
+
+<p>Once enough text is filled in, Googling for long phrases in quotes (for exact
+match) can be surprisingly effective, though this only works if the source text
+is directly from a search-indexed source. In our case, lots of our content is
+almost entirely from Wikipedia, so even a search for something innocuous like
+“during that century. By the end of the 19th century” (with quotes) yields the
+correct topic immediately.</p>
+<p>The first paragraph of each passage is written about a particular topic, which
+fits the blank above the passage. Indexing by the number in parentheses yields
+the first answer, <strong>MUKDEN INCIDENT</strong>.</p>
+<p>The second paragraph of each passage is written about a &ldquo;hidden&rdquo; or
+&ldquo;secret&rdquo; version of the first topic, in keeping with the theme. For
+example, the first passage is about machines and &ldquo;The Machine&rdquo;,
+which is actually the Mystery Machine from Scooby-Doo. Once we realize this, we
+can use it to narrow down the possibilities for any remaining passages. At this
+point searches for exact phrasing become less useful, though the requisite
+information can usually be found somewhere online.</p>
+<p>Each second paragraph contains an out-of-place number word, e.g. &ldquo;The
+classic version is modelled on a <u>Eight</u> LT 40&rdquo;. We may already have
+revealed these early on by guessing common words, or we might go through and
+fill everything in after identifying the topic. We can determine the words that
+should go into those places (in this case, &ldquo;Volkswagen&rdquo;), and index
+into them as well to get the second answer, <strong>GENERAL MOTORS</strong>.</p>
+<table>
+<thead>
+<tr>
+<th>Topic</th>
+<th>#</th>
+<th></th>
+<th>Second topic</th>
+<th>Word</th>
+<th>#</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>machine</td>
+<td>1</td>
+<td>M</td>
+<td>Mystery Machine</td>
+<td>Volkswagen</td>
+<td>8</td>
+<td>G</td>
+</tr>
+<tr>
+<td>university</td>
+<td>1</td>
+<td>U</td>
+<td>Unseen University</td>
+<td>Pratchett&rsquo;s</td>
+<td>7</td>
+<td>E</td>
+</tr>
+<tr>
+<td>handshake</td>
+<td>8</td>
+<td>K</td>
+<td>secret handshake</td>
+<td>fingers</td>
+<td>3</td>
+<td>N</td>
+</tr>
+<tr>
+<td>dragon</td>
+<td>1</td>
+<td>D</td>
+<td>Crouching Tiger, Hidden Dragon</td>
+<td>Destiny</td>
+<td>2</td>
+<td>E</td>
+</tr>
+<tr>
+<td>ingredient</td>
+<td>5</td>
+<td>E</td>
+<td>secret ingredient</td>
+<td>Green</td>
+<td>2</td>
+<td>R</td>
+</tr>
+<tr>
+<td>identity</td>
+<td>4</td>
+<td>N</td>
+<td>secret identity</td>
+<td>Scarlet</td>
+<td>3</td>
+<td>A</td>
+</tr>
+<tr>
+<td>Hitler</td>
+<td>2</td>
+<td>I</td>
+<td>Secret Hitler</td>
+<td>liberals</td>
+<td>7</td>
+<td>L</td>
+</tr>
+<tr>
+<td>hunt</td>
+<td>3</td>
+<td>N</td>
+<td>Mystery Hunt</td>
+<td>N/A</td>
+<td>--</td>
+<td></td>
+</tr>
+<tr>
+<td>chessboxing</td>
+<td>1</td>
+<td>C</td>
+<td>Mystery of Chessboxing</td>
+<td>Chambers</td>
+<td>4</td>
+<td>M</td>
+</tr>
+<tr>
+<td>sharing</td>
+<td>5</td>
+<td>I</td>
+<td>secret sharing</td>
+<td>encryption</td>
+<td>9</td>
+<td>O</td>
+</tr>
+<tr>
+<td>soldier</td>
+<td>4</td>
+<td>D</td>
+<td>unknown soldier</td>
+<td>Vietnam</td>
+<td>4</td>
+<td>T</td>
+</tr>
+<tr>
+<td>power</td>
+<td>4</td>
+<td>E</td>
+<td>Hidden Power</td>
+<td>Unown</td>
+<td>3</td>
+<td>O</td>
+</tr>
+<tr>
+<td>citizen</td>
+<td>7</td>
+<td>N</td>
+<td>The Unknown Citizen</td>
+<td>advertisements</td>
+<td>5</td>
+<td>R</td>
+</tr>
+<tr>
+<td>servant</td>
+<td>7</td>
+<td>T</td>
+<td>Unseen Servant</td>
+<td>bonus</td>
+<td>5</td>
+<td>S</td>
+</tr>
+</tbody>
+</table>
+<p>Note: Since &ldquo;The Unknown Citizen&rdquo; is reproduced verbatim, the
+extraction number FIVE is capitalized to distinguish it from the other numbers
+in the poem.</p>
+
+    
+    
+
+    
+    
+    <h2 id="appendix">
+Appendix: Full texts
+</h2>
+    
+<div class="full-text">
+
+<h4>MACHINE (1)</h4>
+<p>A machine is a physical system using power to apply forces and control movement to perform an action. The term is commonly applied to artificial devices, such as those employing engines or motors, but also to natural biological macromolecules, such as molecular machines. Machines can be driven by animals and people, by natural forces such as wind and water, and by chemical, thermal, or electrical power, and include a system of mechanisms that shape the actuator input to achieve a specific application of output forces and movement. They can also include computers and sensors that monitor performance and plan movement, often called mechanical systems. In the 17th century, the word machine could also mean a scheme or plot, a meaning now expressed by the derived &quot;machination&quot;. The modern meaning developed out of specialized application of the term to stage engines used in theater and to military siege engines, both in the late 16th and early 17th centuries.
+
+The Machine is a teal and green van, used as the primary transportation method for the Scooby gang in the Scooby-Doo! franchise. The vehicle is decorated with flowers, and has its name painted across both sides. The classic version is modelled on a Eight LT 40, while later versions were based on a Chevy Astro/GMC Safari instead. Although it appears to be a normal vehicle, it has several unusual features, including a submarine mode, a large number of airbags, and unexpectedly large storage space. It is often referred to as a 6th member of the team, due to its large contributions on their adventures.</p>
+
+<h4>UNIVERSITY (1)</h4>
+<p>A university is an institution of higher education and research which awards academic degrees in several academic disciplines. Universities typically offer both undergraduate and postgraduate programs. Though institutions with similar purposes predate it, the University of Bologna, founded in Italy in 1088, is considered to be the first university in terms of being named as such as well as issuing secular degrees. In the United States, the term &quot;college&quot; may be used interchangeably with &quot;university&quot;; in other parts of the world, a college is more often a constituent school within a university. Until the 19th century, religion played a significant role in university curriculum; however, the role of religion in research universities decreased during that century. By the end of the 19th century, the German university model had spread around the world. Universities concentrated on science in the 19th and 20th centuries and became increasingly accessible to the masses. In the United States, the Johns Hopkins University was the first to adopt the (German) research university model and pioneered the adoption of that model by most American universities.
+
+The University is a wizarding institution located in the fictional city of Ankh-Morpork. The school is mainly staffed by incompetent old wizards, and their adventures are one of the key parts of Terry Seven Discworld series. Its architecture features inexplicable (and sometimes impossible) geometry, which is handled in-lore by an official Professor of Recondite Architecture and Origami Map Folding. Societally, the University functions as a holding pen for wizards to keep their arbitrarily destructive activities relatively contained.</p>
+
+<h4>HANDSHAKE (8)</h4>
+<p>A handshake is a globally widespread, brief greeting or parting tradition in which two people grasp one of each other&#x27;s like hands, in most cases accompanied by a brief up-and-down movement of the grasped hands. It is commonly done upon meeting, greeting, parting, offering congratulations, expressing gratitude, or as a public sign of completing a business or diplomatic agreement. In sports or other competitive activities, it is also done as a sign of good sportsmanship. Customs surrounding handshakes are specific to cultures. Different cultures may be more or less likely to shake hands, or there may be different customs about how or when to shake hands. The handshake may have originated in prehistory as a demonstration of peaceful intent, since it shows that the hand holds no weapon. Another possibility is that it originated as a symbolic gesture of mutual commitment to an oath or promise: two hands clasping each other represents the sealing of a bond.
+
+A handshake is a representation of membership or affiliation to an organization, in the form of a greeting. The Freemasonry organizations are known for their long-time use of these rituals. This handshake is meant as a method for identifying themselves to members of the organization, while potentially appearing to be a benign handshake to non-members. Handshakes typically involve the hands, typically the three, being placed in a specific position. However, they can also involve a complicated sequence of movements, as well as contact between the participating parties. They may also use other parts of the body, including but not limited to the feet, elbows, or even the lips. </p>
+
+<h4>DRAGON (1)</h4>
+<p>A dragon is a reptile-like legendary creature that appears in the folklore of many cultures worldwide. Beliefs about dragons vary considerably through regions, but dragons in western cultures since the High Middle Ages have often been depicted as winged, horned, four-legged, and capable of breathing fire. Dragons in eastern cultures are usually depicted as wingless, four-legged, serpentine creatures with above-average intelligence. Commonalities between dragons&#x27; traits are often a hybridization of feline, avian, and reptilian features. One of the most iconic modern dragons is Smaug from J. R. R. Tolkien&#x27;s classic novel The Hobbit. Other prominent works depicting dragons include Anne McCaffrey&#x27;s Dragonriders of Pern, Ursula K. Le Guin&#x27;s Earthsea Cycle, George R. R. Martin&#x27;s series A Song of Ice and Fire, and Christopher Paolini&#x27;s Inheritance Cycle.
+
+Crouching Tiger Dragon is a 2000 wuxia film, with a cast of fully ethnic Chinese actors. It premiered at the Cannes Film Festival in May 2000, with a US theatrical release in December. The movie was filmed in Mandarin Chinese, and was the first foreign-language film in the United States to break $100 million. The film was a recognized success, garnering over 40 awards. In particular, it had 10 Academy Award nominations in 2001, receiving the most nominations ever for a non-English language film at the time. The plot follows swordsman Li Mu Bai and his friend Yu Shu Lien, a Machete female warrior, as they try to recover the fabled sword &quot;Green Two&quot; after it is stolen early in the film. </p>
+
+<h4>INGREDIENT (5)</h4>
+<p>An ingredient is a substance that forms part of a mixture (in a general sense). For example, in cooking, recipes specify which ingredients are used to prepare a specific dish. In the pharmaceutical industry, an active ingredient is that part of a formulation that yields the effect expected by the customer. National laws usually require prepared food products to display a list of ingredients, and specifically require that certain additives be listed. In most developed countries, the law requires that ingredients be listed according to their relative weight in the product. If an ingredient itself consists of more than one ingredient (such as the cookie pieces which are a part of &quot;cookies and cream&quot; flavor ice cream), then that ingredient is listed by what percentage of the total product it occupies, with its own ingredients displayed next to it in brackets.
+
+An ingredient is a part of a product that is hidden from the public, potentially for a competitive advantage. The ingredient could make a noticeable difference in the product, but it may also be used simply for the purpose of advertisement. In popular culture, an ingredient may also be concealed because it is an infohazard -- for example, in Soylent Two, where the ingredient is human flesh; or in explanations about dangerous final products like explosives, to prevent audience members from replicating them easily. The Ingredient is also a mechanic in the Iron Chef television show, though its meaning is reversed in that its identity is intended as secret from the chefs rather than exclusive to them.</p>
+
+<h4>IDENTITY (4)</h4>
+<p>In mathematics, an identity is some element whose action on a broadly defined set of inputs results in no change. For example, the identity element of a binary operation operating on a set leaves every element of that set unchanged. Similarly, an identity function preserves its inputs. The identity matrix of size n is the n-by-n matrix whose main diagonal elements are all ones and whose remaining elements are all zeroes. &quot;Identity&quot; may also refer to an equality relating one mathematical expression A to a different mathematical expression B, such that A and B (which might contain some variables) produce the same value for all values of the variables within a certain range of validity.
+
+An identity is an alter ego which may not be known to the general public. This term is most commonly used in fictional works, particularly comic books. Brought into popular culture by the Three Pimpernel in 1903, it is a trope of the masquerade. In American comic books, a character typically has dual identities. The public identity is known to the general public as the &quot;superhero persona&quot;, and the other is kept secret. This latter identity is typically the superhero&#x27;s legal name, true identity, and/or &quot;civilian persona&quot; when they are not actively assuming the superhero persona. It is concealed to protect the character from legal ramifications, pressure, or public scrutiny, as well as to protect their friends and loved ones from harm secondary to their actions. </p>
+
+<h4>HITLER (2)</h4>
+<p>Adolf Hitler (20 April 1889 – 30 April 1945) was an Austrian-born German politician who was the dictator of Germany from 1933 until his death in 1945. He rose to power as the leader of the Nazi Party, becoming the chancellor in 1933 and then assuming the title of Fuhrer und Reichskanzler in 1934. During his dictatorship, he initiated World War II in Europe by invading Poland on 1 September 1939. He was closely involved in military operations throughout the war and was central to the perpetration of the Holocaust, the genocide of about six million Jews and millions of other victims.
+
+Hitler is a hidden identity social deduction party game. The board game was funded via Kickstarter and released on August 25, 2016. In Hitler, players assume the roles of seven and fascists in the Reichstag of the Weimar Republic, with a single player becoming Hitler. To win the game, both parties are set to competitively enact their side&#x27;s policies, or complete a secondary objective directly involving Hitler. In February 2017, free copies of Hitler were shipped to all 100 members of the United States Senate. The Trump Pack, a booster pack for Hitler, which replaces the fascists&#x27; cards with Donald Trump and prominent members of his administration at the time (respectively Sean Spicer, Stephen Miller, Steve Bannon and Mike Pence), was released in June 2017. All proceeds generated from the pack&#x27;s sales were donated to the American Civil Liberties Union.</p>
+
+<h4>HUNT (3)</h4>
+<p>Hunting is the human practice of seeking, pursuing and capturing or killing wildlife or feral animals. The most common reasons for humans to hunt are to harvest food (i.e. meat) and useful animal products (fur/hide, bone/tusks, horn/antler, etc.), for recreation/taxidermy (trophy hunting), to remove predators dangerous to humans or domestic animals (e.g. wolf hunting), to eliminate pests and nuisance animals that damage crops/livestock/poultry or spread diseases (varminting), for trade/tourism (safari), or for ecological conservation against overpopulation and invasive species. Skillful tracking and acquisition of an elusive target has caused the word hunt to be used in the vernacular as a metaphor for solving puzzles.
+
+Hunt is an annual puzzlehunt competition hosted by the Massachusetts Institute of Technology. It was started in 1981 by graduate student Brad Schaefer. It was a single page of puzzles, and the objective was to find an Indian Head penny somewhere on campus. Since then, the size of the hunt has ballooned to upwards of 100 puzzles, and the prize has been varying interpretations on a coin. Traditionally, the team that first completes the hunt is charged with running the next year&#x27;s event.</p>
+
+<h4>CHESSBOXING (1)</h4>
+<p>Chess boxing, or chessboxing, is a hybrid sport that combines two traditional disciplines: chess and boxing. Two combatants play alternating rounds of blitz chess and boxing until one wins by checkmate or knockout. It is also possible to win by time penalty as in normal chess, and by boxing decision if there is a draw in the chess round. Typically, events are held in a standard boxing ring using standard amateur boxing equipment and rules. The chess round is also played in the ring with the table, board, and seating being moved in and out of the ring for each round. It was invented by French comic book artist Enki Bilal and adapted by Dutch performance artist Iepe Rubingh as an art performance and has subsequently grown into a competitive sport.
+
+Chessboxing (international title Ninja Checkmate) is a Hong Kong kung fu film released in 1979 and directed by Joseph Kuo, starring Mark Long, Jack Long and Lee Yi Min. Its plot follows a boy Ah Pao who wants to learn kung fu and exact vengeance against the Ghost Faced Killer for his father&#x27;s death. The movie is the inspiration for the Wu-Tang Clan song &quot;Da Chessboxin&#x27;&quot; on the album Enter the Wu-Tang (36 Four). Wu-Tang Clan member Ghostface Killah also takes his name from the film&#x27;s distinctive villain.</p>
+
+<h4>SHARING (5)</h4>
+<p>Sharing is the joint use of a resource or space. It is also the process of dividing and distributing. In its narrow sense, it refers to joint or alternating use of inherently finite goods, such as a common pasture or a shared residence. Still more loosely, &quot;sharing&quot; can actually mean giving something as an outright gift: for example, to &quot;share&quot; one&#x27;s food really means to give some of it as a gift. Sharing is a basic component of human interaction, and is responsible for strengthening social ties and ensuring a person’s well-being. In a broader sense, it can also include free granting of use rights to goods that can be treated as nonrival goods, such as information.
+
+Sharing, independently introduced in 1979 by Shamir and Blakley, is a widely studied topic in information-theoretic cryptography. This scheme refers to protocols where a value is distributed into shares among a set of participants in such a way that only some qualified groups of participants can recover the original value from their shares. It is commonly used in the context of security, where some nine key (or the asset it guards) is too valuable to allow any single individual to know it in its entirety, but the need for reliability requires a recovery method if some stakeholders become unavailable. In addition, this technique is a key primitive in secure multiparty computation.</p>
+
+<h4>SOLDIER (4)</h4>
+<p>A soldier is a person who is a member of an army. A soldier can be a conscripted or volunteer enlisted person, a non-commissioned officer, or an officer. In most armies use of the word &quot;soldier&quot; has taken on a more general meaning due to the increasing specialization of military occupations that require different areas of knowledge and skill-sets. As a result, &quot;soldiers&quot; are referred to by names or ranks which reflect an individual&#x27;s military occupation specialty arm, service, or branch of military employment, their type of unit, or operational employment or technical use such as: trooper, tanker (a member of tank crew), commando, dragoon, infantryman, guardian, artilleryman, paratrooper, grenadier, ranger, sniper, engineer, sapper, craftsman, signaller, medic, or a gunner.
+
+The soldier is one of several unidentified individuals buried at a historic monument in Arlington National Cemetery in Virginia at various times. They serve as representatives or stand-ins for deceased United States service members whose remains have not been found or identified, and awards have been conferred to the soldiers in this capacity. The practice of burying a soldier at their Tomb started in 1921 with a World War I soldier returned from France. The most recently interred soldier was a casualty of the Four War, but since his identification and the return of his body to his family in 1998, that crypt has remained vacant.</p>
+
+<h4>POWER (4)</h4>
+<p>Power is an amount of energy transferred or converted per unit time. In the International System of Units, the unit of power is the watt, equal to one joule per second. In older works, power is sometimes called activity. It is a scalar quantity. Power is related to other quantities; for example, the power involved in moving a ground vehicle is the product of the traction force on the wheels and the velocity of the vehicle. The output power of a motor is the product of the torque that the motor generates and the angular velocity of its output shaft. Likewise, the power dissipated in an electrical element of a circuit is the product of the current flowing through the element and of the voltage across the element.
+
+Power is a damage-dealing move introduced in Generation II. It was TM10 from Generation II to Pokémon Ultra Sun and Ultra Moon. In Generation VIII, it is the signature move of Three. The power varies between 31 and 70 in Generation II, between 30 and 70 in Generations III to V, and is fixed at 60 from Generation VI onward. Although it appears as a Normal-type move, it can be any type other than Normal, Fairy, and ???. From its introduction in Generation II through most of Generation VIII, its type was determined by the user&#x27;s individual values. In Pokémon Legends: Arceus, it is a randomly chosen super effective type against the opponent, prioritizing double weaknesses, and is rerolled every round.</p>
+
+<h4>CITIZEN (7)</h4>
+<p>A citizen is an individual who owes allegiance to a state and in turn is entitled to its protection. Each state determines the conditions under which it will recognize persons as its citizens, and the conditions under which that status will be withdrawn. Recognition by a state as a citizen generally carries with it recognition of civil, political, and social rights which are not afforded to non-citizens. In general, the basic rights normally regarded as arising from citizenship are the right to a passport, the right to leave and return to the country of citizenship, the right to live in that country, and to work there. Some countries permit their citizens to have multiple citizenships, while others insist on exclusive allegiance.
+
+He was found by the Bureau of Statistics to be one against whom there was no official complaint, and all the reports on his conduct agree that, in the modern sense of an old-fashioned word, he was a saint, for in everything he did he served the Greater Community. Except for the War till the day he retired he worked in a factory and never got fired, but satisfied his employers, Fudge Motors Inc. Yet he wasn&#x27;t a scab or odd in his views, for his Union reports that he paid his dues, (our report on his Union shows it was sound) and our Social Psychology workers found that he was popular with his mates and liked a drink. The Press are convinced that he bought a paper every day and that his reactions to FIVE were normal in every way. Policies taken out in his name prove that he was fully insured, and his Health-card shows he was once in hospital but left it cured. Both Producers Research and High-Grade Living declare he was fully sensible to the advantages of the Instalment Plan and had everything necessary to the Modern Man: a phonograph, a radio, a car and a frigidaire. Our researchers into Public Opinion are content that he held the proper opinions for the time of year; when there was peace, he was for peace: when there was war, he went. He was married and added five children to the population, which our Eugenist says was the right number for a parent of his generation. And our teachers report that he never interfered with their education. Was he free? Was he happy? The question is absurd: had anything been wrong, we should certainly have heard.</p>
+
+<h4>SERVANT (7)</h4>
+<p>A servant is a person who works within the scope of a residence. The term &quot;domestic service&quot; applies to the equivalent occupational category. In traditional English contexts, such a person was said to be &quot;in service&quot;. Domestic workers perform a variety of household services for an individual, from providing cleaning and household maintenance, or cooking, laundry and ironing, or care for children and elderly dependents, and other household errands. Some domestic workers live within their employer&#x27;s household. In some cases, the contribution and skill of servants whose work encompassed complex management tasks in large households have been highly valued. However, for the most part, domestic work tends to be demanding and is commonly considered to be undervalued, despite often being necessary. Although legislation protecting domestic workers is in place in many countries, it is often not extensively enforced. In many jurisdictions, domestic work is poorly regulated and domestic workers are subject to serious abuses, including slavery.
+
+Servant is a first level conjuration spell that creates an invisible, mindless, shapeless force that performs simple tasks at your command until the spell ends. The servant springs into existence in an unoccupied space on the ground within 60 feet. It has Armor Class 10, 1 hit point, and a Strength of 2, and it can’t attack. If it drops to 0 hit points, the spell ends. Once on each of your turns as a five action, you can mentally command the servant to move up to 15 feet and interact with an object. The servant can perform simple tasks that a human servant could do, such as fetching things, cleaning, mending, folding clothes, lighting fires, serving food, and pouring wine. Once you give the command, the servant performs the task to the best of its ability until it completes the task, then waits for your next command. If you command the servant to perform a task that would move it more than 60 feet away from you, the spell ends.</p>
+
+</div>
+
+    
+
+    
+</main>
+
+
+    </div>
+    
+
+    
+
+    
+</body>
+</html>

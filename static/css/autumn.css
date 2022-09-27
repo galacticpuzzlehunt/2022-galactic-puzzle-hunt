@@ -1,0 +1,16 @@
+@media screen {
+  :root {
+      --background-image-url: url(/static/images/autumn.jpg);
+      --background-top-rgb: 222, 172, 139;
+      --background-bottom-rgb: 222, 172, 139;
+
+      --primary-content-rgb: 249, 248, 245;
+      --secondary-content-rgb: 161, 92, 46; /* Make sure this has enough contrast with primary content rgb. */
+      --tertiary-content-rgb: 136, 78, 39;
+      
+      --button-hover-background-color: var(--tertiary-content-color);
+      --button-inverse-hover-background-color: rgb(225, 167, 89);
+
+      --decorative-line-color: rgb(220, 104, 0);
+  }
+}

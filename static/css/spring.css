@@ -1,0 +1,20 @@
+@media screen {
+  :root {
+      --background-image-url: url(/static/images/spring.jpg);
+      --background-top-rgb: 249, 182, 236;
+      --background-bottom-rgb: 255, 222, 255;
+
+      --primary-content-rgb: 249, 248, 245;
+      --secondary-content-rgb: 162, 13, 133; /* Make sure this has enough contrast with primary content rgb. */
+      --tertiary-content-rgb: 133, 11, 109;
+      
+      --button-hover-background-color: rgb(103, 8, 85);
+      --button-inverse-hover-background-color: rgb(247, 152, 228);
+
+      --decorative-line-color: rgb(242, 93, 213);
+
+      /* Manually specify some stuff on the home page. */
+      --title1-color: var(--secondary-content-color);
+      --svg-filter: brightness(0) saturate(100%) invert(16%) sepia(94%) saturate(4123%) hue-rotate(301deg) brightness(70%) contrast(99%);
+  }
+}

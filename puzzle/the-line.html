@@ -1,0 +1,417 @@
+
+
+
+
+
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    
+<title>The Line</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=0.5">
+    <meta property="og:title" content="Galactic Puzzle Hunt 2022">
+    <meta property="og:description" content="Registration for this year's Galactic Puzzle Hunt is now open!">
+    <meta property="og:image" content="https://galacticpuzzlehunt.com/static/images/banner.png">
+    <meta property="twitter:card" content="summary_large_image">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Recursive:slnt,CASL,CRSV,MONO@-3,0.5,1,1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/skeleton.css">
+    <link rel="stylesheet" href="/static/css/base.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.19/jquery.touchSwipe.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.formset/1.2.2/jquery.formset.min.js"></script>
+    <script src="/jsi18n/"></script>
+    <script src="/static/js/sorttable.js"></script>
+    <script src="/static/js/tray.js"></script>
+    <script src="/static/js/notify.js"></script>
+    <script src="/static/js/time.js"></script>
+    
+    
+    <link rel="icon" sizes="16x16 32x32 48x48 64x64" href="/static/images/favicon.ico" type="image/vnd.microsoft.icon">
+    
+    
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-92192633-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-92192633-1');
+</script>
+
+</head>
+<body>
+    
+    <div id="background-glitch-wrapper" class="background-glitch">
+        <div class="glitch-1"></div>
+        <div class="glitch-2"></div>
+        <div class="glitch-3"></div>
+    </div>
+    
+    
+    <input id="shortcuts" type="checkbox">
+    
+    <nav>
+        <span class="tray">
+            <span id="tray-timer"></span>
+            <div class="top-tabs">
+                <a href="/">
+                    Home
+                </a>
+                
+                <a href="/rules">
+                    Rules
+                </a>
+                
+                
+                <a href="/story">
+                    Story
+                </a>
+                
+                
+                <a class="selected-tab" href="/puzzles">
+                    Puzzles
+                </a>
+                
+                <a href="/teams">
+                    Teams
+                </a>
+                
+                <a href="/faq">
+                    FAQ
+                </a>
+                
+                
+                <a href="/errata">
+                    Updates
+                </a>
+                
+                
+                <a href="/wrapup">
+                    Wrap-Up
+                </a>
+                
+                
+                <a href="https://galacticpuzzlehunt.com/archive">
+                    Archive
+                </a>
+                
+                
+                
+            </div>
+            <div class="top-left-actions">
+                
+
+
+
+
+<a href="/post-hunt-solve/the-line" class="btn">Check your answer spoiler-free</a>
+
+
+
+<a href="/solution/the-line" class="btn">View solution</a>
+<a href="/stats/the-line" class="btn">Stats</a>
+
+
+            </div>
+        </span>
+        <div class="top-right-actions">
+        
+        
+        </div>
+    </nav>
+    
+    
+    
+    
+    
+    <script>
+
+    
+    
+    let glitchTriggerFuncs = [];
+    let glitchTriggerReceived = false;
+    let glitchTriggerExReceived = false;
+    let glitchPageLoaded = false;
+    function processGlitchFuncs(ex) {
+        glitchTriggerFuncs.forEach((func) => {
+            func(ex);
+        });
+    }
+    function doGlitch(ex) {
+        glitchTriggerReceived = true;
+        if (ex) {
+            glitchTriggerExReceived = true;
+        }
+        if (glitchPageLoaded) {
+            processGlitchFuncs(ex);
+        }
+    }
+    window.addEventListener('load', () => {
+        glitchPageLoaded = true;
+        if (glitchTriggerExReceived) {
+            processGlitchFuncs(true);
+        }
+        else if (glitchTriggerReceived) {
+            processGlitchFuncs(false);
+        }
+    }, false);
+    
+    
+    
+    function registerOnGlitchHook(func) {
+        if (glitchTriggerExReceived) {
+            func(true);
+        }
+        else if (glitchTriggerReceived) {
+            func(false);
+        }
+        glitchTriggerFuncs.push(func);
+    }
+    
+
+    
+    
+    </script>
+    <div class="content">
+        
+
+<h1>
+    The Line
+    
+    
+</h1>
+
+
+
+<main class="puzzle-main clipboard-container">
+    
+    
+    
+    
+
+<link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+<style>
+#the_line {
+    font-family: "Fredoka One", cursive;
+    text-align: center;
+    font-size: 1.7rem;
+    word-break: break-word;
+    overflow-wrap: anywhere;
+    position: relative;
+}
+
+.line-glitch {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    mix-blend-mode: exclusion;
+    display: none;
+    pointer-events: none;
+    transition: transform 0.05s;
+}
+
+</style>
+
+
+<p class="note">
+The content of this puzzle changed depending on how many alternate answers were submitted in The Exam round. You can simulate this by changing the dropdown:
+<select id="alternate-answers">
+    <option selected value="0">0 alternate answers</option>
+    <option value="1">1 alternate answer</option>
+    <option value="2">2 alternate answers</option>
+    <option value="3">3 alternate answers</option>
+    <option value="4">4 alternate answers</option>
+    <option value="5">5 alternate answers</option>
+    <option value="6">6 alternate answers</option>
+    <option value="7">7 alternate answers</option>
+    <option value="8">8 alternate answers</option>
+</select>
+<br/>
+The table in the puzzle revealed answers to the puzzles that have been solved. You can simulate this by hovering over the row you want revealed.
+</p>
+<p class="flavor">The exam is more difficult than expected.<br>What do you need?</p>
+
+<div id="the_line">
+    <div id="line-puzzle"></div>
+    <div id="line-glitches"></div>
+</div>
+
+<table id="normal-table" style="margin: auto">
+    
+    <tr>
+        <td style="font-weight: bold; max-width: 200px">Extreme Anagrams</td>
+        <td class="spoiler" style="font-family: Recursive, monospace; max-width: 200px">HALLEY&#x27;S COMET</td>
+    </tr>
+    
+    <tr>
+        <td style="font-weight: bold; max-width: 200px">Naval Conflict</td>
+        <td class="spoiler" style="font-family: Recursive, monospace; max-width: 200px">LUSITANIA</td>
+    </tr>
+    
+    <tr>
+        <td style="font-weight: bold; max-width: 200px">What&#x27;s the Difference?</td>
+        <td class="spoiler" style="font-family: Recursive, monospace; max-width: 200px">MORE POPULAR THAN JESUS</td>
+    </tr>
+    
+    <tr>
+        <td style="font-weight: bold; max-width: 200px">Nobody Knows What Your Perfect Puzzle Is, But You Will After Answering These Nine Questions</td>
+        <td class="spoiler" style="font-family: Recursive, monospace; max-width: 200px">STONEWALL</td>
+    </tr>
+    
+    <tr>
+        <td style="font-weight: bold; max-width: 200px">Eclairs and More @ Ovsljs* Opsvut</td>
+        <td class="spoiler" style="font-family: Recursive, monospace; max-width: 200px">GOODBYE, FAREWELL, AND AMEN</td>
+    </tr>
+    
+    <tr>
+        <td style="font-weight: bold; max-width: 200px">Shared Samples</td>
+        <td class="spoiler" style="font-family: Recursive, monospace; max-width: 200px">EDWARD VIII</td>
+    </tr>
+    
+    <tr>
+        <td style="font-weight: bold; max-width: 200px">Wordless</td>
+        <td class="spoiler" style="font-family: Recursive, monospace; max-width: 200px">MUKDEN INCIDENT</td>
+    </tr>
+    
+    <tr>
+        <td style="font-weight: bold; max-width: 200px">Extreme Anagrams</td>
+        <td class="spoiler" style="font-family: Recursive, monospace; max-width: 200px">HALLEY&#x27;S COMET</td>
+    </tr>
+    
+</table>
+
+<table id="alt-table" style="margin: auto">
+    
+    <tr>
+        <td style="font-weight: bold; max-width: 200px">Extreme Anagrams</td>
+        <td class="spoiler" style="font-family: Recursive, monospace; max-width: 200px">HALLEY&#x27;S COMET</td>
+        <td class="spoiler" style="font-family: Recursive, monospace; max-width: 200px"><span class="glitch" data-text="CHRYSLER">CHRYSLER</span></td>
+    </tr>
+    
+    <tr>
+        <td style="font-weight: bold; max-width: 200px">Naval Conflict</td>
+        <td class="spoiler" style="font-family: Recursive, monospace; max-width: 200px">LUSITANIA</td>
+        <td class="spoiler" style="font-family: Recursive, monospace; max-width: 200px"><span class="glitch" data-text="ARCHDIOCESE">ARCHDIOCESE</span></td>
+    </tr>
+    
+    <tr>
+        <td style="font-weight: bold; max-width: 200px">What&#x27;s the Difference?</td>
+        <td class="spoiler" style="font-family: Recursive, monospace; max-width: 200px">MORE POPULAR THAN JESUS</td>
+        <td class="spoiler" style="font-family: Recursive, monospace; max-width: 200px"><span class="glitch" data-text="MAGNET">MAGNET</span></td>
+    </tr>
+    
+    <tr>
+        <td style="font-weight: bold; max-width: 200px">Nobody Knows What Your Perfect Puzzle Is, But You Will After Answering These Nine Questions</td>
+        <td class="spoiler" style="font-family: Recursive, monospace; max-width: 200px">STONEWALL</td>
+        <td class="spoiler" style="font-family: Recursive, monospace; max-width: 200px"><span class="glitch" data-text="CHEF&#x27;S TABLE">CHEF&#x27;S TABLE</span></td>
+    </tr>
+    
+    <tr>
+        <td style="font-weight: bold; max-width: 200px">Eclairs and More @ Ovsljs* Opsvut</td>
+        <td class="spoiler" style="font-family: Recursive, monospace; max-width: 200px">GOODBYE, FAREWELL, AND AMEN</td>
+        <td class="spoiler" style="font-family: Recursive, monospace; max-width: 200px"><span class="glitch" data-text="LYRIC">LYRIC</span></td>
+    </tr>
+    
+    <tr>
+        <td style="font-weight: bold; max-width: 200px">Shared Samples</td>
+        <td class="spoiler" style="font-family: Recursive, monospace; max-width: 200px">EDWARD VIII</td>
+        <td class="spoiler" style="font-family: Recursive, monospace; max-width: 200px"><span class="glitch" data-text="CARNEGIE">CARNEGIE</span></td>
+    </tr>
+    
+    <tr>
+        <td style="font-weight: bold; max-width: 200px">Wordless</td>
+        <td class="spoiler" style="font-family: Recursive, monospace; max-width: 200px">MUKDEN INCIDENT</td>
+        <td class="spoiler" style="font-family: Recursive, monospace; max-width: 200px"><span class="glitch" data-text="GENERAL MOTORS">GENERAL MOTORS</span></td>
+    </tr>
+    
+    <tr>
+        <td style="font-weight: bold; max-width: 200px">Extreme Anagrams</td>
+        <td class="spoiler" style="font-family: Recursive, monospace; max-width: 200px">HALLEY&#x27;S COMET</td>
+        <td class="spoiler" style="font-family: Recursive, monospace; max-width: 200px"><span class="glitch" data-text="CHRYSLER">CHRYSLER</span></td>
+    </tr>
+    
+</table>
+
+<script>
+const magic_string = "STUGCIWEAORETSWDNEAURXEUPVTGYEITPOASCAMTRTSEIEEBPLEDNOHSUEHRPFRALKARAMRTHNERS";
+const line_image_url = "/static/puzzle_resources/the-line.png";
+const square_image_url = "/static/puzzle_resources/the-square-7cd2c14.png";
+const gid = (s) => document.getElementById(s);
+
+let intro_meta_state = 0;
+let intro_meta_level = 0;
+let intro_meta_range = [];
+
+function buildCopy(isLine) {
+    const url = isLine ? line_image_url : square_image_url;
+    return `${magic_string}<br><img src="${url}">`;
+}
+
+function renderPuzzle() {
+    const isLine = intro_meta_state <= 4;
+    const glitches = intro_meta_range.map(x => `<div class="line-glitch">${buildCopy(isLine)}</div>`).join("");
+    gid("the_line").innerHTML = `
+       <div>${buildCopy(isLine)}</div>
+       ${glitches}
+    `;
+    clearTimeout(puzDoGlitch);
+    gid("normal-table").style.display = isLine ? "table" : "none";
+    gid("alt-table").style.display = !isLine ? "table" : "none";
+    puzDoGlitch();
+}
+
+gid("alternate-answers").addEventListener("change", (e) => {
+    intro_meta_state = e.target.value;
+    intro_meta_level = [0, 1, 2, 3, 4, 3, 2, 1, 0][intro_meta_state];
+    intro_meta_range = Array(intro_meta_level).fill(null);
+    renderPuzzle();
+});
+
+function puzDoGlitch() {
+    if (Math.random() * (intro_meta_level + 0.5) < 1) {
+        setTimeout(puzDoGlitch, Math.random() * (5 - intro_meta_level) * 1000 + 500);
+        $('.line-glitch').css('display', '');
+    } else {
+        setTimeout(puzDoGlitch, Math.random() * 100 + 200);
+        $('.line-glitch').each(function() {
+            $(this).css({
+                display: 'block',
+                opacity: Math.random() / (4 - intro_meta_level / 2),
+                transform: 'translate(' + (Math.random() - 0.5) * 10 + 'px, ' + (Math.random() - 0.5) * 10 + 'px)',
+            });
+        });
+    }
+}
+
+gid("alternate-answers").value = 0;
+renderPuzzle();
+</script>
+
+
+
+
+    
+    
+
+    
+</main>
+
+<script src="/static/js/copyjack.js"></script>
+
+
+    </div>
+    
+
+    
+
+    
+</body>
+</html>

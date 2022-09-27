@@ -1,0 +1,287 @@
+
+
+
+
+
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    
+<title>Solution: Naval Conflict</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=0.5">
+    <meta property="og:title" content="Galactic Puzzle Hunt 2022">
+    <meta property="og:description" content="Registration for this year's Galactic Puzzle Hunt is now open!">
+    <meta property="og:image" content="https://galacticpuzzlehunt.com/static/images/banner.png">
+    <meta property="twitter:card" content="summary_large_image">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Recursive:slnt,CASL,CRSV,MONO@-3,0.5,1,1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/skeleton.css">
+    <link rel="stylesheet" href="/static/css/base.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.19/jquery.touchSwipe.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.formset/1.2.2/jquery.formset.min.js"></script>
+    <script src="/jsi18n/"></script>
+    <script src="/static/js/sorttable.js"></script>
+    <script src="/static/js/tray.js"></script>
+    <script src="/static/js/notify.js"></script>
+    <script src="/static/js/time.js"></script>
+    
+    
+    <link rel="icon" sizes="16x16 32x32 48x48 64x64" href="/static/images/favicon.ico" type="image/vnd.microsoft.icon">
+    
+    
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-92192633-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-92192633-1');
+</script>
+
+</head>
+<body>
+    
+    <div id="background-glitch-wrapper" class="background-glitch">
+        <div class="glitch-1"></div>
+        <div class="glitch-2"></div>
+        <div class="glitch-3"></div>
+    </div>
+    
+    
+    <input id="shortcuts" type="checkbox">
+    
+    <nav>
+        <span class="tray">
+            <span id="tray-timer"></span>
+            <div class="top-tabs">
+                <a href="/">
+                    Home
+                </a>
+                
+                <a href="/rules">
+                    Rules
+                </a>
+                
+                
+                <a href="/story">
+                    Story
+                </a>
+                
+                
+                <a class="selected-tab" href="/puzzles">
+                    Puzzles
+                </a>
+                
+                <a href="/teams">
+                    Teams
+                </a>
+                
+                <a href="/faq">
+                    FAQ
+                </a>
+                
+                
+                <a href="/errata">
+                    Updates
+                </a>
+                
+                
+                <a href="/wrapup">
+                    Wrap-Up
+                </a>
+                
+                
+                <a href="https://galacticpuzzlehunt.com/archive">
+                    Archive
+                </a>
+                
+                
+                
+            </div>
+            <div class="top-left-actions">
+                
+<a href="/puzzle/naval-conflict" class="btn">Back to the puzzle</a>
+
+            </div>
+        </span>
+        <div class="top-right-actions">
+        
+        
+        </div>
+    </nav>
+    
+    
+    
+    
+    
+    <script>
+
+    
+    
+    let glitchTriggerFuncs = [];
+    let glitchTriggerReceived = false;
+    let glitchTriggerExReceived = false;
+    let glitchPageLoaded = false;
+    function processGlitchFuncs(ex) {
+        glitchTriggerFuncs.forEach((func) => {
+            func(ex);
+        });
+    }
+    function doGlitch(ex) {
+        glitchTriggerReceived = true;
+        if (ex) {
+            glitchTriggerExReceived = true;
+        }
+        if (glitchPageLoaded) {
+            processGlitchFuncs(ex);
+        }
+    }
+    window.addEventListener('load', () => {
+        glitchPageLoaded = true;
+        if (glitchTriggerExReceived) {
+            processGlitchFuncs(true);
+        }
+        else if (glitchTriggerReceived) {
+            processGlitchFuncs(false);
+        }
+    }, false);
+    
+    
+    
+    function registerOnGlitchHook(func) {
+        if (glitchTriggerExReceived) {
+            func(true);
+        }
+        else if (glitchTriggerReceived) {
+            func(false);
+        }
+        glitchTriggerFuncs.push(func);
+    }
+    
+
+    
+    
+    </script>
+    <div class="content">
+        
+
+<style>
+h2 {
+    font-size: 2.5rem;
+    font-weight: normal;
+    font-style: italic;
+    margin-bottom: 2rem;
+}
+
+h4 {
+    font-size: 2rem;
+    font-weight: normal;
+    margin: 2rem 0;
+}
+</style>
+
+<h1>
+    Solution <span style="font-weight: 300">Naval Conflict</span>
+    <div class="solved-title-marker">Answer <span class="solved-title-answer spoiler">LUSITANIA</span> / <span class="solved-title-answer spoiler">ARCHDIOCESE</span></div>
+</h1>
+
+<main class="puzzle-main">
+    <h2 style="margin-top: 0">
+        Written by
+        
+Jenna Himawan
+
+    </h2>
+
+    
+    <style>
+  table.t td {
+    height: 2em;
+    width: 2em;
+    line-height: 1em;
+    padding: 0px;
+    text-align: center;
+    border: 1px solid black;
+  }
+  table td.black {
+    background-color: black;
+    color: white;
+  }
+  table td.gray {
+    background-color: gray;
+  }
+  div.centered {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  img.i {
+    margin-bottom: 10px;
+  }
+  pre.p {
+    display: inline-block;
+    margin: 0px;
+  }
+</style>
+
+<p>We begin by solving the battleship puzzles:</p>
+<div class="centered"><video controls><source src="naval-conflict/puzzle_1-b9ce7950.mp4"></video><video controls width="350px"><source src="naval-conflict/puzzle_2-8ef3097d.mp4"></video><video controls><source src="naval-conflict/puzzle_3-20fe9692.mp4"></video></div>
+
+<p>The final solutions to the puzzles look like this:</p>
+<div class="centered"><img class="i" src="naval-conflict/puzzle_1-489c0830.png"/><img class="i" src="naval-conflict/puzzle_2-966d8cab.png"/><img class="i" src="naval-conflict/puzzle_3-4c3996f6.png"/></div>
+
+<p>The flavortext hints us to find the locations where all 3 grids have a ship. These locations are denoted by the shaded squares in the grid below.</p>
+<div class="centered no-break"><table class="t"><tr><td class="black">L</td><td>A</td><td>E</td><td class="black">U</td><td>D</td><td class="black">S</td><td>S</td><td>S</td></tr><tr><td>A</td><td>T</td><td>S</td><td>O</td><td>A</td><td>V</td><td>E</td><td>R</td></tr><tr><td class="black">I</td><td>S</td><td>B</td><td class="black">T</td><td>A</td><td class="black">A</td><td>C</td><td class="black">N</td></tr><tr><td>F</td><td>R</td><td>N</td><td>U</td><td>L</td><td>H</td><td>G</td><td>D</td></tr><tr><td class="black">I</td><td>I</td><td class="black">A</td><td>E</td><td>S</td><td>R</td><td>I</td><td>E</td></tr><tr><td>C</td><td>P</td><td>E</td><td>E</td><td>H</td><td>L</td><td>O</td><td>O</td></tr><tr><td>A</td><td>P</td><td>I</td><td>S</td><td>P</td><td>C</td><td>R</td><td>C</td></tr><tr><td>E</td><td>E</td><td>L</td><td>L</td><td>S</td><td>S</td><td>E</td><td>H</td></tr></table></div>
+
+<p>This yields the first answer, <strong>LUSITANIA</strong>.</p>
+<p>Now for the 2nd part of the puzzle. If we pay attention to the number of ships that overlap with any given grid cell, the number is either 3 (all ships), 1 (exactly one ship), or 0. 
+It is notable that there are no locations where 2 ships are overlapping but the 3rd is not. 
+Looking at the letters where exactly 1 of the grids has a ship:</p>
+<p>Puzzle 1</p>
+<div class="centered no-break"><table class="t"><tr><td>L</td><td>A</td><td>E</td><td>U</td><td>D</td><td>S</td><td>S</td><td>S</td></tr><tr><td>A</td><td>T</td><td>S</td><td class="black">O</td><td>A</td><td class="black">V</td><td>E</td><td>R</td></tr><tr><td>I</td><td>S</td><td>B</td><td>T</td><td>A</td><td>A</td><td>C</td><td>N</td></tr><tr><td>F</td><td>R</td><td>N</td><td>U</td><td>L</td><td>H</td><td>G</td><td>D</td></tr><tr><td>I</td><td>I</td><td>A</td><td class="black">E</td><td>S</td><td class="black">R</td><td>I</td><td>E</td></tr><tr><td>C</td><td>P</td><td>E</td><td>E</td><td>H</td><td class="black">L</td><td>O</td><td>O</td></tr><tr><td class="black">A</td><td class="black">P</td><td class="black">I</td><td class="black">S</td><td>P</td><td>C</td><td>R</td><td class="black">C</td></tr><tr><td>E</td><td>E</td><td>L</td><td>L</td><td>S</td><td>S</td><td>E</td><td class="black">H</td></tr></table></div>
+
+<p>Puzzle 2</p>
+<div class="centered no-break"><table class="t"><tr><td>L</td><td>A</td><td class="black">E</td><td>U</td><td>D</td><td>S</td><td class="black">S</td><td>S</td></tr><tr><td>A</td><td>T</td><td>S</td><td>O</td><td>A</td><td>V</td><td>E</td><td>R</td></tr><tr><td>I</td><td class="black">S</td><td class="black">B</td><td>T</td><td>A</td><td>A</td><td>C</td><td>N</td></tr><tr><td>F</td><td>R</td><td>N</td><td>U</td><td>L</td><td>H</td><td>G</td><td>D</td></tr><tr><td>I</td><td class="black">I</td><td>A</td><td>E</td><td class="black">S</td><td>R</td><td>I</td><td>E</td></tr><tr><td>C</td><td>P</td><td>E</td><td>E</td><td class="black">H</td><td>L</td><td class="black">O</td><td>O</td></tr><tr><td>A</td><td>P</td><td>I</td><td>S</td><td class="black">P</td><td>C</td><td class="black">R</td><td>C</td></tr><tr><td class="black">E</td><td>E</td><td>L</td><td>L</td><td>S</td><td>S</td><td>E</td><td>H</td></tr></table></div>
+
+<p>Puzzle 3</p>
+<div class="centered no-break"><table class="t"><tr><td>L</td><td class="black">A</td><td>E</td><td>U</td><td class="black">D</td><td>S</td><td>S</td><td class="black">S</td></tr><tr><td>A</td><td>T</td><td>S</td><td>O</td><td>A</td><td>V</td><td>E</td><td>R</td></tr><tr><td>I</td><td>S</td><td>B</td><td>T</td><td>A</td><td class="black">A</td><td>C</td><td>N</td></tr><tr><td class="black">F</td><td>R</td><td>N</td><td>U</td><td>L</td><td>H</td><td>G</td><td>D</td></tr><tr><td>I</td><td>I</td><td>A</td><td>E</td><td>S</td><td>R</td><td>I</td><td class="black">E</td></tr><tr><td class="black">C</td><td>P</td><td class="black">E</td><td>E</td><td>H</td><td>L</td><td>O</td><td>O</td></tr><tr><td>A</td><td>P</td><td>I</td><td>S</td><td>P</td><td>C</td><td>R</td><td>C</td></tr><tr><td>E</td><td>E</td><td class="black">L</td><td class="black">L</td><td>S</td><td class="black">S</td><td>E</td><td>H</td></tr></table></div>
+
+<p>Reading all of these in reading order yields a message: OVERLAP IS CHESS BISHOP READ SAFE CELLS.</p>
+<p>Now, we imagine that the locations of the overlaps are chess bishops, and mark which cells they are attacking. Attacked cells are denoted with a gray highlight.</p>
+<div class="centered no-break"><table class="t"><tr><td class="black">L</td><td class="gray">A</td><td class="gray">E</td><td class="black">U</td><td class="gray">D</td><td class="black">S</td><td class="gray">S</td><td class="gray">S</td></tr><tr><td>A</td><td class="gray">T</td><td class="gray">S</td><td class="gray">O</td><td class="gray">A</td><td class="gray">V</td><td class="gray">E</td><td>R</td></tr><tr><td class="black">I</td><td class="gray">S</td><td class="gray">B</td><td class="black">T</td><td class="gray">A</td><td class="black">A</td><td>C</td><td class="black">N</td></tr><tr><td class="gray">F</td><td class="gray">R</td><td class="gray">N</td><td class="gray">U</td><td class="gray">L</td><td>H</td><td class="gray">G</td><td>D</td></tr><tr><td class="black">I</td><td class="gray">I</td><td class="black">A</td><td class="gray">E</td><td class="gray">S</td><td class="gray">R</td><td>I</td><td class="gray">E</td></tr><tr><td class="gray">C</td><td class="gray">P</td><td class="gray">E</td><td class="gray">E</td><td class="gray">H</td><td class="gray">L</td><td class="gray">O</td><td>O</td></tr><tr><td class="gray">A</td><td class="gray">P</td><td class="gray">I</td><td class="gray">S</td><td class="gray">P</td><td>C</td><td class="gray">R</td><td class="gray">C</td></tr><tr><td class="gray">E</td><td>E</td><td class="gray">L</td><td class="gray">L</td><td>S</td><td class="gray">S</td><td>E</td><td class="gray">H</td></tr></table></div>
+
+<p>Reading the safe cells yields the second answer, <strong>ARCHDIOCESE</strong>.</p>
+
+    
+    
+    <h2 id="authors-notes">Author&rsquo;s Notes</h2>
+    
+This puzzle is dedicated to Dany Qumsiyeh and Michael Tang, without whose hard work <pre class="p">&lt;shameless-plug&gt;</pre> the handy suite of logic puzzle solving (and writing!) tools <a href="https://www.noq.solutions">https://www.noq.solutions</a> would not exist.
+
+<pre style="color: gray">&lt;!-- &lt;/shameless-plug&gt; --&gt; &lt;-- note: ending tag intentionally omitted; do not uncomment --&gt;</pre>
+
+    
+
+    
+    
+
+    
+</main>
+
+
+    </div>
+    
+
+    
+
+    
+</body>
+</html>

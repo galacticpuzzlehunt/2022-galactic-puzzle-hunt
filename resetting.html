@@ -1,0 +1,287 @@
+
+
+
+
+
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    
+    <title>Galactic Puzzle Hunt</title>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=0.5">
+    <meta property="og:title" content="Galactic Puzzle Hunt 2022">
+    <meta property="og:description" content="Registration for this year's Galactic Puzzle Hunt is now open!">
+    <meta property="og:image" content="https://galacticpuzzlehunt.com/static/images/banner.png">
+    <meta property="twitter:card" content="summary_large_image">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Recursive:slnt,CASL,CRSV,MONO@-3,0.5,1,1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/skeleton.css">
+    <link rel="stylesheet" href="/static/css/base.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.19/jquery.touchSwipe.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.formset/1.2.2/jquery.formset.min.js"></script>
+    <script src="/jsi18n/"></script>
+    <script src="/static/js/sorttable.js"></script>
+    <script src="/static/js/tray.js"></script>
+    <script src="/static/js/notify.js"></script>
+    <script src="/static/js/time.js"></script>
+    
+    
+    <link rel="icon" sizes="16x16 32x32 48x48 64x64" href="/static/images/favicon.ico" type="image/vnd.microsoft.icon">
+    
+    
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-92192633-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-92192633-1');
+</script>
+
+</head>
+<body>
+    
+    <div id="background-glitch-wrapper" class="background-glitch">
+        <div class="glitch-1"></div>
+        <div class="glitch-2"></div>
+        <div class="glitch-3"></div>
+    </div>
+    
+    
+    <input id="shortcuts" type="checkbox">
+    
+    <nav>
+        <span class="tray">
+            <span id="tray-timer"></span>
+            <div class="top-tabs">
+                <a href="/">
+                    Home
+                </a>
+                
+                <a href="/rules">
+                    Rules
+                </a>
+                
+                
+                <a href="/story">
+                    Story
+                </a>
+                
+                
+                <a href="/puzzles">
+                    Puzzles
+                </a>
+                
+                <a href="/teams">
+                    Teams
+                </a>
+                
+                <a href="/faq">
+                    FAQ
+                </a>
+                
+                
+                <a href="/errata">
+                    Updates
+                </a>
+                
+                
+                <a href="/wrapup">
+                    Wrap-Up
+                </a>
+                
+                
+                <a href="https://galacticpuzzlehunt.com/archive">
+                    Archive
+                </a>
+                
+                
+                
+            </div>
+            <div class="top-left-actions">
+                
+            </div>
+        </span>
+        <div class="top-right-actions">
+        
+        
+        </div>
+    </nav>
+    
+    
+    
+    
+    
+    <script>
+
+    
+    
+    let glitchTriggerFuncs = [];
+    let glitchTriggerReceived = false;
+    let glitchTriggerExReceived = false;
+    let glitchPageLoaded = false;
+    function processGlitchFuncs(ex) {
+        glitchTriggerFuncs.forEach((func) => {
+            func(ex);
+        });
+    }
+    function doGlitch(ex) {
+        glitchTriggerReceived = true;
+        if (ex) {
+            glitchTriggerExReceived = true;
+        }
+        if (glitchPageLoaded) {
+            processGlitchFuncs(ex);
+        }
+    }
+    window.addEventListener('load', () => {
+        glitchPageLoaded = true;
+        if (glitchTriggerExReceived) {
+            processGlitchFuncs(true);
+        }
+        else if (glitchTriggerReceived) {
+            processGlitchFuncs(false);
+        }
+    }, false);
+    
+    
+    
+    function registerOnGlitchHook(func) {
+        if (glitchTriggerExReceived) {
+            func(true);
+        }
+        else if (glitchTriggerReceived) {
+            func(false);
+        }
+        glitchTriggerFuncs.push(func);
+    }
+    
+
+    
+    
+    </script>
+    <div class="content">
+        
+<style>
+
+h1.glitch {
+    display: block;
+}
+
+h1.glitch::before, h1.glitch::after {
+    padding: 2rem;
+    height: unset;
+    width: unset;
+}
+
+#wow, .glitch-1, .glitch-2, .glitch-3 {
+    opacity: 0;
+    transition: opacity 1s ease;
+    cursor: default;
+}
+
+#blank {
+    cursor: default;
+}
+
+#glitch-audio {
+    visibility: none;
+}
+
+#blank-screen {
+    display: none;
+    background: white;
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    opacity: 0;
+}
+
+@keyframes fade-in {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fade-out {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
+</style>
+<h1 id="congratulations" data-text="Congratulations?">Congratulations!</h1>
+<main style="text-align: center">
+    <p>
+    You eagerly grab the sheet of paper with your test results. Automated grading is so effective these days!
+    </p>
+
+    <p id="wow">
+    But before you manage to see your score, everything goes <a id="blank" data-text="blank">blank</a>.
+    </p>
+
+    <audio id="glitch-audio" src="/static/audio/glitch.mp3"></audio>
+
+    <script>
+        const eid = (id_) => document.getElementById(id_);
+        const ecn = (id_) => document.getElementsByClassName(id_)[0];
+        setTimeout(function () {
+            eid('wow').style.opacity = "1";
+            eid('blank').style.cursor = "pointer";
+        }, 2500);
+        eid('blank').addEventListener("click", function () {
+            eid('blank-screen').style.display = "block";
+            eid('blank').style.cursor = "default";
+            eid('blank').style.color = "inherit";
+            eid('glitch-audio').play().finally(function () {
+                setTimeout(function () {
+                    eid('blank').classList.add("glitch");
+                }, 250);
+                setTimeout(function () {
+                    eid('congratulations').innerText = "Congratulations?";
+                    eid('congratulations').classList.add("glitch");
+                    doGlitch(false);
+                }, 2300);
+                setTimeout(function () {
+                    ecn('glitch-1').style.opacity = "1";
+                }, 4000);
+                setTimeout(function () {
+                    ecn('glitch-2').style.opacity = "1";
+                }, 4300);
+                setTimeout(function () {
+                    ecn('glitch-3').style.opacity = "1";
+                }, 5000);
+                setTimeout(function () {
+                    eid('blank-screen').style.animation = "fade-in 2.4s ease-out";
+                }, 6100);
+                setTimeout(function () {
+                    eid('blank-screen').style.animation = "fade-out 1s ease-in";
+                }, 8500);
+                setTimeout(function () {
+                    eid('blank-screen').style.animation = "fade-in 4.5s ease-out";
+                }, 10700);
+                setTimeout(function () {
+                    eid('blank-screen').style.opacity = "1";
+                }, 15200);
+                setTimeout(function () {
+                    window.location = "/puzzles";
+                }, 16200);
+            });
+        });
+    </script>
+</main>
+<div id="blank-screen"></div>
+
+    </div>
+    
+
+    
+
+    
+</body>
+</html>

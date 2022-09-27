@@ -1,0 +1,244 @@
+
+
+
+
+
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    
+<title>Naval Conflict</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=0.5">
+    <meta property="og:title" content="Galactic Puzzle Hunt 2022">
+    <meta property="og:description" content="Registration for this year's Galactic Puzzle Hunt is now open!">
+    <meta property="og:image" content="https://galacticpuzzlehunt.com/static/images/banner.png">
+    <meta property="twitter:card" content="summary_large_image">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Recursive:slnt,CASL,CRSV,MONO@-3,0.5,1,1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/skeleton.css">
+    <link rel="stylesheet" href="/static/css/base.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.19/jquery.touchSwipe.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.formset/1.2.2/jquery.formset.min.js"></script>
+    <script src="/jsi18n/"></script>
+    <script src="/static/js/sorttable.js"></script>
+    <script src="/static/js/tray.js"></script>
+    <script src="/static/js/notify.js"></script>
+    <script src="/static/js/time.js"></script>
+    
+    
+    <link rel="icon" sizes="16x16 32x32 48x48 64x64" href="/static/images/favicon.ico" type="image/vnd.microsoft.icon">
+    
+    
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-92192633-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-92192633-1');
+</script>
+
+</head>
+<body>
+    
+    <div id="background-glitch-wrapper" class="background-glitch">
+        <div class="glitch-1"></div>
+        <div class="glitch-2"></div>
+        <div class="glitch-3"></div>
+    </div>
+    
+    
+    <input id="shortcuts" type="checkbox">
+    
+    <nav>
+        <span class="tray">
+            <span id="tray-timer"></span>
+            <div class="top-tabs">
+                <a href="/">
+                    Home
+                </a>
+                
+                <a href="/rules">
+                    Rules
+                </a>
+                
+                
+                <a href="/story">
+                    Story
+                </a>
+                
+                
+                <a class="selected-tab" href="/puzzles">
+                    Puzzles
+                </a>
+                
+                <a href="/teams">
+                    Teams
+                </a>
+                
+                <a href="/faq">
+                    FAQ
+                </a>
+                
+                
+                <a href="/errata">
+                    Updates
+                </a>
+                
+                
+                <a href="/wrapup">
+                    Wrap-Up
+                </a>
+                
+                
+                <a href="https://galacticpuzzlehunt.com/archive">
+                    Archive
+                </a>
+                
+                
+                
+            </div>
+            <div class="top-left-actions">
+                
+
+
+
+
+<a href="/post-hunt-solve/naval-conflict" class="btn">Check your answer spoiler-free</a>
+
+
+
+<a href="/solution/naval-conflict" class="btn">View solution</a>
+<a href="/stats/naval-conflict" class="btn">Stats</a>
+
+
+            </div>
+        </span>
+        <div class="top-right-actions">
+        
+        
+        </div>
+    </nav>
+    
+    
+    
+    
+    
+    <script>
+
+    
+    
+    let glitchTriggerFuncs = [];
+    let glitchTriggerReceived = false;
+    let glitchTriggerExReceived = false;
+    let glitchPageLoaded = false;
+    function processGlitchFuncs(ex) {
+        glitchTriggerFuncs.forEach((func) => {
+            func(ex);
+        });
+    }
+    function doGlitch(ex) {
+        glitchTriggerReceived = true;
+        if (ex) {
+            glitchTriggerExReceived = true;
+        }
+        if (glitchPageLoaded) {
+            processGlitchFuncs(ex);
+        }
+    }
+    window.addEventListener('load', () => {
+        glitchPageLoaded = true;
+        if (glitchTriggerExReceived) {
+            processGlitchFuncs(true);
+        }
+        else if (glitchTriggerReceived) {
+            processGlitchFuncs(false);
+        }
+    }, false);
+    
+    
+    
+    function registerOnGlitchHook(func) {
+        if (glitchTriggerExReceived) {
+            func(true);
+        }
+        else if (glitchTriggerReceived) {
+            func(false);
+        }
+        glitchTriggerFuncs.push(func);
+    }
+    
+
+    
+    
+    </script>
+    <div class="content">
+        
+
+<h1>
+    Naval Conflict
+    
+    
+</h1>
+
+
+
+<main class="puzzle-main clipboard-container">
+    
+    
+    
+    <p class="flavor">Can you hit three ships with one shot?</p>
+<style>
+  table.t {
+    margin: 0px;
+  }
+  table.t td {
+    height: 2em;
+    width: 2em;
+    line-height: 1em;
+    padding: 0px;
+    text-align: center;
+    border: none;
+  }
+  table.battleship {
+    margin-top: 30px;
+  }
+  table.battleship td:not(.no-borders) {
+    border: 1px solid black;
+  }
+  table img {
+    height: 100%;
+  }
+  div.centered {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+</style>
+<div class="centered"><table class="t battleship"><tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td class="no-borders">3</td></tr><tr><td></td><td></td><td><img src="/static/puzzle_resources/naval-conflict/7.png"></td><td></td><td></td><td></td><td></td><td></td><td class="no-borders">2</td></tr><tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td class="no-borders">4</td></tr><tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td class="no-borders">0</td></tr><tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td class="no-borders">4</td></tr><tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td class="no-borders">1</td></tr><tr><td></td><td></td><td></td><td></td><td></td><td><img src="/static/puzzle_resources/naval-conflict/7.png"></td><td></td><td></td><td class="no-borders">5</td></tr><tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td class="no-borders">1</td></tr><tr><td class="no-borders">4</td><td class="no-borders">1</td><td class="no-borders">2</td><td class="no-borders">5</td><td class="no-borders">0</td><td class="no-borders">5</td><td class="no-borders">0</td><td class="no-borders">3</td><td class="no-borders"></td></tr></table><table class="t no-borders no-copy"><tr><td><img src="/static/puzzle_resources/naval-conflict/3.png"/></td><td><img src="/static/puzzle_resources/naval-conflict/2.png"/></td><td><img src="/static/puzzle_resources/naval-conflict/2.png"/></td><td><img src="/static/puzzle_resources/naval-conflict/5.png"/></td></tr></table><table class="t no-borders no-copy"><tr><td><img src="/static/puzzle_resources/naval-conflict/3.png"/></td><td><img src="/static/puzzle_resources/naval-conflict/2.png"/></td><td><img src="/static/puzzle_resources/naval-conflict/5.png"/></td><td></td><td><img src="/static/puzzle_resources/naval-conflict/3.png"/></td><td><img src="/static/puzzle_resources/naval-conflict/2.png"/></td><td><img src="/static/puzzle_resources/naval-conflict/5.png"/></td></tr></table><table class="t no-borders no-copy"><tr><td><img src="/static/puzzle_resources/naval-conflict/3.png"/></td><td><img src="/static/puzzle_resources/naval-conflict/5.png"/></td><td></td><td><img src="/static/puzzle_resources/naval-conflict/3.png"/></td><td><img src="/static/puzzle_resources/naval-conflict/5.png"/></td><td></td><td><img src="/static/puzzle_resources/naval-conflict/3.png"/></td><td><img src="/static/puzzle_resources/naval-conflict/5.png"/></td></tr></table><table class="t no-borders no-copy"><tr><td><img src="/static/puzzle_resources/naval-conflict/1.png"/></td><td></td><td><img src="/static/puzzle_resources/naval-conflict/1.png"/></td><td></td><td><img src="/static/puzzle_resources/naval-conflict/1.png"/></td><td></td><td><img src="/static/puzzle_resources/naval-conflict/1.png"/></td></tr></table><div class="copy-only">Battleship lengths are: 4, 3, 3, 2, 2, 2, 1, 1, 1, 1.</div><a href="https://swaroopg92.github.io/penpa-edit/#m=solve&p=vVXfb5tADH7PXxHd863hRxIIb23W9mXrui1TFaGouhDaoBLIDmgrovZvr+3QwsHxMGmbEJb57LN95j5f9rsQMuQzbo657XKDm/DYrsEnDr4uvUb1LKI8Dr3hlXgU8XCeJndxFOTD66Is43Bo8tMi36bSG16KWAR5FAwXMkw2WZjnocz4Ns/3mTcaWYZlndxXLntauy2S/CRId6Pj5yjBBJ+CKgGfxyLLINxa5JA/20b7oSxAOeHfLi74nYizcOAbfIrVrwY+MxlnFrwmW72Wy1ef1Qtvzxj6HMof3qG89fzVCy9/1apbqz+9A8gr78DsKfN8ZsNCCsnZeIYAZHgHphYC4xpwJggYNeC6LQ/TMBGBUj8Qc4zIpIFYTtvHbmcybbvjQ3Ea5Zk2ldOMfNxTo0DTplyKD9Ws+NDGPzoB/TGpS0vo0hjrcHiz15fYa9wYblVvmmAOW2/CZJbWNDX6TZhrojU5aNLncrCt+oAO7qsnILa1JyD2tycgNlof0MU/pw/oYq6eVRiwZxW2V79qhj3Ur5r193CGueDv60z4v7Qmi856jwnbqzHBqbqgs2WRXAApeWmT/EzSIDkh+YV8zknekJyTHJOcko+DtB4MfMulEVc/0//7DQMK5g/L0vg2K+SdCELm0QjjhCXFbh1KBYrTdB9HieoX3SepDLUmBMPNvc5/ncpNK/qTiGMFON4IChREMohVKJeR8i2kTJ8UZCfyrQLUv1iNFCa5WkAu1BLFg2hl29V7fhmwZ0Yv8M2acsvA8T7zylNeXh4n4/tlwMvvMN+/euUSx7vP6AjC4SEnC9TzWr0hO2rzarwaoF9VOqhLUDvnubz2/HLBGeY6owiosl36COUea8FvuOrWsKFmgMqSFZv0oXif6MiC0/6S7bpkVI8lo6YpGXfSKpmuwr9c8mz1cvwhxh/dsc2b5B8x/7kiXSq1vANYQz1AtRSr8A7LAO/wCRN2KQWohlWAtokFUJdbAHboBVgPwzBqm2RYVZtnmKpDNUzVZJtyAlYDQt8A">Solve puzzle 1 interactively with Penpa.</a><table class="t battleship"><tr><td></td><td></td><td></td><td></td><td><img src="/static/puzzle_resources/naval-conflict/7.png"></td><td></td><td></td><td></td><td class="no-borders">5</td></tr><tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td class="no-borders">0</td></tr><tr><td></td><td><img src="/static/puzzle_resources/naval-conflict/2.png"></td><td></td><td></td><td></td><td></td><td><img src="/static/puzzle_resources/naval-conflict/7.png"></td><td></td><td class="no-borders">6</td></tr><tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td class="no-borders">0</td></tr><tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td class="no-borders">4</td></tr><tr><td></td><td><img src="/static/puzzle_resources/naval-conflict/7.png"></td><td></td><td></td><td></td><td></td><td><img src="/static/puzzle_resources/naval-conflict/4.png"></td><td></td><td class="no-borders">2</td></tr><tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td class="no-borders">2</td></tr><tr><td></td><td></td><td></td><td><img src="/static/puzzle_resources/naval-conflict/7.png"></td><td></td><td></td><td></td><td></td><td class="no-borders">1</td></tr><tr><td class="no-borders">4</td><td class="no-borders">2</td><td class="no-borders">3</td><td class="no-borders">2</td><td class="no-borders">3</td><td class="no-borders">2</td><td class="no-borders">3</td><td class="no-borders">1</td><td class="no-borders"></td></tr></table><table class="t no-borders no-copy"><tr><td><img src="/static/puzzle_resources/naval-conflict/3.png"/></td><td><img src="/static/puzzle_resources/naval-conflict/2.png"/></td><td><img src="/static/puzzle_resources/naval-conflict/2.png"/></td><td><img src="/static/puzzle_resources/naval-conflict/5.png"/></td></tr></table><table class="t no-borders no-copy"><tr><td><img src="/static/puzzle_resources/naval-conflict/3.png"/></td><td><img src="/static/puzzle_resources/naval-conflict/2.png"/></td><td><img src="/static/puzzle_resources/naval-conflict/5.png"/></td><td></td><td><img src="/static/puzzle_resources/naval-conflict/3.png"/></td><td><img src="/static/puzzle_resources/naval-conflict/2.png"/></td><td><img src="/static/puzzle_resources/naval-conflict/5.png"/></td></tr></table><table class="t no-borders no-copy"><tr><td><img src="/static/puzzle_resources/naval-conflict/3.png"/></td><td><img src="/static/puzzle_resources/naval-conflict/5.png"/></td><td></td><td><img src="/static/puzzle_resources/naval-conflict/3.png"/></td><td><img src="/static/puzzle_resources/naval-conflict/5.png"/></td><td></td><td><img src="/static/puzzle_resources/naval-conflict/3.png"/></td><td><img src="/static/puzzle_resources/naval-conflict/5.png"/></td></tr></table><table class="t no-borders no-copy"><tr><td><img src="/static/puzzle_resources/naval-conflict/1.png"/></td><td></td><td><img src="/static/puzzle_resources/naval-conflict/1.png"/></td><td></td><td><img src="/static/puzzle_resources/naval-conflict/1.png"/></td><td></td><td><img src="/static/puzzle_resources/naval-conflict/1.png"/></td></tr></table><div class="copy-only">Battleship lengths are: 4, 3, 3, 2, 2, 2, 1, 1, 1, 1.</div><a href="https://swaroopg92.github.io/penpa-edit/?m=solve&p=vVXfT9swEH7vX1H52aOJ0+bXG3TAy8bY1glVUYXcNNCINOnyA1Aq+Nu5uwZSp87DpG2qal2+O999Pvuzi9+VzCPucXPMLZcb3ISf5Rp84uDfpb/R/GZxmUT+8Eo+ymQ4zdK7JA7L4XVV10k0FPy0KtdZ7g8vZSLDMg6HszxKV0VUllFe8HVZbgt/NBKGECf3TciW5q6rtDwJs81o/zlKscCnsCnAp4ksCki3lCXUL9bxdphXYJzwbxcX/E4mRTQIDG4j+8UgYCbjTMDfZIvXev4asHbi7RnDmF39w9/Vt36weOH1r9Z0W/Onv4Pxyt8xy2Z+wCYwkVJyNvYQMFrAFgjYLeBMOhGui8C4BUzDRARofiDmuIsIBxFYzgdiUaXDPJbVnWVRHusQITpKDK1JiaFaSgxxVmJo4R98oD8mdWmOXUJmDj/s9SX2mrMJVhc6j230zfFwDXoPchjrPKbopWBOcC2W3oUJtfRM4tfjwu2baF0OuvS1HGSoT+jgPvYkxAb2JMR97EmIG6pP6GJ39QldrNUzCxP2zML26md52EP9LK+/hx7WglOmc+F+aV2CNNXjwvZqXHB6L+gMCxpnIH5eWzR+ptGgcULjF4o5p/GGximNYxptinHw+hgMAuHSVdr+7P/7DRch3HOsyJLbosrvZBgxn65KTlhabZZRrkBJlm2TOFXj4vs0yyOtC8Foda+LX2b5qpP9SSaJAuxfHgUK4zxMVKjMY+Vb5nn2pCAbWa4VoN1i5pd59Z4oSku1filVhvJBdopt2iW/DNgzoz/ITdhcGPiKeH59yuvL/aX4/ubw+js8I1/9eo6vSMDoBMLZoSAB5nlr3pAfrWlzsxpgXzU2mHMwj45zfe0H9YwzrHVGGdBkm+wR6O654De8qEtY0GGCxlNUq+yher/MUQSn/ZStljKae8poaSjjSjqU6cX9y5S9xct+Q4w/esoPH6x/JPznRnNZrpUdwBrlAapVWIMfiQzwIzlhwWNFAaoRFaBdXQF0LC0Aj9QF2KHAOlm7IkNWXZ1hqSOpYalDtSknYDEg9A0=">Solve puzzle 2 interactively with Penpa.</a><table class="t battleship"><tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td class="no-borders">6</td></tr><tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td class="no-borders">0</td></tr><tr><td></td><td></td><td><img src="/static/puzzle_resources/naval-conflict/7.png"></td><td></td><td></td><td><img src="/static/puzzle_resources/naval-conflict/5.png"></td><td></td><td></td><td class="no-borders">5</td></tr><tr><td></td><td></td><td><img src="/static/puzzle_resources/naval-conflict/7.png"></td><td></td><td></td><td></td><td></td><td></td><td class="no-borders">1</td></tr><tr><td></td><td></td><td></td><td></td><td></td><td><img src="/static/puzzle_resources/naval-conflict/7.png"></td><td></td><td></td><td class="no-borders">3</td></tr><tr><td></td><td></td><td><img src="/static/puzzle_resources/naval-conflict/6.png"></td><td></td><td></td><td><img src="/static/puzzle_resources/naval-conflict/7.png"></td><td></td><td></td><td class="no-borders">2</td></tr><tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td class="no-borders">0</td></tr><tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td class="no-borders">3</td></tr><tr><td class="no-borders">5</td><td class="no-borders">1</td><td class="no-borders">3</td><td class="no-borders">3</td><td class="no-borders">2</td><td class="no-borders">3</td><td class="no-borders">0</td><td class="no-borders">3</td><td class="no-borders"></td></tr></table><table class="t no-borders no-copy"><tr><td><img src="/static/puzzle_resources/naval-conflict/3.png"/></td><td><img src="/static/puzzle_resources/naval-conflict/2.png"/></td><td><img src="/static/puzzle_resources/naval-conflict/2.png"/></td><td><img src="/static/puzzle_resources/naval-conflict/5.png"/></td></tr></table><table class="t no-borders no-copy"><tr><td><img src="/static/puzzle_resources/naval-conflict/3.png"/></td><td><img src="/static/puzzle_resources/naval-conflict/2.png"/></td><td><img src="/static/puzzle_resources/naval-conflict/5.png"/></td><td></td><td><img src="/static/puzzle_resources/naval-conflict/3.png"/></td><td><img src="/static/puzzle_resources/naval-conflict/2.png"/></td><td><img src="/static/puzzle_resources/naval-conflict/5.png"/></td></tr></table><table class="t no-borders no-copy"><tr><td><img src="/static/puzzle_resources/naval-conflict/3.png"/></td><td><img src="/static/puzzle_resources/naval-conflict/5.png"/></td><td></td><td><img src="/static/puzzle_resources/naval-conflict/3.png"/></td><td><img src="/static/puzzle_resources/naval-conflict/5.png"/></td><td></td><td><img src="/static/puzzle_resources/naval-conflict/3.png"/></td><td><img src="/static/puzzle_resources/naval-conflict/5.png"/></td></tr></table><table class="t no-borders no-copy"><tr><td><img src="/static/puzzle_resources/naval-conflict/1.png"/></td><td></td><td><img src="/static/puzzle_resources/naval-conflict/1.png"/></td><td></td><td><img src="/static/puzzle_resources/naval-conflict/1.png"/></td><td></td><td><img src="/static/puzzle_resources/naval-conflict/1.png"/></td></tr></table><div class="copy-only">Battleship lengths are: 4, 3, 3, 2, 2, 2, 1, 1, 1, 1.</div><a href="https://swaroopg92.github.io/penpa-edit/?m=solve&p=vVVbb6M6EH7Pr4j87G24hOtbm9P2Zbenu5tVFaGocghtUAnkGGgrova3d2ZCSgDzcKTdFWI0/sZz8difnf9XChlxj+tTbrpc4zp8pqtxy8HfpV+rv3lcJJE/vhHPIhnPsvQhicNifFtWVRKNTX5eFptM+uNrkYiwiMPxXEbpOo+KIpI53xTFLvcnE0MzjLPHesqOfDdlWpyF2XZyGE5STPAlrBPwWSLyHMKtRAH58028G8sSlDP+79UVfxBJHo0CjdtY/XIUMJ1xZsCvs+V7tXgPWON4f8Fwzr764e+rez9YvvHqV6O6jfrT34O88ffMtJkfMBscKSRnUw8BrQFsAwGrARwLAajjCLguAmYD6JqOCJT5iejTTljdcLpeZjeTbpqdVLpJcVpeVE4LoTWdZjf7uajm03pMWvjnHOiPTl1aQJcsjOjw015fY685s9DLUllstCh9XKxYafHQYistWK/SR7fQZKpNWIOhNNnasAl3T7km3UGTOpeDu6cO6OA2DgTEFQ8ExKYPBMT9VAd08YCoA1LfB7ww4IAXtlft5WEP1V7ecA89zAWHTGXC/VKaDKLUgAnbqzDB4b2iI2yQnAP3eWWS/IekRtIi+ZXmXJK8IzkjOSVp0xwHb4/RKDBcukmbz/67Y7gH4ZpjeZbc56V8EGHEfLopOWFpuV1FsgUlWbZL4rQ9L35MMxkpTQhG60fV/FUm153oLyJJWsDh4WlBYSzDpA0VMm6NhZTZSwvZimLTApotZn4hy2OgKC3a+QvRrlA8iU6ybbPktxF7ZfQD3QybGxo+Ip5fnfPq+nD/Hp8cXn2HV+SbXy3wEQkYnUA4OzTJAPWyUe/IjtqsvsQ10G9qHdQFqL3jXN36QTXnDHNdUARU2TZ7hnIPteAYHtQVLOg0QG3Jy3X2VB7fDSTB+XDJZlMyqoeSUVOUjCvplEwP7m8u2Vu+HTZE+18v+el79YeI/1pzLpNK2gGsYB6gSobVeI9kgPfohAn7jAJUQSpAu7wCqE8tAHvsAuyUYJ2oXZJhVV2eYaoe1TDVKdtaJ2A5IvQD">Solve puzzle 3 interactively with Penpa.</a><hr><table class="t"><tr><td>L</td><td>A</td><td>E</td><td>U</td><td>D</td><td>S</td><td>S</td><td>S</td></tr><tr><td>A</td><td>T</td><td>S</td><td>O</td><td>A</td><td>V</td><td>E</td><td>R</td></tr><tr><td>I</td><td>S</td><td>B</td><td>T</td><td>A</td><td>A</td><td>C</td><td>N</td></tr><tr><td>F</td><td>R</td><td>N</td><td>U</td><td>L</td><td>H</td><td>G</td><td>D</td></tr><tr><td>I</td><td>I</td><td>A</td><td>E</td><td>S</td><td>R</td><td>I</td><td>E</td></tr><tr><td>C</td><td>P</td><td>E</td><td>E</td><td>H</td><td>L</td><td>O</td><td>O</td></tr><tr><td>A</td><td>P</td><td>I</td><td>S</td><td>P</td><td>C</td><td>R</td><td>C</td></tr><tr><td>E</td><td>E</td><td>L</td><td>L</td><td>S</td><td>S</td><td>E</td><td>H</td></tr></table></div>
+<p><button class="btn clipboard-button"></button></p>
+    
+    
+
+    
+</main>
+
+<script src="/static/js/copyjack.js"></script>
+
+
+    </div>
+    
+
+    
+
+    
+</body>
+</html>

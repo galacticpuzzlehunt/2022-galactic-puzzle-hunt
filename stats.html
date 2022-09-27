@@ -1,0 +1,1300 @@
+
+
+
+
+
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    
+    <title>Galactic Puzzle Hunt</title>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=0.5">
+    <meta property="og:title" content="Galactic Puzzle Hunt 2022">
+    <meta property="og:description" content="Registration for this year's Galactic Puzzle Hunt is now open!">
+    <meta property="og:image" content="https://galacticpuzzlehunt.com/static/images/banner.png">
+    <meta property="twitter:card" content="summary_large_image">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Recursive:slnt,CASL,CRSV,MONO@-3,0.5,1,1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/skeleton.css">
+    <link rel="stylesheet" href="/static/css/base.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.19/jquery.touchSwipe.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.formset/1.2.2/jquery.formset.min.js"></script>
+    <script src="/jsi18n/"></script>
+    <script src="/static/js/sorttable.js"></script>
+    <script src="/static/js/tray.js"></script>
+    <script src="/static/js/notify.js"></script>
+    <script src="/static/js/time.js"></script>
+    
+    
+    <link rel="icon" sizes="16x16 32x32 48x48 64x64" href="/static/images/favicon.ico" type="image/vnd.microsoft.icon">
+    
+    
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-92192633-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-92192633-1');
+</script>
+
+</head>
+<body>
+    
+    <div id="background-glitch-wrapper" class="background-glitch">
+        <div class="glitch-1"></div>
+        <div class="glitch-2"></div>
+        <div class="glitch-3"></div>
+    </div>
+    
+    
+    <input id="shortcuts" type="checkbox">
+    
+    <nav>
+        <span class="tray">
+            <span id="tray-timer"></span>
+            <div class="top-tabs">
+                <a href="/">
+                    Home
+                </a>
+                
+                <a href="/rules">
+                    Rules
+                </a>
+                
+                
+                <a href="/story">
+                    Story
+                </a>
+                
+                
+                <a href="/puzzles">
+                    Puzzles
+                </a>
+                
+                <a href="/teams">
+                    Teams
+                </a>
+                
+                <a href="/faq">
+                    FAQ
+                </a>
+                
+                
+                <a href="/errata">
+                    Updates
+                </a>
+                
+                
+                <a href="/wrapup">
+                    Wrap-Up
+                </a>
+                
+                
+                <a href="https://galacticpuzzlehunt.com/archive">
+                    Archive
+                </a>
+                
+                
+                
+            </div>
+            <div class="top-left-actions">
+                
+<a href="/wrapup" class="btn">Back to wrap-up</a>
+
+            </div>
+        </span>
+        <div class="top-right-actions">
+        
+        
+        </div>
+    </nav>
+    
+    
+    
+    
+    
+    <script>
+
+    
+    
+    let glitchTriggerFuncs = [];
+    let glitchTriggerReceived = false;
+    let glitchTriggerExReceived = false;
+    let glitchPageLoaded = false;
+    function processGlitchFuncs(ex) {
+        glitchTriggerFuncs.forEach((func) => {
+            func(ex);
+        });
+    }
+    function doGlitch(ex) {
+        glitchTriggerReceived = true;
+        if (ex) {
+            glitchTriggerExReceived = true;
+        }
+        if (glitchPageLoaded) {
+            processGlitchFuncs(ex);
+        }
+    }
+    window.addEventListener('load', () => {
+        glitchPageLoaded = true;
+        if (glitchTriggerExReceived) {
+            processGlitchFuncs(true);
+        }
+        else if (glitchTriggerReceived) {
+            processGlitchFuncs(false);
+        }
+    }, false);
+    
+    
+    
+    function registerOnGlitchHook(func) {
+        if (glitchTriggerExReceived) {
+            func(true);
+        }
+        else if (glitchTriggerReceived) {
+            func(false);
+        }
+        glitchTriggerFuncs.push(func);
+    }
+    
+
+    
+    
+    </script>
+    <div class="content">
+        
+
+<h1>Hunt Stats</h1>
+
+<main>
+    <div class="info-row">
+        <div>
+            <h4>&nbsp;</h4>
+            <div class="info-desc">
+                <div class="stat-entry">Total teams <span class="stat-value">919</span></div>
+                <div class="stat-entry">Total participants <span class="stat-value">2751</span></div>
+                <div class="stat-entry">Total resets <span class="stat-value">51863</span></div>
+                <div class="stat-entry">Hints asked <span class="stat-value">3841</span></div>
+            </div>
+        </div>
+        <div>
+            <h4>&nbsp;</h4>
+            <div class="info-desc">
+                <div class="stat-entry">Total guesses <span class="stat-value">231876</span></div>
+                <div class="stat-entry">Correct guesses <span class="stat-value">188441</span></div>
+                <div class="stat-entry">Puzzles solved <span class="stat-value">9255</span></div>
+                <div class="stat-entry">Metas solved <span class="stat-value">758</span></div>
+            </div>
+        </div>
+    </div>
+
+    <table class="sortable list-table">
+        <tr>
+            <th>Puzzle</th>
+            <th title="Total number of correct answers">Solves</th>
+            <th title="Total number of wrong guesses">Guesses</th>
+            <th title="Total number of hints requested">Hints</th>
+            <th title="Total number of non-backsolves">Forward solves</th>
+            <th title="Forward solve after using no hints on this puzzle">0&#8288;-&#8288;hint forward</th>
+            <th title="Forward solve after using one hint on this puzzle">1&#8288;-&#8288;hint forward</th>
+            <th title="Forward solve after using multiple hints on this puzzle">2&#8288;+&#8288;-&#8288;hint forward</th>
+            <th title="Solved after the round meta or within five minutes of it">Back solves</th>
+            <th title="Made at least one guess but none were correct">No solve</th>
+        </tr>
+        
+        <tr>
+            <td sorttable_customkey="1" >
+                <a href="/stats/extreme-anagrams">Extreme Anagrams</a>
+            </td>
+            
+            <td>591</td>
+            
+            <td>462</td>
+            
+            <td>98</td>
+            
+            <td>589</td>
+            
+            <td>542</td>
+            
+            <td>45</td>
+            
+            <td>2</td>
+            
+            <td>2</td>
+            
+            <td>9</td>
+            
+        </tr>
+        
+        <tr>
+            <td sorttable_customkey="2" >
+                <a href="/stats/naval-conflict">Naval Conflict</a>
+            </td>
+            
+            <td>615</td>
+            
+            <td>608</td>
+            
+            <td>70</td>
+            
+            <td>610</td>
+            
+            <td>573</td>
+            
+            <td>33</td>
+            
+            <td>4</td>
+            
+            <td>5</td>
+            
+            <td>14</td>
+            
+        </tr>
+        
+        <tr>
+            <td sorttable_customkey="3" >
+                <a href="/stats/whats-the-difference">What&#x27;s the Difference?</a>
+            </td>
+            
+            <td>545</td>
+            
+            <td>1353</td>
+            
+            <td>164</td>
+            
+            <td>535</td>
+            
+            <td>455</td>
+            
+            <td>73</td>
+            
+            <td>7</td>
+            
+            <td>10</td>
+            
+            <td>14</td>
+            
+        </tr>
+        
+        <tr>
+            <td sorttable_customkey="4" >
+                <a href="/stats/your-puzzle">Nobody Knows What Your Perfect Puzzle Is, But You Will After Answering These Nine Questions</a>
+            </td>
+            
+            <td>597</td>
+            
+            <td>827</td>
+            
+            <td>69</td>
+            
+            <td>588</td>
+            
+            <td>548</td>
+            
+            <td>39</td>
+            
+            <td>1</td>
+            
+            <td>9</td>
+            
+            <td>2</td>
+            
+        </tr>
+        
+        <tr>
+            <td sorttable_customkey="5" >
+                <a href="/stats/eclairs-and-more">Eclairs and More @ Ovsljs* Opsvut</a>
+            </td>
+            
+            <td>547</td>
+            
+            <td>756</td>
+            
+            <td>121</td>
+            
+            <td>535</td>
+            
+            <td>468</td>
+            
+            <td>56</td>
+            
+            <td>11</td>
+            
+            <td>12</td>
+            
+            <td>10</td>
+            
+        </tr>
+        
+        <tr>
+            <td sorttable_customkey="6" >
+                <a href="/stats/shared-samples">Shared Samples</a>
+            </td>
+            
+            <td>401</td>
+            
+            <td>615</td>
+            
+            <td>408</td>
+            
+            <td>278</td>
+            
+            <td>133</td>
+            
+            <td>92</td>
+            
+            <td>53</td>
+            
+            <td>123</td>
+            
+            <td>34</td>
+            
+        </tr>
+        
+        <tr>
+            <td sorttable_customkey="7" >
+                <a href="/stats/wordless">Wordless</a>
+            </td>
+            
+            <td>566</td>
+            
+            <td>397</td>
+            
+            <td>38</td>
+            
+            <td>560</td>
+            
+            <td>545</td>
+            
+            <td>14</td>
+            
+            <td>1</td>
+            
+            <td>6</td>
+            
+            <td>2</td>
+            
+        </tr>
+        
+        <tr>
+            <td sorttable_customkey="8" >
+                <a href="/stats/%D0%B5xtreme-anagrams">Extreme Anagrams</a>
+            </td>
+            
+            <td>569</td>
+            
+            <td>186</td>
+            
+            <td>10</td>
+            
+            <td>565</td>
+            
+            <td>561</td>
+            
+            <td>3</td>
+            
+            <td>1</td>
+            
+            <td>4</td>
+            
+            <td>2</td>
+            
+        </tr>
+        
+        <tr>
+            <td sorttable_customkey="9" class="meta-stats">
+                <a href="/stats/the-line">The Line</a>
+            </td>
+            
+            <td>381</td>
+            
+            <td>2002</td>
+            
+            <td>500</td>
+            
+            <td>381</td>
+            
+            <td>204</td>
+            
+            <td>102</td>
+            
+            <td>75</td>
+            
+            <td>0</td>
+            
+            <td>34</td>
+            
+        </tr>
+        
+        <tr>
+            <td sorttable_customkey="10" >
+                <a href="/stats/horse_ebooks">horse_ebooks</a>
+            </td>
+            
+            <td>340</td>
+            
+            <td>147</td>
+            
+            <td>61</td>
+            
+            <td>340</td>
+            
+            <td>315</td>
+            
+            <td>20</td>
+            
+            <td>5</td>
+            
+            <td>0</td>
+            
+            <td>4</td>
+            
+        </tr>
+        
+        <tr>
+            <td sorttable_customkey="11" >
+                <a href="/stats/make-your-own-puzzle-hunt">Make Your Own Puzzle Hunt</a>
+            </td>
+            
+            <td>185</td>
+            
+            <td>744</td>
+            
+            <td>70</td>
+            
+            <td>184</td>
+            
+            <td>158</td>
+            
+            <td>23</td>
+            
+            <td>3</td>
+            
+            <td>1</td>
+            
+            <td>10</td>
+            
+        </tr>
+        
+        <tr>
+            <td sorttable_customkey="12" >
+                <a href="/stats/bullet-curtain">Bullet Curtain</a>
+            </td>
+            
+            <td>200</td>
+            
+            <td>354</td>
+            
+            <td>144</td>
+            
+            <td>197</td>
+            
+            <td>144</td>
+            
+            <td>42</td>
+            
+            <td>11</td>
+            
+            <td>3</td>
+            
+            <td>33</td>
+            
+        </tr>
+        
+        <tr>
+            <td sorttable_customkey="13" >
+                <a href="/stats/duality">Duality</a>
+            </td>
+            
+            <td>133</td>
+            
+            <td>169</td>
+            
+            <td>87</td>
+            
+            <td>122</td>
+            
+            <td>82</td>
+            
+            <td>38</td>
+            
+            <td>2</td>
+            
+            <td>11</td>
+            
+            <td>11</td>
+            
+        </tr>
+        
+        <tr>
+            <td sorttable_customkey="14" >
+                <a href="/stats/changes">Changes</a>
+            </td>
+            
+            <td>131</td>
+            
+            <td>332</td>
+            
+            <td>48</td>
+            
+            <td>104</td>
+            
+            <td>83</td>
+            
+            <td>18</td>
+            
+            <td>3</td>
+            
+            <td>27</td>
+            
+            <td>16</td>
+            
+        </tr>
+        
+        <tr>
+            <td sorttable_customkey="15" >
+                <a href="/stats/the-earth-guide">The Earth Guide</a>
+            </td>
+            
+            <td>109</td>
+            
+            <td>189</td>
+            
+            <td>27</td>
+            
+            <td>51</td>
+            
+            <td>45</td>
+            
+            <td>6</td>
+            
+            <td>0</td>
+            
+            <td>58</td>
+            
+            <td>6</td>
+            
+        </tr>
+        
+        <tr>
+            <td sorttable_customkey="16" >
+                <a href="/stats/three">Three</a>
+            </td>
+            
+            <td>151</td>
+            
+            <td>25984</td>
+            
+            <td>192</td>
+            
+            <td>116</td>
+            
+            <td>61</td>
+            
+            <td>41</td>
+            
+            <td>14</td>
+            
+            <td>35</td>
+            
+            <td>290</td>
+            
+        </tr>
+        
+        <tr>
+            <td sorttable_customkey="17" >
+                <a href="/stats/cryptology">Cryptology</a>
+            </td>
+            
+            <td>220</td>
+            
+            <td>1458</td>
+            
+            <td>186</td>
+            
+            <td>219</td>
+            
+            <td>135</td>
+            
+            <td>62</td>
+            
+            <td>22</td>
+            
+            <td>1</td>
+            
+            <td>31</td>
+            
+        </tr>
+        
+        <tr>
+            <td sorttable_customkey="18" >
+                <a href="/stats/young-artists">Young Artists</a>
+            </td>
+            
+            <td>264</td>
+            
+            <td>123</td>
+            
+            <td>41</td>
+            
+            <td>264</td>
+            
+            <td>246</td>
+            
+            <td>16</td>
+            
+            <td>2</td>
+            
+            <td>0</td>
+            
+            <td>4</td>
+            
+        </tr>
+        
+        <tr>
+            <td sorttable_customkey="19" >
+                <a href="/stats/mythic-arms">Mythic Arms</a>
+            </td>
+            
+            <td>126</td>
+            
+            <td>220</td>
+            
+            <td>135</td>
+            
+            <td>93</td>
+            
+            <td>44</td>
+            
+            <td>38</td>
+            
+            <td>11</td>
+            
+            <td>33</td>
+            
+            <td>9</td>
+            
+        </tr>
+        
+        <tr>
+            <td sorttable_customkey="20" >
+                <a href="/stats/practical-guide">A Practical Guide to Choosing a Team Name</a>
+            </td>
+            
+            <td>205</td>
+            
+            <td>207</td>
+            
+            <td>88</td>
+            
+            <td>203</td>
+            
+            <td>163</td>
+            
+            <td>34</td>
+            
+            <td>6</td>
+            
+            <td>2</td>
+            
+            <td>1</td>
+            
+        </tr>
+        
+        <tr>
+            <td sorttable_customkey="21" >
+                <a href="/stats/all-things-big-and-small">All Things Big and Small</a>
+            </td>
+            
+            <td>137</td>
+            
+            <td>217</td>
+            
+            <td>64</td>
+            
+            <td>125</td>
+            
+            <td>108</td>
+            
+            <td>15</td>
+            
+            <td>2</td>
+            
+            <td>12</td>
+            
+            <td>13</td>
+            
+        </tr>
+        
+        <tr>
+            <td sorttable_customkey="22" class="meta-stats">
+                <a href="/stats/forward">Forward</a>
+            </td>
+            
+            <td>120</td>
+            
+            <td>208</td>
+            
+            <td>148</td>
+            
+            <td>120</td>
+            
+            <td>50</td>
+            
+            <td>54</td>
+            
+            <td>16</td>
+            
+            <td>0</td>
+            
+            <td>3</td>
+            
+        </tr>
+        
+        <tr>
+            <td sorttable_customkey="23" >
+                <a href="/stats/everything-everywhere-all-at-once">Everything Everywhere All at Once</a>
+            </td>
+            
+            <td>127</td>
+            
+            <td>316</td>
+            
+            <td>95</td>
+            
+            <td>120</td>
+            
+            <td>90</td>
+            
+            <td>23</td>
+            
+            <td>7</td>
+            
+            <td>7</td>
+            
+            <td>4</td>
+            
+        </tr>
+        
+        <tr>
+            <td sorttable_customkey="24" >
+                <a href="/stats/abc">✝️🔤🧩</a>
+            </td>
+            
+            <td>130</td>
+            
+            <td>168</td>
+            
+            <td>99</td>
+            
+            <td>128</td>
+            
+            <td>84</td>
+            
+            <td>37</td>
+            
+            <td>7</td>
+            
+            <td>2</td>
+            
+            <td>6</td>
+            
+        </tr>
+        
+        <tr>
+            <td sorttable_customkey="25" >
+                <a href="/stats/pocket-guide-to-travel">Pocket Guide to Travel</a>
+            </td>
+            
+            <td>105</td>
+            
+            <td>127</td>
+            
+            <td>70</td>
+            
+            <td>103</td>
+            
+            <td>74</td>
+            
+            <td>25</td>
+            
+            <td>4</td>
+            
+            <td>2</td>
+            
+            <td>2</td>
+            
+        </tr>
+        
+        <tr>
+            <td sorttable_customkey="26" >
+                <a href="/stats/oversimplified">Oversimplified</a>
+            </td>
+            
+            <td>118</td>
+            
+            <td>381</td>
+            
+            <td>62</td>
+            
+            <td>107</td>
+            
+            <td>80</td>
+            
+            <td>20</td>
+            
+            <td>7</td>
+            
+            <td>11</td>
+            
+            <td>3</td>
+            
+        </tr>
+        
+        <tr>
+            <td sorttable_customkey="27" >
+                <a href="/stats/the-dining-philosophers">The Dining Philosophers</a>
+            </td>
+            
+            <td>81</td>
+            
+            <td>461</td>
+            
+            <td>19</td>
+            
+            <td>70</td>
+            
+            <td>61</td>
+            
+            <td>7</td>
+            
+            <td>2</td>
+            
+            <td>11</td>
+            
+            <td>19</td>
+            
+        </tr>
+        
+        <tr>
+            <td sorttable_customkey="28" >
+                <a href="/stats/somewhere">Somewhere</a>
+            </td>
+            
+            <td>72</td>
+            
+            <td>337</td>
+            
+            <td>95</td>
+            
+            <td>46</td>
+            
+            <td>16</td>
+            
+            <td>27</td>
+            
+            <td>3</td>
+            
+            <td>26</td>
+            
+            <td>18</td>
+            
+        </tr>
+        
+        <tr>
+            <td sorttable_customkey="29" >
+                <a href="/stats/reap-what-you-sow">Reap What You Sow</a>
+            </td>
+            
+            <td>117</td>
+            
+            <td>138</td>
+            
+            <td>54</td>
+            
+            <td>116</td>
+            
+            <td>103</td>
+            
+            <td>9</td>
+            
+            <td>4</td>
+            
+            <td>1</td>
+            
+            <td>2</td>
+            
+        </tr>
+        
+        <tr>
+            <td sorttable_customkey="30" >
+                <a href="/stats/galactic-history-exam">Galactic History Exam</a>
+            </td>
+            
+            <td>80</td>
+            
+            <td>457</td>
+            
+            <td>82</td>
+            
+            <td>61</td>
+            
+            <td>39</td>
+            
+            <td>15</td>
+            
+            <td>7</td>
+            
+            <td>19</td>
+            
+            <td>22</td>
+            
+        </tr>
+        
+        <tr>
+            <td sorttable_customkey="31" >
+                <a href="/stats/a-winding-walk">A Winding Walk</a>
+            </td>
+            
+            <td>80</td>
+            
+            <td>178</td>
+            
+            <td>38</td>
+            
+            <td>68</td>
+            
+            <td>46</td>
+            
+            <td>20</td>
+            
+            <td>2</td>
+            
+            <td>12</td>
+            
+            <td>11</td>
+            
+        </tr>
+        
+        <tr>
+            <td sorttable_customkey="32" >
+                <a href="/stats/maze">Maze</a>
+            </td>
+            
+            <td>113</td>
+            
+            <td>127</td>
+            
+            <td>23</td>
+            
+            <td>100</td>
+            
+            <td>92</td>
+            
+            <td>7</td>
+            
+            <td>1</td>
+            
+            <td>13</td>
+            
+            <td>7</td>
+            
+        </tr>
+        
+        <tr>
+            <td sorttable_customkey="33" class="meta-stats">
+                <a href="/stats/hibernating-and-flying-south">Hibernating and Flying South</a>
+            </td>
+            
+            <td>89</td>
+            
+            <td>174</td>
+            
+            <td>35</td>
+            
+            <td>89</td>
+            
+            <td>72</td>
+            
+            <td>13</td>
+            
+            <td>4</td>
+            
+            <td>0</td>
+            
+            <td>1</td>
+            
+        </tr>
+        
+        <tr>
+            <td sorttable_customkey="34" >
+                <a href="/stats/babysit-the-supercomputer">Babysit the Supercomputer</a>
+            </td>
+            
+            <td>117</td>
+            
+            <td>109</td>
+            
+            <td>11</td>
+            
+            <td>116</td>
+            
+            <td>114</td>
+            
+            <td>2</td>
+            
+            <td>0</td>
+            
+            <td>1</td>
+            
+            <td>5</td>
+            
+        </tr>
+        
+        <tr>
+            <td sorttable_customkey="35" >
+                <a href="/stats/speedy-crosswording">Speedy Crosswording</a>
+            </td>
+            
+            <td>143</td>
+            
+            <td>907</td>
+            
+            <td>64</td>
+            
+            <td>143</td>
+            
+            <td>131</td>
+            
+            <td>12</td>
+            
+            <td>0</td>
+            
+            <td>0</td>
+            
+            <td>37</td>
+            
+        </tr>
+        
+        <tr>
+            <td sorttable_customkey="36" >
+                <a href="/stats/combat-roller">Combat Roller</a>
+            </td>
+            
+            <td>103</td>
+            
+            <td>337</td>
+            
+            <td>36</td>
+            
+            <td>102</td>
+            
+            <td>86</td>
+            
+            <td>15</td>
+            
+            <td>1</td>
+            
+            <td>1</td>
+            
+            <td>10</td>
+            
+        </tr>
+        
+        <tr>
+            <td sorttable_customkey="37" >
+                <a href="/stats/broken-jukebox">Broken Jukebox</a>
+            </td>
+            
+            <td>78</td>
+            
+            <td>204</td>
+            
+            <td>37</td>
+            
+            <td>63</td>
+            
+            <td>43</td>
+            
+            <td>18</td>
+            
+            <td>2</td>
+            
+            <td>15</td>
+            
+            <td>9</td>
+            
+        </tr>
+        
+        <tr>
+            <td sorttable_customkey="38" >
+                <a href="/stats/at-the-park">At the Park</a>
+            </td>
+            
+            <td>109</td>
+            
+            <td>239</td>
+            
+            <td>8</td>
+            
+            <td>102</td>
+            
+            <td>98</td>
+            
+            <td>4</td>
+            
+            <td>0</td>
+            
+            <td>7</td>
+            
+            <td>10</td>
+            
+        </tr>
+        
+        <tr>
+            <td sorttable_customkey="39" >
+                <a href="/stats/just-wait-an-hour">Just Wait an Hour</a>
+            </td>
+            
+            <td>72</td>
+            
+            <td>399</td>
+            
+            <td>19</td>
+            
+            <td>57</td>
+            
+            <td>52</td>
+            
+            <td>5</td>
+            
+            <td>0</td>
+            
+            <td>15</td>
+            
+            <td>15</td>
+            
+        </tr>
+        
+        <tr>
+            <td sorttable_customkey="40" >
+                <a href="/stats/me-the-worm">Me, the Worm</a>
+            </td>
+            
+            <td>101</td>
+            
+            <td>270</td>
+            
+            <td>67</td>
+            
+            <td>84</td>
+            
+            <td>56</td>
+            
+            <td>24</td>
+            
+            <td>4</td>
+            
+            <td>17</td>
+            
+            <td>10</td>
+            
+        </tr>
+        
+        <tr>
+            <td sorttable_customkey="41" >
+                <a href="/stats/piano-typer">Piano Typer</a>
+            </td>
+            
+            <td>119</td>
+            
+            <td>245</td>
+            
+            <td>16</td>
+            
+            <td>114</td>
+            
+            <td>107</td>
+            
+            <td>7</td>
+            
+            <td>0</td>
+            
+            <td>5</td>
+            
+            <td>4</td>
+            
+        </tr>
+        
+        <tr>
+            <td sorttable_customkey="42" class="meta-stats">
+                <a href="/stats/worlds-end-concert">World&#x27;s End Concert</a>
+            </td>
+            
+            <td>89</td>
+            
+            <td>115</td>
+            
+            <td>118</td>
+            
+            <td>89</td>
+            
+            <td>32</td>
+            
+            <td>41</td>
+            
+            <td>16</td>
+            
+            <td>0</td>
+            
+            <td>4</td>
+            
+        </tr>
+        
+        <tr>
+            <td sorttable_customkey="43" class="meta-stats">
+                <a href="/stats/the-cube">The Cube</a>
+            </td>
+            
+            <td>79</td>
+            
+            <td>26</td>
+            
+            <td>24</td>
+            
+            <td>79</td>
+            
+            <td>71</td>
+            
+            <td>6</td>
+            
+            <td>2</td>
+            
+            <td>0</td>
+            
+            <td>0</td>
+            
+        </tr>
+        
+    </table>
+</main>
+
+
+    </div>
+    
+
+    
+
+    
+</body>
+</html>

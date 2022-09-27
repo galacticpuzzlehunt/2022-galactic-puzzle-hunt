@@ -1,0 +1,420 @@
+/**
+ * This is a general file for use by all seasons.
+ * To use it, each individual season needs to define a bunch of variables in :root.
+ */
+@media screen {
+  :root {
+        /* True all the time. */
+        --body-text-color: rgb(34, 34, 34);
+        --puzzle-list-border-radius: 2em;
+
+        /* Declare some variables based on other variables, to be defined in individual seasons files. */
+        --background-top-color: rgb(var(--background-top-rgb));
+        --background-bottom-color: rgb(var(--background-bottom-rgb));
+        --primary-content-color: rgb(var(--primary-content-rgb));
+        --secondary-content-color: rgb(var(--secondary-content-rgb));
+        --tertiary-content-color: rgb(var(--tertiary-content-rgb));
+        --button-background-color: var(--secondary-content-color);
+        --button-text-color: var(--primary-content-color);
+        --button-inverse-background-color:  var(--primary-content-color);
+        --button-inverse-text-color: var(--secondary-content-color);
+        --top-tab-link-color: var(--secondary-content-color);
+        --tray-background-color: var(--secondary-content-color);
+        --tray-icon-color: var(--primary-content-color);
+        --title1-color: var(--primary-content-color);
+        --svg-filter: none;
+
+        /* These will be overridden for smaller screen sizes. */
+        --background-image-yoffset: 20px;
+        --background-image-top-fade-start-yoffset: var(--background-image-yoffset);
+        --background-image-top-fade-yoffset: 120px;
+        --gradient-yoffset: 220px;
+  }
+
+  html, .background-glitch {
+      background: 
+          linear-gradient(to bottom, var(--background-top-color) var(--background-image-top-fade-start-yoffset), rgba(0, 0, 0, 0) var(--background-image-top-fade-yoffset)),
+          var(--background-image-url),
+          linear-gradient(to bottom, var(--background-top-color), var(--background-bottom-color) var(--gradient-yoffset));
+      background-repeat: no-repeat;
+      background-size: 100% auto;
+      background-position: center top, center var(--background-image-yoffset), center top;
+      background-color: var(--background-bottom-color);
+  }
+
+  h1, h2, h3, h4 {
+      border: 0px; /* Get rid of the box on the left of the header. */
+      background-color: var(--primary-content-color);
+      color: var(--secondary-content-color);
+  }
+
+  h1, h2, .form-row, .note, .info-row h4, .puzzles-answer > :first-child, #loop-timer, .loop-shade {
+      color: var(--secondary-content-color);
+      background-color: var(--primary-content-color);
+      background-size: 5px 5px;
+      background-attachment: fixed;
+      position: relative;
+  }
+
+  /* added these for previous guesses on Solve pages, not sure if too general */
+  h3, h4 {
+      padding: 0.5rem 2rem;
+  }
+  main {
+      background-color: rgba(var(--primary-content-rgb));
+  }
+
+  h1#title1 {
+      color: var(--title1-color);
+  }
+
+  svg#hero {
+      filter: var(--svg-filter);
+  }
+
+  .note {
+      background-color: rgba(var(--background-bottom-rgb), 0.3);
+  }
+
+  a {
+      color: var(--secondary-content-color);
+  }
+
+  a:hover, a:focus {
+      color: var(--tertiary-content-color);
+  }
+
+  .puzzle-main {
+      color: initial;
+      background-color: var(--primary-content-color);
+  }
+
+  .puzzle-main a {
+      color: var(--secondary-content-color);
+  }
+
+  .puzzle-main a:hover, .puzzle-main a:focus {
+      color: var(--tertiary-content-color);
+  }
+
+  .btn {
+      color: var(--button-text-color);
+      background-color: var(--button-background-color);
+  }
+
+  .btn:hover, .btn:focus {
+      color: var(--button-text-color);
+      background-color: var(--button-hover-background-color);
+  }
+
+  .shortcuts {
+      border: 2px solid #f9f8f5;
+      background-color: var(--primary-content-color);
+  }
+
+  list-table td {
+      border-color: #f9f8f5;
+  }
+
+  .list-table th {
+      background-color: rgba(54, 86, 147, 0.5);
+      box-shadow: inset 0 -2px 0 0 #f9f8f5;
+  }
+
+  .form-row, .note {
+      border-color: currentColor;
+  }
+
+  .info-row > div {
+      border: none;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+  }
+
+  .info-row > div:not(.rating):before {
+      content: "";
+      position: absolute;
+      background: linear-gradient(to left, transparent, #c1cde6bb 0.5rem, #c1cde6bb 80%, transparent);
+      top: 0;
+      height: 1px;
+      left: 0;
+      right: -1rem;
+  }
+
+  .info-row > div:not(.rating):after {
+      content: "";
+      position: absolute;
+      background: linear-gradient(to bottom, transparent, #c1cde6bb 0.5rem, #c1cde6bb 80%, transparent);
+      right: 0;
+      width: 1px;
+      bottom: 0;
+      top: -1rem;
+  }
+
+  .info-row h4 {
+      font-weight: bold;
+      padding: 0.5rem 2rem;
+      border-top-right-radius: var(--puzzle-list-border-radius);
+      border: 2px solid #f9f8f5;
+      border-bottom: none;
+  }
+
+  .info-desc {
+      background-color: rgba(var(--primary-content-rgb), 0.8);
+      border: 2px solid #f9f8f5;
+      border-top: none;
+      flex-grow: 1;
+  }
+
+  .puzzles-list th {
+      padding-bottom: 0;
+  }
+
+  .puzzles-section {
+      position: relative;
+      background-color: rgba(var(--primary-content-rgb), 0.8);
+      /* Border-radius doesn't work because border-collapse is 'collapse' on the table. */
+  }
+
+  .puzzles-section tr:first-child td {
+      padding-top: 24px;
+  }
+
+  .puzzles-section tr:last-child td {
+      padding-bottom: 24px;
+  }
+
+  .puzzles-section td:last-child {
+      padding-right: 24px;
+  }
+
+  .puzzles-answer > :first-child {
+      border-bottom: 2px solid var(--secondary-content-color);
+  }
+
+  /* Used for META tag and SOLUTION buttons. */
+  .puzzles-new {
+      background-color: var(--button-background-color);
+      color: var(--button-text-color);
+  }
+
+  .puzzles-new:hover, a:hover .puzzles-new {
+      background-color: var(--button-hover-background-color);
+      color: var(--button-text-color);
+  }
+
+  .glitch::before {
+      background: rgba(255, 255, 255, 0.2);
+      color: #f9b4f5;
+  }
+
+  .glitch::after {
+      background: rgba(255, 255, 255, 0.2);
+      color: #f9c3c2;
+  }
+
+  nav {
+      position: relative;
+      z-index: 700;
+  }
+
+  #loop-reset {
+      animation: loop-show 1s 1;
+      position: fixed;
+      inset: 0;
+      background: radial-gradient(#000b, #0008);
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: rgb(249, 248, 245) /* same for all seasons */
+  }
+
+  @keyframes loop-show {
+      from { opacity: 0; filter: blur(1rem); }
+      to { opacity: 1; filter: none; }
+  }
+
+  #loop-reset:not(.loop-resetting) {
+      display: none;
+  }
+
+  .loop-resetting ~ .content {
+      transition: filter 1s;
+      filter: blur(1rem);
+  }
+
+  #loop-reset form {
+      text-align: center;
+  }
+
+  #loop-reset svg {
+      width: 720px;
+      height: 320px;
+      fill: none;
+      stroke: currentColor;
+  }
+
+  #loop-reset use {
+      stroke-width: 4;
+  }
+
+  #loop-reset path {
+      stroke-width: 8;
+  }
+
+  #loop-reset div {
+      font-size: 65px;
+      margin: -105px 0 45px 0;
+  }
+
+  #loop-reset table {
+      width: 500px;
+      margin: auto;
+  }
+
+  #loop-reset td {
+      border: none;
+  }
+
+  #loop-reset .btn {
+      width: 100%;
+      box-sizing: border-box;
+      text-align: center;
+      margin: 0;
+  }
+
+  div.top-right-actions a.team-name {
+      color: var(--top-tab-link-color);
+  }
+  
+  span.tray::before {
+      color: var(--tray-icon-color);
+      background-color: var(--tray-background-color);
+  }
+
+  input[type=text], input[type=password], input[type=email] {
+    /* Get rid of standardized-test styling. */
+    background: #0002;
+  }
+
+  main.solve-main {
+      padding: 1em;
+  }
+}
+
+@media screen and (min-width: 961px) {
+  .top-tabs {
+      border-bottom: 2px solid var(--decorative-line-color);
+      margin-bottom: 2.5rem;
+  }
+
+  .top-tabs a:before {
+      content: "";
+      position: absolute;
+      background: linear-gradient(to top, transparent, var(--decorative-line-color) 0.5rem, var(--decorative-line-color) 80%, transparent);
+      left: -1rem;
+      width: 1px;
+      bottom: -1rem;
+      top: 50%;
+  }
+
+  .top-tabs a:after {
+      content: "";
+      position: absolute;
+      background: linear-gradient(to top, transparent, var(--decorative-line-color) 0.5rem, var(--decorative-line-color) 80%, transparent);
+      right: -1rem;
+      width: 1px;
+      bottom: -1rem;
+      top: 50%;
+  }
+
+  .top-tabs a {
+      color: var(--top-tab-link-color);
+  }
+
+  #loop-indicator {
+      position: fixed;
+      left: 0;
+      top: -60px;
+      width: 60px;
+      height: calc(100vh + 60px);
+      fill: none;
+      stroke: #f9f8f5;
+      stroke-width: 2;
+      pointer-events: none;
+      z-index: 200;
+  }
+
+  #loop-timer {
+      position: fixed;
+      left: 0;
+      bottom: 0;
+      font-size: 4rem;
+      line-height: 4rem;
+      width: 60px;
+      text-align: center;
+      padding: 0.5rem 0;
+      white-space: pre;
+      font-family: Recursive, monospace;
+      pointer-events: none;
+      z-index: 200;
+  }
+
+  /* Make the actions easier to read over the background. */
+  div.top-right-actions {
+      background-color: rgba(var(--background-top-rgb), 0.8);
+      padding: 0.1em 0.3em;
+  }
+}
+
+/* Small screen styling */
+@media screen and (max-width: 960px) {
+  :root {
+      --background-image-yoffset: 100px;
+      --background-image-top-fade-yoffset: 200px;
+      --gradient-yoffset: 300px;
+  }
+
+  .tray:before {
+      background-color: var(--secondary-content-color);
+      box-shadow: 0px 5px var(--secondary-content-color); /* Kill the tiny line between the 2 sections. */
+  }
+
+  #tray-timer,
+  .tray:after {
+      color: var(--tray-icon-color);
+      background-image: 
+          linear-gradient(var(--tray-background-color), var(--tray-background-color)),
+          linear-gradient(to right, transparent, #c1cde6bb 20%, #c1cde6bb 80%, transparent);
+      background-size: 100% 48px, 100% 1px;
+      background-position: top, 0 48px;
+  }
+
+  .top-tabs a {
+      color: var(--tray-icon-color);
+  }
+
+  .top-tabs a:before, .top-tabs a:after {
+      content: initial;
+  }
+
+  .top-left-actions a {
+      background-color: var(--button-inverse-background-color);
+      color: var(--button-inverse-text-color);
+  }
+
+  .top-left-actions a:hover {
+      background-color: var(--button-inverse-hover-background-color);
+      color: var(--button-inverse-text-color);
+  }
+
+  .info-row > div:not(:first-child) {
+      margin-top: 1em;
+  }
+
+  #loop-indicator, #loop-timer {
+      display: none;
+  }
+}

@@ -1,0 +1,6 @@
+exif
+Flask
+grilops
+librosa
+pylcs
+z3-solver

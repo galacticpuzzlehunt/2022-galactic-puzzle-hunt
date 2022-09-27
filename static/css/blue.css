@@ -1,0 +1,441 @@
+@media screen {
+    html, .background-glitch {
+        background:
+            linear-gradient(to bottom, transparent 19px, #49669d 19px),
+            radial-gradient(circle at bottom right, transparent 60px, #49669d 60px, #49669d 62px, transparent 62px),
+            radial-gradient(circle at bottom left, transparent 60px, #49669d 60px, #49669d 62px, transparent 62px),
+            linear-gradient(to right, transparent 59px, #49669d 59px, #49669d 61px, transparent 61px),
+            linear-gradient(to bottom, transparent 59px, #49669d 59px, #49669d 61px, transparent 61px),
+            url(/static/images/paper-blue.png);
+        background-repeat: repeat-y, no-repeat, no-repeat, round, repeat, repeat;
+        background-size: 35px 30px, 60px 60px, 60px 60px, 120px 100%, 100% 120px, auto;
+        background-position: 15px 0, top left, top right, left, top, top;
+        background-attachment: fixed, scroll, scroll, scroll, scroll, scroll;
+        background-color: #365693;
+    }
+
+    body {
+        color: #f9f8f5;
+    }
+
+    h1, h2, h3, h4 {
+        color: #f9f8f5;
+    }
+
+    h1, h2, .form-row, .note, .info-row h4, .puzzles-answer > :first-child, #loop-timer, .loop-shade {
+        background: linear-gradient(to top left, transparent 40%, #c1cde6bb 40%, #c1cde6bb 50%, transparent 50%, transparent 90%, #c1cde6bb 90%);
+        background-size: 5px 5px;
+        background-attachment: fixed;
+        position: relative;
+    }
+
+    h1:not(#title1):before {
+        content: "";
+        position: absolute;
+        background: linear-gradient(to left, transparent, #c1cde6bb 0.5rem, #c1cde6bb 80%, transparent);
+        top: 0;
+        height: 1px;
+        left: 0;
+        right: -1rem;
+    }
+
+    h1:not(#title1):after {
+        content: "";
+        position: absolute;
+        background: linear-gradient(to bottom, transparent, #c1cde6bb 0.5rem, #c1cde6bb 80%, transparent);
+        right: 0;
+        width: 1px;
+        bottom: 0;
+        top: -1rem;
+    }
+
+    a {
+        color: #c1cde6;
+    }
+
+    a:hover, a:focus {
+        color: #f9f8f5;
+    }
+
+    input[type=text], input[type=password], input[type=email] {
+        background-image: url(/static/images/blank-blue.svg);
+        color: inherit;
+    }
+
+    .puzzle-main {
+        color: initial;
+    }
+
+    .puzzle-main a {
+        color: #365693;
+    }
+
+    .puzzle-main a:hover, .puzzle-main a:focus {
+        color: #49669d;
+    }
+
+    .puzzle-main-corner {
+        position: absolute;
+        width: 1rem;
+        height: 1rem;
+        padding: 0 1px 1px 0;
+        outline: 1px solid #c1cde6bb;
+        border-radius: 0.5rem;
+        margin: -0.5rem;
+        z-index: -1;
+    }
+
+    .puzzle-main-corner:before {
+        content: "";
+        position: absolute;
+        background: linear-gradient(to left, transparent, #c1cde6bb 0.5rem, #c1cde6bb 1.5rem, transparent);
+        top: 0.5rem;
+        left: -0.5rem;
+        right: -0.5rem;
+        height: 1px;
+    }
+
+    .puzzle-main-corner:after {
+        content: "";
+        position: absolute;
+        background: linear-gradient(to bottom, transparent, #c1cde6bb 0.5rem, #c1cde6bb 1.5rem, transparent);
+        left: 0.5rem;
+        top: -0.5rem;
+        bottom: -0.5rem;
+        width: 1px;
+    }
+
+    .puzzle-main-corner-1 { top: 0; left: 0; }
+    .puzzle-main-corner-2 { top: 0; right: 0; }
+    .puzzle-main-corner-3 { bottom: 0; left: 0; }
+    .puzzle-main-corner-4 { bottom: 0; right: 0; }
+
+    .btn {
+        color: #365693;
+        background-color: #c1cde6;
+    }
+
+    .btn:hover, .btn:focus {
+        color: #365693;
+        background-color: #f9f8f5;
+    }
+
+    .shortcuts {
+        border: 2px solid #f9f8f5;
+        background-color: #365693;
+    }
+
+    .list-table td {
+        border-color: #f9f8f5;
+    }
+
+    .list-table th {
+        background-color: rgba(54, 86, 147, 0.5);
+        box-shadow: inset 0 -2px 0 0 #f9f8f5;
+    }
+
+    .form-row, .note {
+        border-color: currentColor;
+    }
+
+    .info-row > div {
+        border: none;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .info-row > div:not(.rating):before {
+        content: "";
+        position: absolute;
+        background: linear-gradient(to left, transparent, #c1cde6bb 0.5rem, #c1cde6bb 80%, transparent);
+        top: 0;
+        height: 1px;
+        left: 0;
+        right: -1rem;
+    }
+
+    .info-row > div:not(.rating):after {
+        content: "";
+        position: absolute;
+        background: linear-gradient(to bottom, transparent, #c1cde6bb 0.5rem, #c1cde6bb 80%, transparent);
+        right: 0;
+        width: 1px;
+        bottom: 0;
+        top: -1rem;
+    }
+
+    .info-row h4 {
+        font-weight: bold;
+        padding: 0.5rem 2rem;
+        border-top-right-radius: 2em;
+        border: 2px solid #f9f8f5;
+        border-bottom: none;
+    }
+
+    .info-desc {
+        border: 2px solid #f9f8f5;
+        border-top: none;
+        flex-grow: 1;
+    }
+
+    .solved-title-marker {
+        color: #f9f8f5;
+    }
+
+    .solved-title-answer {
+        background-color: #4a2;
+        color: inherit;
+        padding: 0 0.5rem;
+    }
+
+    .puzzles-list th {
+        padding-bottom: 0;
+    }
+
+    .puzzles-section {
+        position: relative;
+    }
+
+    .puzzles-section:before {
+        content: "";
+        position: absolute;
+        background: linear-gradient(to left, transparent, #c1cde6bb 0.5rem, #c1cde6bb 80%, transparent);
+        bottom: 0;
+        height: 1px;
+        left: 0;
+        right: -1rem;
+    }
+
+    .puzzles-section:after {
+        content: "";
+        position: absolute;
+        background: linear-gradient(to top, transparent, #c1cde6bb 0.5rem, #c1cde6bb 80%, transparent);
+        right: 0;
+        width: 1px;
+        top: 0;
+        bottom: -1rem;
+    }
+
+    .puzzles-section tr:last-child:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        border: 2px solid #f9f8f5;
+        border-left: none;
+        border-bottom-right-radius: 2em;
+        z-index: -1;
+        pointer-events: none;
+    }
+
+    .puzzles-section tr:first-child td {
+        padding-top: 24px;
+    }
+
+    .puzzles-section tr:last-child td {
+        padding-bottom: 24px;
+    }
+
+    .puzzles-section td:last-child {
+        padding-right: 24px;
+    }
+
+    .puzzles-answer > :first-child {
+        border-bottom: 2px solid #f9f8f5;
+    }
+
+    .puzzles-new {
+        background-color: #c1cde6;
+        color: #365693;
+    }
+
+    .puzzles-new:hover, a:hover .puzzles-new {
+        background-color: #f9f8f5;
+        color: #365693;
+    }
+
+    .glitch::before {
+        background: #365693;
+        color: #f9b4f5;
+    }
+
+    .glitch::after {
+        background: #365693;
+        color: #f9c3c2;
+    }
+
+    nav {
+        position: relative;
+        z-index: 700;
+    }
+
+    #loop-reset {
+        animation: loop-show 1s 1;
+        position: fixed;
+        inset: 0;
+        background: radial-gradient(#000b, #0008);
+        z-index: 100;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    @keyframes loop-show {
+        from { opacity: 0; filter: blur(1rem); }
+        to { opacity: 1; filter: none; }
+    }
+
+    #loop-reset:not(.loop-resetting) {
+        display: none;
+    }
+
+    .loop-resetting ~ .content {
+        transition: filter 1s;
+        filter: blur(1rem);
+    }
+
+    #loop-reset form {
+        text-align: center;
+    }
+
+    #loop-reset svg {
+        width: 720px;
+        height: 320px;
+        fill: none;
+        stroke: currentColor;
+    }
+
+    #loop-reset use {
+        stroke-width: 4;
+    }
+
+    #loop-reset path {
+        stroke-width: 8;
+    }
+
+    #loop-reset div {
+        font-size: 65px;
+        margin: -105px 0 45px 0;
+    }
+
+    #loop-reset table {
+        width: 500px;
+        margin: auto;
+    }
+
+    #loop-reset td {
+        border: none;
+    }
+
+    #loop-reset .btn {
+        width: 100%;
+        box-sizing: border-box;
+        text-align: center;
+        margin: 0;
+    }
+}
+
+@media screen and (min-width: 961px) {
+    .top-tabs {
+        border-bottom: 2px solid #f9f8f5;
+        margin-bottom: 2.5rem;
+    }
+
+    .top-tabs a:before {
+        content: "";
+        position: absolute;
+        background: linear-gradient(to top, transparent, #c1cde6bb 0.5rem, #c1cde6bb 80%, transparent);
+        left: -1rem;
+        width: 1px;
+        bottom: -1rem;
+        top: 50%;
+    }
+
+    .top-tabs a:after {
+        content: "";
+        position: absolute;
+        background: linear-gradient(to top, transparent, #c1cde6bb 0.5rem, #c1cde6bb 80%, transparent);
+        right: -1rem;
+        width: 1px;
+        bottom: -1rem;
+        top: 50%;
+    }
+
+    #loop-indicator {
+        position: fixed;
+        left: 0;
+        top: -60px;
+        width: 60px;
+        height: calc(100vh + 60px);
+        fill: none;
+        stroke: #f9f8f5;
+        stroke-width: 2;
+        pointer-events: none;
+        z-index: 200;
+    }
+
+    #loop-timer {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        font-size: 4rem;
+        line-height: 4rem;
+        width: 60px;
+        text-align: center;
+        padding: 0.5rem 0;
+        white-space: pre;
+        font-family: Recursive, monospace;
+        pointer-events: none;
+        z-index: 200;
+    }
+}
+
+@media screen and (max-width: 960px) {
+    html, .background-glitch {
+        background-image:
+            linear-gradient(to right, transparent 59px, #49669d 59px, #49669d 61px, transparent 61px),
+            linear-gradient(to bottom, transparent 59px, #49669d 59px, #49669d 61px, transparent 61px);
+        background-repeat: round, repeat;
+        background-size: 120px 100%, 100% 120px;
+        background-position: left, top;
+        background-attachment: scroll, scroll;
+        background-color: #365693;
+    }
+
+    .tray:before {
+        background-color: #49669d;
+    }
+
+    #tray-timer,
+    .tray:after {
+        color: #c1cde6;
+        background-image:
+            linear-gradient(#49669d, #49669d),
+            linear-gradient(to right, transparent, #c1cde6bb 20%, #c1cde6bb 80%, transparent);
+        background-size: 100% 48px, 100% 1px;
+        background-position: top, 0 48px;
+    }
+
+    .top-tabs a:before, .top-tabs a:after {
+        content: initial;
+    }
+
+    .top-tabs .glitch::before {
+        background: #49669d;
+    }
+
+    .top-tabs .glitch::after {
+        background: #49669d;
+    }
+
+    .info-row > div:not(:first-child) {
+        margin-top: 1em;
+    }
+
+    #loop-indicator, #loop-timer {
+        display: none;
+    }
+}

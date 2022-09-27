@@ -1,0 +1,26 @@
+@media screen {
+  :root {
+      --background-image-url: url(/static/images/summer.jpg);
+      --background-top-rgb: 119, 184, 251;
+      --background-bottom-rgb: 101, 174, 250;
+
+      --primary-content-rgb: 249, 248, 245;
+      --secondary-content-rgb: 6, 94, 185; /* Make sure this has enough contrast with primary content rgb. */
+      --tertiary-content-rgb: 4, 69, 136;
+
+      --button-hover-background-color: rgb(8, 119, 235);
+      --button-inverse-hover-background-color: rgb(70, 158, 249);
+
+      --decorative-line-color: rgb(20, 132, 247);
+
+      /* Needs more aggressive fading. */
+      --background-image-top-fade-start-yoffset: 40px;
+  }
+}
+
+/* Small screen styling */
+@media screen and (max-width: 960px) {
+  :root {
+      --background-image-top-fade-start-yoffset: 100px;
+  }
+}

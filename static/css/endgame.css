@@ -1,0 +1,461 @@
+@media screen {
+    html, .background-glitch {
+        background:
+            linear-gradient(to bottom, transparent 19px, #444 19px),
+            radial-gradient(circle at bottom right, transparent 60px, #444 60px, #444 62px, transparent 62px),
+            radial-gradient(circle at bottom left, transparent 60px, #444 60px, #444 62px, transparent 62px),
+            linear-gradient(to right, transparent 59px, #444 59px, #444 61px, transparent 61px),
+            linear-gradient(to bottom, transparent 59px, #444 59px, #444 61px, transparent 61px);
+        background-repeat: repeat-y, no-repeat, no-repeat, round, repeat, repeat;
+        background-size: 35px 30px, 60px 60px, 60px 60px, 120px 100%, 100% 120px, auto;
+        background-position: 15px 0, top left, top right, left, top, top;
+        background-attachment: fixed, scroll, scroll, scroll, scroll, scroll;
+        background-color: #222;
+    }
+
+    body {
+        color: #fffff0;
+    }
+
+    h1, h2, h3, h4 {
+        color: #fffff0;
+    }
+
+    h1, h2, .form-row, .note, .info-row h4, .puzzles-answer > :first-child, #loop-timer, .loop-shade {
+        background: #fffff011;
+    }
+
+    a {
+        color: #fffcb0;
+    }
+
+    a:hover, a:focus {
+        color: #f6e05e;
+    }
+
+    .energy-nodes-info {
+        text-align: center;
+        margin: 40px auto;
+        width: fit-content;
+        padding: 20px;
+        position: relative;
+        background: #fffff011;
+        border: 2px solid #ecc94b;
+        border-radius: 0 20px 0 20px;
+    }
+
+    .energy-nodes-info:before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        border: 2px solid #ecc94b;
+        border-radius: 0 20px 0 20px;
+        z-index: -1;
+        animation: pulsate 3s infinite ease-out;
+    }
+
+    .energy-nodes-info > a {
+        font-size: 150%;
+        font-weight: bold;
+        text-decoration: none;
+        fill: #ecc94b;
+        color: #ecc94b;
+        line-height: 1.2;
+        transition: color 0.3s, fill 0.3s;
+    }
+
+    .energy-nodes-info > a:hover {
+        fill: #fffcb0;
+        color: #fffcb0;
+    }
+
+    @keyframes pulsate {
+      0% { inset: 0; opacity: 0; }
+      29.9% { inset: 0; opacity: 0; }
+      30% { inset: 0; opacity: 1; border-radius: 0 20px 0 20px; }
+      80% { inset: -25px; border-radius: 0 45px 0 45px; }
+      100% { inset: -30px; opacity: 0; border-radius: 0 50px 0 50px; }
+    }
+
+    input[type=text], input[type=password], input[type=email] {
+        background-image: url(/static/images/blank-blue.svg);
+        color: inherit;
+    }
+
+    .puzzle-main {
+        color: initial;
+    }
+
+    .puzzle-main a {
+        color: #5f370e;
+    }
+
+    .puzzle-main a:hover, .puzzle-main a:focus {
+        color: #744210;
+    }
+
+    .puzzle-main-corner {
+        position: absolute;
+        width: 1rem;
+        height: 1rem;
+        padding: 0 1px 1px 0;
+        outline: 1px solid #fffcb0bb;
+        border-radius: 0.5rem;
+        margin: -0.5rem;
+        z-index: -1;
+    }
+
+    .puzzle-main-corner:before {
+        content: "";
+        position: absolute;
+        background: linear-gradient(to left, transparent, #fffcb0bb 0.5rem, #fffcb0bb 1.5rem, transparent);
+        top: 0.5rem;
+        left: -0.5rem;
+        right: -0.5rem;
+        height: 1px;
+    }
+
+    .puzzle-main-corner:after {
+        content: "";
+        position: absolute;
+        background: linear-gradient(to bottom, transparent, #fffcb0bb 0.5rem, #fffcb0bb 1.5rem, transparent);
+        left: 0.5rem;
+        top: -0.5rem;
+        bottom: -0.5rem;
+        width: 1px;
+    }
+
+    .puzzle-main-corner-1 { top: 0; left: 0; }
+    .puzzle-main-corner-2 { top: 0; right: 0; }
+    .puzzle-main-corner-3 { bottom: 0; left: 0; }
+    .puzzle-main-corner-4 { bottom: 0; right: 0; }
+
+    .btn {
+        color: #5f380e;
+        background-color: #fffcb0;
+    }
+
+    .btn:hover, .btn:focus {
+        color: #5f380e;
+        background-color: #fffff0;
+    }
+
+    .shortcuts {
+        border: 2px solid #fffff0;
+        background-color: #5f380e;
+    }
+
+    .list-table td {
+        border-color: #fffff0;
+    }
+
+    .list-table th {
+        background-color: rgba(54, 86, 147, 0.5);
+        box-shadow: inset 0 -2px 0 0 #fffff0;
+    }
+
+    .form-row, .note {
+        border-color: currentColor;
+    }
+
+    .info-row > div {
+        border: none;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .info-row > div:not(.rating):before {
+        content: "";
+        position: absolute;
+        background: linear-gradient(to left, transparent, #fffcb0bb 0.5rem, #fffcb0bb 80%, transparent);
+        top: 0;
+        height: 1px;
+        left: 0;
+        right: -1rem;
+    }
+
+    .info-row > div:not(.rating):after {
+        content: "";
+        position: absolute;
+        background: linear-gradient(to bottom, transparent, #fffcb0bb 0.5rem, #fffcb0bb 80%, transparent);
+        right: 0;
+        width: 1px;
+        bottom: 0;
+        top: -1rem;
+    }
+
+    .info-row h4 {
+        font-weight: bold;
+        padding: 0.5rem 2rem;
+        border-top-right-radius: 2em;
+        border: 2px solid #fefcbf;
+        border-bottom: none;
+    }
+
+    .info-desc {
+        border: 2px solid #fefcbf;
+        border-top: none;
+        flex-grow: 1;
+    }
+
+    .solved-title-marker {
+        color: #fffff0;
+    }
+
+    .solved-title-answer {
+        background-color: #4a2;
+        color: inherit;
+        padding: 0 0.5rem;
+    }
+
+    .puzzles-list th {
+        padding-bottom: 0;
+    }
+
+    .puzzles-section {
+        position: relative;
+    }
+
+    .puzzles-section:before {
+        content: "";
+        position: absolute;
+        background: linear-gradient(to left, transparent, #fffcb0bb 0.5rem, #fffcb0bb 80%, transparent);
+        bottom: 0;
+        height: 1px;
+        left: 0;
+        right: -1rem;
+    }
+
+    .puzzles-section:after {
+        content: "";
+        position: absolute;
+        background: linear-gradient(to top, transparent, #fffcb0bb 0.5rem, #fffcb0bb 80%, transparent);
+        right: 0;
+        width: 1px;
+        top: 0;
+        bottom: -1rem;
+    }
+
+    .puzzles-section tr:last-child:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        border: 2px solid #fffff0;
+        border-left: none;
+        border-bottom-right-radius: 2em;
+        z-index: -1;
+        pointer-events: none;
+    }
+
+    .puzzles-section tr:first-child td {
+        padding-top: 24px;
+    }
+
+    .puzzles-section tr:last-child td {
+        padding-bottom: 24px;
+    }
+
+    .puzzles-section td:last-child {
+        padding-right: 24px;
+    }
+
+    .puzzles-answer > :first-child {
+        border-bottom: 2px solid #fffff0;
+    }
+
+    .puzzles-new {
+        background-color: #fffcb0;
+        color: #5f380e;
+    }
+
+    .puzzles-new:hover, a:hover .puzzles-new {
+        background-color: #fffff0;
+        color: #5f380e;
+    }
+
+    .glitch::before {
+        background: #5f380e;
+        color: #c4f1f9;
+    }
+
+    .glitch::after {
+        background: #5f380e;
+        color: #fed7e2;
+    }
+
+    nav {
+        position: relative;
+        z-index: 700;
+    }
+
+    #loop-reset {
+        animation: loop-show 1s 1;
+        position: fixed;
+        inset: 0;
+        background: radial-gradient(#000b, #0008);
+        z-index: 100;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    @keyframes loop-show {
+        from { opacity: 0; filter: blur(1rem); }
+        to { opacity: 1; filter: none; }
+    }
+
+    #loop-reset:not(.loop-resetting) {
+        display: none;
+    }
+
+    .loop-resetting ~ .content {
+        transition: filter 1s;
+        filter: blur(1rem);
+    }
+
+    #loop-reset form {
+        text-align: center;
+    }
+
+    #loop-reset svg {
+        width: 720px;
+        height: 320px;
+        fill: none;
+        stroke: currentColor;
+    }
+
+    #loop-reset use {
+        stroke-width: 4;
+    }
+
+    #loop-reset path {
+        stroke-width: 8;
+    }
+
+    #loop-reset div {
+        font-size: 65px;
+        margin: -105px 0 45px 0;
+    }
+
+    #loop-reset table {
+        width: 500px;
+        margin: auto;
+    }
+
+    #loop-reset td {
+        border: none;
+    }
+
+    #loop-reset .btn {
+        width: 100%;
+        box-sizing: border-box;
+        text-align: center;
+        margin: 0;
+    }
+}
+
+@media screen and (min-width: 961px) {
+    .top-tabs {
+        border-bottom: 2px solid #fffff0;
+        margin-bottom: 2.5rem;
+    }
+
+    .top-tabs a:before {
+        content: "";
+        position: absolute;
+        background: linear-gradient(to top, transparent, #fffcb0bb 0.5rem, #fffcb0bb 80%, transparent);
+        left: -1rem;
+        width: 1px;
+        bottom: -1rem;
+        top: 50%;
+    }
+
+    .top-tabs a:after {
+        content: "";
+        position: absolute;
+        background: linear-gradient(to top, transparent, #fffcb0bb 0.5rem, #fffcb0bb 80%, transparent);
+        right: -1rem;
+        width: 1px;
+        bottom: -1rem;
+        top: 50%;
+    }
+
+    #loop-indicator {
+        position: fixed;
+        left: 0;
+        top: -60px;
+        width: 60px;
+        height: calc(100vh + 60px);
+        fill: none;
+        stroke: #fffff0;
+        stroke-width: 2;
+        pointer-events: none;
+        z-index: 200;
+    }
+
+    #loop-timer {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        font-size: 4rem;
+        line-height: 4rem;
+        width: 60px;
+        text-align: center;
+        padding: 0.5rem 0;
+        white-space: pre;
+        font-family: Recursive, monospace;
+        pointer-events: none;
+        z-index: 200;
+    }
+}
+
+@media screen and (max-width: 960px) {
+    html, .background-glitch {
+        background-image:
+            linear-gradient(to right, transparent 59px, #444 59px, #444 61px, transparent 61px),
+            linear-gradient(to bottom, transparent 59px, #444 59px, #444 61px, transparent 61px);
+        background-repeat: round, repeat;
+        background-size: 120px 100%, 100% 120px;
+        background-position: left, top;
+        background-attachment: scroll, scroll;
+        background-color: #222;
+    }
+
+    .tray:before {
+        background-color: #444;
+    }
+
+    #tray-timer,
+    .tray:after {
+        color: #fffcb0;
+        background-image:
+            linear-gradient(#444, #444),
+            linear-gradient(to right, transparent, #fffcb0bb 20%, #fffcb0bb 80%, transparent);
+        background-size: 100% 48px, 100% 1px;
+        background-position: top, 0 48px;
+    }
+
+    .top-tabs a:before, .top-tabs a:after {
+        content: initial;
+    }
+
+    .top-tabs .glitch::before {
+        background: #744210;
+    }
+
+    .top-tabs .glitch::after {
+        background: #744210;
+    }
+
+    .info-row > div:not(:first-child) {
+        margin-top: 1em;
+    }
+
+    #loop-indicator, #loop-timer {
+        display: none;
+    }
+}

@@ -1,0 +1,1093 @@
+
+
+
+
+
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    
+<title>Nobody Knows What Your Perfect Puzzle Is, But You Will After Answering These Nine Questions</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=0.5">
+    <meta property="og:title" content="Galactic Puzzle Hunt 2022">
+    <meta property="og:description" content="Registration for this year's Galactic Puzzle Hunt is now open!">
+    <meta property="og:image" content="https://galacticpuzzlehunt.com/static/images/banner.png">
+    <meta property="twitter:card" content="summary_large_image">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Recursive:slnt,CASL,CRSV,MONO@-3,0.5,1,1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/skeleton.css">
+    <link rel="stylesheet" href="/static/css/base.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.19/jquery.touchSwipe.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.formset/1.2.2/jquery.formset.min.js"></script>
+    <script src="/jsi18n/"></script>
+    <script src="/static/js/sorttable.js"></script>
+    <script src="/static/js/tray.js"></script>
+    <script src="/static/js/notify.js"></script>
+    <script src="/static/js/time.js"></script>
+    
+    
+    <link rel="icon" sizes="16x16 32x32 48x48 64x64" href="/static/images/favicon.ico" type="image/vnd.microsoft.icon">
+    
+    
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-92192633-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-92192633-1');
+</script>
+
+</head>
+<body>
+    
+    <div id="background-glitch-wrapper" class="background-glitch">
+        <div class="glitch-1"></div>
+        <div class="glitch-2"></div>
+        <div class="glitch-3"></div>
+    </div>
+    
+    
+    <input id="shortcuts" type="checkbox">
+    
+    <nav>
+        <span class="tray">
+            <span id="tray-timer"></span>
+            <div class="top-tabs">
+                <a href="/">
+                    Home
+                </a>
+                
+                <a href="/rules">
+                    Rules
+                </a>
+                
+                
+                <a href="/story">
+                    Story
+                </a>
+                
+                
+                <a class="selected-tab" href="/puzzles">
+                    Puzzles
+                </a>
+                
+                <a href="/teams">
+                    Teams
+                </a>
+                
+                <a href="/faq">
+                    FAQ
+                </a>
+                
+                
+                <a href="/errata">
+                    Updates
+                </a>
+                
+                
+                <a href="/wrapup">
+                    Wrap-Up
+                </a>
+                
+                
+                <a href="https://galacticpuzzlehunt.com/archive">
+                    Archive
+                </a>
+                
+                
+                
+            </div>
+            <div class="top-left-actions">
+                
+
+
+
+
+<a href="/post-hunt-solve/your-puzzle" class="btn">Check your answer spoiler-free</a>
+
+
+
+<a href="/solution/your-puzzle" class="btn">View solution</a>
+<a href="/stats/your-puzzle" class="btn">Stats</a>
+
+
+            </div>
+        </span>
+        <div class="top-right-actions">
+        
+        
+        </div>
+    </nav>
+    
+    
+    
+    
+    
+    <script>
+
+    
+    
+    let glitchTriggerFuncs = [];
+    let glitchTriggerReceived = false;
+    let glitchTriggerExReceived = false;
+    let glitchPageLoaded = false;
+    function processGlitchFuncs(ex) {
+        glitchTriggerFuncs.forEach((func) => {
+            func(ex);
+        });
+    }
+    function doGlitch(ex) {
+        glitchTriggerReceived = true;
+        if (ex) {
+            glitchTriggerExReceived = true;
+        }
+        if (glitchPageLoaded) {
+            processGlitchFuncs(ex);
+        }
+    }
+    window.addEventListener('load', () => {
+        glitchPageLoaded = true;
+        if (glitchTriggerExReceived) {
+            processGlitchFuncs(true);
+        }
+        else if (glitchTriggerReceived) {
+            processGlitchFuncs(false);
+        }
+    }, false);
+    
+    
+    
+    function registerOnGlitchHook(func) {
+        if (glitchTriggerExReceived) {
+            func(true);
+        }
+        else if (glitchTriggerReceived) {
+            func(false);
+        }
+        glitchTriggerFuncs.push(func);
+    }
+    
+
+    
+    
+    </script>
+    <div class="content">
+        
+
+<h1>
+    Nobody Knows What Your Perfect Puzzle Is, But You Will After Answering These Nine Questions
+    
+    
+</h1>
+
+
+
+<main class="puzzle-main clipboard-container">
+    
+    
+    
+    <script src="/static/puzzle_resources/your-puzzle/your-puzzle.js"></script>
+<style>
+    @font-face{
+        font-family: 'Andika';
+        src: url(/static/puzzle_resources/your-puzzle/AndikaPhon-R.woff)
+            format('woff');
+    }
+
+    .ipa {
+        font-family: 'Andika', serif;
+    }
+    /* big radio buttons */
+    input[type=radio] {
+        float: left;
+        width: 20px;
+        height: 20px;
+        margin: 4px 0 0 5px;
+        appearance: none;
+        border: 0px solid #696d6b;
+        border-radius: 50%;
+        outline: 2px solid #087;
+        background-color: white;
+        background-image: radial-gradient(circle at center, #696d6b 30%, transparent 35%);
+        background-size: 0 0;
+        background-position: 50% 50%;
+        background-repeat: no-repeat;
+        transition: background-size 0.2s, border-width 0.5s, background-color 0.5s;
+    }
+
+    input[type=radio]:hover {
+        outline: 2px solid #0a9;
+        background-size: 100% 100%;
+        /* border: 9px solid white; */
+        /* background-color: #696d6b; */
+    }
+
+
+    input[type=radio]:checked {
+        background-size: 250% 250%;
+        /* border: 9px solid #696d6b;
+        background-color: #696d6b; */
+    }
+
+    /* input[type=radio]:checked.wrong {
+        border: 9px solid rgb(203, 58, 94);
+        background-color: rgb(203, 58, 94);
+    } */
+
+    input[type=radio]:disabled.wrong {
+        outline: 2px solid rgb(203, 58, 94);
+        border: 9px solid rgb(212, 142, 160);
+        background-color: rgb(212, 142, 160);
+    }
+
+    input[type=radio]:disabled.wrong:before {
+        /* outline: 2px solid rgb(203, 58, 94);
+        border: 9px solid rgb(212, 142, 160);
+        background-color: rgb(212, 142, 160); */
+        /* position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0; */
+        display: flex;
+        transform: translate(0, -50%);
+        align-items: center;
+        flex-direction: column;
+        font-size: 1rem;
+        content: "\274c";
+    }
+
+
+    input[type=checkbox].confirm {
+        float: left;
+        width: 20px;
+        height: 20px;
+        margin: 4px 0 0 5px;
+        /* outline: 2px solid #087; */
+        /* border: 0px solid #087; */
+        /* border-radius: 50%; */
+        accent-color: #087;
+    }
+
+
+    .qa {
+        margin: 2rem 0 3rem;
+    }
+
+    .question {
+        font-weight: bold;
+        margin: 1rem 0;
+    }
+/* 
+    .answers {
+        display: flex;
+        flex-direction: column;
+    } */
+
+    label{
+        /* margin-left: 30px; */
+        /* vertical-align: baseline; */
+        /* display: block; */
+        font-weight: normal;
+        /* line-height: 0.1rem; */
+        margin: 0 0 1rem 35px;
+    }
+
+    .special {
+        margin-left: 2rem;
+    }
+
+    td {
+        vertical-align: top;
+    }
+
+    code {
+        color: rgb(208, 63, 34);
+        font-size: 1.8rem;
+    }
+
+    .fourthwall {
+        background-color: white;
+        padding: 10px;
+        border: dashed 2px blue;;
+    }
+
+    input[type=checkbox].expando-toggle {
+        display: none;
+    }
+
+    .expando-header {
+        margin: 0;
+        background-color: #f9f8f5;
+        cursor: pointer;
+        transition: 0.25s;
+    }
+
+    .expando-header:hover {
+        background-color: #c3dcce;
+    }
+
+    .expando-content {
+        max-height: 0px;
+        overflow: hidden;
+    }
+
+    .expando-header h3::before{
+        content: '▶';
+    }
+
+    .expando-toggle:checked + .expando-header h3::before{
+        content: '▼';
+    }
+
+    .expando-toggle:checked + .expando-header + .expando-content {
+        max-height: 100%;
+    }
+
+    .disabled {
+        color: rgb(149, 150, 149);
+        pointer-events: none;
+        user-select: none;
+    }
+
+    #warn {
+        position: fixed;
+        bottom: 10%;
+        right: 12px;
+        min-width: 20%;
+        max-width: 30%;
+        min-height: 40px;
+        padding: 10px;
+        background-color: #087;
+        color: white;
+        border-radius: 5px;
+
+        opacity: 0;
+        transition: 0.2s;
+    }
+
+    #submit {
+        margin: auto;
+        width: 150px;
+    }
+
+    .submit.btn {
+        transition: background-color 0.3s;
+        color: #f9f8f5;
+        background-color: #087;
+        width: 150px;
+        border: none;
+        border-radius: 0%;
+        font-weight: normal;
+    }
+
+    .submit.btn.incomplete {
+        background-color: rgb(157, 159, 159);
+        pointer-events: all;
+    }
+
+    .submit.btn:hover,
+    .submit.btn:focus {
+        color: #f9f8f5;
+        background-color: #3ba;
+    }
+
+    .submit.btn.incomplete:hover,
+    .submit.btn.incomplete:focus {
+        background-color: rgb(157, 159, 159);
+    }
+
+    .submit.btn.disabled {
+        pointer-events: none;
+    }
+
+    #static-buttons {
+        display: none;
+        justify-content: space-between;
+    }
+
+    #static-buttons button {
+        visibility: hidden;
+    }
+
+    #sec2 .puzzle {
+        display: none;
+    }
+
+    #copyjack {
+        display: none;
+    }
+
+</style>
+<div id="static-buttons"><button id="yp-reset" class="btn" onclick="reset()">Reset quiz</button><button id="yp-wipe" class="btn danger" onclick="wipe()">Delete progress</button></div>
+
+<p class="flavor">Are you writing an exam that just isn&rsquo;t your style? After you take this short quiz, you&rsquo;ll get a puzzle suited to your puzzle tastes.</p>
+<div id="yp-note" class="note"></div>
+<div class="expando"><input id="expando" class="expando-toggle" type="checkbox" checked><label for="expando" class="expando-header"><h3>&nbsp;Section 1.  Multiple Choice (9 questions)</h3></label><div class="expando-content"><form id="your-puzzle-form" action="javascript:void(0);" autocomplete="off"><input type="hidden" name="csrfmiddlewaretoken" value="0leRteZXp3JmxyZCRCwAJB15DFos5rlDcMR6cVr3YeiCwjwV8wvp09t0zSb9Bkyv"><div class="qa" id="q1"><div class="question">
+                    1. What&rsquo;s your favourite part of a puzzlehunt?
+                </div><div class="answers"><input type="radio" name="q1" value="1" id="q1-1" required><label for="q1-1">
+                        GOING FAST
+                    </label><input type="radio" name="q1" value="2" id="q1-2"><label for="q1-2">
+                        Surprises in puzzles, story, and design
+                    </label><input type="radio" name="q1" value="3" id="q1-3"><label for="q1-3">
+                        Unlocking a puzzle catered to my extremely niche interest
+                    </label><input type="radio" name="q1" value="4" id="q1-4"><label for="q1-4">
+                        Having fun with my teammates
+                    </label></div></div><div class="qa" id="q2"><div class="question">
+                    2. What best describes your experience with puzzlehunts?
+                </div><div class="answers"><input type="radio" name="q2" value="1" id="q2-1" required><label for="q2-1">
+                        It&rsquo;s all very new to me! I know every puzzle has an answer, does that count?
+                    </label><input type="radio" name="q2" value="2" id="q2-2"><label for="q2-2">
+                        I&rsquo;m a novice — I know that a number <em>n</em> often means either an enumeration (something <em>n</em> characters long), or an index (taking the <em>nth</em> letter)
+                    </label><input type="radio" name="q2" value="3" id="q2-3"><label for="q2-3">
+                        I can handle some puzzles, and I&rsquo;ve even solved a meta or two
+                    </label><input type="radio" name="q2" value="4" id="q2-4"><label for="q2-4">
+                        I&rsquo;m ready to cheese your metas, and backsolve the rest
+                    </label><input type="radio" name="q2" value="5" id="q2-5"><label for="q2-5">
+                        ↈ ROMAN NUMERAL MY MIT MYSTERY HUNT COIN COLLECTION
+                    </label></div></div><div class="qa" id="q3"><div class="question">
+                    3. You&rsquo;re now a puzzle expert. What&rsquo;s your superpower?
+                </div><div class="answers"><input type="radio" name="q3" value="1" id="q3-1" required><label for="q3-1">
+                        Gridless Printer&rsquo;s Devilry anagrind Flats
+                    </label><input type="radio" name="q3" value="2" id="q3-2"><label for="q3-2">
+                        Double Liar Cipher Dosufuwa-Like Slalom
+                    </label><input type="radio" name="q3" value="3" id="q3-3"><label for="q3-3">
+                        Using ARRAYFORMULA, I can find eigenletters of all ordered and unordered sets known to mankind
+                    </label><input type="radio" name="q3" value="4" id="q3-4"><label for="q3-4">
+                        Yandex crop RIS didn&rsquo;t work? I&rsquo;ll try context aware inpainting first, or maybe I&rsquo;ll just 3D model it in Minecraft
+                    </label><input type="radio" name="q3" value="5" id="q3-5"><label for="q3-5"><span class="ipa">/ɰäˑkʷʰːɯ̟ᵝꜛɰa̠̞kʰɯ̥/</span></label></div></div><div class="qa" id="q4"><div class="question">
+                    4. What is a logic puzzle?
+                </div><div class="answers"><input type="radio" name="q4" value="1" id="q4-1" required><label for="q4-1">
+                        An Einstein puzzle, like Q is lying in the blue house eating tofu and W is in the Reliant Robin speaking Bengali
+                    </label><input type="radio" name="q4" value="2" id="q4-2"><label for="q4-2">
+                        A grid puzzle with number or shape clues, like Sudoku, Slitherlink, Nurikabe, Tapa, Fillomino, Country Road...
+                    </label><input type="radio" name="q4" value="3" id="q4-3"><label for="q4-3">
+                        An open ended engineering game often about optimizing the number of steps in your solution, like Baba Is You or Opus Magnum
+                    </label><input type="radio" name="q4" value="4" id="q4-4"><label for="q4-4">
+                        A detailed list of constraints and instructions that must be carefully followed to the letter to discover that we end up in a landlocked country in West Africa
+                    </label><input type="radio" name="q4" value="5" id="q4-5"><label for="q4-5">
+                        Something I&rsquo;m not interested in
+                    </label></div></div><div class="qa" id="q5"><div class="question">
+                    5. When do you start putting letters into <a href="https://nutrimatic.org/" target="_blank" rel="noopener noreferrer">Nutrimatic</a>?
+                </div><div class="answers"><input type="radio" name="q5" value="1" id="q5-1" required><label for="q5-1">
+                        What&rsquo;s Nutrimatic?
+                    </label><input type="radio" name="q5" value="2" id="q5-2"><label for="q5-2">
+                        I solve every clue for that 100% feeling, no WoFing allowed
+                    </label><input type="radio" name="q5" value="3" id="q5-3"><label for="q5-3">
+                        Around half the letters
+                    </label><input type="radio" name="q5" value="4" id="q5-4"><label for="q5-4"><code>AAAAAAAAAAeA*</code></label><input type="radio" name="q5" value="5" id="q5-5"><label for="q5-5">
+                        I only use <a href="https://www.quinapalus.com/qat.html" target="_blank" rel="noopener noreferrer">Qat</a></label></div></div><div class="qa" id="q6"><div class="question">
+                    6. How much effort do you like to spend solving puzzles?
+                </div><div class="answers"><input type="radio" name="q6" value="1" id="q6-1" required><label for="q6-1">
+                        Zero
+                    </label><input type="radio" name="q6" value="2" id="q6-2"><label for="q6-2">
+                        I like to get the insight and make my teammates do all the work
+                    </label><input type="radio" name="q6" value="3" id="q6-3"><label for="q6-3">
+                        I&rsquo;m fine with grunt work, but I&rsquo;m not great at insights/extraction
+                    </label><input type="radio" name="q6" value="4" id="q6-4"><label for="q6-4">
+                        I&rsquo;ll spend every waking moment solving (what is sleep?)
+                    </label></div></div><div class="qa" id="q7"><div class="question">
+                    7. What&rsquo;s the optimal number of people working on a puzzle?
+                </div><div class="answers"><input type="radio" name="q7" value="1" id="q7-1" required><label for="q7-1">
+                        1: THIS IS MY PUZZLE, NO ONE ELSE TOUCH IT (claimed offline, last update 3 hours ago)
+                    </label><input type="radio" name="q7" value="2" id="q7-2"><label for="q7-2">
+                        2–3: The sweet spot of productivity
+                    </label><input type="radio" name="q7" value="3" id="q7-3"><label for="q7-3">
+                        4+: Many hands make grunt work!
+                    </label></div></div><div class="qa" id="q8"><div class="question">
+                    8. What &ldquo;generation&rdquo; of puzzles matches your interests?
+                </div><div class="answers"><input type="radio" name="q8" value="1" id="q8-1" required><label for="q8-1">
+                        Jigsaws and knitting
+                    </label><input type="radio" name="q8" value="2" id="q8-2"><label for="q8-2">
+                        Crosswords, armchair treasure hunts, and the NPL
+                    </label><input type="radio" name="q8" value="3" id="q8-3"><label for="q8-3">
+                        Advanced math or programming
+                    </label><input type="radio" name="q8" value="4" id="q8-4"><label for="q8-4">
+                        Interactive games and escape rooms
+                    </label><input type="radio" name="q8" value="5" id="q8-5"><label for="q8-5">
+                        Mazes, word searches, and Connect the Dots
+                    </label></div></div><div class="qa" id="q9"><div class="question">
+                    9. You have a list of identified information. How do you sort and index into these clues?
+                </div><div class="answers"><table class="special"><tr><td><div class="question"><strong>Sort by:</strong></div><input type="radio" name="q9a" value="1" id="q9a-1" class="wrong" required><label for="q9a-1">
+                                    Alphabetic order
+                                </label><input type="radio" name="q9a" value="2" id="q9a-2"><label for="q9a-2">
+                                    Length (of each clue&rsquo;s alphabetic characters, removing spaces)
+                                </label><input type="radio" name="q9a" value="3" id="q9a-3" class="wrong"><label for="q9a-3">
+                                    Look for any sign of numbers or just make stuff up
+                                </label><input type="radio" name="q9a" value="4" id="q9a-4" class="wrong"><label for="q9a-4">
+                                    Randomly Google the information until you find some chronological data or canonical ordering
+                                </label></td><td><div class="question"><strong>Index:</strong></div><input type="radio" name="q9b" value="1" id="q9b-1" required><label for="q9b-1">
+                                    First letters
+                                </label><input type="radio" name="q9b" value="2" id="q9b-2" class="wrong"><label for="q9b-2">
+                                    Diagonalize (1st letter of 1st clue, 2nd letter of 2nd clue, etc.)
+                                </label><input type="radio" name="q9b" value="3" id="q9b-3" class="wrong"><label for="q9b-3">
+                                    Last letters
+                                </label><input type="radio" name="q9b" value="4" id="q9b-4" class="wrong"><label for="q9b-4">
+                                    Look for any sign of numbers and try A1Z26, or character codes (add 64 to the number and convert to ASCII)
+                                </label></td></tr></table></div></div><div class="question"><strong>Team Acknowledgement</strong></div><input id="confirm" class="confirm" type="checkbox" name="confirm" required><label for="confirm"><em>Our team understands that we can only submit this quiz <span class="glitch" data-text="once">once</span>, and that our choices cannot be changed after pressing submit.</em></label><div id="warn"></div><div id="submit"><button id="submit-btn" class="submit btn incomplete">Submit</button></div></form></div></div>
+
+<h3><span id="sec2-header" class="expando">▼</span> Section 2. Short Answer (1 puzzle)</h3>
+<div id="sec2"><p class="text flavor">Submit section 1 first!</p><div class="puzzle alicebob copy"><style>
+    code {
+        color: rgb(208, 63, 34);
+        font-size: 1.8rem;
+    }
+
+    .img img {
+        display: block;
+        margin: auto;
+    }
+</style><div class="clipboard-container"><p class="flavor">
+        You&rsquo;d love a conundrum: a long list of instructions you have to carefully follow in order to get the answer!<br>
+        Your teammate says, &ldquo;I already spent the last eight hours on this puzzle, just check my sheet. I know that Bob is on the far right...&rdquo;<br>
+        Their sheet is incomprehensible, and no one wants to check their work.
+    </p><p><strong>Alice</strong> sends a message to <strong>Bob</strong>: <code>Hello, I&rsquo;m Alice!</code></p><p>Oh no! Some interlopers are between Alice and Bob, who modify the message, and instead of Alice&rsquo;s name, Bob ends up receiving <strong>the answer to the puzzle</strong> instead.</p><p>All messages start with <code>Hello, I&rsquo;m</code>. Messages are case-insensitive and ignore all non-alphabetic characters.</p><p>Every message is sent to the person immediately to the right of the sender, and only that person.</p><p>Interlopers are all in a line, receive the message from their left, modify the message, and send the modified message to their right.</p><p>Correctly order the interlopers to find out what message Bob received!</p><div class="img"><img src="/static/puzzle_resources/your-puzzle/alicebob.png"></div><p><strong>Interlopers:</strong></p><ul><li><strong>Count von Count</strong> counts the number of &lsquo;count&rsquo;s in his name, and inserts that number, spelled out in English, after <code>Hello, I&rsquo;m</code>, but before the rest of the message. </li><li><strong>Eve</strong> overhears the message, records it on her cold storage blockchain wallet, and retransmits the message unmodified. </li><li><strong>Mallory</strong> makes sure every <code>L</code> in the message is paired, adding one <code>L</code> to any odd length sequence of consecutive <code>L</code>s. </li><li><strong>Monkey</strong> randomly hits keys on their keyboard, appending an infinite number of random characters to the message. </li><li><strong>Sunny</strong> melts (deletes) <code>ICE</code> in the message as well as everything after <code>ICE</code>.
+        </li><li><strong>Zero</strong> looks for a written number in the message, and thinks of that number. She inserts the number one less than the number she&rsquo;s thinking of, spelled out in English, one letter after <code>Hello, I&rsquo;m</code> in the message. Hey, the length of the message is now the number she&rsquo;s thinking of to the power of four!</li><li><strong>Zulu</strong> moves the fourth last letter in the message x characters to the left and replaces it with y, where x is the length of the NATO phonetic alphabet codeword for that letter, and y is the next letter in that codeword.
+            <ul><li>(Example: if the fourth last letter is B, move it 5 characters left and replace it with R, as in BRAVO).</li></ul></li></ul><p><strong>Order:</strong>&nbsp;<em>(before = left, after = right)</em></p><ul><li><strong>Count von Count</strong> is (at most the number of &lsquo;count&rsquo;s in his name)th, among the interlopers, from the left.</li><li><strong>Eve</strong> is second among the interlopers.</li><li><strong>Mallory</strong> is not fourth or fifth.</li><li><strong>Monkey</strong> is right after Mallory, but not last.</li><li><strong>Sunny</strong> is before the person after him, and after the person before him.</li><li><strong>Zero</strong> isn&rsquo;t last either.</li><li><strong>Zulu</strong> is right after Zero.</li><li>Actually, all the interlopers are in alphabetical order, left to right. Good thing you read this first, right?
+        </li></ul></div></div><div class="puzzle backsolve"><p class="flavor">
+  Wow, we&rsquo;ve found the perfect puzzle for you, one that requires absolutely no effo—Wait, your team already backsolved this puzzle somehow? They&rsquo;re saying it solves to the cluephrase <strong>FREE ANS IS STONEWALL.</strong> Huh, okay.
+</p></div><div class="puzzle ball"><p class="flavor">You&rsquo;re one of the types that like to discover key insights.</p><img src="/static/puzzle_resources/your-puzzle/ball.svg"
+    style="max-width: 100%;"></div><div class="puzzle extract copy"><div class="clipboard-container"><p class="flavor">
+        Your team marked this puzzle as SOE: stuck on extraction.
+    </p><div style="margin-top: 2rem;"><ul><li>Administrative Command, Amphibious Forces, Pacific Fleet Subordinate Command</li><li>Automated Teller Machine, Human Immunodeficiency Virus, Redundant Acronym Syndrome</li><li>By the way</li><li>Eddie ate dynamite, good-bye Eddie, every good boy deserves fudge</li><li>Ethylenediaminetetraacetic acid, dichlorodiphenyltrichloroethane, γ-aminobutyric acid, monosodium glutamate</li><li>Exempli gratia: si vales bene est ego valeo, Senatus populusque Romanus, anno Domini, requiescat in pace; quod erat demonstrandum</li><li>Extracellular matrix metalloproteinase inducer</li><li>HERschel Observations Edge-on Spirals</li><li>Large Binocular Telescope Near-infrared Spectroscopic Utility with Camera and Integral Field Unit for Extragalactic Research for the win, Chicago Air Shower Array; Broad LAteral Non-imaging Cerenkov Array for the lose</li><li>Laugh out loud! As far as I know, in real life (away from keyboard) I love you, too much information. What do you mean?</li><li>New Spring, Lord of Chaos, Knife of Dreams, A Memory of Light</li><li>North Atlantic Treaty Organization, Commonwealth of Independent States, Unión de Naciones Suramericanas, United Nations Educational, Scientific and Cultural Organization</li><li>On behalf of United States Code Congressional and Administrative News, Statute of Limitations, Supreme Court of the United States</li><li>Role playing game, kill, deaths, assists, damage per second, downloadable content, area of effect</li><li>Service Level Agreement: end of day. For what it&rsquo;s worth, Chief Executive Officer out of office</li><li>There ain&rsquo;t no such thing as a free lunch, except bacon lettuce tomato</li><li>Thomas A. Swift&rsquo;s Electric Rifle</li><li>Today I f***ed up, original poster, am I the a**hole? Ask me anything. Too long; didn&rsquo;t read</li><li>Well developed, well nourished / negative to date</li><li>What You See Is What You Get, Formula Translation, Completely Automated Public Turing Test to tell Computers and Humans Apart</li><li>YAML ain&rsquo;t markup language, GNU&rsquo;s Not Unix, PHP: Hypertext Preprocessor</li><li>You only live once</li></ul></div></div></div><div class="puzzle frogorf"><style>
+    #frogorf {
+        width: 80%;
+        height: 450px;
+        border: none;
+        display: block;
+        margin: auto;
+    }
+
+    .tt {
+        display: block;
+        margin: auto;
+        text-align: center;
+        font-size: 1.2rem;
+        font-style: italic;
+    }
+</style><p class="flavor">
+    Oh, that&rsquo;s what you like? How incredibly niche... just like this infuriating puzzle game about an inscrutable film!<br></p><iframe 
+    id="frogorf"
+    src="/static/puzzle_resources/your-puzzle/frogorf.html"
+></iframe><div class="tt">(click inside the game to focus)</div></div><div class="puzzle id copy"><style>
+    .pics {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: center;
+        margin: auto;
+        /* width: 80%; */
+        border: none;
+    }
+
+    .pic {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 450px;
+    }
+
+    .face {
+        display: inline-block;
+        /* text-align: center; */
+        /* vertical-align: middle; */
+        position: relative;
+        width: 143px;
+        height: 110px;
+    }
+
+    .face .num {
+        top: 40px;
+        left: 60px;
+        font-size: 5rem;
+        /* font-weight: bold; */
+        color: rgb(204, 105, 30);
+        /* text-shadow: 2px 2px 0 black; */
+    }
+
+    .face .inner {
+        position:absolute;
+    }
+
+</style><div class="clipboard-container"><p class="flavor">
+        You love identifying things? You&rsquo;re in the right place, here&rsquo;s a bunch of random identities! Click the images to reverse search them. After you&rsquo;re done identifying, index the given numbers to extract one or two letters from each identity, read in the given order, and close your million browser tabs.
+    </p><div class="pics"><div class="pic"><a href="https://www.google.com/searchbyimage?image_url=https%3A%2F%2F2022.galacticpuzzlehunt.com%2Fstatic%2Fpuzzle_resources%2Fyour-puzzle%2Fid-3q5Qg6dsvk%2F1.png" target="_blank" rel="noopener noreferrer"><img src="/static/puzzle_resources/your-puzzle/id-3q5Qg6dsvk/1.png"></a><div class="face"><div class="inner"><img src="/static/puzzle_resources/your-puzzle/id-3q5Qg6dsvk/face.png"></div><div class="inner num">4</div></div></div><div class="pic"><a href="https://www.google.com/searchbyimage?image_url=https%3A%2F%2F2022.galacticpuzzlehunt.com%2Fstatic%2Fpuzzle_resources%2Fyour-puzzle%2Fid-3q5Qg6dsvk%2F2.png" target="_blank" rel="noopener noreferrer"><img src="/static/puzzle_resources/your-puzzle/id-3q5Qg6dsvk/2.png"></a><div class="face"><div class="inner"><img src="/static/puzzle_resources/your-puzzle/id-3q5Qg6dsvk/face.png"></div><div class="inner num">3</div></div></div><div class="pic"><a href="https://www.google.com/searchbyimage?image_url=https%3A%2F%2F2022.galacticpuzzlehunt.com%2Fstatic%2Fpuzzle_resources%2Fyour-puzzle%2Fid-3q5Qg6dsvk%2F3.png" target="_blank" rel="noopener noreferrer"><img src="/static/puzzle_resources/your-puzzle/id-3q5Qg6dsvk/3.png"></a><div class="face"><div class="inner"><img src="/static/puzzle_resources/your-puzzle/id-3q5Qg6dsvk/face.png"></div><div class="inner num">7</div></div></div><div class="pic"><a href="https://www.google.com/searchbyimage?image_url=https%3A%2F%2F2022.galacticpuzzlehunt.com%2Fstatic%2Fpuzzle_resources%2Fyour-puzzle%2Fid-3q5Qg6dsvk%2F4.png" target="_blank" rel="noopener noreferrer"><img src="/static/puzzle_resources/your-puzzle/id-3q5Qg6dsvk/4.png"></a><div class="face"><div class="inner"><img src="/static/puzzle_resources/your-puzzle/id-3q5Qg6dsvk/face.png"></div><div class="inner num">2</div></div></div><div class="pic"><a href="https://www.google.com/searchbyimage?image_url=https%3A%2F%2F2022.galacticpuzzlehunt.com%2Fstatic%2Fpuzzle_resources%2Fyour-puzzle%2Fid-3q5Qg6dsvk%2F5.png" target="_blank" rel="noopener noreferrer"><img src="/static/puzzle_resources/your-puzzle/id-3q5Qg6dsvk/5.png"></a><div class="face"><div class="inner"><img src="/static/puzzle_resources/your-puzzle/id-3q5Qg6dsvk/face.png"></div><div class="inner num">1</div></div></div><div class="pic"><a href="https://www.google.com/searchbyimage?image_url=https%3A%2F%2F2022.galacticpuzzlehunt.com%2Fstatic%2Fpuzzle_resources%2Fyour-puzzle%2Fid-3q5Qg6dsvk%2F6.png" target="_blank" rel="noopener noreferrer"><img src="/static/puzzle_resources/your-puzzle/id-3q5Qg6dsvk/6.png"></a><div class="face"><div class="inner"><img src="/static/puzzle_resources/your-puzzle/id-3q5Qg6dsvk/face.png"></div><div class="inner num">5</div></div></div><div class="pic"><a href="https://www.google.com/searchbyimage?image_url=https%3A%2F%2F2022.galacticpuzzlehunt.com%2Fstatic%2Fpuzzle_resources%2Fyour-puzzle%2Fid-3q5Qg6dsvk%2F7.png" target="_blank" rel="noopener noreferrer"><img src="/static/puzzle_resources/your-puzzle/id-3q5Qg6dsvk/7.png"></a><div class="face"><div class="inner"><img src="/static/puzzle_resources/your-puzzle/id-3q5Qg6dsvk/face.png"></div><div class="inner num">3</div></div></div><div class="pic"><a href="https://www.google.com/searchbyimage?image_url=https%3A%2F%2F2022.galacticpuzzlehunt.com%2Fstatic%2Fpuzzle_resources%2Fyour-puzzle%2Fid-3q5Qg6dsvk%2F8.png" target="_blank" rel="noopener noreferrer"><img src="/static/puzzle_resources/your-puzzle/id-3q5Qg6dsvk/8.png"></a><div class="face"><div class="inner"><img src="/static/puzzle_resources/your-puzzle/id-3q5Qg6dsvk/face.png"></div><div class="inner num">4</div></div></div><div class="pic"><a href="https://www.google.com/searchbyimage?image_url=https%3A%2F%2F2022.galacticpuzzlehunt.com%2Fstatic%2Fpuzzle_resources%2Fyour-puzzle%2Fid-3q5Qg6dsvk%2F9.png" target="_blank" rel="noopener noreferrer"><img src="/static/puzzle_resources/your-puzzle/id-3q5Qg6dsvk/9.png"></a><div class="face"><div class="inner"><img src="/static/puzzle_resources/your-puzzle/id-3q5Qg6dsvk/face.png"></div><div class="inner num">6</div></div></div><div class="pic"><a href="https://www.google.com/searchbyimage?image_url=https%3A%2F%2F2022.galacticpuzzlehunt.com%2Fstatic%2Fpuzzle_resources%2Fyour-puzzle%2Fid-3q5Qg6dsvk%2F10.png" target="_blank" rel="noopener noreferrer"><img src="/static/puzzle_resources/your-puzzle/id-3q5Qg6dsvk/10.png"></a><div class="face"><div class="inner"><img src="/static/puzzle_resources/your-puzzle/id-3q5Qg6dsvk/face.png"></div><div class="inner num">5</div></div></div><div class="pic"><a href="https://www.google.com/searchbyimage?image_url=https%3A%2F%2F2022.galacticpuzzlehunt.com%2Fstatic%2Fpuzzle_resources%2Fyour-puzzle%2Fid-3q5Qg6dsvk%2F11.png" target="_blank" rel="noopener noreferrer"><img src="/static/puzzle_resources/your-puzzle/id-3q5Qg6dsvk/11.png"></a><div class="face"><div class="inner"><img src="/static/puzzle_resources/your-puzzle/id-3q5Qg6dsvk/facehalf.png"></div><div class="inner num">3</div></div></div></div></div></div><div class="puzzle magic"><style>
+    .play {
+        margin: auto;
+        height: 90%;
+        width: 90%;
+        font-family: Georgia, Palatino, "Times New Roman", Times, serif;
+        /* font-size: 100%; */
+        background: white;
+        /* line-height: 1.4; */
+        padding: 20px;
+    }
+
+    #parser {
+        max-height: 30vh;
+        hyphens: auto;
+        overflow-y: auto;
+    }
+    .command {
+        width: 90%;
+        font-weight: bold;
+    }
+
+    .response {
+        margin: 0 0 1rem;
+    }
+
+    .secret {
+        font-family: monospace;
+        /* if you have time, you can use trick of background-color for each spanning redactle to get rid of the seams */
+    }
+
+    #typer {
+        cursor: text;
+    }
+
+    #typer input {
+        background: inherit;
+        font-family: inherit;
+        letter-spacing: inherit;
+        font-size: inherit;
+        width: 90%;
+    }
+
+</style><div class="play"><div id="parser"><div><b>Magic Words</b></div><div>An Interaction Fiction</div><div>Release 1 / Serial number 170220 / Inform 7 build F4K3 (I6/v6.33 lib 6/12N)</div><hr><div><b>Sealed Chamber</b></div><div><p>
+                You once again find yourself stuck in a black-and-white, half-century-old, barely-passable work of &lsquo;fiction&rsquo; with no way out. If only you knew the magic words.
+            </p></div></div><div id="typer" onclick="document.getElementById('typer-input').focus()">
+        ><input id="typer-input" class="command" type="text" autofocus maxlength="64"></div></div><script>
+    const answer = "Lo! Your answer is STONEWALL."
+    const redact = "01  4512 643625 30 9a7b8a879 "
+    const redactChar = "█"
+    const revealOrder = " 0123456789ab"
+
+    let progress = Array.from([...answer].entries())
+        .map(([i, c]) => redact[i] !== " " ? redactChar:c)
+        .join('')
+
+    const magicWords = [
+        ["ABRACADABRA","ABRAKADABRA",],
+        ["ALAKAZAM",],
+        ["HOCUS POCUS",],
+        ["OPEN SESAME",],
+        ["ZIMZALABIM","SIMSALABIM","SIM SIM SALA BIM",],
+        ["PRESTO","PRESTO CHANGO","HEY PRESTO",],
+        ["AJJI MAJJI LA TARAJJI",],
+        ["JANTAR MANTAR JADU MANTAR",],
+        ["BIBBIDI BOBBIDI BOO",],
+        ["YU MO GUI GWAI FAI DI ZAO","YIU MO GWAI GWAAI FAAI DI JAU","妖魔鬼怪快哋走","妖魔鬼怪快啲走",],
+        ["KLAATU BARADA NIKTO",],
+        ["SHAZAM",],
+        ["FHTAGN","PH'NGLUI MGLW'NAFH CTHULHU R'LYEH WGAH'NAGL FHTAGN","CTHULHU FHTAGN",],
+        ["FUS RO DAH",],
+        ["XYZZY",],
+        ["PLUGH",],
+        ["PLOVER",],
+        ["SQUEAMISH OSSIFRAGE",],
+        ["DEADBEEF",],
+        ["PRETTY PLEASE WITH A CHERRY ON TOP",],
+        ["PRETTY PLEASE",],
+        ["PLEASE",],
+        ["EXPELLIARMUS",],
+        ["ANNARASUMANARA","안나라수마나라",],
+        ["OM","AUM","ॐ", "ओम्"],
+        ["DOUBLEDOUBLETOILANDTROUBLE","FIREBURNANDCAULDRONBUBBLE",],
+        ["WIÐ FÆRSTICE","WITH FAERSTICE",],
+        ["GESUNDHEIT",],
+        ["THERE'S NO PLACE LIKE HOME",],
+        ["AMEN","AMIN","AMEEN","آمين","אָמֵן",],
+        ["THE MAGIC WORDS",],
+        ["WIGGLE WAGGLE",],
+        ["IZZY WIZZY LET'S GET BUSY",],
+        ["VOILA", "VOILÀ"],
+    ].map(xs=>xs.map(x=>clean(x)))
+
+    const easterEggs = {
+        "HELP":      "You&rsquo;ll need to ask more nicely.",
+        "ANSWER":    "You&rsquo;ll need to ask more nicely.",
+        "THANKS":    "You&rsquo;re welcome!",
+        "THANK YOU": "You&rsquo;re welcome!",
+        "TY":        "You&rsquo;re welcome!",
+        "THX":       "You&rsquo;re welcome!",
+    }
+
+    let points = 1
+
+    let found = 0n // bits are set for each word found, need BigInt because << is 32-bit and we have more words
+
+    function reveal() {
+        if (points < revealOrder.length)
+            points += 1
+
+        let showChars = revealOrder.slice(0, points)
+        progress = Array.from([...answer].entries())
+            .map(([i, c]) => showChars.includes(redact[i]) ? c : redactChar)
+            .join('')
+    }
+
+    function clean(s) {
+        // convert string to uppercase, remove specials but keep meaningful chars
+        return s.toUpperCase().replace(/[\s'"!.,\-~`<>(){}&;\\\/]/g, "")
+    }
+
+    let parser = document.getElementById("parser")
+    let typerInput = document.getElementById("typer-input")
+
+    // client-side text adventure
+    function find(s) {
+        // find a magic word in the parser
+        // returns response if s is an easter egg or already found
+
+        let c = clean(s)
+
+        for (let [i, word] of magicWords.entries()) {
+            // special case: please can come at end of c 
+            if (word.includes(c) || (word.includes("PLEASE") && c.endsWith("PLEASE"))) {
+                if (found & (1n << BigInt(i))) {
+                    return "You already used that spell."
+                } else {
+                    found += (1n << BigInt(i))
+                    return true
+                }
+            }
+        }
+
+        for (let [egg, response] of Object.entries(easterEggs)) {
+            if (clean(egg) === c)
+                return response
+        }
+
+        return false
+    }
+
+    typerInput.addEventListener('keydown', e=>{
+        if (e.key === "Enter") {
+            let text = typerInput.value
+
+            let output = document.createElement("div")
+            output.innerHTML = "&gt;<span class=\"command\"></span>"
+            output.querySelector(".command").appendChild(document.createTextNode(text))
+
+            // response
+            let f = find(text)
+            let response = document.createElement("div")
+            response.classList.add("response")
+
+            if (f === true) {
+                reveal()
+                response.innerHTML = "A hollow voice says, &ldquo;<span class=\"secret\">" + progress + "</span>&rdquo;"
+            } else if (f === false) {
+                response.innerHTML = "You can&rsquo;t do that without saying the magic words."
+            } else {
+                // special response (already found, easter egg)
+                response.innerHTML = f
+            } 
+
+            // cleanup
+            typerInput.value = ""
+            parser.appendChild(output)
+            parser.appendChild(response)
+            parser.scrollTop = parser.scrollHeight
+        }
+
+    })
+
+</script></div><div class="puzzle masyu"><style>
+    .masyu-grid {
+        border: 4px solid black;
+        margin: auto;
+    }
+    .masyu-grid td {
+        border: .5px dashed grey;
+        min-width: 40px;
+        height: 40px;
+        text-align: center;
+        vertical-align: middle;
+        padding: 0;
+    }
+
+    .c {
+        width: 30px;
+        height: 30px;
+        background-color: white;
+        border-radius: 50%;
+        border: 2px solid black;
+        display: block;
+        margin: auto;
+        vertical-align: middle;
+        text-align: center;
+    }
+
+    .g {
+        background-color: #bbb;
+    }
+
+    .masyu-list > li {
+        list-style-type: none;
+    }
+
+    .masyu-img {
+        height: 22px;
+        vertical-align: text-bottom;
+        padding-right: 5px;
+    }
+</style><p class="flavor">
+    Don&rsquo;t you hate it when you solve your favorite logic puzzle but get stuck on extraction? Here&rsquo;s how you extract this one: read the letters traversed by the loop, in loop order.
+</p><div><p><strong>
+            Masyu:
+        </strong></p><p><ul class="masyu-list"><li>
+                Draw a single closed loop through all circled cells.
+            </li><li><img class="masyu-img" src="/static/puzzle_resources/your-puzzle/masyu-w.png"><strong>white circles</strong>: loop goes straight through, then turns in at least one of the cells before/after loop
+            </li><li><img class="masyu-img" src="/static/puzzle_resources/your-puzzle/masyu-b.png"><strong>black circles</strong>: loop turns, and goes straight in both cells before/after loop
+            </li><li><img class="masyu-img" src="/static/puzzle_resources/your-puzzle/masyu-g.png"><strong>grey circles</strong>: are either white or black circles
+            </li></ul></p></div><table class="masyu-grid"><tr><td>S</td><td>O</td><td>C</td><td>A</td><td>T</td></tr><tr><td>N</td><td>E</td><td><span class="c g"></span></td><td>L</td><td>L</td></tr><tr><td><span class="c"></span></td><td><span class="c g"></span></td><td>L</td><td>L</td><td><span class="c g"></span></td></tr><tr><td>O</td><td>W</td><td><span class="c g"></span></td><td>A</td><td>I</td></tr><tr><td>T</td><td><span class="c g"></span></td><td>S</td><td>N</td><td><span class="c g"></span></td></tr></table><br><p>
+    Links to solve online (no answer checking): 
+    <a href="https://swaroopg92.github.io/penpa-edit/#m=solve&p=tZTfb5swEMff+SsqP/uBn2nCW5e106QuXddMVYRQ5aRugwpxZshaEaV/e++ObNjApk3TRLhcPjHnr819XX7bCS15BFcw5i734PL9Md2hi58f1zyrchmf8LNdtVYaEs6vLi74g8hL6STHUamTMJ9xuj2WvtaL14StMr3K5d0l417q7Osv8b6+i5P0wOuvbTpu05t4D3EW75nvsjhhN4wHVA7qegiuDOAjmBogQHBmgBDB3AATBLMWBDTLuQGoKOj9CaioAUJ6xAQkzASnHaXhGMFtCyKqYSiNqMZHA4w60iOqYexHZK8Fts2jzVvA5gVYbsKt7YelYIlxj2Kd3tgQ96FPB8dGuN4eHeEaOxTkXZBIn+IcXjqvA4rvKboUI4qXNOac4i3FKcWQ4ojGnGLbOE7iN+2LV/RnGbbrZbaRJzOlC5FD096sxVbC91QVW1VmlWTQsqxU+V250w9iJVlMHc+JbXbFUmoL5Uptcyhpwexxo7Qc/AuhvH8cGr9U+r5T/VnkuQUa/1qo2WsLVTqzfgut1bNFClGtLbAUFfi9XGdbu5LcVLaAStgSxZPozFa0az447IXRnfjcH3GfToRJXF/z+gN0snF28PoajoRPMVupYpkxPBYSRl0FTZHACB5Aet6kPqS39D9m0wZ6LuSzduwCUqs9689xUs85w8ne0dOYskJ9B730GP1uBADAl/dyhOXuXj3tjsOoqc9Ibr34vVJMG6WYDSjFBfyzUuPtDcidpIfmRbh/dRybp8t/MvHL0WxKD/oN8IDlgA5a68h77gLe8xFO2LcS0AE3Ae0aClDfUwB7tgL2C2dh1a65UFXXXzhVz2I4lemyJHUoewM=" target="_blank" rel="noopener noreferrer">penpa-edit</a>, 
+    <a href="https://puzz.link/p?mashu/v:/5/5/0065220ii" target="_blank" rel="noopener noreferrer">puzz.link</a></p></div><div class="puzzle submit"><style>
+    #reply {
+        display: none;
+    }
+</style><p class="flavor">
+    The perfect puzzle is like a recipe — it requires creativity, gives just as much as you put in, and is always a little different each time.
+</p><div><p>
+        You know what, why don&rsquo;t you make it yourself?
+    </p><p>
+        Write a (very easy) puzzle and send it to us at <a href="mailto:galacticpuzzlesetters+mypuzzle@gmail.com" target="_blank" rel="noopener noreferrer">galacticpuzzlesetters+mypuzzle@gmail.com</a>.
+    </p></div></div><div class="puzzle words copy"><style>
+    @font-face{
+        font-family: 'Recursive';
+        src: url(/static/puzzle_resources/your-puzzle/recursive.woff2)
+            format('woff2-variations');
+    }
+
+    .words-grid {
+        border: 2px solid black;
+
+    }
+    .words-grid td {
+        border: 1px solid black;
+        min-width: 40px;
+        height: 40px;
+        text-align: center;
+        padding: 0;
+    }
+
+    .empty {
+        background-color: #000000;
+    }
+
+    .y {
+        background-color: rgb(165, 221, 214);
+    }
+
+    .click{
+        color: #087;
+        font-weight: bold;
+        cursor: pointer;
+        border-radius: 5px;
+    }
+
+    .clues {
+        font-family: 'Recursive';
+        opacity: 1;
+        transition: 0.5s;
+
+    }
+
+    #like, #no-like, #not-sure, #words-flavor {
+        opacity: 1;
+        transition: 0.25s;
+    }
+
+    ruby {
+        ruby-position: under;
+    }
+
+    rt {
+        opacity: 0;
+        display: none;
+        transition: 0.5s;
+    }
+
+    .bar {
+        opacity: 0;
+        display: none;
+        transition: 0.5s;
+        font-variation-settings: 'CASL' 0, 'CRSV' 1, 'wght' 300, 'MONO' 0, 'slnt' 0;
+        color:rgb(111, 111, 111);
+        transition: 0.5s;
+    }
+
+    .unhighlight{
+        opacity: 1;
+        font-variation-settings: 'CASL' 0, 'CRSV' 1, 'wght' 400, 'MONO' 0, 'slnt' 0;
+        transition: 0.5s;
+    }
+
+    .force.defn, .highlight.defn{
+        font-variation-settings: 'CASL' 0, 'CRSV' 1, 'wght' 700, 'MONO' 0, 'slnt' 0;
+        transition: 0.5s;
+    }
+
+    .force.fodder, .highlight.fodder{
+        font-variation-settings: 'CASL' 0, 'CRSV' 1, 'wght' 500, 'MONO' 100, 'slnt' 0;
+        color:rgb(51, 129, 177);
+        transition: 0.5s;
+    }
+
+    .force.indicator, .highlight.indicator{
+        font-variation-settings: 'CASL' 1, 'CRSV' 1, 'wght' 500, 'MONO' 0, 'slnt' -10;
+        color:rgb(162, 89, 30);
+        transition: 0.5s;
+    }
+
+    .force.synonym, .highlight.synonym{
+        font-variation-settings: 'CASL' 0.2, 'CRSV' 1, 'wght' 600, 'MONO' 0, 'slnt' -5;
+        color:#5f5bb0;
+        transition: 0.5s;
+    }
+
+    .force.link, .highlight.link{
+        font-variation-settings: 'CASL' 0, 'CRSV' 1, 'wght' 450, 'MONO' 0, 'slnt' -10;
+        color: rgb(169, 76, 124);
+        transition: 0.5s;
+    }
+
+    .force.unimportant, .highlight.unimportant{
+        font-variation-settings: 'CASL' 0, 'CRSV' 1, 'wght' 300, 'MONO' 0, 'slnt' 0;
+        color:rgb(111, 111, 111);
+        transition: 0.5s;
+    }
+
+</style><div class="clipboard-container"><p class="flavor" id="words-flavor">
+        Why cross your words when you can check them twice with the same clue?
+    </p><div>
+        You like cryptics?
+            <span id="like">Great!<br></span>
+        You don&rsquo;t like cryptics?
+            <span id="no-like">Click <span class="click" id="delete" onclick="toggleDelete(this)">here</span> to delete them.<br></span>
+        You&rsquo;re not sure?
+            <span id="not-sure">Click <span class="click" id="toggleHighlight" onclick="toggleHighlight(this)">here</span> to toggle helpful indicator highlighting.</span></div><br><div style="display: block; overflow: auto;"><div class="one-half column"><table class="words-grid"><tr><td>1</td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td></tr><tr><td></td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td>7</td><td class="empty"></td><td class="empty"></td><td class="empty"></td></tr><tr><td></td><td>2</td><td class="empty"></td><td>4</td><td class="empty"></td><td class="empty"></td><td></td><td class="empty"></td><td class="empty"></td><td>10</td></tr><tr><td></td><td></td><td>3</td><td></td><td>5</td><td>6</td><td></td><td>8</td><td>9</td><td></td></tr><tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td class="y"></td><td class="y"></td><td class="y"></td><td class="y"></td><td class="y"></td><td class="y"></td><td class="y"></td><td class="y"></td><td class="y"></td><td class="y"></td></tr><tr><td class="empty"></td><td class="y"></td><td class="y"></td><td class="y"></td><td class="y"></td><td class="y"></td><td class="y"></td><td class="y"></td><td class="y"></td><td class="y"></td></tr><tr><td class="empty"></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td class="empty"></td><td></td><td></td><td></td><td></td><td></td><td class="empty"></td><td></td><td></td><td></td></tr><tr><td class="empty"></td><td class="empty"></td><td class="empty"></td><td></td><td class="empty"></td><td></td><td class="empty"></td><td></td><td class="empty"></td><td></td></tr></table></div><div class="one-half column"><p><b>Down</b></p><ol class="clues"><li><span class="defn unhighlight">An instrument that points North or draws circles</span><span class="cryptic">&#32;<ruby class="fodder unhighlight">encompassed<rt>fodder</rt></ruby>&#32;<ruby class="indicator unhighlight">within<rt>containment</rt></ruby></span></li><li><span class="defn unhighlight">&ldquo;Will you marry me?&rdquo; is one example</span><span class="cryptic">&#32;<ruby class="indicator unhighlight">odd<rt>alternate letters</rt></ruby>&#32;<ruby class="fodder unhighlight">part of pool&rsquo;s table<rt>fodder</rt></ruby></span></li><li><span class="defn unhighlight">Not sick</span><span class="cryptic"><span class="unimportant unhighlight">? </span><ruby class="synonym unhighlight">Cure<rt>synonym</rt></ruby><span class="bar"> |</span>&#32;
+                        <ruby class="synonym unhighlight">your old English<rt>synonym</rt></ruby><span class="unimportant unhighlight">!</span></span></li><li><span class="defn unhighlight">Color between green and blue</span><span class="cryptic">&#32;<ruby class="indicator unhighlight">called<rt>homophone</rt></ruby>&#32;<ruby class="fodder unhighlight">&ldquo;Turk Ways&rdquo;<rt>fodder</rt></ruby></span></li><li><span class="defn unhighlight">Ho Chi Minh City and Hanoi&rsquo;s country</span><span class="cryptic">&#32;<span class="unimportant unhighlight">where</span>&#32;
+                    <ruby class="fodder unhighlight">V<rt>fodder</rt></ruby>&#32;
+                    <ruby class="link unhighlight">and<rt>link</rt></ruby>&#32;
+                    <ruby class="fodder unhighlight">Taemin<rt>fodder</rt></ruby>&#32;<ruby class="indicator unhighlight">collaborated<rt>anagram</rt></ruby></span></li><li><span class="defn unhighlight">Spectators at a performance</span><span class="cryptic">&#32;<ruby class="indicator unhighlight">cracked up<rt>anagram</rt></ruby><span class="unimportant unhighlight">, </span><ruby class="fodder unhighlight">i.e., a dunce<rt>fodder</rt></ruby></span></li><li><span class="defn unhighlight">Urban center known for skyscrapers and landmarks</span><span class="cryptic"><span class="unimportant unhighlight">, </span><ruby class="synonym unhighlight">not up<rt>synonym</rt></ruby><span class="bar"> |</span>&#32;
+                        <ruby class="synonym unhighlight">city<rt>synonym</rt></ruby></span></li><li><span class="defn unhighlight">Sweet spice used in pumpkin pie and breakfast rolls</span><span class="cryptic"><span class="unimportant unhighlight">, </span><ruby class="fodder unhighlight">conman in<rt>fodder</rt></ruby>&#32;<ruby class="indicator unhighlight">disguise<rt>anagram</rt></ruby></span></li><li><span class="defn unhighlight">Largest ape with silver backs</span><span class="cryptic">&#32;
+                        <ruby class="synonym unhighlight">barbecue<rt>synonym</rt></ruby>&#32;
+                        <ruby class="indicator unhighlight">with<rt>containment</rt></ruby>&#32;
+                        <ruby class="synonym unhighlight">zero<rt>abbr.</rt></ruby>&#32;
+                        <span class="unimportant unhighlight">and</span>&#32;
+                        <ruby class="synonym unhighlight">one<rt>abbr.</rt></ruby></span></li><li><span class="defn unhighlight">Convert from one language to another</span><span class="cryptic">&#32;
+                        <ruby class="synonym unhighlight">announcement at rail platform<rt>synonymous-phrase</rt></ruby>&#32;
+                        <ruby class="fodder unhighlight">I<rt>fodder</rt></ruby>&#32;
+                        <ruby class="indicator unhighlight">missed<rt>deletion</rt></ruby></span></li></ol></div></div></div><script>
+    const highlightClasses = '.defn, .fodder, .indicator, .synonym, .link, .unimportant'
+
+    document.querySelectorAll('rt, .bar').forEach(e=>e.classList.add('no-copy'))
+
+    async function highlight() {
+        //highlight
+        document.querySelectorAll('.unhighlight').forEach(e=> e.classList.remove('unhighlight'))
+        document.querySelectorAll(highlightClasses).forEach(e => e.classList.add('highlight'))
+
+        // add tooltips
+        document.querySelectorAll('rt, .bar').forEach(e => e.style.opacity = 1)
+        document.querySelectorAll('rt').forEach(e=>e.style.display = 'block')
+        document.querySelectorAll('.bar').forEach(e=>e.style.display = 'inline')
+
+
+    }
+
+    async function unhighlight() {
+        document.querySelectorAll('.highlight').forEach(e=> e.classList.remove('highlight'))
+        document.querySelectorAll(highlightClasses).forEach(e => e.classList.add('unhighlight'))
+
+        // hide tooltips
+        document.querySelectorAll('rt, .bar').forEach(e => e.style.opacity = 0)
+        await sleep(500)
+        document.querySelectorAll('rt, .bar').forEach(e => e.style.display = "none")
+    }
+
+    // toggle indicator highlighting
+    function toggleHighlight(el) {
+        if (el.classList.contains('highlighted')) {
+            unhighlight()
+        } else {
+            highlight()
+        }
+        el.classList.toggle('highlighted');
+    }
+
+    async function toggleDelete(el) {
+        const like = document.getElementById('like')
+        const noLike = document.getElementById('no-like')
+        const notSure = document.getElementById('not-sure')
+        const wordsFlavor = document.getElementById('words-flavor')
+        const cryptics = document.querySelectorAll('.cryptic')
+
+        like.style.opacity = 0
+        noLike.style.opacity = 0
+        notSure.style.opacity = 0
+        wordsFlavor.style.opacity = 0
+
+        if (el.id === "delete") {
+            cryptics.forEach(e=>{
+                e.style.opacity = 0
+                e.style.display = 'none'
+            })
+            unhighlight()
+            await sleep(250)
+            like.innerHTML = 'Click <span class="click" id="undelete" onclick="toggleDelete(this)">here</span> to make the clues cryptic again.<br>'
+            noLike.innerHTML = 'Great!<br>'
+            notSure.innerHTML = 'Too bad!'
+            wordsFlavor.innerHTML = 'Why cross your words when the clues are so easy?'
+
+        } else {
+            cryptics.forEach(e=> {
+                e.style.opacity = 1
+                e.style.display = 'inline'
+            })
+            await sleep(250)
+            like.innerHTML = 'Great!<br>'
+            noLike.innerHTML = 'Click <span class="click" id="delete" onclick="toggleDelete(this)">here</span> to delete them.<br>'
+            notSure.innerHTML = 'Click <span class="click" id="toggleHighlight" onclick="toggleHighlight(this)">here</span> to toggle helpful indicator highlighting.'
+            wordsFlavor.innerHTML = 'Why cross your words when you can check them twice with the same clue?'
+        }
+
+        like.style.opacity = 1
+        noLike.style.opacity = 1
+        notSure.style.opacity = 1
+        wordsFlavor.style.opacity = 1
+
+    }
+</script></div></div>
+<p><button id="copyjack" class="btn" data-force-rejack="true"></button></p>
+    
+    
+
+    
+</main>
+
+<script src="/static/js/copyjack.js"></script>
+
+
+    </div>
+    
+
+    
+
+    
+</body>
+</html>

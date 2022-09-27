@@ -1,0 +1,748 @@
+
+
+
+
+
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    
+<title>Shower Pomelo 🍈</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=0.5">
+    <meta property="og:title" content="Galactic Puzzle Hunt 2022">
+    <meta property="og:description" content="Registration for this year's Galactic Puzzle Hunt is now open!">
+    <meta property="og:image" content="https://galacticpuzzlehunt.com/static/images/banner.png">
+    <meta property="twitter:card" content="summary_large_image">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Recursive:slnt,CASL,CRSV,MONO@-3,0.5,1,1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/skeleton.css">
+    <link rel="stylesheet" href="/static/css/base.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.19/jquery.touchSwipe.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.formset/1.2.2/jquery.formset.min.js"></script>
+    <script src="/jsi18n/"></script>
+    <script src="/static/js/sorttable.js"></script>
+    <script src="/static/js/tray.js"></script>
+    <script src="/static/js/notify.js"></script>
+    <script src="/static/js/time.js"></script>
+    
+    
+    <link rel="icon" sizes="16x16 32x32 48x48 64x64" href="/static/images/favicon.ico" type="image/vnd.microsoft.icon">
+    
+    
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-92192633-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-92192633-1');
+</script>
+
+</head>
+<body>
+    
+    <div id="background-glitch-wrapper" class="background-glitch">
+        <div class="glitch-1"></div>
+        <div class="glitch-2"></div>
+        <div class="glitch-3"></div>
+    </div>
+    
+    
+    <input id="shortcuts" type="checkbox">
+    
+    <nav>
+        <span class="tray">
+            <span id="tray-timer"></span>
+            <div class="top-tabs">
+                <a href="/">
+                    Home
+                </a>
+                
+                <a href="/rules">
+                    Rules
+                </a>
+                
+                
+                <a href="/story">
+                    Story
+                </a>
+                
+                
+                <a href="/puzzles">
+                    Puzzles
+                </a>
+                
+                <a class="selected-tab" href="/teams">
+                    Teams
+                </a>
+                
+                <a href="/faq">
+                    FAQ
+                </a>
+                
+                
+                <a href="/errata">
+                    Updates
+                </a>
+                
+                
+                <a href="/wrapup">
+                    Wrap-Up
+                </a>
+                
+                
+                <a href="https://galacticpuzzlehunt.com/archive">
+                    Archive
+                </a>
+                
+                
+                
+            </div>
+            <div class="top-left-actions">
+                
+
+
+            </div>
+        </span>
+        <div class="top-right-actions">
+        
+        
+        </div>
+    </nav>
+    
+    
+    
+    
+    
+    <script>
+
+    
+    
+    let glitchTriggerFuncs = [];
+    let glitchTriggerReceived = false;
+    let glitchTriggerExReceived = false;
+    let glitchPageLoaded = false;
+    function processGlitchFuncs(ex) {
+        glitchTriggerFuncs.forEach((func) => {
+            func(ex);
+        });
+    }
+    function doGlitch(ex) {
+        glitchTriggerReceived = true;
+        if (ex) {
+            glitchTriggerExReceived = true;
+        }
+        if (glitchPageLoaded) {
+            processGlitchFuncs(ex);
+        }
+    }
+    window.addEventListener('load', () => {
+        glitchPageLoaded = true;
+        if (glitchTriggerExReceived) {
+            processGlitchFuncs(true);
+        }
+        else if (glitchTriggerReceived) {
+            processGlitchFuncs(false);
+        }
+    }, false);
+    
+    
+    
+    function registerOnGlitchHook(func) {
+        if (glitchTriggerExReceived) {
+            func(true);
+        }
+        else if (glitchTriggerReceived) {
+            func(false);
+        }
+        glitchTriggerFuncs.push(func);
+    }
+    
+
+    
+    
+    </script>
+    <div class="content">
+        
+
+<style>
+.free td:not(:first-child) {
+    opacity: 0.5;
+}
+
+.free td:last-child:before {
+    content: "(";
+}
+
+.free td:last-child:after {
+    content: ")";
+}
+</style>
+
+<h1>Shower Pomelo 🍈</h1>
+
+<main>
+    <div class="info-row">
+        <div>
+            <h4>Stats</h4>
+            <div class="info-desc">
+                <div class="stat-entry">Rank <span class="stat-value">58</span></div>
+                <div class="stat-entry">Puzzles solved <span class="stat-value">43</span></div>
+                
+            </div>
+        </div>
+        <div>
+            <h4>Members</h4>
+            <div class="info-desc">
+                
+                Annie, 
+                
+                Elly, 
+                
+                Cyn, 
+                
+                Tian, 
+                
+                Evan, 
+                
+                Michelle, 
+                
+                Carly, 
+                
+                Kevin, 
+                
+                Swagmaster
+                
+            </div>
+        </div>
+    </div>
+    
+    
+    <svg class="chart" style="height: calc(2px * 43)" viewbox="0 0 907200.0 43" preserveAspectRatio="none">
+        <path d="M 907200.0 0 L 0 0
+        
+        L 0.0 1
+        L 2929.660512 1
+        
+        L 2929.660512 2
+        L 3557.61234 2
+        
+        L 3557.61234 3
+        L 6859.588719 3
+        
+        L 6859.588719 4
+        L 10403.61125 4
+        
+        L 10403.61125 5
+        L 10503.899517 5
+        
+        L 10503.899517 6
+        L 11766.777282 6
+        
+        L 11766.777282 7
+        L 16299.695705 7
+        
+        L 16299.695705 8
+        L 18390.166702 8
+        
+        L 18390.166702 9
+        L 42718.875158 9
+        
+        L 42718.875158 10
+        L 67199.353342 10
+        
+        L 67199.353342 11
+        L 81368.422663 11
+        
+        L 81368.422663 12
+        L 93853.41749 12
+        
+        L 93853.41749 13
+        L 112562.268151 13
+        
+        L 112562.268151 14
+        L 129346.348141 14
+        
+        L 129346.348141 15
+        L 169238.361403 15
+        
+        L 169238.361403 16
+        L 207280.426763 16
+        
+        L 207280.426763 17
+        L 214216.008013 17
+        
+        L 214216.008013 18
+        L 272742.849155 18
+        
+        L 272742.849155 19
+        L 290282.525091 19
+        
+        L 290282.525091 20
+        L 297977.851002 20
+        
+        L 297977.851002 21
+        L 359829.369882 21
+        
+        L 359829.369882 22
+        L 365598.968928 22
+        
+        L 365598.968928 23
+        L 380647.215962 23
+        
+        L 380647.215962 24
+        L 381125.025648 24
+        
+        L 381125.025648 25
+        L 427645.648153 25
+        
+        L 427645.648153 26
+        L 438762.109442 26
+        
+        L 438762.109442 27
+        L 456893.182987 27
+        
+        L 456893.182987 28
+        L 467820.671676 28
+        
+        L 467820.671676 29
+        L 474574.97319 29
+        
+        L 474574.97319 30
+        L 481955.800735 30
+        
+        L 481955.800735 31
+        L 521324.827014 31
+        
+        L 521324.827014 32
+        L 532158.199428 32
+        
+        L 532158.199428 33
+        L 543215.173392 33
+        
+        L 543215.173392 34
+        L 638352.388582 34
+        
+        L 638352.388582 35
+        L 651457.457636 35
+        
+        L 651457.457636 36
+        L 667444.519388 36
+        
+        L 667444.519388 37
+        L 707820.932217 37
+        
+        L 707820.932217 38
+        L 743478.945973 38
+        
+        L 743478.945973 39
+        L 745120.036708 39
+        
+        L 745120.036708 40
+        L 824244.373271 40
+        
+        L 824244.373271 41
+        L 860765.678382 41
+        
+        L 860765.678382 42
+        L 903864.794216 42
+        
+        L 903864.794216 43
+        L 907140.590971 43
+        
+        L 907140.590971 44
+        L 907200.0 44
+        
+        " class="chart-area"></path>
+        
+        <path d="M 18390.166702 0 L 18390.166702 43" class="chart-line"></path>
+        
+        <path d="M 380647.215962 0 L 380647.215962 43" class="chart-line"></path>
+        
+        <path d="M 707820.932217 0 L 707820.932217 43" class="chart-line"></path>
+        
+        <path d="M 745120.036708 0 L 745120.036708 43" class="chart-line"></path>
+        
+        <path d="M 824244.373271 0 L 824244.373271 43" class="chart-line"></path>
+        
+    </svg>
+    <table class="sortable list-table">
+        <col style="width: 40%">
+        <col style="width: 10%">
+        <col style="width: 20%">
+        <col style="width: 10%">
+        <col style="width: 20%">
+        <tr>
+            <th>Puzzle</th>
+            <th>Incorrect guesses</th>
+            <th>Unlock time (EDT)</th>
+            <th>Time to solve</th>
+            <th>Solve time (EDT)</th>
+        </tr>
+        
+        <tr>
+            <td sorttable_customkey="Naval Conflict"><a href="/puzzle/naval-conflict">Naval Conflict</a></td>
+            <td>14</td>
+            <td sorttable_customkey="1661569320"><time datetime="2022-08-26T22:02:00+00:00" data-format="M j, H:i">Aug 26, 18:02</time></td>
+            <td sorttable_customkey="2929.660512">48m49s</td>
+            <td sorttable_customkey="1661572249"><time datetime="2022-08-26T22:50:49.660512+00:00" data-format="M j, H:i">Aug 26, 18:50</time></td>
+        </tr>
+        
+        <tr>
+            <td sorttable_customkey="Extreme Anagrams"><a href="/puzzle/extreme-anagrams">Extreme Anagrams</a></td>
+            <td>0</td>
+            <td sorttable_customkey="1661569320"><time datetime="2022-08-26T22:02:00+00:00" data-format="M j, H:i">Aug 26, 18:02</time></td>
+            <td sorttable_customkey="3557.61234">59m17s</td>
+            <td sorttable_customkey="1661572877"><time datetime="2022-08-26T23:01:17.612340+00:00" data-format="M j, H:i">Aug 26, 19:01</time></td>
+        </tr>
+        
+        <tr>
+            <td sorttable_customkey="Eclairs and More @ Ovsljs* Opsvut"><a href="/puzzle/eclairs-and-more">Eclairs and More @ Ovsljs* Opsvut</a></td>
+            <td>13</td>
+            <td sorttable_customkey="1661572878"><time datetime="2022-08-26T23:01:18.836725+00:00" data-format="M j, H:i">Aug 26, 19:01</time></td>
+            <td sorttable_customkey="3300.751994">55m0s</td>
+            <td sorttable_customkey="1661576179"><time datetime="2022-08-26T23:56:19.588719+00:00" data-format="M j, H:i">Aug 26, 19:56</time></td>
+        </tr>
+        
+        <tr>
+            <td sorttable_customkey="What&#x27;s the Difference?"><a href="/puzzle/whats-the-difference">What&#x27;s the Difference?</a></td>
+            <td>0</td>
+            <td sorttable_customkey="1661569320"><time datetime="2022-08-26T22:02:00+00:00" data-format="M j, H:i">Aug 26, 18:02</time></td>
+            <td sorttable_customkey="10403.61125">2h53m</td>
+            <td sorttable_customkey="1661579723"><time datetime="2022-08-27T00:55:23.611250+00:00" data-format="M j, H:i">Aug 26, 20:55</time></td>
+        </tr>
+        
+        <tr>
+            <td sorttable_customkey="Extreme Anagrams"><a href="/puzzle/%D0%B5xtreme-anagrams">Extreme Anagrams</a></td>
+            <td>0</td>
+            <td sorttable_customkey="1661579725"><time datetime="2022-08-27T00:55:25.201526+00:00" data-format="M j, H:i">Aug 26, 20:55</time></td>
+            <td sorttable_customkey="98.697991">1m38s</td>
+            <td sorttable_customkey="1661579823"><time datetime="2022-08-27T00:57:03.899517+00:00" data-format="M j, H:i">Aug 26, 20:57</time></td>
+        </tr>
+        
+        <tr>
+            <td sorttable_customkey="Nobody Knows What Your Perfect Puzzle Is, But You Will After Answering These Nine Questions"><a href="/puzzle/your-puzzle">Nobody Knows What Your Perfect Puzzle Is, But You Will After Answering These Nine Questions</a></td>
+            <td>3</td>
+            <td sorttable_customkey="1661572250"><time datetime="2022-08-26T22:50:50.578692+00:00" data-format="M j, H:i">Aug 26, 18:50</time></td>
+            <td sorttable_customkey="8836.19859">2h27m</td>
+            <td sorttable_customkey="1661581086"><time datetime="2022-08-27T01:18:06.777282+00:00" data-format="M j, H:i">Aug 26, 21:18</time></td>
+        </tr>
+        
+        <tr>
+            <td sorttable_customkey="Wordless"><a href="/puzzle/wordless">Wordless</a></td>
+            <td>0</td>
+            <td sorttable_customkey="1661576181"><time datetime="2022-08-26T23:56:21.756610+00:00" data-format="M j, H:i">Aug 26, 19:56</time></td>
+            <td sorttable_customkey="9437.939095">2h37m</td>
+            <td sorttable_customkey="1661585619"><time datetime="2022-08-27T02:33:39.695705+00:00" data-format="M j, H:i">Aug 26, 22:33</time></td>
+        </tr>
+        
+        <tr>
+            <td sorttable_customkey="The Line" class="meta-stats"><a href="/puzzle/the-line">The Line</a></td>
+            <td>12</td>
+            <td sorttable_customkey="1661579827"><time datetime="2022-08-27T00:57:07.973517+00:00" data-format="M j, H:i">Aug 26, 20:57</time></td>
+            <td sorttable_customkey="7882.193185">2h11m</td>
+            <td sorttable_customkey="1661587710"><time datetime="2022-08-27T03:08:30.166702+00:00" data-format="M j, H:i">Aug 26, 23:08</time></td>
+        </tr>
+        
+        <tr>
+            <td sorttable_customkey="Shared Samples"><a href="/puzzle/shared-samples">Shared Samples</a></td>
+            <td>11</td>
+            <td sorttable_customkey="1661576181"><time datetime="2022-08-26T23:56:21.756610+00:00" data-format="M j, H:i">Aug 26, 19:56</time></td>
+            <td sorttable_customkey="35857.118548">9h57m</td>
+            <td sorttable_customkey="1661612038"><time datetime="2022-08-27T09:53:58.875158+00:00" data-format="M j, H:i">Aug 27, 05:53</time></td>
+        </tr>
+        
+        <tr>
+            <td sorttable_customkey="horse_ebooks"><a href="/puzzle/horse_ebooks">horse_ebooks</a></td>
+            <td>2</td>
+            <td sorttable_customkey="1661619067"><time datetime="2022-08-27T11:51:07.813727+00:00" data-format="M j, H:i">Aug 27, 07:51</time></td>
+            <td sorttable_customkey="17451.539615">4h50m</td>
+            <td sorttable_customkey="1661636519"><time datetime="2022-08-27T16:41:59.353342+00:00" data-format="M j, H:i">Aug 27, 12:41</time></td>
+        </tr>
+        
+        <tr>
+            <td sorttable_customkey="Bullet Curtain"><a href="/puzzle/bullet-curtain">Bullet Curtain</a></td>
+            <td>1</td>
+            <td sorttable_customkey="1661619067"><time datetime="2022-08-27T11:51:07.813727+00:00" data-format="M j, H:i">Aug 27, 07:51</time></td>
+            <td sorttable_customkey="31620.608936">8h47m</td>
+            <td sorttable_customkey="1661650688"><time datetime="2022-08-27T20:38:08.422663+00:00" data-format="M j, H:i">Aug 27, 16:38</time></td>
+        </tr>
+        
+        <tr>
+            <td sorttable_customkey="Changes"><a href="/puzzle/changes">Changes</a></td>
+            <td>2</td>
+            <td sorttable_customkey="1661636519"><time datetime="2022-08-27T16:41:59.770205+00:00" data-format="M j, H:i">Aug 27, 12:41</time></td>
+            <td sorttable_customkey="26653.647285">7h24m</td>
+            <td sorttable_customkey="1661663173"><time datetime="2022-08-28T00:06:13.417490+00:00" data-format="M j, H:i">Aug 27, 20:06</time></td>
+        </tr>
+        
+        <tr>
+            <td sorttable_customkey="Make Your Own Puzzle Hunt"><a href="/puzzle/make-your-own-puzzle-hunt">Make Your Own Puzzle Hunt</a></td>
+            <td>1</td>
+            <td sorttable_customkey="1661619067"><time datetime="2022-08-27T11:51:07.813727+00:00" data-format="M j, H:i">Aug 27, 07:51</time></td>
+            <td sorttable_customkey="62814.454424">17h26m</td>
+            <td sorttable_customkey="1661681882"><time datetime="2022-08-28T05:18:02.268151+00:00" data-format="M j, H:i">Aug 28, 01:18</time></td>
+        </tr>
+        
+        <tr>
+            <td sorttable_customkey="Cryptology"><a href="/puzzle/cryptology">Cryptology</a></td>
+            <td>18</td>
+            <td sorttable_customkey="1661681882"><time datetime="2022-08-28T05:18:02.692448+00:00" data-format="M j, H:i">Aug 28, 01:18</time></td>
+            <td sorttable_customkey="16783.655693">4h39m</td>
+            <td sorttable_customkey="1661698666"><time datetime="2022-08-28T09:57:46.348141+00:00" data-format="M j, H:i">Aug 28, 05:57</time></td>
+        </tr>
+        
+        <tr>
+            <td sorttable_customkey="Young Artists"><a href="/puzzle/young-artists">Young Artists</a></td>
+            <td>0</td>
+            <td sorttable_customkey="1661681882"><time datetime="2022-08-28T05:18:02.692448+00:00" data-format="M j, H:i">Aug 28, 01:18</time></td>
+            <td sorttable_customkey="56675.668955">15h44m</td>
+            <td sorttable_customkey="1661738558"><time datetime="2022-08-28T21:02:38.361403+00:00" data-format="M j, H:i">Aug 28, 17:02</time></td>
+        </tr>
+        
+        <tr>
+            <td sorttable_customkey="The Earth Guide"><a href="/puzzle/the-earth-guide">The Earth Guide</a></td>
+            <td>1</td>
+            <td sorttable_customkey="1661650689"><time datetime="2022-08-27T20:38:09.146352+00:00" data-format="M j, H:i">Aug 27, 16:38</time></td>
+            <td sorttable_customkey="125911.280411">34h58m</td>
+            <td sorttable_customkey="1661776600"><time datetime="2022-08-29T07:36:40.426763+00:00" data-format="M j, H:i">Aug 29, 03:36</time></td>
+        </tr>
+        
+        <tr>
+            <td sorttable_customkey="Three"><a href="/puzzle/three">Three</a></td>
+            <td>167</td>
+            <td sorttable_customkey="1661663173"><time datetime="2022-08-28T00:06:13.967350+00:00" data-format="M j, H:i">Aug 27, 20:06</time></td>
+            <td sorttable_customkey="120362.040663">33h26m</td>
+            <td sorttable_customkey="1661783536"><time datetime="2022-08-29T09:32:16.008013+00:00" data-format="M j, H:i">Aug 29, 05:32</time></td>
+        </tr>
+        
+        <tr>
+            <td sorttable_customkey="All Things Big and Small"><a href="/puzzle/all-things-big-and-small">All Things Big and Small</a></td>
+            <td>1</td>
+            <td sorttable_customkey="1661776738"><time datetime="2022-08-29T07:38:58.305383+00:00" data-format="M j, H:i">Aug 29, 03:38</time></td>
+            <td sorttable_customkey="65324.543772">18h8m</td>
+            <td sorttable_customkey="1661842062"><time datetime="2022-08-30T01:47:42.849155+00:00" data-format="M j, H:i">Aug 29, 21:47</time></td>
+        </tr>
+        
+        <tr>
+            <td sorttable_customkey="Oversimplified"><a href="/puzzle/oversimplified">Oversimplified</a></td>
+            <td>2</td>
+            <td sorttable_customkey="1661828520"><time datetime="2022-08-29T22:02:00+00:00" data-format="M j, H:i">Aug 29, 18:02</time></td>
+            <td sorttable_customkey="31082.525091">8h38m</td>
+            <td sorttable_customkey="1661859602"><time datetime="2022-08-30T06:40:02.525091+00:00" data-format="M j, H:i">Aug 30, 02:40</time></td>
+        </tr>
+        
+        <tr>
+            <td sorttable_customkey="✝️🔤🧩"><a href="/puzzle/abc">✝️🔤🧩</a></td>
+            <td>2</td>
+            <td sorttable_customkey="1661753158"><time datetime="2022-08-29T01:05:58.738872+00:00" data-format="M j, H:i">Aug 28, 21:05</time></td>
+            <td sorttable_customkey="114139.11213">31h42m</td>
+            <td sorttable_customkey="1661867297"><time datetime="2022-08-30T08:48:17.851002+00:00" data-format="M j, H:i">Aug 30, 04:48</time></td>
+        </tr>
+        
+        <tr>
+            <td sorttable_customkey="Duality"><a href="/puzzle/duality">Duality</a></td>
+            <td>1</td>
+            <td sorttable_customkey="1661636519"><time datetime="2022-08-27T16:41:59.770205+00:00" data-format="M j, H:i">Aug 27, 12:41</time></td>
+            <td sorttable_customkey="292629.599677">81h17m</td>
+            <td sorttable_customkey="1661929149"><time datetime="2022-08-31T01:59:09.369882+00:00" data-format="M j, H:i">Aug 30, 21:59</time></td>
+        </tr>
+        
+        <tr>
+            <td sorttable_customkey="A Practical Guide to Choosing a Team Name"><a href="/puzzle/practical-guide">A Practical Guide to Choosing a Team Name</a></td>
+            <td>6</td>
+            <td sorttable_customkey="1661738558"><time datetime="2022-08-28T21:02:38.793559+00:00" data-format="M j, H:i">Aug 28, 17:02</time></td>
+            <td sorttable_customkey="196360.175369">54h32m</td>
+            <td sorttable_customkey="1661934918"><time datetime="2022-08-31T03:35:18.968928+00:00" data-format="M j, H:i">Aug 30, 23:35</time></td>
+        </tr>
+        
+        <tr>
+            <td sorttable_customkey="Forward" class="meta-stats"><a href="/puzzle/forward">Forward</a></td>
+            <td>4</td>
+            <td sorttable_customkey="1661783536"><time datetime="2022-08-29T09:32:16.543510+00:00" data-format="M j, H:i">Aug 29, 05:32</time></td>
+            <td sorttable_customkey="166430.672452">46h13m</td>
+            <td sorttable_customkey="1661949967"><time datetime="2022-08-31T07:46:07.215962+00:00" data-format="M j, H:i">Aug 31, 03:46</time></td>
+        </tr>
+        
+        <tr>
+            <td sorttable_customkey="Mythic Arms"><a href="/puzzle/mythic-arms">Mythic Arms</a></td>
+            <td>2</td>
+            <td sorttable_customkey="1661698666"><time datetime="2022-08-28T09:57:46.795469+00:00" data-format="M j, H:i">Aug 28, 05:57</time></td>
+            <td sorttable_customkey="251778.230179">69h56m</td>
+            <td sorttable_customkey="1661950445"><time datetime="2022-08-31T07:54:05.025648+00:00" data-format="M j, H:i">Aug 31, 03:54</time></td>
+        </tr>
+        
+        <tr>
+            <td sorttable_customkey="Everything Everywhere All at Once"><a href="/puzzle/everything-everywhere-all-at-once">Everything Everywhere All at Once</a></td>
+            <td>5</td>
+            <td sorttable_customkey="1661753158"><time datetime="2022-08-29T01:05:58.738872+00:00" data-format="M j, H:i">Aug 28, 21:05</time></td>
+            <td sorttable_customkey="243806.909281">67h43m</td>
+            <td sorttable_customkey="1661996965"><time datetime="2022-08-31T20:49:25.648153+00:00" data-format="M j, H:i">Aug 31, 16:49</time></td>
+        </tr>
+        
+        <tr>
+            <td sorttable_customkey="Pocket Guide to Travel"><a href="/puzzle/pocket-guide-to-travel">Pocket Guide to Travel</a></td>
+            <td>3</td>
+            <td sorttable_customkey="1661753158"><time datetime="2022-08-29T01:05:58.738872+00:00" data-format="M j, H:i">Aug 28, 21:05</time></td>
+            <td sorttable_customkey="254923.37057">70h48m</td>
+            <td sorttable_customkey="1662008082"><time datetime="2022-08-31T23:54:42.109442+00:00" data-format="M j, H:i">Aug 31, 19:54</time></td>
+        </tr>
+        
+        <tr>
+            <td sorttable_customkey="Speedy Crosswording"><a href="/puzzle/speedy-crosswording">Speedy Crosswording</a></td>
+            <td>5</td>
+            <td sorttable_customkey="1662010223"><time datetime="2022-09-01T00:30:23.243333+00:00" data-format="M j, H:i">Aug 31, 20:30</time></td>
+            <td sorttable_customkey="15989.939654">4h26m</td>
+            <td sorttable_customkey="1662026213"><time datetime="2022-09-01T04:56:53.182987+00:00" data-format="M j, H:i">Sep 1, 00:56</time></td>
+        </tr>
+        
+        <tr>
+            <td sorttable_customkey="Combat Roller"><a href="/puzzle/combat-roller">Combat Roller</a></td>
+            <td>3</td>
+            <td sorttable_customkey="1662010223"><time datetime="2022-09-01T00:30:23.243333+00:00" data-format="M j, H:i">Aug 31, 20:30</time></td>
+            <td sorttable_customkey="26917.428343">7h28m</td>
+            <td sorttable_customkey="1662037140"><time datetime="2022-09-01T07:59:00.671676+00:00" data-format="M j, H:i">Sep 1, 03:59</time></td>
+        </tr>
+        
+        <tr>
+            <td sorttable_customkey="Babysit the Supercomputer"><a href="/puzzle/babysit-the-supercomputer">Babysit the Supercomputer</a></td>
+            <td>0</td>
+            <td sorttable_customkey="1662010223"><time datetime="2022-09-01T00:30:23.243333+00:00" data-format="M j, H:i">Aug 31, 20:30</time></td>
+            <td sorttable_customkey="33671.729857">9h21m</td>
+            <td sorttable_customkey="1662043894"><time datetime="2022-09-01T09:51:34.973190+00:00" data-format="M j, H:i">Sep 1, 05:51</time></td>
+        </tr>
+        
+        <tr>
+            <td sorttable_customkey="At the Park"><a href="/puzzle/at-the-park">At the Park</a></td>
+            <td>1</td>
+            <td sorttable_customkey="1662037157"><time datetime="2022-09-01T07:59:17.144254+00:00" data-format="M j, H:i">Sep 1, 03:59</time></td>
+            <td sorttable_customkey="14118.656481">3h55m</td>
+            <td sorttable_customkey="1662051275"><time datetime="2022-09-01T11:54:35.800735+00:00" data-format="M j, H:i">Sep 1, 07:54</time></td>
+        </tr>
+        
+        <tr>
+            <td sorttable_customkey="Me, the Worm"><a href="/puzzle/me-the-worm">Me, the Worm</a></td>
+            <td>1</td>
+            <td sorttable_customkey="1662043895"><time datetime="2022-09-01T09:51:35.440863+00:00" data-format="M j, H:i">Sep 1, 05:51</time></td>
+            <td sorttable_customkey="46749.386151">12h59m</td>
+            <td sorttable_customkey="1662090644"><time datetime="2022-09-01T22:50:44.827014+00:00" data-format="M j, H:i">Sep 1, 18:50</time></td>
+        </tr>
+        
+        <tr>
+            <td sorttable_customkey="Just Wait an Hour"><a href="/puzzle/just-wait-an-hour">Just Wait an Hour</a></td>
+            <td>1</td>
+            <td sorttable_customkey="1662037157"><time datetime="2022-09-01T07:59:17.144254+00:00" data-format="M j, H:i">Sep 1, 03:59</time></td>
+            <td sorttable_customkey="64321.055174">17h52m</td>
+            <td sorttable_customkey="1662101478"><time datetime="2022-09-02T01:51:18.199428+00:00" data-format="M j, H:i">Sep 1, 21:51</time></td>
+        </tr>
+        
+        <tr>
+            <td sorttable_customkey="Piano Typer"><a href="/puzzle/piano-typer">Piano Typer</a></td>
+            <td>5</td>
+            <td sorttable_customkey="1662051276"><time datetime="2022-09-01T11:54:36.189750+00:00" data-format="M j, H:i">Sep 1, 07:54</time></td>
+            <td sorttable_customkey="61258.983642">17h0m</td>
+            <td sorttable_customkey="1662112535"><time datetime="2022-09-02T04:55:35.173392+00:00" data-format="M j, H:i">Sep 2, 00:55</time></td>
+        </tr>
+        
+        <tr>
+            <td sorttable_customkey="Reap What You Sow"><a href="/puzzle/reap-what-you-sow">Reap What You Sow</a></td>
+            <td>2</td>
+            <td sorttable_customkey="1661828520"><time datetime="2022-08-29T22:02:00+00:00" data-format="M j, H:i">Aug 29, 18:02</time></td>
+            <td sorttable_customkey="379152.388582">105h19m</td>
+            <td sorttable_customkey="1662207672"><time datetime="2022-09-03T07:21:12.388582+00:00" data-format="M j, H:i">Sep 3, 03:21</time></td>
+        </tr>
+        
+        <tr>
+            <td sorttable_customkey="A Winding Walk"><a href="/puzzle/a-winding-walk">A Winding Walk</a></td>
+            <td>0</td>
+            <td sorttable_customkey="1661828520"><time datetime="2022-08-29T22:02:00+00:00" data-format="M j, H:i">Aug 29, 18:02</time></td>
+            <td sorttable_customkey="392257.457636">108h57m</td>
+            <td sorttable_customkey="1662220777"><time datetime="2022-09-03T10:59:37.457636+00:00" data-format="M j, H:i">Sep 3, 06:59</time></td>
+        </tr>
+        
+        <tr>
+            <td sorttable_customkey="Maze"><a href="/puzzle/maze">Maze</a></td>
+            <td>1</td>
+            <td sorttable_customkey="1661828520"><time datetime="2022-08-29T22:02:00+00:00" data-format="M j, H:i">Aug 29, 18:02</time></td>
+            <td sorttable_customkey="408244.519388">113h24m</td>
+            <td sorttable_customkey="1662236764"><time datetime="2022-09-03T15:26:04.519388+00:00" data-format="M j, H:i">Sep 3, 11:26</time></td>
+        </tr>
+        
+        <tr>
+            <td sorttable_customkey="World&#x27;s End Concert" class="meta-stats"><a href="/puzzle/worlds-end-concert">World&#x27;s End Concert</a></td>
+            <td>1</td>
+            <td sorttable_customkey="1662101478"><time datetime="2022-09-02T01:51:18.696877+00:00" data-format="M j, H:i">Sep 1, 21:51</time></td>
+            <td sorttable_customkey="175662.23534">48h47m</td>
+            <td sorttable_customkey="1662277140"><time datetime="2022-09-04T02:39:00.932217+00:00" data-format="M j, H:i">Sep 3, 22:39</time></td>
+        </tr>
+        
+        <tr>
+            <td sorttable_customkey="The Dining Philosophers"><a href="/puzzle/the-dining-philosophers">The Dining Philosophers</a></td>
+            <td>0</td>
+            <td sorttable_customkey="1661828520"><time datetime="2022-08-29T22:02:00+00:00" data-format="M j, H:i">Aug 29, 18:02</time></td>
+            <td sorttable_customkey="484278.945973">134h31m</td>
+            <td sorttable_customkey="1662312798"><time datetime="2022-09-04T12:33:18.945973+00:00" data-format="M j, H:i">Sep 4, 08:33</time></td>
+        </tr>
+        
+        <tr>
+            <td sorttable_customkey="Hibernating and Flying South" class="meta-stats"><a href="/puzzle/hibernating-and-flying-south">Hibernating and Flying South</a></td>
+            <td>0</td>
+            <td sorttable_customkey="1662236765"><time datetime="2022-09-03T15:26:05.089768+00:00" data-format="M j, H:i">Sep 3, 11:26</time></td>
+            <td sorttable_customkey="77674.94694">21h34m</td>
+            <td sorttable_customkey="1662314440"><time datetime="2022-09-04T13:00:40.036708+00:00" data-format="M j, H:i">Sep 4, 09:00</time></td>
+        </tr>
+        
+        <tr>
+            <td sorttable_customkey="The Cube" class="meta-stats"><a href="/puzzle/the-cube">The Cube</a></td>
+            <td>0</td>
+            <td sorttable_customkey="1662390145"><time datetime="2022-09-05T10:02:25.316627+00:00" data-format="M j, H:i">Sep 5, 06:02</time></td>
+            <td sorttable_customkey="3419.056644">56m59s</td>
+            <td sorttable_customkey="1662393564"><time datetime="2022-09-05T10:59:24.373271+00:00" data-format="M j, H:i">Sep 5, 06:59</time></td>
+        </tr>
+        
+        <tr>
+            <td sorttable_customkey="Broken Jukebox"><a href="/puzzle/broken-jukebox">Broken Jukebox</a></td>
+            <td>6</td>
+            <td sorttable_customkey="1662026213"><time datetime="2022-09-01T04:56:53.556976+00:00" data-format="M j, H:i">Sep 1, 00:56</time></td>
+            <td sorttable_customkey="403872.121406">112h11m</td>
+            <td sorttable_customkey="1662430085"><time datetime="2022-09-05T21:08:05.678382+00:00" data-format="M j, H:i">Sep 5, 17:08</time></td>
+        </tr>
+        
+        <tr>
+            <td sorttable_customkey="Somewhere"><a href="/puzzle/somewhere">Somewhere</a></td>
+            <td>1</td>
+            <td sorttable_customkey="1661828520"><time datetime="2022-08-29T22:02:00+00:00" data-format="M j, H:i">Aug 29, 18:02</time></td>
+            <td sorttable_customkey="644664.794216">179h4m</td>
+            <td sorttable_customkey="1662473184"><time datetime="2022-09-06T09:06:24.794216+00:00" data-format="M j, H:i">Sep 6, 05:06</time></td>
+        </tr>
+        
+        <tr>
+            <td sorttable_customkey="Galactic History Exam"><a href="/puzzle/galactic-history-exam">Galactic History Exam</a></td>
+            <td>15</td>
+            <td sorttable_customkey="1661828520"><time datetime="2022-08-29T22:02:00+00:00" data-format="M j, H:i">Aug 29, 18:02</time></td>
+            <td sorttable_customkey="647940.590971">179h59m</td>
+            <td sorttable_customkey="1662476460"><time datetime="2022-09-06T10:01:00.590971+00:00" data-format="M j, H:i">Sep 6, 06:01</time></td>
+        </tr>
+        
+    </table>
+    
+    
+</main>
+
+
+    </div>
+    
+
+    
+
+    
+</body>
+</html>

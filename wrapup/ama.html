@@ -1,0 +1,517 @@
+
+
+
+
+
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    
+    <title>Galactic Puzzle Hunt</title>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=0.5">
+    <meta property="og:title" content="Galactic Puzzle Hunt 2022">
+    <meta property="og:description" content="Registration for this year's Galactic Puzzle Hunt is now open!">
+    <meta property="og:image" content="https://galacticpuzzlehunt.com/static/images/banner.png">
+    <meta property="twitter:card" content="summary_large_image">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Recursive:slnt,CASL,CRSV,MONO@-3,0.5,1,1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/skeleton.css">
+    <link rel="stylesheet" href="/static/css/base.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.19/jquery.touchSwipe.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.formset/1.2.2/jquery.formset.min.js"></script>
+    <script src="/jsi18n/"></script>
+    <script src="/static/js/sorttable.js"></script>
+    <script src="/static/js/tray.js"></script>
+    <script src="/static/js/notify.js"></script>
+    <script src="/static/js/time.js"></script>
+    
+    
+    <link rel="icon" sizes="16x16 32x32 48x48 64x64" href="/static/images/favicon.ico" type="image/vnd.microsoft.icon">
+    
+    
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-92192633-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-92192633-1');
+</script>
+
+</head>
+<body>
+    
+    <div id="background-glitch-wrapper" class="background-glitch">
+        <div class="glitch-1"></div>
+        <div class="glitch-2"></div>
+        <div class="glitch-3"></div>
+    </div>
+    
+    
+    <input id="shortcuts" type="checkbox">
+    
+    <nav>
+        <span class="tray">
+            <span id="tray-timer"></span>
+            <div class="top-tabs">
+                <a href="/">
+                    Home
+                </a>
+                
+                <a href="/rules">
+                    Rules
+                </a>
+                
+                
+                <a href="/story">
+                    Story
+                </a>
+                
+                
+                <a href="/puzzles">
+                    Puzzles
+                </a>
+                
+                <a href="/teams">
+                    Teams
+                </a>
+                
+                <a href="/faq">
+                    FAQ
+                </a>
+                
+                
+                <a href="/errata">
+                    Updates
+                </a>
+                
+                
+                <a class="selected-tab" href="/wrapup">
+                    Wrap-Up
+                </a>
+                
+                
+                <a href="https://galacticpuzzlehunt.com/archive">
+                    Archive
+                </a>
+                
+                
+                
+            </div>
+            <div class="top-left-actions">
+                
+<a href="/wrapup" class="btn">Back to wrap-up</a>
+
+            </div>
+        </span>
+        <div class="top-right-actions">
+        
+        
+        </div>
+    </nav>
+    
+    
+    
+    
+    
+    <script>
+
+    
+    
+    let glitchTriggerFuncs = [];
+    let glitchTriggerReceived = false;
+    let glitchTriggerExReceived = false;
+    let glitchPageLoaded = false;
+    function processGlitchFuncs(ex) {
+        glitchTriggerFuncs.forEach((func) => {
+            func(ex);
+        });
+    }
+    function doGlitch(ex) {
+        glitchTriggerReceived = true;
+        if (ex) {
+            glitchTriggerExReceived = true;
+        }
+        if (glitchPageLoaded) {
+            processGlitchFuncs(ex);
+        }
+    }
+    window.addEventListener('load', () => {
+        glitchPageLoaded = true;
+        if (glitchTriggerExReceived) {
+            processGlitchFuncs(true);
+        }
+        else if (glitchTriggerReceived) {
+            processGlitchFuncs(false);
+        }
+    }, false);
+    
+    
+    
+    function registerOnGlitchHook(func) {
+        if (glitchTriggerExReceived) {
+            func(true);
+        }
+        else if (glitchTriggerReceived) {
+            func(false);
+        }
+        glitchTriggerFuncs.push(func);
+    }
+    
+
+    
+    
+    </script>
+    <div class="content">
+        
+
+<style>
+  aside {
+    display: none;
+  }
+
+  @media screen and (min-width: 961px) {
+    aside {
+      display: block;
+      position: fixed;
+      width: 240px;
+      top: 120px;
+      left: 60px;
+    }
+
+    aside div {
+      color: #087;
+      cursor: pointer;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    aside :hover {
+      text-decoration: underline;
+    }
+
+    aside .highlight {
+      font-weight: bold;
+    }
+
+    .content {
+      margin-left: calc(240px - 10vw);
+    }
+  }
+</style>
+
+<h1>Ask Us Anything</h1>
+
+<main>
+    <p><i>Questions have been edited slightly for clarity.</i></p>
+
+    <h3>Hunt Writing</h3>
+
+    <p><strong>When did meta/feeder puzzle writing begin for this hunt?</strong></p>
+    
+    <p>On April 4, we did a first testsolve for both Forward and Hibernating and Flying South. So let’s say that we started writing metas in late March.</p>
+
+    <p>Feeder writing began in earnest in mid-May. (There were some puzzle ideas that people were passionate about and were working on regardless of which answers were assigned—but meta answers were finalized and assigned in mid-May.)</p>
+
+    <p><strong>How long does it take you all to put this together? Do you do it as a full-time job? Are you paid? Do donations cover your cost?</strong></p>
+
+    <p>We started planning in February, holding weekly meetings. The total time invested is probably on the order of low-thousands of hours. We all volunteer our time freely and support ourselves through other means. Money that you <a href="https://www.paypal.com/donate/?cmd=_s-xclick&hosted_button_id=L4CVDVR3VTLZJ">donate to us</a> is used for hunt-related expenses, such as server costs or individual puzzle costs.</p>
+
+    <p><strong>Each puzzle in this hunt feels like a mini hunt with so much information. How long does it take to testsolve and check to make sure there are no mistakes?</strong></p>
+
+    <p>Every puzzle gets two clean testsolves (meaning that the solvers are not spoiled on any of the mechanics, and they don’t get any hints from observing authors/editors), and then it is separately factchecked (meaning that another person combs through the data in the puzzle or the logical reasoning and verifies that it is accurate). If a testsolve is stalling, then an observer steps in and does one of two things. Either they will ask the testers to come back later after changes are made to the puzzle, or they will provide a hint with the hope that the group can continue to test the remaining part of the puzzle.</p>
+
+    <p>How long the factchecking process takes depends a lot on the puzzle. A “fast” puzzle requires only verifying crossword clues or unambiguous steps. Other puzzles take significantly longer. For example, factchecking Hibernating and Flying South required setting up an emulator and playing around in the game. The factchecker enjoyed this, but it took awhile.</p>
+
+    <p><strong>How many resets did your testsolvers need for the puzzles in the World’s End Concert round?</strong></p>
+
+    <p>378</p>
+
+    <p><strong>How much suffering did you anticipate, versus how much seemed to happen? In particular suffering about (a) website uptime/lag, and (b) that teams needed to carefully manage resets and page turns/wormhole jumps.</strong></p>
+
+    <p>We didn’t anticipate that the website would have serious problems. On the other hand, we were thinking about how to make the time loop fun to interact with from the beginning. One of our main points of discussion when deciding on a theme was whether the extra theme components would be “worth it” and would contribute positively to the core puzzle hunt experience.</p>
+
+    <p><strong>Which round was the hardest to design/write/code?</strong></p>
+
+    <p>World’s End Concert. For one, the metapuzzle was tested and tweaked many times in order to have the right difficulty. For two, there were a lot of tech requirements for the round and the puzzles in the round.</p>
+
+    <p><strong>Is innovating hunt formats a primary goal for your writing team, or does it just kind of happen every year?</strong></p>
+
+    <p>One of our main goals is to innovate, and the way we did that this year was by the unusual global structure. In past years, innovation has appeared in different ways (for example, in 2020, we decided to focus on unique round concepts).</p>
+
+    <p><strong>Most importantly, I really want to see more of this bad puzzle ideas Discord channel (as referenced in the <a href="/solution/abc">emoji crossword solution</a>).</strong></p>
+
+    <p>The hunt writers’ Discord is a sacred place to which entry is not easily gained. The 2020 puzzle <a href="https://2020.galacticpuzzlehunt.com/puzzle/crosswerd.html">Crosswerd</a> also came from this channel (surely there are others too).</p>
+
+    <p><strong>Were there older versions of any of the puzzles made using game engines that didn’t make it into the final version of the hunt?</strong></p>
+
+    <p>No.</p>
+
+    <p><strong>Any stories about puzzles changing, e.g. to fit into the Exam or World’s End Concert round structures?</strong></p>
+
+    <p>Perhaps surprisingly, no. When we chose this theme, we knew that the Exam was going to be the way that it was, and we wrote puzzles specifically for its mechanic. Similarly, we decided that we wanted to do the World’s End round pretty early on, and puzzles were built with that knowledge. Of course, not all the puzzles ended up using the mechanic very heavily, but we think that bit of variety was probably for the best.</p>
+
+    <p><strong>Writing a puzzlehunt is a different beast than an individual puzzle. Do you have any good resources for aspiring hunt writers?</strong><p>
+
+    <p>The best resource is a group of people who will encourage, motivate, and inspire you. Everyone on this team has taught me so much, and I’m happy to have become their friend. If you have dreams, reach out to your teammates and the broader puzzle community! Throw ideas around! Write puzzles together! Testsolve each other’s puzzles!</p>
+
+    <p>A potentially less sappy answer from a different member of the writing team:</p>
+    <ul>
+        <li><a href="https://blog.vero.site/post/puzzlehunts">Introduction to Puzzlehunts</a> is a great place to gain an understanding of puzzle hunt tropes / basics. It’s important to understand puzzle hunt fundamentals to be able to write them. This page also links to some writing resources:
+            <ul>
+                <li>Foggy Brume’s notes on puzzle standards (<a href="https://foggyb.livejournal.com/42978.html">part 1</a>, <a href="https://foggyb.livejournal.com/43107.html">part 2</a>, <a href="https://foggyb.livejournal.com/43360.html">part 3</a>)</li>
+                <li><a href="http://www.mit.edu/~dwilson/puzzles/puzzlewriting.html">David Wilson’s Introduction to Writing Good Puzzle Hunt Puzzles</a></li>
+            </ul>
+        </li>
+        <li><a href="https://jaylorch.net/static/puzzles/HowToWriteAFunPuzzle.pdf">Jay Lorch’s How to Write a Fun Puzzle</a></li>
+        <li><a href="https://www.amazon.com/Puzzlecraft-Ultimate-Guide-Construct-Puzzle/dp/1402779240">Puzzlecraft: The Ultimate Guide on How to Construct Every Kind of Puzzle</a> is an excellent resource. For some puzzle types, it actually gives you steps to follow to hone your puzzle-writing skills and “work your way up” to writing better puzzles. (e.g. learn to construct crosswords by making small rectangles and filling them completely with letters)</li>
+    </ul>
+
+    <ul>
+        <li>For crosswords specifically, try crossword fill tools:
+            <ul>
+                <li><a href="https://www.crosserville.com">Crosserville</a>, online</li>
+                <li><a href="https://www.quinapalus.com/qxw.html">Qxw</a>, available for Windows and Linux</li>
+                <li><a href="http://beekeeperlabs.com/crossfire/">Crossfire</a>, available for Windows, Mac, and Linux</li>
+            </ul>
+        </li>
+        <li>The word list that you use is very important. Try <a href="https://peterbroda.me/crosswords/wordlist/">https://peterbroda.me/crosswords/wordlist/</a> and <a href="https://www.spreadthewordlist.com/">https://www.spreadthewordlist.com/</a>; you can also supplement wordlists like <a href="https://sites.google.com/view/expandedcrosswordnamedatabase/home">https://sites.google.com/view/expandedcrosswordnamedatabase/home</a>.</li>
+    </ul>
+
+    <ul>
+        <li>The most important part of puzzlewriting is practice! The second most important part is having editors and testsolvers that will push you to produce something great!
+            <ul>
+                <li>I wrote tons of bad puzzles before I wrote any good ones. I apologize to anyone who solved one of my early puzzles.</li>
+                <li>A very formative experience for me as a writer was repeatedly writing puzzles that I perceived as being okay (although not great), then sending them to an editor who just told me “this isn’t a very good puzzle” and got me to iterate. It taught me that I could set the bar higher for myself and that starting over is a normal part of writing puzzles.</li>
+                <li>Experienced authors write bad puzzles, too, but usually solvers don’t get insight into this process. It turns out the answer to “How did you write this amazing, elegant, fun puzzle?” is sometimes “I threw out a lot of bad ideas and started from scratch until I had something good”.</li>
+            </ul>
+        </li>
+        <li>A good way to practice writing might be to hold a puzzle potluck with some friends! It’s also good to ask around to see which huntwriting teams you can join.</li>
+    </ul>
+
+    <ul><li>Oops, I realized that you were actually asking about writing <em>hunts</em> as opposed to individual puzzles. Start with metas before working on feeders. Try to keep an eye on “hunt balance”. Keep in mind topics / subject matter, “reference puzzles” (does it require outside source material?), word-centric vs logic-centric, etc. Plus, try to mix up the presentation of your puzzles so that there aren’t too many word-only puzzles—try to include image-based and/or audio-based puzzles too. <a href="https://github.com/galacticpuzzlehunt/puzzlord">PuzzLord</a> is the tool that we use to keep track of puzzles through the [ideation, writing, testing, revising, factchecking, websitifying] pipeline, but Google Sheets is a good option too.</li></ul>
+
+
+    <h3>Hunt Design Decisions</h3>
+
+    <p><strong>Galactic Puzzle Hunt is traditionally a difficult hunt. How consciously do you make an effort to generate high difficulty in writing puzzles?</strong></p>
+
+    <p>We tend to write difficult puzzles, but we don’t particularly try to. We have a general sense of “what makes a good puzzle”. Often, these puzzles end up being hard, but sometimes they’re fun and relatively straightforward (notably, in the case of horse_ebooks).</p>
+
+    <p><strong>How did the leaderboard actually work?</strong></p>
+
+    <p>Before you complete The Exam by solving The Square, you can only see teams’ progress in The Exam. Afterwards, you can see how many puzzles every team has solved overall. Your Exam solve count goes back to 0 each loop, but your 2021 solves are preserved.</p>
+
+    <p><strong>Was there an explicit goal to create more interactive puzzles this year? It seemed like a large proportion (a majority?) of the later puzzles were interactive.</strong></p>
+
+    <p>No, this happened naturally, probably due in part to the World’s End Concert round being well suited for interactive puzzles.</p>
+
+    <p><strong>What happens if we submit the second answer for an Exam puzzle first? Did any team do that and get confused? How did you design it in such that the first answers are always identified first, and how did you dare release it this way and not worry about causing a lot of confusion?</strong></p>
+
+    <p>If you submit an alternate answer first, then that answer is marked with a “?” instead of a check or an X, and the response “SUBMISSION is incorrect” appears glitchy. While we suspect that teams were rightfully confused about what is going on here, we hoped to lead them as naturally as possible to discovering the second answers. Because of the extra level of misdirection going on in The Exam, we explicitly tried to write easier puzzles for The Exam than those in intro rounds for past Galactic Puzzle Hunts.</p>
+
+    <p>As for how we dared to do it this way, to be honest we weren’t entirely sure if it would work out.</p>
+
+    <p><strong>Did you suspect that The Line’s answer would be very guessable before hunt?</strong></p>
+
+    <p>Yes.</p>
+
+    <p><strong>What other time loop mechanics did you consider using (unless you want to save those ideas for future hunts)?</strong></p>
+
+    <p>Some rough ideas are in the <a href="https://docs.google.com/document/d/14-TSIi8rKktuMQZlmk-F2hfot5Y1p82FcMiUu9Xfs6Q/edit">theme proposal doc</a>. We had six meta proposals, of which four were chosen for the hunt.</p>
+
+    <p><strong>How did the concept for World’s End Concert develop? The individual round theme seemed pretty different from the rest of the hunt.</strong></p>
+
+    <p>The progression of ideas was: asteroid impact → the asteroid is a “rock concert” → the song “4 Minutes” has a nice time element to it → metapuzzle attempts using the song “4 Minutes”, and the idea to solve each puzzle in four minutes. Another branch that was explored was using the song “Time Warp” from the Rocky Horror Picture Show.</p>
+
+    <p><strong>Where did the idea to have an opt-out of the timed unlocks come from?</strong></p>
+
+    <p>Several teams emailed us requesting the feature! This feature is something that we will likely incorporate into future hunts.</p>
+
+
+    <h3>Web</h3>
+
+    <p><strong>How did you do all the website code? Detailed write-ups of how you put the website together are always very interesting.</strong></p>
+
+    <p>The starting point was our publicly-available codebase we’ve used for the last few years, <a href="https://github.com/galacticpuzzlehunt/gph-site">gph-site</a>, which uses Django (a Python library for web apps). On top of gph-site, we built in a lot of customization for this hunt. First, we needed to update the backend to handle the time loop. This required adding to the Django database models, and carefully managing and routing content between the 2021 and 2022 versions of the site. Second, we implemented a lot of frontend features for polish. This included the glitch text and effects on the site, the “Reset” screen when the time loop resets, and the cool animation on the <a href="https://2021.galacticpuzzlehunt.com/">2021 Home page</a>. These things were made using a mix of CSS and Javascript for styling and animation.</p>
+
+    <p><strong>What happened with the website?</strong></p>
+
+    <p>We still don’t entirely know! Our best guesses are in the wrap-up.</p>
+
+    <p><strong>How did you load test the hunt and the interactive puzzles?</strong></p>
+
+    <p>We didn’t specifically do load testing this year, although we got some insights about likely bottlenecks during testsolving.</p>
+
+
+    <h3>Hints and During-Hunt</h3>
+    <p><strong>Which puzzles played much easier or harder than you anticipated?</strong></p>
+
+    <p>The Earth Guide turned out to be significantly easier than we expected. Shared Samples and Broken Jukebox ended up being harder than we expected.</p>
+
+    <p><strong>How did teams get help if they couldn’t finish enough of Piano Typer?</strong></p>
+
+    <p>If they asked for a hint, we gave them the reward for beating a level.</p>
+
+    <p><strong>How are the hint requests managed? Is it one big queue or is it split on smaller queues depending on which puzzle it is related to?</strong></p>
+
+    <p>The hint requests go into one large queue. Each hint request that comes in has information about which puzzle it is for, which team asked it, and whether it’s a follow-up or a new hint.</p>
+
+    <p><strong>WHO ANSWERS HINTS? How can you answer hints in 5m at 4am?? I was in 2 wildly different time zones during the hunt, and there was still no time that it took more than 10 minutes.</strong></p>
+
+    <p>Answering a hint can be as easy as clicking a button to copy a past response, then clicking again to submit. Yannick Yao and Max Murin answered most of the hints this year. #freeyannick #freemax</p>
+
+    <p><strong>What is your stance on trying to stream puzzlehunts?</strong></p>
+
+    <p>We don’t allow it during the hunt because the puzzle answers should not be publicly available while the hunt is running. On the other hand, we like streaming as a medium and want to encourage it in a way that follows the rules. For example, recording a stream during the hunt and editing it down for later release is allowed, and so is streaming after solutions are available.</p>
+
+
+    <h3>Specific Puzzles</h3>
+    <p><strong>What’s your favorite Touhou song?</strong></p>
+
+    <p>Last Remote<p>
+
+    <p><strong>How did you determine which teams to use for Galactic History Exam? I heard you had to write a lot of clues for different teams. What happens if TRALSE didn’t finish first? J is not an easy letter to clue. Did <em>every</em> team get a custom clue for their team name? That’s… amazing.</strong></p>
+
+    <p>The algorithm tries to use your own team name, and then greedily takes teams from the ends. In retrospect perhaps it would have been better to take teams near your own team when possible. In order to make this work as often as possible, one goal was to write at least one clue for every team. For the ~600 teams that signed up before the start of the hunt, we were able to write clues for about 450 teams. Some teams were too hard to find a one-letter change, others had a strange format, and some others we just didn’t have the time to write a clue for. Due to the website crashing/slowdown going on, we decided not to add additional clues in the middle of the hunt unless absolutely necessary.</p>
+
+    <p>We also wrote a J clue for exAM TEsters and several other teams that have historically done well in previous GPH’s. In the event that a team was leading that didn’t have a J clue ready, we probably would write a clue for them and quickly push that change to the website! That said, there are a few failsafes—if a team didn’t have a clue written for them then it would default to trying to take the topmost ranked teams that works (and if that fails, there was a fixed puzzle where we give you the ordering directly, instead of using the leaderboard order.)</p>
+
+    <p><strong>It’s crazy that Galactic History Exam exists. In order to make it, did you retroactively change the rules on each GPH site or did you plan for 5 years to make a history puzzle with QUINAPALUS as the solution?</strong></p>
+
+    <p>We didn’t retcon anything on the GPH site. QUINAPALUS was intentionally placed, though we really only started planning for that around 2018 (for 2017 it was mostly a throwaway joke). Anderson also ensured that Rock Lobster was in every Spotify playlist in the hopes that it could be used as an index at some point in the future. It was a coincidence that the only letter in puzzle titles that doesn’t appear in either 2017 or 2018 was a J (which meant that we couldn’t index into titles (though we did think about trying to index into dʒʌmbəl), but did eventually motivate the current extraction). The <a href="/solution/galactic-history-exam">authors’ notes</a> go in a bit more detail about how we planned things for this puzzle.</p>
+
+    <p><strong>What is one emoji you really wish you could have used in ✝🔤🧩?</strong></p>
+    
+    <p>The fridge emoji: 􏿾</p>
+
+    <p><strong>How were the words for Reap What You Sow selected/generated?</strong></p>
+
+    <p>See the <a href="/solution/reap-what-you-sow">author’s notes</a>.</p>
+
+    <p><strong>Did the eidolons being in those specific days for A Winding Walk matter?</strong></p>
+
+    <p>No.</p>
+
+    <p><strong>Favorite Mumbo Token transformation?</strong></p>
+
+    <p>Crocodile</p>
+
+    <p><strong>In Pocket Guide to Travel, what do you think was the effect of captioning all those images with alt text on the sighted solvers? Did it obviate the identification step too much?</strong></p>
+
+    <p>We’re not sure. The alt text was initially MUCH more obvious (basically just giving away the answers), but we rewrote it to obscure the answers a bit more. We hope that we were able to make the puzzle accessible without creating too much of a difference in experience between a sighted solver who read the alt text and one who didn’t.</p>
+
+
+    <p><strong>Since Piano Typer featured (well, kind of) classical music, I gotta ask—any recommendations for classical music? Favorite pieces of such?</strong></p>
+
+    <p>The author has a <a href="https://open.spotify.com/playlist/5DVLrAZ7UFhtPoXYeSG3Y3?si=11f6283848ca4a60">Spotify playlist</a> of similar music, and also <a href="https://open.spotify.com/playlist/4xIWhHzOGFianG9ybHjlCK?si=daf71be49a6d478d">normal</a> <a href="https://open.spotify.com/playlist/29QpFke9FzHXOrLMKVuHjl?si=348b189a60774d59">classical</a> <a href="https://open.spotify.com/playlist/5jMqcBj8hSVm1KKQqujVCZ?si=0860f3ed35f04e4c">playlists</a>.</p>
+
+    <p>For other examples of “kind of classical” music, we recommend Lionel Yu’s Nightmare videos (<a href="https://www.youtube.com/watch?v=WheoGHREF60">start here</a>), <a href="https://www.youtube.com/user/thepianoguys?themeRefresh=1">The Piano Guys</a>, <a href="https://www.youtube.com/channel/UCyC_4jvPzLiSkJkLIkA7B8g">Lindsey Stirling</a>, <a href="https://www.youtube.com/channel/UCyjuFsbclXyntSRMBAILzbw">2CELLOS</a>, <a href="https://www.youtube.com/channel/UCC9h6FtIb58ZQCRPJ2ZQtKg">Vitamin String Quartet</a>.</p>
+
+    <p><strong>Puflantwe tacwlafwe puflantu tacadwl-ka zovwe dokfe odeleswe jadif na? (Are there any differences in how puflantu speakers speak puflantu? Put a different way: does puflantu have dialects?)</strong></p>
+
+    <p>The galaxy is very big. In addition to dialects, other galactic languages incorporate (or are incorporated into) some words of puflantu. Spoken and written puflantu has evolved over time. I should also mention that there are puflantu keyboards, puflantu dictionaries, puflantu emoji, a puflantu text-to-binary encoding, puflantu ciphers, and many quite excellent works of puflantu literature and poetry.</p>
+
+    <p><strong>We had an interesting time trying to connect some of the puzzles to Pokémon.</strong></p>
+
+    <p>We like Pokémon too.</p>
+
+    <p><strong>Out of the dishes served in The Dining Philosophers, which are your favorites / do you have any good recipes?</strong></p>
+
+    <p>I made ratatouille recently but it did not look like the fancy Pixar version so I was disappointed.</p>
+
+    <p><strong>For Combat Rollers, we were unable to figure out exact rules for computing the odds, but we were still able to solve the puzzle using 2 rules:
+        <ol>
+            <li>Words with no shared letters have a 0% draw rate. Ergo, if two words have a draw rate of 0% , they share no letters. By process of elimination, a letter bank of an unknown word can be formed.</li>
+            <li>Consistent input gives consistent output. Ergo, if known word A and known word B give a win-lose-ratio of X in practice mode, and known word A and unknown word C give a win-lose-ratio of X in campaign mode, then unknown word C is known word B. This can be used to confirm the words generated from the letter banks.</li>
+        </ol>
+        Did you expect solvers to approach the puzzle in this way?</strong></p>
+
+    <p>At least one testsolving group used strategy 1 (although they also figured out the math so they can use nonzero tie probabilities as well).</p>
+
+    <p><strong>Why do you guys like writing guess-and-check submission puzzles so much?</strong></p>
+
+    <p>(Assuming that you are referring to <a href="https://2021.galacticpuzzlehunt.com/puzzle/three">Three</a> and <a href="https://2018.galacticpuzzlehunt.com/puzzle/the-answer-to-this-puzzle-is.html">The Answer to This Puzzle Is...</a>) The Answer to This Puzzle Is… was written to play with solvers’ expectations about how the answer checker works. Three was written to be a puzzle about history with a fun presentation (and a small thematic callback to The Answer to This Puzzle Is…, with the same leading question).</p>
+
+
+    <h3>Random</h3>
+    <p><strong>What games do you recommend, apart from Baba is You, Opus Magnum, frogorf and Touhou?</strong></p>
+
+    <p>Ghost Trick needs to be first on this list, but the following are in no particular order: Outer Wilds, Myst, La-Mulana, The Witness, Talos Principle, Stephen’s Sausage Roll, Braid, Superliminal, Snakebird, SpaceChem (and other Zachtronics games), the Ace Attorney games, Room to Grow, Recursed, Patrick’s Parabox, Return of the Obra Dinn, Jelly no Puzzle, Taiji, the Zero Escape series, the Portal series, the Professor Layton series.</p>
+
+    <p><strong>What defines a puzzle, to you? (This question is in regard to Piano Typer.)</strong><p>
+
+    <p>To me, a puzzle is something with a short solution path which is hard to find. A puzzle should have a definite completion (usually the answer). A good puzzle should be fun to try and rewarding to complete.</p>
+
+    <p><strong>Is the timey wimey stuff over? Will the 2023 hunt actually be the 2023 hunt?</strong></p>
+
+    <p>We can’t predict the future, but at least the Galactic Cinematic Universe has now filled in the gaps between 2017 and present. (Not to mention 2009.)</p>
+
+    <p><strong>Is it unethical to repeatedly submit stupid answers? If you hate it, we won’t do it next time.</strong></p>
+
+    <p>We love to see it. Though the number of guesses remaining might not…</p>
+
+    <p><strong>Why isn’t your favorite Pokémon Unown R?</strong></p>
+
+    <p>Because it’s not as good as Bulbasaur!</p>
+
+    <p><strong>Have you “emoji kitchen’d” the ✈??</strong></p>
+
+    <p>
+    <img style="max-width:20%" src="/static/images/wrapup/airplane-shrug.png">
+    <img style="max-width:20%" src="/static/images/wrapup/airplane-celebration.png">
+    </p>
+
+    <p><strong>When are you going to reprint MacGregor House into a new hunt?</strong></p>
+
+    <p>2048</p>
+
+    <p><strong>Is ✈✈✈ Galactic Trendsetters ✈✈✈ going to sandbag if they end up taking the lead on Sunday in next year’s Mystery Hunt?</strong></p>
+
+    <p>Who can say!</p>
+
+    <p><strong>Will GPH 2023 consist of 40 puzzles that all have the answer of HALLEY’S COMET?</strong></p>
+
+    <p>Hey, that’s a pretty good idea. Or maybe just the answer ANSWER.</p>
+
+    <p><strong>From the writer’s perspective, what are everyone’s favourite puzzles?</strong></p>
+
+    <p>Everyone writes the kind of puzzles that they like the best :)</p>
+
+</main>
+
+<aside>
+  <script>
+    const heads = [...$('h1,h2,h3,h4,h5,h6')].map(head => [head, $('<div>')
+      .text(head.textContent)
+      .css('padding-left', head.tagName.substr(1) + 'em')
+      .click(() => head.scrollIntoView())
+      .appendTo('aside')]);
+    function highlight() {
+      const rects = heads.map(([head]) => head.getBoundingClientRect());
+      heads.forEach(([head, link], i) => link.toggleClass('highlight',
+        (!rects[i + 1] || rects[i + 1].top > 0) && rects[i].top < innerHeight));
+    }
+    document.addEventListener('scroll', highlight, { passive: true });
+    highlight();
+  </script>
+</aside>
+
+
+    </div>
+    
+
+    
+
+    
+</body>
+</html>
