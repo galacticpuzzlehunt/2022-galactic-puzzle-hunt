@@ -1,0 +1,313 @@
+
+
+
+
+
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    
+    <title>Galactic Puzzle Hunt</title>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=0.5">
+    <meta property="og:title" content="Galactic Puzzle Hunt 2022">
+    <meta property="og:description" content="Registration for this year's Galactic Puzzle Hunt is now open!">
+    <meta property="og:image" content="https://galacticpuzzlehunt.com/static/images/banner.png">
+    <meta property="twitter:card" content="summary_large_image">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Recursive:slnt,CASL,CRSV,MONO@-3,0.5,1,1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/skeleton.css">
+    <link rel="stylesheet" href="/static/css/base.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.19/jquery.touchSwipe.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.formset/1.2.2/jquery.formset.min.js"></script>
+    <script src="/jsi18n/"></script>
+    <script src="/static/js/sorttable.js"></script>
+    <script src="/static/js/tray.js"></script>
+    <script src="/static/js/notify.js"></script>
+    <script src="/static/js/time.js"></script>
+    
+    
+    <link rel="icon" sizes="16x16 32x32 48x48 64x64" href="/static/images/favicon.ico" type="image/vnd.microsoft.icon">
+    
+    
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-92192633-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-92192633-1');
+</script>
+
+</head>
+<body>
+    
+    <div id="background-glitch-wrapper" class="background-glitch">
+        <div class="glitch-1"></div>
+        <div class="glitch-2"></div>
+        <div class="glitch-3"></div>
+    </div>
+    
+    
+    <input id="shortcuts" type="checkbox">
+    
+    <nav>
+        <span class="tray">
+            <span id="tray-timer"></span>
+            <div class="top-tabs">
+                <a href="/">
+                    Home
+                </a>
+                
+                <a href="/rules">
+                    Rules
+                </a>
+                
+                
+                <a href="/story">
+                    Story
+                </a>
+                
+                
+                <a href="/puzzles">
+                    Puzzles
+                </a>
+                
+                <a href="/teams">
+                    Teams
+                </a>
+                
+                <a href="/faq">
+                    FAQ
+                </a>
+                
+                
+                <a href="/errata">
+                    Updates
+                </a>
+                
+                
+                <a href="/wrapup">
+                    Wrap-Up
+                </a>
+                
+                
+                <a href="https://galacticpuzzlehunt.com/archive">
+                    Archive
+                </a>
+                
+                
+                
+            </div>
+            <div class="top-left-actions">
+                
+
+            </div>
+        </span>
+        <div class="top-right-actions">
+        
+        
+        </div>
+    </nav>
+    
+    
+    
+    
+    
+    <script>
+
+    
+    
+    let glitchTriggerFuncs = [];
+    let glitchTriggerReceived = false;
+    let glitchTriggerExReceived = false;
+    let glitchPageLoaded = false;
+    function processGlitchFuncs(ex) {
+        glitchTriggerFuncs.forEach((func) => {
+            func(ex);
+        });
+    }
+    function doGlitch(ex) {
+        glitchTriggerReceived = true;
+        if (ex) {
+            glitchTriggerExReceived = true;
+        }
+        if (glitchPageLoaded) {
+            processGlitchFuncs(ex);
+        }
+    }
+    window.addEventListener('load', () => {
+        glitchPageLoaded = true;
+        if (glitchTriggerExReceived) {
+            processGlitchFuncs(true);
+        }
+        else if (glitchTriggerReceived) {
+            processGlitchFuncs(false);
+        }
+    }, false);
+    
+    
+    
+    function registerOnGlitchHook(func) {
+        if (glitchTriggerExReceived) {
+            func(true);
+        }
+        else if (glitchTriggerReceived) {
+            func(false);
+        }
+        glitchTriggerFuncs.push(func);
+    }
+    
+
+    
+    
+    </script>
+    <div class="content">
+        
+<style>
+
+</style>
+
+<h1>Unlocking</h1>
+
+<main class="puzzle-main clipboard-container">
+
+<p>
+    All the puzzle materials for GPH 2022 are available on this site, so you can still go through the full hunt by yourself even though the event is over; however, to best replicate the experience, you’ll have to hide some information from yourself until you “unlock” it.
+</p>
+<p>
+    The layout for the site changed dynamically as you progressed through the hunt, in a way that is hard to replicate with the static site. If you’re working through the hunt from start to finish, here’s roughly what you should do:
+</p>
+<ul>
+    <li>
+        The first two entries in the <a href="/story" target="_blank" rel="noopener noreferrer">Story</a> page will give you some background flavor.
+    </li>
+    <li>
+        The puzzles in The Exam serve as the “intro round”. At the beginning of the hunt, the first three puzzles are available.
+    </li>
+    <li>
+        Solving one puzzle in The Exam unlocks one additional puzzle in The Exam, with the following exceptions:
+        <ul>
+            <li>
+                The third solve unlocks two puzzles instead of one.
+            </li>
+            <li>
+                The fifth solve unlocks the meta. (At this point, there are no more feeders to unlock.)
+            </li>
+        </ul>
+    </li>
+    <li>
+        There is a spoiler that is necessary to reveal to help you understand the unlock structure for the rest of the hunt; if you want to avoid this spoiler, limit yourself to the puzzles in The Exam round and don’t read the infobox at the top of The Line, until you notice something funky about one or more of the puzzles in The Exam. At that point, you can continue reading below.
+    </li>
+    <li>
+        Unfortunately, we need to spoil this mechanic to explain how unlocking works, but each puzzle in The Exam has two answers: one “main” answer and one “alternate” answer. During the hunt, it was intended that teams would only find the main answers when going through The Exam the first time—then, upon solving the meta (The Line), the website would reset and dump solvers back at the beginning of the hunt, with no puzzles solved. Submitting the same answers would repeatedly reset the hunt; eventually, solvers had to realize that there was an “alternate” answer hidden in each puzzle, and the meta would change if enough alternate answers were submitted. Some more specifics:
+        <ul>
+            <li>
+                During the actual hunt, if teams submitted an alternate answer the first time going through The Exam, it would be marked as incorrect. However, in the list of previously-submitted answers, it would show up with a question mark instead of an X to indicate that it was somehow unusual. In the second loop onwards, alternate answers were marked as correct but would have a “glitch” effect wherever they were displayed.
+            </li>
+            <li>
+                The answer checker will explicitly tell you “Solved (alternate answer)!” if you submit the alternate answer to a puzzle.
+            </li>
+        </ul>
+    </li>
+    <li>
+        To best simulate the hunt, you should only submit the main answers when going through The Exam the first time. The first meta (The Line) uses these main answers and not the alternate answers.
+    </li>
+    <li>
+        Select 0 alternate answers in the dropdown in the dropdown of The Line, and solve it.
+    </li>
+    <li>
+        Now you can find alternate answers to the puzzles. Feel free to change the dropdown in The Line to reflect the number of alternate answers you have submitted.
+    </li>
+    <li>
+        The other rounds are gated behind The Exam. Do not open any other puzzles until you have finished The Exam.
+    </li>
+    <li>
+        When The Exam is complete, the wormhole appears, leading to the <a href="https://2021.galacticpuzzlehunt.com/story" target="_blank" rel="noopener noreferrer">2021 Story page</a>, and the first three puzzles in the Forward round open. Solving one puzzle in Forward unlocks one additional puzzle in Forward, with the following exceptions:
+        <ul>
+            <li>
+                The first solve unlocks two puzzles instead of one.
+            </li>
+            <li>
+                The seventh solve unlocks two puzzles instead of one.
+            </li>
+            <li>
+                The eighth solve unlocks the meta. (At this point, there are no more feeders to unlock.)
+            </li>
+        </ul>
+    </li>
+    <li>
+        Once 6 puzzles in Forward have been solved, “A Note” and “A Memory” unlock on the puzzle page. Visit our <a href="/navigation" target="_blank" rel="noopener noreferrer">Wormhole Simulator</a> to use them. When the outcome of the Wormhole Simulator is finalized, the gadgets will become gray, and a paragraph explaining the page’s behavior will appear beneath the text “You can simulate solving these puzzles by clicking the corresponding answer below”.
+        <ul>
+            <li>
+                Once you succeed in using “A Memory”, you can visit the first three puzzles in the Hibernating and Flying South round. These puzzles can be visited in any season (although they may not have content).
+            </li>
+            <li>
+                Once all four of the seasons have been visited, it becomes possible to “jump to” a particular season. This means you can use the season-changing buttons on puzzles without returning to the Wormhole Simulator.
+            </li>
+        </ul>
+    </li>
+    <li>
+        Solving one puzzle in Hibernating and Flying South unlocks one additional puzzle in Hibernating and Flying South, with the following exceptions:
+        <ul>
+            <li>
+                The third solve unlocks two puzzles instead of one.
+            </li>
+            <li>
+                The seventh solve unlocks the meta. (At this point, there are no more feeders to unlock.)
+            </li>
+        </ul>
+    </li>
+    <li>
+        When (Hibernating and Flying South solves) ≥ 4 and (Forward solves) + (Hibernating and Flying South solves) ≥ 13, “Another Note” and “Another Memory” appear. Visit our <a href="/navigation" target="_blank" rel="noopener noreferrer">Wormhole Simulator</a> to use them.
+        <ul>
+            <li>
+                Once you succeed in using “Another Memory”, you can visit the first three puzzles in the World’s End Concert round.
+            </li>
+        </ul>
+    </li>
+    <li>
+        Solving one puzzle in World’s End Concert unlocks one additional puzzle in World’s End Concert, with the following exceptions:
+        <ul>
+            <li>
+                The second solve unlocks two puzzles instead of one.
+            </li>
+            <li>
+                The fifth solve does not unlock any puzzles. (At this point, there are no more feeders to unlock.)
+            </li>
+            <li>
+                The sixth solve unlocks the meta.
+            </li>
+        </ul>
+    </li>
+    <li>
+        Once you have solved all three metas (Forward, Hibernating and Flying South, World’s End Concert), proceed to the <a href="/asteroid" target="_blank" rel="noopener noreferrer">Asteroid</a>.
+    </li>
+    <li>
+        Once you have completed the Asteroid, unlock <a href="/puzzle/the-cube" target="_blank" rel="noopener noreferrer">The Cube</a>.
+    </li>
+
+</ul>
+
+<p>
+    During the hunt, teams were able to use “cheat sheets” to receive hints tailored towards their progress. If you would like hints, feel free to email us at galacticpuzzlesetters@gmail.com with your work and we will try to get back to you (no promises on response time, though).
+</p>
+    
+
+</main>
+
+    </div>
+    
+
+    
+
+    
+</body>
+</html>
