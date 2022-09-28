@@ -183,7 +183,7 @@
     <div class="content">
         
 
-<h1>
+<h1 id="puzzle-title">
     The Line
     
     
@@ -363,6 +363,7 @@ function renderPuzzle() {
        ${glitches}
     `;
     clearTimeout(puzDoGlitch);
+    gid("puzzle-title").innerText = isLine? "The Line" : "The Square";
     gid("normal-table").style.display = isLine ? "table" : "none";
     gid("alt-table").style.display = !isLine ? "table" : "none";
     puzDoGlitch();
